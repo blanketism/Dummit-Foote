@@ -1,0 +1,266 @@
+\setcounter{section}{-1}
+
+\section{Preliminaries}
+
+\subsection{Basics}
+
+For Exercises 1 to 4, let
+$$M = 
+\begin{pmatrix}
+    1 & 1 \\
+    0 & 1
+\end{pmatrix}$$
+and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
+\begin{problems}
+    \item Determine which of the following elements of $\ac$ lie in $\bb$:
+    $$
+    \begin{pmatrix}
+        1 & 1 \\
+        0 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 1 \\
+        1 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 1 \\
+        1 & 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 & 1 \\
+        1 & 0 
+    \end{pmatrix}$$
+    \begin{sol}
+        Note that the 1st matrix is $M$ itself so that it belongs to $\bb$, since $MX = XM = M^2$. Further note that the 3rd, 5th, and 6th matrices are the zero, identity, and exchange matrices respectively. Then the 3rd and 5th belong to $\bb$ while the 6th does not. Then only the remaining matrices to check are the 2nd and 4th matrices. For the 2nd matrix:
+        \begin{align*}
+            MX & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot 1 \\
+                0 \cdot 1 + 1 \cdot 1 & 0 \cdot 1 + 1 \cdot 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                2 & 2 \\ 1 & 1
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 1 
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 \\
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 
+            \end{pmatrix} =
+            \begin{pmatrix}
+                2 & 1 \\
+                2 & 1
+            \end{pmatrix}
+        \end{align*}
+        Then $MX \neq XM$ and the 2nd matrix does not belong to $\bb$. For the 4th matrix:
+        \begin{align*}
+            MX & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1 
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 0
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot 0 \\
+                0 \cdot 1 + 1 \cdot 1 & 0 \cdot 1 + 1 \cdot 0
+            \end{pmatrix} =
+            \begin{pmatrix}
+                2 & 1 \\
+                1 & 0
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 \\
+                1 \cdot 1 + 0 \cdot 0 & 1 \cdot 1 + 0 \cdot 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 & 2 \\
+                1 & 1
+            \end{pmatrix}
+        \end{align*}
+        So that $MX \neq XM$.
+    \end{sol}
+    \item Prove that if $P, Q \in \bb$, then $P + Q \in \bb$ where $+$ denotes the usual sum of two matrices.
+    \begin{sol}
+        For Exercises 2 and 3, let
+        \[P = 
+        \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}, \quad Q = 
+        \begin{pmatrix}
+            e & f \\
+            g & h
+        \end{pmatrix}, \quad P + Q = 
+        \begin{pmatrix}
+            a + e & b + f \\
+            c + g & d + h
+        \end{pmatrix}, \quad P \cdot Q = 
+        \begin{pmatrix}
+            ae + bg & af + bh \\
+            ce + dg & cf + dh
+        \end{pmatrix}\]
+        where $PM = MP$ and $QM = MQ$. Then
+        \begin{align*}
+            M(P + Q) & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                a + e & b + f \\
+                c + g & d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e + c + g & b + f + d + h \\
+                c + g & d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + c & b + d \\
+                c & d
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                e + g & f + h \\
+                g & h
+            \end{pmatrix} \\
+            & = MP + MQ \\
+            & = PM + QM \\
+            & = 
+            \begin{pmatrix}
+                a & a + b \\
+                c & c + d
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                e & e + f \\
+                g & g + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e & a + e + b + f \\
+                c + g & c + g + d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e & b + f \\
+                c + g & d + h
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} \\
+            & = (P + Q)M \qh
+        \end{align*}
+    \end{sol}
+    \item Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$ where $\cdot$ denotes the usual product of two matrices.
+    \begin{sol}
+        Using $PQ$, proceed as we did above with $M(PQ)$. Rewriting the entries will result in $(MP)Q$. Since $P \in \bb$, then we have $(PM)Q$. We rewrite entries again to result in $P(MQ)$. Because $Q \in \bb$, we have $P(QM)$, and a final rewrite results in $(PQ)M$.
+    \end{sol}
+    \item Find conditions on $p, q, r, s$ which determine precisely when $
+    \begin{pmatrix}
+        p & q \\
+        r & s
+    \end{pmatrix} \in \bb$.
+    \begin{sol}
+        Let $X$ be the matrix described above. Note that
+        \begin{align*}
+            MX & =
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                p & q \\
+                r & s
+            \end{pmatrix} =
+            \begin{pmatrix}
+                p + r & q + s \\
+                r & s
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                p & q \\
+                r & s
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                p & p + q \\
+                r & r + s
+            \end{pmatrix}
+        \end{align*}
+        Because $X \in \bb$, then we may compare entries to obtain the following:
+        \[
+        \begin{cases}
+            p + r = p \\
+            q + s = p + q \\
+            r = r \\
+            s = r + s
+        \end{cases}
+        \]
+        The first and fourth equations force $r = 0$, and the second equation forces $p = s$. Then $\bb$ is classified as
+        \[\bb = \set*{\left.
+        \begin{pmatrix}
+            p & p + q \\
+            0 & p
+        \end{pmatrix}\,\right|\, p, q \in \r} \qh\]
+    \end{sol}
+    \item Determine whether the following functions $f$ are well defined:
+    \begin{problems}
+        \item $f : \q \to \z$ defined by $f(a/b) = a$.
+        \item $f : \q \to \q$ defined by $f(a/b) = a^2/b^2$.
+    \end{problems}
+    \begin{solalph}
+        \item No, because $1/2 = 2/4$, but $f(1/2) = 1$ and $f(2/4) = 2$.
+        \item Yes; suppose $a/b = c/d$. Then $ad = bc$, or that $a^2d^2 = b^2c^2$. Then $a^2/b^2 = c^2/d^2$, or $f(a/b) = f(c/d)$. 
+    \end{solalph}
+    \item Determine whether the function $f: R^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well defined.
+    \begin{sol}
+        No. Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 1$ and $f(0.999\ldots) = 9$.
+    \end{sol}
+    \item Let $f: A \to B$ be a surjective map of sets. Prove that the relation
+    $$a \sim b \iff f(a) = f(b)$$
+    is an equivalence relation whose equivalence classes are the fibers of $f$.
+    \begin{sol}
+        The relation above is an equivalence relation, since $=$ is already an equivalence relation on $B$.
+        
+        Consider now some $b \in B$. Since $f$ is surjective, there exists $a \in A$ such that $f(a) = b$. The equivalence class of $a$ is the set $\set{x \in A \mid x \sim a}$. By definition of $\sim$, this is equal to the set $\set{x \in A \mid f(x) = f(a) = b}$, which is precisely the fiber of $f$ over $b$.
+    \end{sol}
+\end{problems}
