@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.20)  27 JUL 2026 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.20)  27 JUL 2026 12:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1190,26 +1190,31 @@ LaTeX Font Info:    Font shape `T1/mdput/b/it' will be
 (Font)              scaled to size 9.40002pt on input line 41.
  [2
 
-]) [3] (dummit foote exercises.aux (Dummit Foote Exercises/chapter 0.aux))
+] [3]
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 312.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 312.
+ [4]) [5] (dummit foote exercises.aux (Dummit Foote Exercises/chapter 0.aux))
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `"dummit foote exercises".out' has not changed.
-(rerunfilecheck)             Checksum: B335D80DC5B80AC7F50971D8EEAC2398;195.
+(rerunfilecheck)             Checksum: 4E7B8E3963F780D2BD4F3166F8507BC5;391.
  ) 
 Here is how much of TeX's memory you used:
- 37086 strings out of 467510
- 853481 string characters out of 5408308
+ 37118 strings out of 467510
+ 853867 string characters out of 5408308
  1472312 words of memory out of 5000000
- 65621 multiletter control sequences out of 15000+600000
- 720320 words of font info for 94 fonts, out of 8000000 for 9000
+ 65632 multiletter control sequences out of 15000+600000
+ 735983 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,94p,812b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7t.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7v.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7y.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdpgd/md-utrma.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "dummit foote exercises.pdf" (3 pages, 100156 bytes).
+ 84i,14n,94p,812b,785s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7t.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7v.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utr7y.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdpgd/md-utrma.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdput/md-utrmb.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Josiah/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on "dummit foote exercises.pdf" (5 pages, 115705 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
