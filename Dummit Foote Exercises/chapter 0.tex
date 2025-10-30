@@ -332,4 +332,56 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
             \phi(n) & 8 & 16 & 6 & 18 & 8 & 12 & 10 & 22 & 8 & 20 & 12 & 18 & 12 & 28 & 8 \\
         \end{array}$$
     \end{sol}
+    \item Prove the Well Ordering Property of $\z$ by induction and prove the minimal element is unique.
+    \begin{sol}
+        Let $A \subseteq \n$ be nonempty. If $0 \in A$, then it has a minimal element. Suppose now that $0 \not\in A$. Moreover, suppose that $1, 2, \ldots, k \not\in A$ for some $k$. By strong induction, it follows that $k + 1 \not\in A$. However, this results in there being no positive integer in $A$, contradicting that it is nonempty, thus it must have a minimal element. Moreover, if it had two minimal elements $a, b$, then it follows that $a \leq b$ and $b \leq a$ by definition of minimal element. Hence, $a = b$, and the minimal element of $A$ is unique.
+    \end{sol}
+    \item If $p$ is a prime, prove that there do not exist nonzero integers $a$ and $b$ such that $a^2 = pb^2$ (i.e., $\sqrt p$ is not a rational number).
+    \begin{sol}
+        Suppose $\sqrt p$ is a rational number. Then there exists $a, b \in \z$ such that $a^2 = b^2p$, and $(a, b) = 1$. If $(a, b) = d \neq 1$, then take $a' = a/d$ and $b' = b/d$ instead. Then $p \mid a^2 = a \cdot a$, and $p \mid a$. We then have $a = kp$ for some $k \in \z$. Then $b^2 = k^2p$ so that $p \mid b$, and $b = mp$ for $m \in \z$. This contradicts that $(a, b) = 1$, hence $\sqrt p$ cannot be a rational number.
+    \end{sol}
+    \item Let $p$ be a prime, $n \in \n$. Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$ (it involves the greatest integer function).
+    \label{ex0.2.8}
+    \begin{sol}
+        Note that in $n!$, there are $\lfloor n/p \rfloor$ integers that are divisible by $p$, where the greatest integer function is necessary since $n$ may not be a perfect multiple of $p$ (consider $n = 36$ and $p = 7$. Then there are the multiples $7, 14, 21, 28,$ and $35$ which is $\lfloor 36/7 \rfloor = 5$). However, this alone does not account for the factors of $p$ in $n!$, so we move onto $p^2$. In this case, there are $\lfloor n/p^2 \rfloor$ integers divisible by $p^2$. We continue this process until a certain integer $a \in \n$ such that $p^a \leq n$. (We must bound $p^a$ above by $n$, up to equality, since $n$ may be a power of $p$, and any power $a$ such that $p^a > n$ would result in $\lfloor n/p^a\rfloor= 0$). It then follows that $a \leq \log_p(n)$, or that the maximum power of $p$ (and any of its multiples) that divide $n!$ is given by $a = \lfloor\log_p(n)\rfloor$. Thus, the largest power of $p$ that divides $n!$ is given by
+        $$\sum_{i = 1}^{\lfloor \log_p(n)\rfloor} \left\lfloor\frac{n}{p^i}\right\rfloor$$
+    \end{sol}
+    \item Write a computer program to determine the greatest common divisor $(a, b)$ of two integers $a$ and $b$ and to express $(a, b)$ in the form $ax + by$ for some integers $x$ and $y$.
+    \begin{breakablealgorithm}
+        \begin{algorithmic}[1]
+            \Require {Integers $a$, $b$ (not both zero)}
+            \Ensure {Integers $g, x, y$ such that $g = (a,b)$ and $a x + b y = g$}
+            
+            \State {$x_1 \gets 1$, $y_1 \gets 0$}
+            \State {$x_2 \gets 0$, $y_2 \gets 1$}
+            
+            \While {$b \neq 0$}
+                \State {$q \gets 0$}
+                \State {$r \gets a$}
+                \While {($r \ge b$) or ($r \le -b$)}
+                    \State {$r \gets r - b$}
+                    \State {$q \gets q + 1$}
+                \EndWhile
+                \State {$a \gets b$}
+                \State {$b \gets r$}
+                \State {$(x_1, x_2) \gets (x_2, x_1 - q \times x_2)$}
+                \State {$(y_1, y_2) \gets (y_2, y_1 - q \times y_2)$}
+            \EndWhile
+            
+            \State {$g \gets a$}
+            \State {\textbf{return} $(g, x_1, y_1)$}
+        \end{algorithmic}
+    \end{breakablealgorithm}
+    \item Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function. Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
+    \begin{sol}
+        Let $N \in \n$ be fixed, and let $n \in \n$ such that $\phi(n) = N$. We can break apart $n$ into its primes $p_i$ (where $p_1 < p_2 < \dots)$ with associated exponents $\alpha_i$:
+        $$n = \prod_{i = 1}^k p_i^{\alpha_i} \implies \phi(n) = \prod_{i = 1}^k p_i^{\alpha_i - 1}(p_i - 1) = N$$
+        In particular, each of the terms $p_i - 1$ divides $N$ so that $p_i - 1 \leq N$, or $p_i \leq N + 1$. It follows that any prime $q$ of some $n$ must be such a prime where $q - 1 \leq N$. Moreover, for some $p_i^{\alpha_i}$ that is a part of $n$'s prime factorization, it follows that $p_i^{\alpha_i - 1}$ divides $N$. Since $\alpha_i - 1$ is finite, this limits the exponents for any particular $p_i$. With a finite list of primes and finitely many exponents, it follows that the amount of $n$ such that $\phi(n) = N$ is finite.
+        
+        For some $N_0 \in \n$, there are finitely many $n$ such that $\phi(n) = N_0$. Then there are infinitely many $m > n$ such that $\phi(m) > N_0$, or that $\phi(n)$ tends towards infinity.
+    \end{sol}
+    \item Prove that if $d$ divides $n$ then $\phi(d)$ divides $\phi(n)$ where $\phi$ denotes Euler's $\phi$-function.
+    \begin{sol}
+        Let $n = p_1^{\alpha_1}p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ with $d \mid n$. Then $d$ is a composition of some $p_i$ present in $n$, so some $\alpha_i$ may go to 0 or are less. In particular, we have that $d = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, where $\beta_i \leq \alpha_i$ for all $i$. To see if $\phi(d) \mid \phi(n)$, it follows to check if $p_i^{\beta_i - 1}(p_i - 1)$ divides $p_i^{\alpha_i - 1}(p_i - 1)$, which further simplifies to checking if $p_i^{\beta_i}$ divides $p_i^{\alpha_i}$ for each $i$. Clearly, $p_i^{\alpha_i} = p_i^{\beta_i} \cdot p_i^{\alpha i - \beta_i}$, hence $\phi(d) \mid \phi(n)$.
+    \end{sol}
 \end{enumerate}
