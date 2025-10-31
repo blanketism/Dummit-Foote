@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {0}Preliminaries}{2}{section.0}%
-\contentsline {subsection}{\numberline {0.1}Basics}{2}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}Properties of the Integers}{3}{subsection.0.2}%
