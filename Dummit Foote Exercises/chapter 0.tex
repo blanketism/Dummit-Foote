@@ -385,3 +385,88 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
         Let $n = p_1^{\alpha_1}p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ with $d \mid n$. Then $d$ is a composition of some $p_i$ present in $n$, so some $\alpha_i$ may go to 0 or are less. In particular, we have that $d = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, where $\beta_i \leq \alpha_i$ for all $i$. To see if $\phi(d) \mid \phi(n)$, it follows to check if $p_i^{\beta_i - 1}(p_i - 1)$ divides $p_i^{\alpha_i - 1}(p_i - 1)$, which further simplifies to checking if $p_i^{\beta_i}$ divides $p_i^{\alpha_i}$ for each $i$. Clearly, $p_i^{\alpha_i} = p_i^{\beta_i} \cdot p_i^{\alpha i - \beta_i}$, hence $\phi(d) \mid \phi(n)$.
     \end{sol}
 \end{enumerate}
+
+\subsection{\texorpdfstring{$\intmod$: The Integers Modulo $n$}{Z/nZ: The Integers Modulo n}}
+
+\begin{enumerate}
+    \item Write down explicitly all the elements in the residue classes of $\intmod[18]$.
+    \begin{sol}
+        \begin{align*}
+            \widebar 0 & = \{0 + 18k : k \in \z\} = \{0, 18, -18, 36, -36, \ldots\} \\
+            \widebar 1 & = \{1 + 18k : k \in \z\} = \{1, 19, -17, 37, -35, \ldots\} \\
+            \widebar 2 & = \{2 + 18k : k \in \z\} = \{2, 20, -16, 38, -34, \ldots\} \\
+            \widebar 3 & = \{3 + 18k : k \in \z\} = \{3, 21, -15, 39, -33, \ldots\} \\
+            \widebar 4 & = \{4 + 18k : k \in \z\} = \{4, 22, -14, 40, -32, \ldots\} \\
+            \widebar 5 & = \{5 + 18k : k \in \z\} = \{5, 23, -13, 41, -31, \ldots\} \\
+            \widebar 6 & = \{6 + 18k : k \in \z\} = \{6, 24, -12, 42, -30, \ldots\} \\
+            \widebar 7 & = \{7 + 18k : k \in \z\} = \{7, 25, -11, 43, -29, \ldots\} \\
+            \widebar 8 & = \{8 + 18k : k \in \z\} = \{8, 26, -10, 44, -28, \ldots\} \\
+            \widebar 9 & = \{9 + 18k : k \in \z\} =\{9, 27, -9, 45, -27, \ldots\} \\
+            \widebar{10} & = \{10 + 18k : k \in \z\} = \{10, 28, -8, 46, -26, \ldots\} \\
+            \widebar{11} & = \{11 + 18k : k \in \z\} = \{11, 29, -7, 47, -25, \ldots\} \\
+            \widebar{12} & = \{12 + 18k : k \in \z\} = \{12, 30, -6, 48, -24, \ldots\} \\
+            \widebar{13} & = \{13 + 18k : k \in \z\} = \{13, 31, -5, 49, -23, \ldots\} \\
+            \widebar{14} & = \{14 + 18k : k \in \z\} = \{14, 32, -4, 50, -22, \ldots\} \\
+            \widebar{15} & = \{15 + 18k : k \in \z\} = \{15, 33, -3, 51, -21, \ldots\} \\
+            \widebar{16} & = \{16 + 18k : k \in \z\} = \{16, 34, -2, 52, -20, \ldots\} \\
+            \widebar{17} & = \{17 + 18k : k \in \z\} = 
+            \{17, 35, -1, 53, -19, \ldots\}
+        \end{align*}
+    \end{sol}
+    \item Prove that the distinct equivalence classes in $\intmod$ are precisely $\widebar 0, \widebar 1, \widebar 2, \ldots, \widebar{n - 1}$ (use the Division Algorithm).
+    \begin{sol}
+        Clearly, $\widebar 0, \widebar 1, \widebar 2, \ldots, \widebar{n - 1} \in \intmod$. Let $\widebar a \in \intmod$. By the Division Algorithm, there exists $q \in \z$ and $0 \leq r < n$ such that $a = nq + r$. Then $a \equiv r \bmod n$, so that $\widebar a = \widebar r$, where $r$ is any one of the aforementioned equivalence classes. Moreover, if $\widebar a = \widebar b$ where $0 \leq a, b < n$, it follows that $n \mid (a - b)$ so that $a - b = 0$, or $a = b$. Hence, the equivalence classes of $\intmod$ are precisely the set above.
+    \end{sol}
+    \item Prove that if $a = a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0$ is any positive integer then $a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9$ (note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9) [note that $10 \equiv 1 \bmod 9$].
+    \begin{sol}
+        Using the note, then
+        \begin{align*}
+            a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
+            & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
+            & = (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9
+        \end{align*}
+    \end{sol}
+    \item Compute the remainder when $37^{100}$ is divided by $29$.
+    \begin{sol}
+        Note the following:
+        \begin{align*}
+            37^2 & \equiv 6 \bmod 29 \\ 
+            37^4 & \equiv 6^2 \bmod 29 \equiv 7 \bmod 29 \\
+            37^8 & \equiv 7^2 \bmod 29 \equiv 20 \bmod 29 \\
+            37^{16} & \equiv 20^2 \bmod 29 \equiv 23 \bmod 29 \equiv -6 \bmod 29 \\
+            37^{32} & \equiv (-6)^2 \bmod 29 \equiv 7 \bmod 29 \\
+            37^{64} & \equiv 20 \bmod 29
+        \end{align*}
+        Then we have
+        $$37^{64}37^{32}37^4 \equiv 20 \cdot 7 \cdot 7 \bmod 29 \equiv 20^2 \bmod 29 \equiv 23 \bmod 29$$
+        Hence the remainder when dividing $37^{100}$ by $29$ is $23$.
+    \end{sol}
+    \item Compute the last two digits of $9^{1500}$.
+    \begin{sol}
+        Note that $9^3 \equiv 29 \bmod 100$ so that $29^3 \equiv 89 \bmod 100$. Then $89 \cdot 9 \equiv 1 \bmod 100$, or $9^{10} \equiv 1 \bmod 100$. Since $1500$ is a multiple of $10$, then $9^{1500} = (9^{10})^{150} \equiv 1^{150} \bmod 100 \equiv 1 \bmod 100$. Then the last two digits is $01$.
+    \end{sol}
+    \item Prove that the square of the elements in $\intmod[4]$ are just $\widebar 0$ and $\widebar 1$.
+    \begin{sol}
+        \begin{align*}
+            0^2 = 0 \equiv 0 \bmod 4 \\
+            1^2 = 1 \equiv 1 \bmod 4 \\
+            2^2 = 4 \equiv 0 \bmod 4 \\
+            3^2 = 9 \equiv 1 \bmod 4 \\
+        \end{align*}
+    \end{sol}
+    \item Prove that for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$ (use the previous exercise).
+    \begin{sol}
+        Since $a^2 $ and $b^2$ is either $0 \bmod 4$ or $1 \bmod 4$, then we have $4$ potential sums:
+        \begin{align*}
+            0 + 0 \equiv 0 \bmod 4 \\
+            0 + 1 \equiv 1 \bmod 4 \\
+            1 + 0 \equiv 1 \bmod 4 \\
+            1 + 1 \equiv 2 \bmod 4
+        \end{align*}
+        In any of the sums, there is no remainder of $3$ when dividing by $4$.
+    \end{sol}
+    \item Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$. [Consider the equation $\bmod 4$ as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$. Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation. Iterate to reach a contradiction.]
+    \begin{sol}
+        As hinted, consider the equation in $\bmod 4$. The left side must be $0$ or $1$, while the right side must be $0$ or $3$, hence both sides must be equivalent to $0 \bmod 4$. Then $3c^2 \equiv 0 \bmod 4$ implies $c$ is even. If $a$ is even, then $b$ is even. If $a$ is odd, then $b$ must be odd. However, putting $a = 2x + 1$ and $b = 2y + 1$ for $x, y \in \z$ results in $a^2 + b^2 = (2x + 1)^2 + (2y + 1)^2 \equiv 2 \bmod 4$, contradicting that $a^2 + b^2 \equiv 0 \bmod 4$. It must be that $a$ and $b$ are even. We may then divide the original equation by $4$ to get a new equation $r^2 + s^2 = 3t^2$, where $r < a, s < b, t < c$. But then we may use the same reasoning to conclude that the new $r, s, t$ must also be even, resulting in a new equation with smaller integer solutions. This process cannot be iterated indefinitely as we cannot halve any integer indefinitely and remain an integer. Hence, the original equation does not have integer solutions.
+    \end{sol}
+\end{enumerate}
