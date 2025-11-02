@@ -469,4 +469,46 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
     \begin{sol}
         As hinted, consider the equation in $\bmod 4$. The left side must be $0$ or $1$, while the right side must be $0$ or $3$, hence both sides must be equivalent to $0 \bmod 4$. Then $3c^2 \equiv 0 \bmod 4$ implies $c$ is even. If $a$ is even, then $b$ is even. If $a$ is odd, then $b$ must be odd. However, putting $a = 2x + 1$ and $b = 2y + 1$ for $x, y \in \z$ results in $a^2 + b^2 = (2x + 1)^2 + (2y + 1)^2 \equiv 2 \bmod 4$, contradicting that $a^2 + b^2 \equiv 0 \bmod 4$. It must be that $a$ and $b$ are even. We may then divide the original equation by $4$ to get a new equation $r^2 + s^2 = 3t^2$, where $r < a, s < b, t < c$. But then we may use the same reasoning to conclude that the new $r, s, t$ must also be even, resulting in a new equation with smaller integer solutions. This process cannot be iterated indefinitely as we cannot halve any integer indefinitely and remain an integer. Hence, the original equation does not have integer solutions.
     \end{sol}
+    \item Prove that the square of any odd integer always leaves a remainder of $1$ when divided by $8$.
+    \begin{sol}
+        Take $a = 2k + 1, k \in \z$. Then $a^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1$. Note that $k(k + 1)$ is even, so that $4k(k + 1)$ is divisible by $8$. Then $a^2 \equiv 1 \bmod 8$.
+    \end{sol}
+    \item Prove that the number of elements of $\units$ is $\phi(n)$ where $\phi$ denotes the Euler $\phi$-function.
+    \begin{sol}
+        Recall that $\phi(n)$ produces the number of integers that are relatively prime to $n$. It suffices to prove that the elements of $\units$ are the equivalence classes of $\intmod$ whose representatives are relatively prime to $n$.
+        
+        Let $\widebar a \in \units$. Then there exists $\widebar b \in \units$ such that $\widebar a \cdot \widebar b = \widebar 1$. In particular, $\widebar a \cdot \widebar b - \widebar 1 = \widebar 0$, or $n \mid (ab - 1)$. Then $nx + ab = 1$ for $x \in \z$, which shows that $(a, n) = 1$. Conversely, if $\widebar a \in \units$ such that $(a, n) = 1$, then there exists $b, x \in \z$ such that $ab + xn = 1$, or $ab = 1 \bmod n$. It follows that $\widebar b$ is the inverse of $\widebar a \in \units$.
+    \end{sol}
+    \item Prove that if $\widebar a, \widebar b \in \units$, then $\widebar a \cdot \widebar b \in \units$.
+    \begin{sol}
+        It follows that there exist $\widebar x, \widebar y \in \units$ such that $\widebar a \cdot \widebar x = \widebar b \cdot \widebar y = \widebar 1$. In particular:
+        $$\widebar 1 = \widebar 1 \cdot \widebar 1 = (\widebar a \cdot \widebar x)\cdot(\widebar b \cdot \widebar y) = (\widebar a \cdot \widebar b) \cdot (\widebar x \cdot \widebar y)$$
+        So that the multiplicative inverse of $\widebar a \cdot \widebar b$ is $\widebar x \cdot \widebar y$.
+    \end{sol}
+    \item Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
+    \begin{sol}
+        Since $a$ and $n$ are not relatively prime, then $(a, n) = d$ where $1 < d \leq a$. Then $n/d, a/d \in \z$, and $a(n/d) = n(a/d) \equiv 0 \bmod n$ so that $b = n/d$. Moreover, if there was such a $c$ such that $ac \equiv 1 \bmod n$, then $abc \equiv b \bmod n$, which is false since $ab \equiv 0 \bmod n$. Hence, no such $b$ may exist.
+    \end{sol}
+    \item Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$ [use the fact that the g.c.d. of two integers is a $\z$-linear combination of the integers].
+    \begin{sol}
+        Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$. Then $ac \equiv 1 \bmod n$.
+    \end{sol}
+    \item Conclude from the previous two exercises that $\units$ is the set of elements $\widebar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4. Verify this directly in the case $n = 12$.
+    \begin{sol}
+        The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[11] = \{\widebar 1, \widebar 5, \widebar 7, \widebar{11}\} $ whose inverses are $\widebar 1, \widebar 7, \widebar 5, \widebar{11}$ respectively. 
+    \end{sol}
+    \item For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\widebar a$ in $\intmod$.
+    \begin{enumerate}
+        \item $a = 13, n = 20$
+        \item $a = 69, n = 89$
+        \item $a = 1891, n = 3797$
+        \item $a = 6003722857, n = 77695236973$
+    \end{enumerate}
+    \begin{solalph}
+        \item Refer to the previous set of exercises on how to do the Euclidean Algorithm and how to calculate such an $x$ such that $ax + by = 1$, or $ax \equiv 1 \bmod n$. For this exercise, we obtain $-3 \equiv 17 \bmod 20$, so the inverse is $\widebar{17}$.
+        \item $40(69) - 31(89) = 1 \implies 40\cdot 89 \equiv 1 \bmod 89$, so the inverse is $\widebar{40}$.
+        \item $253(1891) - 126(3797) = 1 \implies 253 \cdot 1891 \equiv 1 \bmod 3797$, so the inverse is $\widebar{253}$.
+        \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\widebar{77695237193}$.
+    \end{solalph}
+    \item Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\widebar a \cdot \widebar c = \widebar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
 \end{enumerate}
