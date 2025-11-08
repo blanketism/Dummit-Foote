@@ -188,4 +188,59 @@ Let $G$ be a group.
         \end{align*}
         The result follows by induction.
     \end{sol}
+    \item Let $x$ be an element of $G$. Prove that $x^2 = 1$ if and only if $|x|$ is either $1$ or $2$.
+    \begin{sol}
+        If $x^2 = 1$, then $|x| \leq 2$. Then $|x| = 1$ or $2$. If $|x| = 1$, then $x = 1$, and $x^2 = 1^2 = 1$. If $|x| = 2$, then $x^2 = 1$.
+    \end{sol}
+    \item Let $x$ be an element of $G$. Prove that if $|x| = n$ for some positive integer $n$, then $x^{-1} = x^{n-1}$.
+    \begin{sol}
+        Note that $x^n = x^{n - 1}x = 1$. Then $x^{n - 1} = x\inv$.
+    \end{sol}
+    \item Let $x, y$ be elements of $G$. Prove that $xy = yx$ if and only if $y^{-1}xy = x$ if and only if $x^{-1}y^{-1}xy = 1$.
+    \begin{sol}
+        \begin{align*}
+            xy & = yx \\
+            y\inv xy & = y\inv yx \\
+            y\inv xy & = x \\
+            x\inv y\inv xy & = x\inv x \\
+            x\inv y\inv xy & = 1
+        \end{align*}
+    \end{sol}
+    \item
+    \label{ex1.1.19}
+    Let $x \in G$ and let $a, b \in \zp$.
+    \begin{problems}
+        \item Prove that $x^{a+b} = x^a x^b$ and $(x^a)^b = x^{ab}$.
+        \item Prove that $(x^a)^{-1} = x^{-a}$.
+        \item Establish part (a) for arbitrary integers $a$ and $b$ (positive, negative, or zero).
+    \end{problems}
+    \begin{solalph}
+        \item Since $x^a$ has $a$ amount of $x$ and $x^b$ has $b$ amount of $x$, and $x^{a + b}$ has $a + b$ amount of $x$, the result follows. Similarly, $b$ amount of $x^a$ means there are $ab$ amount of $x$, or $x^{ab}$.
+        \item Note that $x^{-a} = (x\inv)^a$. For $a = 1$, this follows. Suppose $(x^a)\inv = (x\inv)^a$ for $a = n \in \zp$. Then for $a = n + 1$, we have
+        $(x\inv)^{n + 1}(x^{n + 1}) = (x\inv)^n x\inv xx^n = 1$, which is true by the inductive hypothesis.
+        \item The case where both $a$ and $b$ are positive is done. If $a \in \z$ and $b = 0$, then $x^{a + 0} = x^ax^0 = x^a$. Moreover, we have $(x^a)^0 = 1$ by definition, so $x^{a \cdot 0} = x^0 = 1$. If $a > 0$ and $b < 0$, we have two cases for the first part of (a):
+        \begin{itemize}
+            \item If $a + b > 0$, then $x^a = x^{a + b - b} = x^{a + b}x^{-b}$. Then $x^ax^b = x^{a + b}$.
+            \item If $a + b < 0$, then $x^b = (x^{-b})\inv = (x^{- (a + b) + a})\inv = (x^{-(a + b)}x^a)\inv = (x^a)\inv(x^{-(a + b)})\inv = x^{-a}x^{a + b}$. Then $x^ax^b = x^{a + b}$.
+        \end{itemize}
+        For the second part of (a), we have $(x^a)^b = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}$. Next, the case of $a < 0$ and $b > 0$ is similar. Lastly, if $a < 0$ and $b < 0$, then $x^{a + b} = (x^{-b - a})\inv = (x^{-b}x^{-a})\inv = (x^{-a})\inv(x^{-b})\inv = x^ax^b$. Additionally, $(x^a)^b = ((x^a)^{-b})\inv = (x^{-ab})\inv = ((x^{ab})\inv)\inv = x^{ab}$.
+    \end{solalph}
+    \item For $x$ an element in $G$, show that $x$ and $x^{-1}$ have the same order.
+    \begin{sol}
+        Let $|x| = n \in \zp$. Then $(x\inv)^n = (x^n)\inv = 1\inv = 1$, so $|x\inv| \leq |x|$. If $|x\inv| = m \in \zp$, then $x^m = (x\inv)^{-m} = ((x\inv)^m)\inv = 1\inv = 1$, ,so $|x| \leq |x\inv|$. Hence, $n = m$. This establishes that the orders are the same if it is finite; otherwise, both $|x|$ and $|x\inv|$ must be of infinite order.
+    \end{sol}
+    \item Let $G$ be a finite group and let $x$ be an element of order $n$. Prove that if $n$ is odd, then $x = (x^2)^k$ for some $k \geq 1$.
+    \begin{sol}
+        Put $n = 2k - 1$ for $k \geq 1$. Then $1 = x^n = x^{2k - 1} = (x^2)^kx\inv$. The result follows.
+    \end{sol}
+    \item \label{ex1.1.22} If $x$ and $g$ are elements of the group $G$, prove that $|x| = |g^{-1} x g|$. Deduce that $|ab| = |ba|$ for all $a, b \in G$.
+    \begin{sol}
+        We first prove that $(g\inv xg)^n = g\inv x^n g$ by induction. For $n = 1$, the result is clear. Supposing it is true for some $n = k$, then for $n = k + 1$, we have $(g\inv xg)^{k + 1} = (g \inv x g)^k(g\inv xg) = (g\inv x^kg)(g\inv x g) = g\inv x^{k + 1}g$.
+        
+        Put $|x| = n \in \zp$. Then $(g\inv xg)^n = g\inv x^ng = g\inv 1 g = 1$ so that $|g\inv xg| \leq n$. Similarly, put $|g\inv xg| = m$. Then $1 = (g\inv xg)^m = g\inv x^mg$. Then $1 = x^m$ so that $|x| \leq m$, hence $|x| = |g\inv xg|$. Similar to the previous exercise, then both must be of finite or infinite order. Finally, for $a, b \in G$, we have $|ab| = |b(ab)\inv| = |ba|$. 
+    \end{sol}
+    \item Suppose $x \in G$ and $|x| = n < \infty$. If $n = st$ for some positive integers $s$ and $t$, prove that $|x^s| = t$.
+    \begin{sol}
+        Let $|x^s| = r$. Since $1 = x^n = x^{st} = (x^s)^t$, then $|x^s| \leq t$. Moreover, we have $(x^s)^r = x^{sr} = 1$ so that $|x| = st \leq sr$. Then $t \leq |x^s|$.
+    \end{sol}
 \end{problems}
