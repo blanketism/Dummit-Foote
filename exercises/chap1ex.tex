@@ -456,3 +456,161 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
         \item $u^4v^3 = u(uv)^3 = u1^3 = 1$. Then $1v = 1$, and $u = v = 1$, so $Y = 1$.
     \end{solalph}
 \end{problems}
+
+\subsection{Symmetric Groups}
+
+\begin{problems}
+    \item Let $\sigma$ be the permutation
+    $$1 \mapsto 3, \quad 2 \mapsto 4, \quad 3 \mapsto 5, \quad 4 \mapsto 2, \quad 5 \mapsto 1$$
+    and let $\tau$ be the permutation
+    $$1 \mapsto 5, \quad 2 \mapsto 3, \quad 3 \mapsto 2, \quad 4 \mapsto 4, \quad 5 \mapsto 1.$$
+    Find the cycle decompositions of each of the following permutations:
+    $\sigma, \tau, \sigma^2, \sigma\tau, \tau\sigma,$ and $\tau^2\sigma.$
+    \begin{sol}
+        \begin{align*}
+            \sigma & = (1\ 3\ 5)(2\ 4) \\
+            \tau & = (1\ 5)(2\ 3) \\
+            \sigma^2 & = (1\ 5\ 3) \\
+            \sigma\tau & = (2\ 5\ 3\ 4)\\
+            \tau\sigma & = (1\ 2\ 4\ 3)\\
+            \tau^2\sigma & = (1\ 3\ 5)(2\ 4)
+        \end{align*}
+    \end{sol}
+    \item Let $\sigma$ be the permutation
+    \begin{align*}
+        1 &\mapsto 13 & 2 &\mapsto 2 & 3 & \mapsto 15 & 4 & \mapsto 14 & 5 & \mapsto 10  \\
+        6 &\mapsto 7 & 7 &\mapsto 12 & 8 & \mapsto 9 & 9 & \mapsto 3 & 10 & \mapsto 1 \\
+        11 &\mapsto 7 & 12 &\mapsto 9 & 13 & \mapsto 5 & 14 & \mapsto 11 & 15 & \mapsto 8
+    \end{align*}
+    and let $\tau$ be the permutation
+    \begin{align*}
+        1 &\mapsto 14 & 2 &\mapsto 9 & 3 &\mapsto 10 & 4 &\mapsto 2 & 5 &\mapsto 12 \\
+        6 &\mapsto 6 & 7 &\mapsto 5 & 8 &\mapsto 11 & 9 &\mapsto 15 & 10 &\mapsto 3 \\
+        11 &\mapsto 8 & 12 &\mapsto 7 & 13 &\mapsto 4 & 14 &\mapsto 1 & 15 &\mapsto 13
+    \end{align*}
+    Find the cycle decompositions of the following permutations: $\sigma, \tau, \sigma^2, \sigma\tau, \tau\sigma$, and $\tau^2\sigma.$
+    \begin{sol}
+        \begin{align*}
+            \sigma & = (1\ 13\ 5\ 1)(3\ 15\ 8)(4\ 14\ 11\ 7\ 12\ 9)\\
+            \tau & = (1\ 14)(2\ 9\ 15\ 13\ 4)(3\ 10)(5\ 12\ 7)(8\ 11)\\
+            \sigma^2 & = (1\ 5)(3\ 8\ 15)(4\ 11\ 12)(7\ 9\ 14)(10\ 13)\\
+            \sigma\tau & = (1\ 11\ 3)(2\ 4)(5\ 9\ 8\ 7\ 10\ 15)(8\ 10\ 14)\\
+            \tau\sigma & = (1\ 4)(2\ 9)(3\ 13\ 12\ 15\ 11\ 5)(8\ 10\ 14)\\
+            \tau^2\sigma & = (1\ 2\ 15\ 8\ 3\ 4\ 14\ 11\ 12\ 13\ 7\ 5\ 10)
+        \end{align*}
+    \end{sol}
+    \item For each of the permutations whose cycle decompositions were computed in the preceding two exercises, compute its order.
+    \begin{sol}
+        Note that the order of a cycle decomposition is the $\lcm$ of the orders of each of the cycles, and that the order of an $m$-cycle is $m$. Then the orders are the following (the first number will be for Exercise 1, and the second for Exercise 2):
+        \begin{align*}
+            \abs\sigma & = 6, 12 \\
+            \abs\tau & = 2, 30 \\
+            \abs{\sigma^2} & = 3, 6 \\
+            \abs{\sigma\tau} & = 4, 6 \\
+            \abs{\tau\sigma} & = 4, 6 \\
+            \abs{\tau^2\sigma} & = 6, 13
+        \end{align*}
+    \end{sol}
+    \item Compute the order of each of the elements in the following groups:
+    \begin{problems}
+        \item $S_3$
+        \item $S_4$
+    \end{problems}
+    \begin{solalph}
+        \item
+        $$\begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            1 & 1 \\
+            (12) & 2 \\
+            (13) & 2 \\
+            (23) & 2 \\
+            (123) & 3 \\
+            (132) & 3
+        \end{array}$$
+        \item 
+        $$\begin{array}{c|c}
+                \text{Permutation} & \text{Order} \\
+                \hline
+                1 & 1 \\
+                (12) & 2 \\
+                (13) & 2 \\
+                (14) & 2 \\
+                (23) & 2 \\
+                (24) & 2
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            (34) & 2 \\
+            (123) & 3 \\
+            (124) & 3 \\
+            (132) & 3 \\
+            (134) & 3 \\
+            (142) & 3
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            (143) & 3 \\
+            (234) & 3 \\
+            (243) & 3 \\
+            (1234) & 4 \\
+            (1243) & 4 \\
+            (1324) & 4
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            (1342) & 4 \\
+            (1423) & 4 \\
+            (1432) & 4 \\
+            (12)(34) & 2 \\
+            (13)(24) & 2 \\
+            (14)(23) & 2
+        \end{array}$$
+    \end{solalph}
+    \item Find the order of $(1\ 12\ 8\ 10\ 4)(2\ 13)(5\ 11\ 7)(6\ 9)$.
+    \begin{sol}
+        $\lcm(5, 2, 3) = 30$.
+    \end{sol}
+    \item Write out the cycle decomposition of each element of order 4 in $S_4$.
+    \begin{sol}
+        See Exercise 4.
+    \end{sol}
+    \item Write out the cycle decomposition of each element of order 2 in $S_4$.
+    \begin{sol}
+        See Exercise 4.
+    \end{sol}
+    \item Prove that if $\Omega = \{1,2,3,\dots\}$, then $S_\Omega$ is an infinite group (do not say $\infty! = \infty$).
+    \begin{sol}
+        Consider the permutation $\sigma_n = (2n - 1\ 2n)$. Note that $\sigma_i \neq \sigma_j$ for any $i, j \in \zp$ so that the set $A = \{\sigma_n \mid n \in \zp\}$ are all distinct. Moreover, $A$ is an infinite subset of $S_\Omega$ so that $|S_\Omega| = \infty$.
+    \end{sol}
+    \item
+    \begin{problems}
+        \item Let $\sigma$ be the 12-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12)$. For which positive integers $i$ is $\sigma^i$ also a 12-cycle?
+        \item Let $\tau$ be the 8-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8)$. For which positive integers $i$ is $\tau^i$ also an 8-cycle?
+        \item Let $\omega$ be the 14-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12\ 13\ 14)$. For which positive integers $i$ is $\omega^i$ also a 14-cycle?
+    \end{problems}
+    \begin{solalph}
+        \item We will compute the explicit powers for the first problem, notice a pattern with the integers that produce a 12-cycle, and apply that pattern to the other problems.
+        
+        For each integer between 1 and 11, we compute the cycle:
+        \begin{align*}
+            \sigma^1 & = \sigma \\
+            \sigma^2 & = (1\ 3\ 5\ 7\ 9\ 11)(2\ 4\ 6\ 8\ 10\ 12)\\
+            \sigma^3 & = (1\ 4\ 7\ 10)(2\ 5\ 8\ 11)(3\ 6\ 9\ 12)\\
+            \sigma^4 & = (1\ 5\ 9)(2\ 6\ 10)(3\ 7\ 11)(4\ 8\ 12)\\
+            \sigma^5 & = \sigma \\
+            \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) \\
+            \sigma^7 & = \sigma \\
+            \sigma^8 & = \sigma^4 \\
+            \sigma^9 & = \sigma^3 \\
+            \sigma^{10} & = \sigma^2\\
+            \sigma^{11} & = \sigma
+        \end{align*}
+        From direct calculations, it seems that the integers $i$ such that $(12, i) = 1$ produce a 12-cycle, while $i$ such that $(12, i) = k$ produces $k$ $12/k$-cycles. In this particular case, the set of integers that produce a 12-cycle is the set $\{x + 12k \mid x \in \{1, 5, 7, 11\}, k \in \z\}$.
+        \item $\{x + 8k \mid x \in \{1, 3, 5, 7\}, k \in \z\}$.
+        \item $\{x + 14k \mid x \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$.
+    \end{solalph}
+\end{problems}
