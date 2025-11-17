@@ -613,4 +613,72 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
         \item $\{x + 8k \mid x \in \{1, 3, 5, 7\}, k \in \z\}$.
         \item $\{x + 14k \mid x \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$.
     \end{solalph}
+    \item Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \{1,2,\dots,m\}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$. Deduce that $|\sigma| = m$.
+    \begin{sol}
+        We prove the first part by induction. Clearly for $i = 1$, this holds true by definition of cycles. Suppose it holds true for some $i \in \zp$. Then $\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}$.
+        
+        Now suppose $1 \leq i < m$. Then $\sigma^i(a_1) = a_{1 + i} \neq a_1$. But then $\sigma^m(a_1) = a_{1 + m} = a_1$ since $(1 + m) \mod m = 1$. Then $|\sigma| = m$.
+    \end{sol}
+    \item Let $\sigma$ be the $m$-cycle $(1\ 2\ \dots\ m)$. Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
+    \begin{sol}
+        Suppose $\sigma^i$ is an $m$-cycle, and put $(m, i) = d$. Then there exists $a, b \in \zp$ such that $ad = i$ and $bd = m$. Noting that $|\sigma^i| = m$ because it is an $m$-cycle, then $(\sigma^i)^b = (\sigma^{ad})^b = (\sigma^{bd})^a = (\sigma^m)^a = 1^a = 1$. Then $|\sigma^i| \leq b$, or $m = b$. It follows that $d = 1$.
+        
+        Suppose that $(m, i) = 1$, and denote $x' \equiv x \bmod m$. Note that the integers $(1 + i)', (1 + 2i)', \ldots, (1 + (m - 1)i)'$ are all distinct, since for any $0 \leq x, y \leq m - 1$ such that $x \neq y$, then $xi \equiv yi \bmod m$ implies $x = y$ (This is seen as follows: $i(x - y) \equiv 0 \bmod m$ implies that $m \mid (x - y)$, since $(m, i) = 1$. Since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$). Then we have $m$ integers so that
+        $$\sigma^i = (1\ (1 + i)'\ (1 + 2i)'\ldots (1 + (m - 1)i)'),$$
+        and $\sigma^i$ is an $m$-cycle.
+    \end{sol}
+    \item
+    \begin{problems}
+        \item If $\tau = (1\ 2)(3\ 4)(5\ 6)(7\ 8)(9\ 10)$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
+        \item If $\tau = (1\ 2)(3\ 4\ 5)$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
+    \end{problems}
+    \begin{solalph}
+        \item $\sigma = (1\ 3\ 5\ 7\ 9\ 2\ 4\ 6\ 8\ 10), \sigma^5 = \tau$.
+        \item We first prove that $(ac, bc) = c(a, b)$. Let $d = (a, b)$ and $d' = (ac, bc)$. Then there exist $x, y \in \z$ such that $ax + by = d$. Then $acx + bcy = dc$. Since $d'$ is the smallest integer that is written of the form $acx' + bcy'$ for $x', y' \in \z$ (if there were any greater, then $d' \neq (ac, bc)$), then $d' \leq dc$. Moreover, $d \mid a$ and $d \mid b$ implies $cd \mid ac$ and $cd \mid bc$. Then $cd \mid d'$, or $cd \leq d'$. Then $dc = d'$, or $c(a, b) = (ac, dc)$.
+        
+        Suppose there existed some $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$. Then $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \bmod n$. Moreover, $\sigma^{3k}(3) = 3$, or that $3k \equiv 0 \bmod n$. Then $n \mid 2k$ and $n \mid 3k$ so that $n \mid (2k,3k)$. By the above, then $(2k, 3k) = k(2, 3) = k$, and $n \mid k$. But then $\sigma^k = (\sigma^n)^q = 1$, contradicting that $\sigma^k = \tau$.
+    \end{solalph}
+    \item Show that an element has order 2 in $S_n$ if and only if its cycle decomposition is a product of commuting 2-cycles.
+    \begin{sol}
+        Suppose $\sigma \in S_n$ such that $|\sigma| = 2$. Perform cycle decomposition on $\sigma$ so that it becomes a product of commuting, disjoint cycles. Pick one of the cycles $(a_1\ a_2 \ldots a_m)$. Since $\sigma \neq 1$, then $\sigma(a_1) = a_2$ and $\sigma^2(a_1) = a_3$. However, $\sigma^2 = 1$, so $\sigma^2(a_1) = a_1$ so that $a_1 = a_3$. Then $m \leq 2$, and the cycle is $(a_1\ a_2)$ so that any cycle in the cycle decomposition of $\sigma$ is of length 2.
+        
+        Suppose $\sigma = (a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$. Since $(a_1\ b_1)^2 = 1$, and the 2-cycles commute, then $\sigma^2 = 1$. Moreover, because $\sigma \neq 1$, then $|\sigma| = 2$. 
+    \end{sol}
+    \item Let $p$ be a prime. Show that an element has order $p$ in $S_n$ if and only if its cycle decomposition is a product of commuting $p$-cycles. Show by an explicit example that this need not be the case if $p$ is not prime.
+    \begin{sol}
+        Suppose $\sigma \in S_n$ such that $|\sigma| = p$ that is prime. Put
+        $$\sigma = \pi_1\pi_2\ldots\pi_k$$
+        as the cycle decomposition of $\sigma$ so that $\pi_i$ commutes with $\pi_j$ for any $i \neq j$. Clearly, $\sigma^p = \pi_1^p\pi_2^p\ldots\pi_k^p$. Since $\sigma^p = 1$, then each $\pi_i^p = 1$. Then $\pi_i$ must be a $p$-cycle or $\pi_i = 1$. But no $\pi_i = 1$, since $\sigma \neq 1$. Then $\pi_i$ must be a $p$-cycle.
+        
+        Suppose $\sigma$'s cycle decomposition is a product of commuting $p$-cycles $\pi_i$. Then for any $t < p$, we have
+        $$\sigma^t = \pi_1^t\pi_2^t \ldots \pi_k^t \neq 1$$
+        since $\pi_i$ is a $p$-cycle. If $t = p$, then $\sigma^t = 1$. Then $|\sigma| = p$.
+    \end{sol}
+    \item Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.
+    \begin{sol}
+        Let $\sigma \in S_n$ have the cycle decomposition $\sigma = \pi_1\pi_2 \ldots \pi_k$, and let $\pi_i$ have length $p_i$ so that $|\pi_i| = p_i$. Suppose $|\sigma| = m$. Then $\pi_i^m = 1$ so that $p_i \mid m$. In particular, every $p_i$ must divide $m$ so that $m$ is a common multiple of all $p_i$. Moreover, if there was another $t$ such that $\sigma^t = 1$, then $t$ must be a common multiple of all $p_i$ and $m \leq t$ so that $m$ is the least common multiple of all $p_i$.
+    \end{sol}
+    \item Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
+    $$\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.$$
+    [Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.]
+    \begin{sol}
+        Note that in an $m$-cycle, there are $m$ integers to write. The first integer has $n$ choices, the second $n - 1$ choices. Continuing on, then the $m$-th integer has $n - m + 1$ choices. However, each choice of $m$ integers has $m$ equivalent representations (such as $(1\ 2\ 3\ 4)$ being equivalent to $(2\ 3\ 4\ 1)$ by shifting each integer to the left one place). Then take the product $n(n - 1)(n - 2) \ldots (n - m + 1)$ and divide by $m$.
+    \end{sol}
+    \item Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint 2-cycles is $n(n - 1)(n - 2)(n - 3)/8$.
+    \begin{sol}
+        The first 2-cycle has $n(n - 1)/2$ choices, and the second 2-cycle has $(n - 2)(n - 3)/2$ choices. Moreover, there are 2 representations for the same set of 2-cycles, so multiply the above quantities and divide by 2 to obtain $n(n - 1)(n - 2)(n - 3)/8$.
+    \end{sol}
+    \item Find all numbers $n$ such that $S_5$ contains an element of order $n$.
+    \begin{sol}
+        $S_5$ contains elements of order 1 through 5. Moreover, we can have a 2 and 3-cycle together whose lcm is 6. Then $n = 1, 2, 3, 4, 5, 6$.
+    \end{sol}
+    \item Find all numbers $n$ such that $S_7$ contains a number an element of order $n$.
+    \begin{sol}
+        We have $n$ from 1 to 7. We can have 2 and 5-cycles and 3 and 4-cycles. Then $n = 10$ and 12.
+    \end{sol}
+    \item Find a set of generators and relations for $S_3$.
+    \label{ex1.4.20}
+    \begin{sol}
+        Recall that $S_3 = \{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)\}$. Moreover, no element in $S_3$ has order 6 so that no element generates $S_3$. It must be that there are at least 2 generators. Put $\alpha = (1\ 2)$ and $\beta = (1\ 3)$. Then $\alpha^2 = \beta^2 = 1$. Then $|\alpha| = |\beta| = 2$, and $\alpha\beta = (1\ 3\ 2), \beta\alpha = (1\ 2\ 3)$, and $\alpha\beta\alpha = (2\ 3)$. Since $\alpha^2 = \beta^2 = 1$ is not enough to determine the order of $\alpha\beta$ (because $\alpha\beta \neq \beta\alpha$), then we must add $(\alpha\beta)^2 = 1$. Then we have the presentation $S_3 = \gen{\alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1}$.
+    \end{sol}
 \end{problems}
