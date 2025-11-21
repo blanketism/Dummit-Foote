@@ -1214,3 +1214,130 @@ Let $F$ be a field and let $n \in \zp$.
         \[Q_8 = \gen{-1, i, j, k \mid i^2 = j^2 = k^2 = ijk = -1}\]
     \end{sol}
 \end{problems}
+
+\subsection{Homomorphisms and Isomorphisms}
+
+\begin{problems}
+    \item Let $\phi : G \to H$ be a homomorphism.
+    \begin{problems}
+        \item Prove that $\phi(x^n) = \phi(x)^n$ for all $n \in \zp$.
+        \item Do part (a) for $n = - 1$ and deduce that $\phi(x^n) = \phi(x)^n$ for all $n \in \z$.
+    \end{problems}
+    \begin{solalph}
+        \item It is clear for $n = 1$. Supposing it holds for some $n$, then for $n + 1$, we have $\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}$.
+        \item We first prove that $\phi$ maps the identity of $G$ to the identity of $H$. To that end, we have $\phi(1_G) = \phi(1_G1_G) = \phi(1_G)\phi(1_G)$ (which is the case for $n = 0$). By cancellation, then $1_H = \phi(1_G)$ so that identities map to each other. Now see that $1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv)$. Then $\phi(x\inv) = \phi(x)\inv$. Then for some $n \in \zp$, it follows that
+        \[\phi(x^{-n}) = \phi((x\inv)^n) = \phi(x\inv)^n = (\phi(x)\inv)^n = \phi(x)^{-n}\]
+    \end{solalph}
+    \item If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$. Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$. Is the result true if $\phi$ is only assumed to be a homomorphism?
+    \begin{sol}
+        Let $|x| = m$ and $|\phi(x)| = n$ for finite $m, n \in \zp$. Then
+        \[\phi(x)^m = \phi(x^m) = \phi(1) = 1\]
+        so that $n \leq m$. Moreover,
+        \[\phi(x^n) = \phi(x)^n = 1\]
+        Since identities map to identities, then $x^n = 1$, or $m \leq n$. Then $m = n$. If $m$ was infinite but $n$ was not, then $\phi(x^n) = \phi(x)^n = 1$ implies that $x^n = 1$, contradicting that $x$ had infinite order. Hence, both must have infinite order. Moreover, two isomorphic groups must the same number of elements of some order because $\phi$ is a bijection, and $|x| = |\phi(x)|$ for every $x \in G$.
+        
+        The result is not true if $\phi$ is only a homomorphism. Take $\phi : G \to H$, where $H$ is the trivial group $\{1\}$, defined by $\phi(x) = 1$. Since there are elements in $G$ that would have orders of greater than 1 (except if $G$ is also the trivial group), then $\phi$ does not preserve order.
+    \end{sol}
+    \item If $\phi : G \to H$ is an isomorphism, prove that $G$ is abelian if and only if $H$ is abelian. If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is abelian, then so is $H$?
+    \begin{sol}
+        Note that $\phi\inv$ exists, since $\phi$ is bijective. It follows that both directions will be proved very similarly, so one direction is only shown: If $G$ is abelian, then for any $h_1, h_2 \in H$, there exists $g_1, g_2 \in G$ such that $g_1 = \phi\inv(h_1)$ and $g_2 = \phi\inv(h_2)$. Then
+        \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1\]
+        so that $H$ is abelian. Moreover, the result does not always follow if $\phi$ is only a homomorphism. Consider the mapping $\phi : (\r, +) \to \gl_2(\r)$ defined by
+        \[\phi(x) = 
+        \begin{pmatrix}
+            1 & x \\
+            0 & 1
+        \end{pmatrix}\]
+        Clearly, this is a homomorphism as
+        \[\phi(x + y) = 
+        \begin{pmatrix}
+            1 & x + y \\
+            0 & 1
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            1 & x \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & y \\
+            0 & 1
+        \end{pmatrix} = \phi(x)\phi(y)\]
+        Note that upper triangular matrices commute with each other (so that $\phi(\r)$ is abelian), but in general $\gl_2(\r)$ is not abelian. It follows that if $\phi$ is assumed only to be a homomorphism, then we must add the additional condition that $\phi$ is also surjective. Following the proof above, we may conclude that such a $g_1$ and $g_2$ must exist because we may pick from the fibers of $\phi$ over $h_1$ and $h_2$, i.e., $g_1 \in \phi\inv(h_1)$ and $g_2 \in \phi\inv(h_2)$ always exist since $\phi$ is surjective.
+    \end{sol}
+    \item Prove that the multiplicative groups $\r - \{0\}$ and $\mathbb{C} - \{0\}$ are not isomorphic.
+    \begin{sol}
+        $|i| = 4$ in $\c - \{0\}$, but there are no elements of order 4 in $\r - \{0\}$.
+    \end{sol}
+    \item Prove that the additive groups $\r$ and $\q$ are not isomorphic.
+    \begin{sol}
+        $|\r| \neq |\q|$.
+    \end{sol}
+    \item Prove that the additive groups $\z$ and $\q$ are not isomorphic.
+    \begin{sol}
+        Every nonidentity element in $\z$ has infinite order, but elements of the form $1/r \in \q$ where $r \in \z$ has order $r$.
+    \end{sol}
+    \item Prove that $D_8$ and $Q_8$ are not isomorphic.
+    \begin{sol}
+        $D_8$ has only 1 element of order 4, while $Q_8$ has 3 elements of order 4.
+    \end{sol}
+    \item Prove that if $n \neq m$, then $S_n$ and $S_m$ are not isomorphic.
+    \begin{sol}
+        If $n \neq m$, then $n! \neq m!$ so that $|S_n| \neq |S_m|$.
+    \end{sol}
+    \item Prove that $D_{24}$ and $S_4$ are not isomorphic.
+    \begin{sol}
+        $D_{24}$ has elements of order 12 (e.g. $r$) but $S_4$ has no elements of order 12, since every element of $S_4$ is either a 2-cycle, 3-cycle, 4-cycle, or a combination of 2-cycles.
+    \end{sol}
+    \item Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection. Define
+    \[
+    \phi : S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
+    \]
+    and prove the following:
+    \begin{problems}
+        \item Prove that $\phi$ is well-defined, that is, if $\sigma$ is a permutation of $\Delta$ then $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$.
+        \item Prove that $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$ by finding a two-sided inverse for $\phi$.
+        \item Prove that $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
+    \end{problems}
+    Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text).
+    \begin{solalph}
+        \item Clearly $\theta \circ \sigma \circ \theta\inv$ is a function from $\Omega$ to $\Omega$. To show that it is a bijection, take some $a, b \in \Omega$ such that $\phi(\sigma)(a) = \phi(\sigma)(b)$, or $(\theta\circ\sigma\circ\theta\inv)(a) = (\theta\circ\sigma\circ\theta\inv)(b)$. Since $\theta$ is a bijection, then $\theta\inv$ is a bijection. Moreover, $\theta \in S_\Delta$ implies that it is a permutation of $\Delta$ so it too is a bijection. It then follows that $a = b$, or that $\phi(\sigma)$ is an injection.
+        
+        Now suppose $b \in \Omega$. Put $a = (\theta\circ\sigma\inv\circ\theta\inv)(b)$. Then $\phi(\sigma)(a) = b$ so that $\phi(\sigma)$ is a surjection. Hence, it is a bijection and is a permutation of $\Omega$.
+        \item Define $\psi : S_\Omega \to S_\Delta$ as
+        \[\psi(\pi) = \theta\inv \circ \pi \circ \theta \quad \text{for $\pi \in S_\Omega$}\]
+        Using similar reasoning in part (a), it is easy to see that $\psi$ is a well-defined mapping. Moreover, for any $\sigma \in S_\Delta$, we have
+        \[(\psi \circ \phi)(\sigma) = \psi(\theta \circ \sigma \circ \theta\inv) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = \sigma\]
+        and for any $\pi \in S_\Omega$, we have
+        \[(\phi \circ \psi)(\pi) = \phi(\theta\inv \circ \pi \circ \theta) = \theta \circ (\theta\inv \circ \pi \circ \theta) \circ \theta\inv = \pi\]
+        Then $\psi$ is a two-sided inverse of $\phi$, hence $\psi = \phi\inv$, and $\phi$ is indeed a bijection.
+        \item Pick $\sigma, \tau \in S_\Delta$. Then
+        \[\phi(\sigma) \circ \phi(\tau) = \theta \circ \sigma \circ \theta\inv \circ \theta \circ \tau \circ \theta\inv = \theta \circ \sigma \circ \tau \circ \theta\inv = \phi(\sigma \circ \tau)\qh\]
+    \end{solalph}
+    \item Let $A$ and $B$ be groups. Prove that $A \times B \cong B \times A$.
+    \begin{sol}
+        Let $\phi : A \times B \to B \times A$ be defined as $\phi(a, b) = (b, a)$ for some $(a, b) \in A \times B$. Clearly, it is a homomorphism, since for $(a, b), (c, d) \in A \times B$, we have $\phi((a, b)(c, d)) = \phi(ac, bd) = (bd, ac) = (b, a)(d, c) = \phi(a, b)\phi(c, d)$. Moreover, for any $(b, a) \in B \times A$, then $\phi(a, b) = (b, a)$ so that $\phi$ is surjective. Finally, suppose $\phi(a, b) = \phi(c, d)$ for $(a, b), (c, d) \in A \times B$. Then $(b, a) = (d, c)$, and comparing components results in $b = d$ and $a = c$, or $(a, b) = (c, d)$. Hence, $\phi$ is injective so that it is an isomorphism, and $A \times B \cong B \times A$.
+    \end{sol}
+    \item Let $A$, $B$, and $C$ be groups and let $G = A \times B$ and $H = B \times C$. Prove that $G \times C \cong A \times H$.
+    \begin{sol}
+        Let $\phi : G \times C \to A \times H$ be defined as $\phi((a, b), c) = (a, (b, c))$. This is easily checked to be an isomorphism.
+    \end{sol}
+    \item Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$ (cf. Exercise 26 of Section 1). Prove that if $\phi$ is injective then $G \cong \phi(G)$.
+    \begin{sol}
+        Pick $\phi(a), \phi(b) \in \phi(G)$. Note that $ab \in G$, since $G$ is a group. Then $\phi(a)\phi(b) = \phi(ab) \in \phi(G)$ so that $\phi(G)$ is closed under the operation of $H$. Moreover, $\phi(a)\inv \in \phi(G)$ since $\phi(a)\inv = \phi(a\inv) \in \phi(G)$ because $a\inv \in G$. Then $\phi(G)$ is a subgroup of $H$. 
+        
+        Suppose now that $\phi$ is injective, and define $\psi : G \to \phi(G)$ as $\psi(g) = \phi(g)$. Let $g, h \in G$. Then $\psi(gh) = \phi(gh) = \phi(g)\phi(h) = \psi(g)\psi(h)$ so that $\psi$ is a homomorphism. Moreover, if $g, h$ are such that $\psi(g) = \psi(h)$, then $\phi(g) = \phi(h)$. Since $\phi$ is injective, then $g = h$ so that $\psi$ is also injective. Moreover, for any $\phi(g) \in \phi(G)$, then $\psi(g) = \phi(g)$ so that $\psi$ is surjective. Hence, $G \cong \phi(G)$.
+    \end{sol}
+    \item Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \emph{kernel} of $\phi$ to be $\{ g \in G \mid \phi(g) = 1_H \}$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
+    \begin{sol}
+        For the remainder of this text, let $\ker(\phi)$ denote the kernel of $\phi$. Note that if $x, y \in \ker(\phi)$, then $\phi(xy) = \phi(x)\phi(y) = 1_H1_H = 1_H$ so that $xy \in \ker(\phi)$. Moreover, for some $x \in \ker(\phi)$, then $\phi(x\inv) = \phi(x)\inv = 1_H\inv = 1_h$ so that $x\inv \in \ker(\phi)$. Then $\ker(\phi)$ is a subgroup of $G$.
+        
+        Now suppose $\phi$ is injective, and pick $x \in \ker(\phi)$. Then $\phi(x) = 1_H$. However, $\phi(1_G) = 1_H$ so that $\phi(x) = \phi(1_G)$. Then $x = 1_G$. If $\ker(\phi)$ was instead trivial, suppose $\phi(x) = \phi(y)$ for some $x, y \in G$. In particular, then $\phi(x)\phi(y)\inv = 1_H$. Then $\phi(x)\phi(y\inv) = \phi(xy\inv) = 1_H$. Since identities map to each other, then $xy\inv = 1_G$, or $x = y$. Then $\phi$ is injective.
+    \end{sol}
+    \item Define a map $\pi : \r^2 \to \r$ by $\pi((x,y)) = x$. Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
+    \begin{sol}
+        Let $(a, b), (c, d) \in \r^2$. Then
+        \[\pi((a, b) + (c, d)) = \pi(a + c, b + d) = a + c = \pi(a, b) = \pi(c, d)\]
+        so that $\pi$ is a homomorphism. Moreover, if $\pi(a, b) = 0$, then $a = 0$ while $b$ varies so that
+        \[\ker(\pi) = \{(0, b) \mid b \in \r\}\qh\]
+    \end{sol}
+\end{problems}
