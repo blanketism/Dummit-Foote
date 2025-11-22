@@ -1340,4 +1340,266 @@ Let $F$ be a field and let $n \in \zp$.
         so that $\pi$ is a homomorphism. Moreover, if $\pi(a, b) = 0$, then $a = 0$ while $b$ varies so that
         \[\ker(\pi) = \{(0, b) \mid b \in \r\}\qh\]
     \end{sol}
+    \item Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$. Prove that the maps $\pi_1 : G \to A$ and $\pi_2 : G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
+    \begin{sol}
+        For $(a, b), (c, d) \in G$, then
+        \[\pi_1((a, b)(c, d)) = \pi_1(ac, bd) = ac = \pi_1(a, b)\pi_1(c, d)\]
+        and
+        \[\pi_2((a, b)(c, d)) = \pi_2(ac, bd) = bd = \pi_2(a, b)\pi_2(c, d)\]
+        Moreover, the kernels are
+        \begin{align*}
+            \ker(\pi_1) & = \{(1, b) \mid b \in B\} \\
+            \ker(\pi_2) & = \{(a, 1) \mid a \in A\} \qh
+        \end{align*}
+    \end{sol}
+    \item Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.
+    \begin{sol}
+        Let $\phi$ be the aforementioned mapping, and suppose $\phi$ is a homomorphism. Then for any $g, h \in G$, we have
+        \[(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = (hg)\inv\]
+        Since inverses are unique, then $gh = hg$, and $G$ is abelian. If instead $G$ was abelian, then
+        \[\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h)\]
+        so that $\phi$ is a homomorphism.
+    \end{sol}
+    \item Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is abelian.
+    \begin{sol}
+        Let $\phi$ be the mapping, and suppose it it is a homomorphism. Then for $g, h \in G$, we have
+        \[(gh)^2 = \phi(gh) = \phi(g)\phi(h) = g^2h^2\]
+        Then $ghgh = gghh$. Left canceling the $g$ and right canceling the $h$, we obtain $hg = gh$ so that $G$ is abelian. If $G$ is abelian, then
+        \[\phi(gh) = (gh)^2 = g^2h^2 = \phi(g)\phi(h)\]
+        so that $\phi$ is a homomorphism.
+    \end{sol}
+    \item Let $G = \{ z \in \mathbb{C} \mid z^n = 1 \text{ for some } n \in \z^+ \}$. Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
+    \begin{sol}
+        Recall the polar form of a complex number $z = r(\cos\theta + i\sin\theta) = re^{i\theta}$ for modulus $r$ and argument $\theta$. For every $z \in G$, then $r = 1$, so elements of $G$ taken on the form $e^{i\theta}$. Moreover, because $z^n = 1$, then $e^{in\theta} = 1$. Lastly, the polar representation of 1 is given by $e^{i2\pi m}$ for some $m \in \z$. Equating the two exponents, or $in\theta = i2\pi m$, then $\theta = 2\pi m/n$, which means we can reformulate $G$ as the following:
+        \[G = \{e^{i2\pi m/n} \in \c \mid m \in \z, n \in \zp\}\]
+        To show that $\phi$ is a homomorphism, we may fall back to the original formulation of $G$: for any $z, w \in G$, then
+        \[\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)\]
+        Now suppose $w \in G$. Then $w = e^{i2\pi m/n}$. Since $z = e^{i2\pi m/nk} \in G$ because $nk \in \zp$, then $z^k = (e^{i2\pi m/nk})^k = e^{i2\pi m/n} = w$ so that $\phi(z) = w$, and $\phi$ is surjective. Moreover, it is not an isomorphism because $\ker(\phi)$ consists of the elements $z \in G$ such that $z^k = (e^{i2\pi m/n})^k = 1$. It follows that such $z$ have a polar representation of $n = k$, or more explicitly:
+        \[\ker(\phi) = \{e^{i2\pi m/k} \mid m = 0, 1, \ldots, k - 1\}\]
+        where $m$ is cut off after $m = k - 1$ since any two elements of $\ker(\phi)$ are equivalent when they dif and only ifer by a factor of $2\pi$.
+    \end{sol}
+    \item Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$. Prove that $\aut(G)$ is a group under function composition (called the \emph{automorphism group} of $G$ and the elements of $\aut(G)$ are called \emph{automorphisms} of $G$).
+    \begin{sol}
+        Function composition is associative in general so that it is associative in $\aut(G)$. Since a composition of bijections is also a bijection, it suffices to check that a composition of homomorphisms is a homomorphisms. In particular, let $\phi, \psi \in \aut(G)$. Then for any $g, h \in G$, we have
+        \[(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g) (\phi \circ \psi)(h)\]
+        so that a composition of isomorphisms is also an isomorphism, and $\aut(G)$ is closed under function composition. The identity map $1 : G \to G$ is trivially in $\aut(G)$ so that it has identity. Lastly, for any $\phi \in \aut(G)$, consider the bijective inverse $\phi\inv$. Then for any $g, h \in G$, there are elements $a, b \in G$ such that $\phi(a) = g$ and $\phi(b) = h$. Then
+        \[\phi\inv(gh) = \phi\inv(\phi(a)\phi(b)) = \phi\inv(\phi(ab)) = ab = \phi\inv(g)\phi\inv(h)\]
+        so that $\aut(G)$ is closed under inverses. Then $\aut(G)$ is a group under function composition.
+    \end{sol}
+    \item Prove that for each fixed nonzero $k \in \q$ the map from $\q$ to itself defined by $q \mapsto kq$ is an automorphism of $\q$.
+    \begin{sol}
+        Suppose $\phi(q) = \phi(r)$ for $q, r \in \q$. Then $kq = kr$, or $q = r$ so that $\phi$ is injective. Similarly, for any $q \in \q$, then $\phi(q/k) = k(q/k) = q$ so that $\phi$ is surjective. Lastly,
+        \[\phi(q + r) = k(q + r) = kq + kr = \phi(q) = \phi(r)\]
+        and $\phi$ is a homomorphism. Then it is an automorphism of $\q$.
+    \end{sol}
+    \item Let $A$ be an abelian group and fix some $k \in \z$. Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself. If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
+    \begin{sol}
+        Suppose $a, b \in A$. Then
+        \[\phi(ab) = (ab)^k = a^kb^k = \phi(a)\phi(b)\]
+        so that it is a homomorphism of $A$. Moreover, if $k = -1$, refer to Exercise 17.
+    \end{sol}
+    \item Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$. If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \emph{fixed point free} of order 2). [Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.]
+    \begin{sol}
+        To show that every $g \in G$ is of the form $x\inv\sigma(x)$ for some $x \in G$, the natural choice is to show that $\phi : G \to G$ defined by $\phi(g) = g\inv\sigma(g)$ is a bijective function. To that end, suppose $g, h \in G$ such that $\phi(g) = \phi(h)$. Then $g\inv \sigma(g) = h\inv \sigma(h)$. Since $\sigma^2 = 1$, then $\sigma\inv = \sigma$, so that:
+        \begin{align*}
+            \phi(g) = \phi(h) & \implies g\inv \sigma(g) = h\inv \sigma(h) \\
+            & \implies \sigma(g) = gh\inv \sigma(h) \\
+            & \implies g = \sigma(gh\inv \sigma(h)) \\
+            & \implies g = \sigma(gh\inv)h \\
+            &\implies gh\inv = \sigma(gh\inv)
+        \end{align*}
+        Then $gh\inv = 1$ because $\sigma$ is fixed point free of order 2. It follows that $g = h$ so that $\phi$ is injective. Since $G$ is finite, then $\phi$ is necessarily surjective so that $\phi$ is a bijection. From this, we conclude that each $g \in G$ can be associated with some $h\inv \sigma(h)$ for $h \in G$.
+        
+        Now suppose $g \in G$. Then for some $x \in G$, we have $\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x)\inv x = (x\inv\sigma (x))\inv = g\inv$. Then for any $h \in G$, we have
+        \[\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h)\sigma(g) = \sigma(hg)\]
+        Since $\sigma \in \aut(G)$, then $gh = hg$.
+    \end{sol}
+    \item Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$. Prove that $G \cong D_{2n}$, where $n = |xy|$.
+    \begin{sol}
+        Put $t = xy$. Then $tx = xt\inv$, since $x = x\inv$ and $y = y\inv$. Moreover, $y = x\inv t = xt$ so that $x$ and $t$ generate $G$. Using the relation $tx = xt\inv$, then the elements of $G$ may be written in the form $x^it^j$ for $i \in \{0, 1\}$ and $0 \leq j < n - 1$. Since $|t| = n$, then $x^it^j$ is unique for any choice of $i$ so that $\gen t$ has unique elements. It follows that $G = \{1, t, \ldots, t^{n - 1}, x, xt, \ldots, xt^{n - 1}\}$, and $|G| = 2n$.
+        
+        Let $\phi : D_{2n} \to G$ be given by
+        \[\phi(s^ir^j) = x^it^j, \quad \text{for $i, j \in \z$ such that $i = \{0, 1\}$ and $0 \leq j < n - 1$}\]
+        It is known that every form of $D_{2n}$ is unique by the representation above so that $\phi$ will be well-defined. Moreover, the elements $x, t \in G$ satisfy the relations of $D_{2n}$, i.e., $(xt)^n = x^2 = 1$, and $tx = xt\inv$. Then $\phi$ is a homomorphism. Lastly, suppose $x^it^j \in G$. Then $\phi(s^ir^j) = x^it^j$ so that $\phi$ is surjective. Since $G$ is finite, then $\phi$ is injective, and $G \cong D_{2n}$.
+    \end{sol}
+    \item Let $n \in \z^+$, let $r$ and $s$ be the usual generators of $D_{2n}$ and let $\theta = 2\pi / n$.
+    \begin{problems}
+        \item Prove that the matrix 
+        \[
+        \begin{pmatrix}
+        \cos \theta & -\sin \theta \\
+        \sin \theta & \cos \theta
+        \end{pmatrix}
+        \]
+        is the matrix of the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
+        \item Prove that the map $\phi : D_{2n} \to \gl_2(\r)$ defined on generators by
+        \[
+        \phi(r) = 
+        \begin{pmatrix}
+            \cos \theta & -\sin \theta \\
+            \sin \theta & \cos \theta
+        \end{pmatrix}
+        \quad \text{and} \quad
+        \phi(s) = 
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        \]
+        extends to a homomorphism of $D_{2n}$ into $\gl_2(\r)$.
+        \item Prove that the homomorphism $\phi$ defined above is injective.
+    \end{problems}
+    \begin{solalph}
+        \item Take any $\vec v = (x \quad y)^T \in \r^2$. Then
+        \[
+        \begin{pmatrix}
+            \cos\theta & -\sin\theta \\
+            \sin\theta & \cos\theta
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            x\cos\theta - y\sin\theta \\
+            x\sin\theta + y\cos\theta
+        \end{pmatrix} = \vec u
+        \]
+        Note that $|\vec v| = \sqrt{x^2 + y^2}$. The distance of this vector is
+        \begin{align*}
+            |\vec u| & = \sqrt{(x\cos\theta - y\sin\theta)^2 + (x\sin\theta + y\cos\theta)^2} \\
+            & = \sqrt{(x^2\cos^2\theta - 2xy\cos\theta\sin\theta + y^2\sin^2\theta + x^2\sin^2\theta + 2xy\cos\theta\sin\theta + y^2\cos^2\theta} \\
+            & = \sqrt{x^2(\cos^2\theta + \sin^2\theta) + y^2(\cos^2\theta + \sin^2\theta)} \\
+            & = \sqrt{x^2 + y^2}
+        \end{align*}
+        so that $|\vec u| = |\vec v|$. Moreover, the angle $\theta'$ between $\vec v$ and $\vec u$ is
+        \begin{align*}
+            \cos(\theta') & = \frac{\vec v \cdot \vec u}{|\vec v||\vec u|} \\
+            & = \frac{x(x\cos\theta - y\sin\theta) + y(x\sin\theta + y\cos\theta)}{x^2 + y^2} \\
+            & = \frac{x^2\cos\theta - xy\sin\theta + xy\sin\theta + y^2\cos\theta}{x^2 + y^2} \\
+            & = \cos\theta
+        \end{align*}
+        so that $\theta' = \theta$. Then $\vec u$ is $\vec v$ rotated $\theta = 2\pi/n$ radians.
+        \item We first show that
+        \[\phi(r)^k = 
+        \begin{pmatrix}
+            \cos(k\theta) & -\sin(k\theta) \\
+            \sin(k\theta) & \cos(k\theta)
+        \end{pmatrix}\]
+        The case for $k = 1$ is clear. Supposing it holds true for some $k$, then for $k + 1$, we have
+        \begin{align*}
+            \begin{pmatrix}
+                \cos\theta & -\sin\theta \\
+                \sin\theta & \cos\theta
+            \end{pmatrix}^{k + 1} & = 
+            \begin{pmatrix}
+                \cos\theta & -\sin\theta \\
+                \sin\theta & \cos\theta
+            \end{pmatrix}^k 
+            \begin{pmatrix}
+                \cos\theta & -\sin\theta \\
+                \sin\theta & \cos\theta
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                \cos(k\theta) & -\sin(k\theta) \\
+                \sin(k\theta) & \cos(k\theta)
+            \end{pmatrix}
+            \begin{pmatrix}
+                \cos\theta & -\sin\theta \\
+                \sin\theta & \cos\theta
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                \cos(k\theta)\cos\theta - \sin(k\theta)\sin\theta & -\cos(k\theta)\sin\theta - \sin(k\theta)\cos\theta \\
+                \sin(k\theta)\cos\theta + \cos(k\theta)\sin\theta & -\sin(k\theta)\sin\theta + \cos(k\theta)\cos\theta 
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                \cos((k + 1)\theta) & -\sin((k + 1)\theta) \\
+                \sin((k + 1)\theta) & \cos((k + 1)\theta)
+            \end{pmatrix}
+        \end{align*}
+        so the result follows by induction. From this, it is clear that $\phi(r)^n = I$, since $\cos(2\pi) = 1$ and $\sin(2\pi) = 0$. Additionally, for $k = -1$, note that $\det(\phi(r)) = 1$. Then
+        \[
+        \phi(r)\inv = 
+        \begin{pmatrix}
+            \cos\theta & -(-\sin\theta) \\
+            -\sin\theta & \cos\theta
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            \cos\theta & \sin\theta \\
+            -\sin\theta & \cos\theta
+        \end{pmatrix}
+        \]
+        Moreover, $\phi(s)^2 = I$. Lastly,
+        \[\phi(s)\phi(r) = 
+        \begin{pmatrix}
+            \sin\theta & \cos\theta \\
+            \cos\theta & -\sin\theta
+        \end{pmatrix} = 
+        \phi(r)\inv\phi(s)\]
+        Since $\phi(r)^n = \phi(s)^2 = I$, and $\phi(s)\phi(r) = \phi(r)\inv\phi(s)$, i.e., the relations in $D_{2n}$ hold in $\gl_2(\r)$, then $\phi$ is a homomorphism.
+        \item Suppose $\phi(g) = I$. Then $g$ can take on two forms:
+        \begin{itemize}
+            \item If $g = r^k$, then $\phi(r)^k \neq I$ for any $k = 0, 1, \ldots, n - 1$, since $\theta = 2\pi k/n$.
+            \item If $g = sr^k$, then $\phi(s)\phi(r)^k = I$, or $\phi(s) = \phi(r)^{-k}$. Note that $\det(\phi(s)) = -1$, while $\det(\phi(r)^k) = 1$. Since $\det(\phi(s)) \neq \det(\phi(r)^{-k})$, then $\phi(s) \neq \phi(r)^{-k}$ (this follows from $A = B \implies \det(A) = \det(B)$ for any $A, B \in \gl_n(\r)$).
+        \end{itemize}
+        This shows that $\ker(\phi) = 1$, so that $\phi$ is injective.
+    \end{solalph}
+    \item Let $i$ and $j$ be the generators of $Q_8$ described in Section 5. Prove that the map $\phi$ from $Q_8$ to $\gl_2(\mathbb{C})$ defined on generators by
+    \[\phi(i) = 
+    \begin{pmatrix}
+        \sqrt{-1} & 0 \\
+        0 & -\sqrt{-1}
+    \end{pmatrix}
+    \quad \text{and} \quad
+    \phi(j) = 
+    \begin{pmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{pmatrix}
+    \]
+    extends to a homomorphism. Prove that $\phi$ is injective.
+    \begin{sol}
+        It is easy to see that
+        \[\phi(i)^2 = 
+        \begin{pmatrix}
+            \sqrt{-1} & 0 \\
+            0 & -\sqrt{-1}
+        \end{pmatrix}^2 = 
+        \begin{pmatrix}
+            -1 & 0 \\
+            0 & -1
+        \end{pmatrix} = -I
+        \]
+        and
+        \[\phi(j)^2 =
+        \begin{pmatrix}
+            0 & -1 \\
+            1 & 0
+        \end{pmatrix}^2 = 
+        \begin{pmatrix}
+            -1 & 0 \\
+            0 & -1
+        \end{pmatrix} = -I
+        \]
+        Also note that
+        \[\phi(i)\phi(j) = 
+        \begin{pmatrix}
+            \sqrt{-1} & 0 \\
+            0 & -\sqrt{-1}
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & -1 \\
+            1 & 0
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            0 & -\sqrt{-1} \\
+            -\sqrt{-1} & 0
+        \end{pmatrix}\]
+        So we may set $\phi(i)\phi(j) = \phi(k)$. We can calculate that $\phi(k)^2 = -I$. It then follows that
+        \[\phi(i)^2 = \phi(j)^2 = \phi(k)^2 = \phi(i)\phi(j)\phi(k) = \phi(-1)\]
+        Clearly these elements satisfy the same relations we found in $Q_8$ so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$. Moreover, it follows that $\phi(x) = I$ only when $x = 1 \in Q_8$ as any nonidentity element in $Q_8$ does not map to $I$. Hence, $\ker(\phi)$ is trivial and is then injective.
+    \end{sol}
 \end{problems}
