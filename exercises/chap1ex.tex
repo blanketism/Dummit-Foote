@@ -1603,3 +1603,144 @@ Let $F$ be a field and let $n \in \zp$.
         Clearly these elements satisfy the same relations we found in $Q_8$ so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$. Moreover, it follows that $\phi(x) = I$ only when $x = 1 \in Q_8$ as any nonidentity element in $Q_8$ does not map to $I$. Hence, $\ker(\phi)$ is trivial and is then injective.
     \end{sol}
 \end{problems}
+
+\subsection{Group Actions}
+
+\begin{problems}
+    \item Let $F$ be a field. Show that the multiplicative group of nonzero elements of $F$ (denoted by $F^\times$) acts on the set $F$ by $g\cdot a = g a$, where $g\in F^\times$, $a\in F$ and $ga$ is the usual product in $F$ of the two field elements (state clearly which axioms in the definition of a field are used).
+    \begin{sol}
+        Suppose $g, h \in F\unt$. Then for any $a \in A$, we have
+        \[g \cdot (h \cdot a) = g \cdot (ha) = \underbrace{g(ha) = (gh)a}_{\text{Associativity}} = (gh)\cdot a\]
+        Moreover, $1 \cdot a = 1a = a$ by definition of $1 \in F\unt$. Lastly, note that $1(0) = 1(0 + 0) = 1(0) + 1(0)$. By cancellation, then $0 = 1(0) = 1 \cdot 0$ so that all $a \in F$ is accounted for.
+    \end{sol}
+    \item Show that the additive group $\mathbb{Z}$ acts on itself by $z\cdot a = z + a$ for all $z,a\in\mathbb{Z}$.
+    \begin{sol}
+        Let $z, w \in \z$. Then
+        \[z \cdot (w \cdot a) = z \cdot (w + a) = z + (w + a) = (z + w) + a = (z + w) \cdot a\]
+        Moreover, $0 \cdot a = 0 + a = a$ so that $\cdot$ is a group action.
+    \end{sol}
+    \item Show that the additive group $\mathbb{R}$ acts on the $x,y$ plane $\mathbb{R}\times\mathbb{R}$ by $r\cdot (x,y) = (x + r, y)$.
+    \begin{sol}
+        Suppose $r, s \in \r$. Then for any $(x, y) \in \r \times \r$, we have
+        \[r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = ((x + s) + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y)\]
+        Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$ so that $\cdot$ is a group action.
+    \end{sol}
+    \item Let $G$ be a group acting on a set $A$ and fix some $a\in A$. Show that the following sets are subgroups of $G$ (cf. Exercise 26 of Section 1):
+    \begin{problems}
+        \item the kernel of the action,
+        \item $\{g\in G \mid g a = a\}$ — this subgroup is called the \emph{stabilizer} of $a$ in $G$.
+    \end{problems}
+    \begin{solalph}
+        \item Recall that $\ker(\cdot) = \{g \in G \mid g \cdot a = a \text{ for all } a \in A\}$. Suppose $g, h \in \ker(\cdot)$. Then for any $a \in A$, we have
+        \[(gh) \cdot a = g \cdot (h \cdot a) = g \cdot a = a\]
+        so that $gh \in \ker(\cdot)$. Moreover,
+        \[a = 1 \cdot a = (g \inv g) \cdot a = g\inv (g \cdot a) = g\inv \cdot a\]
+        so that $g\inv \in \ker(\cdot)$. Then $\ker(\cdot)$ is closed under the operation of $G$ and inverses so that it is a subgroup of $G$.
+        \item Let $a \in A$ be fixed, and let $H$ be as described. Note that $1 \in H$ so that it is nonempty. Suppose $g, h \in H$. Then
+        \[(gh) \cdot a = g \cdot (h \cdot a) = g \cdot a = a\]
+        so that $gh \in H$. Moreover,
+        \[a = 1 \cdot a = (g\inv g) \cdot a = g\inv \cdot (g \cdot a) = g\inv \cdot a\]
+        so that $g\inv \in H$. Then $H$ is closed under the operation of $G$ and inverses, hence it is a subgroup of $G$.
+    \end{solalph}
+    \item Prove that the kernel of an action of the group $G$ on the set $A$ is the same as the kernel of the corresponding permutation representation $G\to S_A$ (cf. Exercise 14 in Section 6).
+    \begin{sol}
+        Let $\ker(\cdot)$ be the kernel of the action and $\phi : G \to S_A$ be the permutation representation so that $\phi(g)(a) = g \cdot a$. Let $g \in \ker(\cdot)$. Then $\phi(g)(a) = g \cdot a = a$ so that $g \in \ker(\phi)$. If $g \in \ker(\phi)$, then $\phi(g) = 1 \in S_A$, or the identity permutation. It follows that $\phi(g)(a) = 1(a) = g \cdot a$ so that $g \in \ker(\cdot)$. It follows that $\ker(\cdot) = \ker(\phi)$.
+    \end{sol}
+    \item Prove that a group $G$ acts faithfully on a set $A$ if and only if the kernel of the action is the set consisting only of the identity.
+    \begin{sol}
+        Suppose $G$ acts faithfully on a set $A$, and pick $g \in \ker(\cdot)$. Then $g \cdot a = a$ for every $a \in A$. But $1 \cdot a = a$ as well. Since the action is faithful, it must be that $g = 1$ so that $\ker(\cdot) = \{1\}$.
+        
+        Suppose now that $\ker(\cdot) = \{1\}$, and pick some $g, h \in G$ such that $g \cdot a = h \cdot a$ for any $a \in A$. Then
+        \[a = (g\inv g) \cdot a = g\inv \cdot (g \cdot a) = g\inv \cdot (h \cdot a) = (g\inv h) \cdot a\]
+        so that $g\inv h \in \ker(\cdot)$. Then $g\inv h = 1$, or $g = h$. Hence, $G$ acts on $A$ faithfully.
+    \end{sol}
+    \item Prove that in Example 2 in this section the action is faithful.
+    \begin{sol}
+        Let $V$ be a vector space with a field $F$. For any $v \in V$ and $r \in F\unt$, let the group action be defined as $r \cdot v = rv$. Now suppose $r \cdot v = s \cdot v$ for some $r, s \in F\unt$. Then
+        \begin{align*}
+            \b 0 = 0 \cdot v & = a \cdot v + (-a) \cdot v \\
+            & = b \cdot v + (-a) \cdot v \\
+            & = (b + (-a)) \cdot v \\
+            & = (b - a)v
+        \end{align*}
+        Since $(b - a)v = \b0$ even for $v \neq \b 0$, it must be that $b - a = 0$, or $b = a$. Then the action is faithful.
+    \end{sol}
+    \item Let $A$ be a nonempty set and let $k$ be a positive integer with $k\le |A|$. The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
+    \[\sigma(\{a_1, \dots, a_k\}) = \{\sigma(a_1), \dots, \sigma(a_k)\}.\]
+    \begin{problems}
+        \item Prove that this is a group action.
+        \item Describe explicitly how the elements $(1\ 2)$ and $(1\ 2\ 3)$ act on the six $2$-element subsets of $\{1,2,3,4\}$.
+    \end{problems}
+    \begin{solalph}
+        \item Let $\sigma, \tau \in S_A$. Then for any cardinality $k$ subset $\{x_1, \ldots, x_k\}$ of $A$, we have
+        \begin{align*}
+            \sigma \cdot (\tau \cdot \{x_1, \ldots, x_k\}) & = \sigma \cdot \{\tau(x_1), \ldots, \tau(x_k)\} \\
+            & = \{\sigma(\tau(x_1)), \ldots, \sigma(\tau(x_k))\} \\
+            & = (\sigma \circ \tau) \cdot \{x_1, \ldots, x_k\}
+        \end{align*}
+        Moreover, $1 \cdot \{x_1, \ldots, x_k\} = \{1(x_1), \ldots, 1(x_k)\} = \{x_1, \ldots, x_k\}$. Then it is a group action.
+        \item
+        \[
+        \begin{array}{c|c|c}
+            A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
+            \hline
+            \{1, 2\} & \{2, 1\} & \{2, 3\} \\
+            \{1, 3\} & \{2, 3\} & \{2, 1\} \\
+            \{1, 4\} & \{2, 4\} & \{2, 4\} \\
+            \{2, 3\} & \{1, 3\} & \{3, 1\} \\
+            \{2, 4\} & \{1, 4\} & \{3, 4\} \\
+            \{3, 4\} & \{3, 4\} & \{1, 4\}
+        \end{array}
+        \]
+    \end{solalph}
+    \item Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses (note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are dif and only iferent even though the sets $\{1,2\}$ and $\{2,1\}$ are the same, so the sets being acted upon are dif and only iferent).
+    \begin{sol}
+        The work is similar as above, except there are 12 2-tuples as $(1, 2) \neq (2, 1)$.
+    \end{sol}
+    \item With reference to the preceding two exercises determine:
+    \begin{problems}
+        \item for which values of $k$ the action of $S_n$ on $k$-element subsets is faithful, and
+        \item for which values of $k$ the action of $S_n$ on ordered $k$-tuples is faithful.
+    \end{problems}
+    \begin{solalph}
+        \item for $k = |A|$, the action is not faithful: if there exist a subset $S \subseteq A$ such that $|S| = |A|$, then $S = A$. Then if we have any distinct permutations $\sigma, \tau \in S_A$, then $\sigma \cdot S = S = \tau \cdot S$.
+        
+        To that end, suppose we have a subset $S$ of cardinality $k$ where $1 \leq k < |A|$, and let $\sigma, \tau \in S_A$ such that $\sigma \neq \tau$. Let $A = \{a_1, \ldots, a_n\}$ such that $\sigma(a_i) \neq \tau(a_i)$ for any such $a_i$. Let $S \subset A$ have cardinality $k$ such that $(\sigma\inv \circ \tau)(a_i) \not\in S$ and $a_i \in S$, where such an element exist since $S$ is a proper subset of $A$. Then $\sigma(a_i) \not\in \sigma \cdot S$, but $\tau(a_i) \in S$ so that distinct permutations are induced on $S$. Then the action of $S_A$ on $A$ is faithful for all $k$ where $1 \leq k < |A|$. 
+        \item Let $1 \leq k \leq |A|$ and consider the $k$-tuple $(a_1, \ldots, a_k)$. Let $\sigma, \tau \in S_A$ such that $\sigma \neq \tau$. Then there is some $a_i \in A$ where $\sigma(a_i) \neq \tau(a_i)$. Then $\sigma \cdot (a_1, \ldots, a_k) \neq \tau \cdot (a_1, \ldots, a_k)$ so that they induce dif and only iferent permutations on the $k$-tuples. Hence, the action is faithful.
+    \end{solalph}
+    \item Write out the cycle decomposition of the eight permutations in $S_4$ corresponding to the elements of $D_8$ given by the action of $D_8$ on the vertices of a square (where the vertices of the square are labeled as in Section 2).
+    \begin{sol}
+        Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\{1, 2, 3, 4\}$. Then
+        \begin{align*}
+            \phi(1) & = 1 \\
+            \phi(r) & = (1\ 2\ 3\ 4) \\
+            \phi(r^2) & = (1\ 3)(2\ 4) \\
+            \phi(r^3) & = (1\ 4\ 3\ 2) \\
+            \phi(s) & = (2\ 4) \\
+            \phi(sr) & = (1\ 4)(2\ 3) \\
+            \phi(sr^2) & = (1\ 3) \\
+            \phi(sr^3) & = (1\ 2)(3\ 4) \qh
+        \end{align*}
+    \end{sol}
+    \item Assume $n$ is an even positive integer and show that $D_{2n}$ acts on the set consisting of pairs of opposite vertices of a regular $n$-gon. Find the kernel of this action (label vertices as usual).
+    \label{ex1.7.12}
+    \begin{sol}
+        Let $P_k$ denote the pair of opposite vertices. In particular, define it as the set
+        \[P_k := \{k, k + n/2\}\]
+        Moreover, let $P = \{P_1, P_2, \ldots, P_{n/2}\}$. Define a mapping $D_{2n} \times P \to P$ as $r \cdot P_k = r(P_k) = P_m$, where $P_m$ consists of the vertices that $r$ maps the vertices in $P_k$ to.
+        
+        By definition, for any $x, y \in D_{2n}$, then $x \cdot (y \cdot P_k) = x \cdot (y(P_k)) = x(y(P_k)) = (xy)(P_k)$. Moreover, $1(P_k) = P_k$ since 1 fixes all vertices in the $n$-gon so that the mapping is a group action. Since no action in $D_{2n}$ fixes some vertices and sends others to other vertices except 1 and $r^{n/2}$, the only candidates for the kernel of this group action is the identity and the $180^\circ$ rotation, or $r^{n/2}$. Note that for $n = 2$, then $s$ and $sr^2$ are also in the kernel.
+    \end{sol}
+    \item Find the kernel of the left regular action.
+    \begin{sol}
+        See item 3 in \hyperref[defi1.7.22]{Definition 1.22} for the solution.
+    \end{sol}
+    \item Let $G$ be a group and let $A = G$. Show that if $G$ is non-abelian then the maps defined by  
+    \[ g \cdot a = ag \quad \text{for all } g,a\in G \]
+    do not satisfy the axioms of a (left) group action of $G$ on itself.
+    \begin{sol}
+        Since $G$ is non-abelian, there exists $g, h \in G$ such that $gh \neq hg$. Assuming that the above is a group action, then it must be that
+        \[g \cdot (h \cdot a) = g \cdot (ah) = (ah)g = a(hg) = a(gh) = (gh) \cdot a\]
+        for any $a \in A$. Left cancelling results in $hg = gh$, contradicting that $G$ is non-abelian.
+    \end{sol}
+\end{problems}
