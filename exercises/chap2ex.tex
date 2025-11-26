@@ -1,0 +1,96 @@
+\section{Subgroups}
+
+\subsection{Definitions and Examples}
+
+\begin{problems}
+    \item In each of (a)--(e) prove that the specified subset is a subgroup of the given group:
+    \begin{problems}
+        \item the set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition)
+        \item the set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication)
+        \item for fixed $n \in \mathbb{Z}^+$ the set of rational numbers whose denominators divide $n$ (under addition)
+        \item for fixed $n \in \mathbb{Z}^+$ the set of rational numbers whose denominators are relatively prime to $n$ (under addition)
+        \item the set of nonzero real numbers whose square is a rational number (under multiplication)
+    \end{problems}
+    \begin{sol}
+        Let $G$ be the group in question and let $H$ be the set that we are trying to prove is a subgroup of $G$.
+        \begin{problems}
+            \item Clearly $0 = 0 + 0i \in H$ so that $H$ is nonempty. Suppose $a + ai, b + bi \in H$. Then $a - b \in \r$ so that $(a + ai) - (b + bi) = (a - b) + (a - b)i \in H$ so that $H \leq G$.
+            \item Since $\abs 1 = 1$, then $1 \in H$ so that it is nonempty. Suppose $z, w \in H$. Note that $\abs{w\inv} = 1$ since $\abs{w\inv} = \abs{\bar w}/\abs {w}^2 = 1/1 = 1$. Then
+            \[\abs{zw\inv} = \abs z \abs{w\inv} = (1)(1) = 1\]
+            so that $zw\inv \in H$. Then $H \leq G$.
+            \item Let $n \in \zp$ be fixed. Since $0 = 0/k$ where $k \mid n$, then $0 \in H$ so that it is nonempty. Suppose $a/b, c/d \in H$, where $(a, b) = (c, d) = 1$, and $br = ds = n$ for $r, s \in \z$. Then
+            \[\frac ab - \frac cd = \frac{ar}n - \frac{cs}n = \frac{ar - bs}n\]
+            After reduction, the denominator will still be a divisor of $n$, so $a/b - c/d \in H$, and $H \leq G$.
+            \item Fix $n \in \zp$, and note that $0= 0/1 \in H$ so that $H$ is nonempty. Suppose $a/b, c/d \in H$ such that $(b, n) = (d, n) = 1$. For any prime $p$ such that $p \mid n$, then $p \nmid b$ and $p \nmid d$. Then
+            \[\frac ab - \frac cd = \frac{ad - bc}{bd}\]
+            Consider $x = (bd, n)$. Then $p \nmid x$, for otherwise $p \mid bd$ implying that $p \mid b$ or $p \mid d$. Then $x = 1$, and $a/b - c/d \in H$ so that $H \leq G$.
+            \item Since $1 = 1^2 = 1/1 \in H$, then $H$ is nonempty. Suppose $a, b \in H$. Then $a^2, b^2 \in \q$ so that
+            \[\left(\frac ab\right)^2 = \frac{a^2}{b^2} \in H\]
+            then $a/b \in H$, and $H \leq G$. \qh
+        \end{problems}
+    \end{sol}
+    \item In each of (a)--(e) prove that the specified subset is \emph{not} a subgroup of the given group:
+    \begin{problems}
+        \item the set of $2$-cycles in $S_n$ for $n \ge 3$
+        \item the set of reflections in $D_{2n}$ for $n \ge 3$
+        \item for $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\{x \in G \mid |x| = n\} \cup \{1\}$
+        \item the set of (positive and negative) odd integers in $\mathbb{Z}$ together with $0$
+        \item the set of real numbers whose square is a rational number (under addition)
+    \end{problems}
+    \begin{sol}
+        Let $H$ be the set in question and $G$ be the group.
+        \begin{problems}
+            \item Note that $(1\ 2), (1\ 3) \in H$, but $(1\ 2)(1\ 3) = (1\ 3\ 2) \not\in H$.
+            \item $s, sr \in H$, but $s(sr) = r \not\in H$ as $r$ is not a reflection.
+            \item Let $p \in \zp$ such that $p \mid n$. Pick $x \in H$ so that $x^{n/p} \in H$. But $|x^{n/p}| < n$, since $(x^{n/p})^p = x^n = 1$, so $H$ is not closed under the operation.
+            \item $1 \in H$, but $1 + 1 = 2 \not\in H$.
+            \item $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt3)^2 = 2 + 2\sqrt6 + 3 \not\in H$, so $\sqrt 2 + \sqrt 3 \not\in H$. \qh
+        \end{problems}
+    \end{sol}
+    \item Show that the following subsets of the dihedral group $D_8$ are actually subgroups:
+    \begin{problems}
+        \item $\{1, r^2, s, sr^2\}$
+        \item $\{1, r^2, sr, sr^3\}$
+    \end{problems}
+    \begin{solalph}
+        \item 
+        \[
+        \begin{array}{c|cccc}
+            \circ & 1 & r^2 & s & sr^2 \\
+            \hline
+            1 & 1 & r^2 & s & sr^2 \\
+            r^2 & r^2 & 1 & sr^2 & s \\
+            s & s & sr^2 & 1 & r^2 \\
+            sr^2 & sr^2 & s & r^2 & 1
+        \end{array}
+        \]
+        \item 
+        \[
+        \begin{array}{c|cccc}
+            \circ & 1 & r^2 & sr & sr^3 \\
+            \hline
+            1 & 1 & r^2 & sr & sr^3 \\
+            r^2 & r^2 & 1 & sr^3 & sr \\
+            sr & sr & sr^3 & 1 & r^2 \\
+            sr^3 & sr^3 & sr & r^2 & 1
+        \end{array}
+        \]
+        Both tables show closure, since no product is an element outside of the subset.
+    \end{solalph}
+    \item Give an explicit example of a group $G$ and an infinite subset $H$ of $G$ that is closed under the group operation but is not a subgroup of $G$.
+    \begin{sol}
+        Consider $\zp$ and $\z$ under addition. Then $|\zp| = \infty$ and $m + n \in \zp$ for any $m, n \in \zp$, but $m - n \not\in \zp$ when $m < n$. Then $\zp$ is not a subgroup of $\z$.
+    \end{sol}
+    \item Prove that $G$ cannot have a subgroup $H$ with $|H| = n - 1$, where $n = |G| > 2$.
+    \begin{sol}
+        Suppose that there did exist $H$ such that $|H| = n - 1$. By Lagrange's Theorem, then $n - 1 \mid n$. Then there exists $k$ such that $k(n - 1) = kn - k = n$, or that $n = k/(k - 1)$. Since $n > 2$, we may safely assume that $k > 2$. Since $n \not\in \zp$ for any $k > 2$, this contradicts Lagrange's Theorem.
+    \end{sol}
+    \item Let $G$ be an abelian group. Prove that $\{ g \in G \mid |g| < \infty \}$ is a subgroup of $G$ (called the torsion subgroup of $G$). Give an explicit example where this set is not a subgroup when $G$ is non-abelian.
+    \begin{sol}
+        Let $\tor(G)$ denote the torsion subgroup of $G$. Since $\abs 1 = 1$, then $1 \in \tor(G)$. Now suppose $g, h \in \tor(G)$, and put $\abs g = m$ and $\abs h = n$ for finite $m, n$. Then
+        \[(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h\inv)^n)^m = 1^n1^m = 1\]
+        so that $gh\inv \in \tor(G)$. Then $\tor(G) \leq G$.
+        
+        Now suppose $G = \aut(\r)$ and consider $\tor(G) = \{f \in \aut(\r) \mid \abs f < \infty\}$. Then $f(x) = -x$ and $g(x) = 1/x$ are both in $\tor(G)$, since $f^2(x) = g^2(x) = x$, but $f(g(x)) = -1/x \not\in \tor(G)$, since $(f \circ g)^n(x) = (-1)^nx^{(-1)^n} \neq 1$ for any $n \in \z$.
+    \end{sol}
+\end{problems}
