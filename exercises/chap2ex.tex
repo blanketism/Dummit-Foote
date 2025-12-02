@@ -443,3 +443,94 @@
         is clearly an isomorphism, so $Z(H(F)) \cong F$.
     \end{sol}
 \end{problems}
+
+\subsection{Cyclic Groups and Cyclic Subgroups}
+
+\begin{problems}
+    \item Find all subgroups of $Z_{45} = \gen x$, giving a generator for each. Describe the containments between these subgroups.
+    \begin{sol}
+        Recall that the containment relation is the following:
+        \[\gen{x^a} \leq \gen{x^b} \iff (b, 45) \mid (a, 45)\]
+        The subgroups of $Z_{45}$ are:
+        \begin{align*}
+            Z_{45} = \gen x & > \gen{x^3}, \gen{x^5}, \gen {x^9}, \gen{x^{15}}, 1 \\
+            \gen{x^3} & > \gen{x^9}, \gen{x^{15}} \\
+            \gen{x^5} & > \gen{x^{15}} \\
+            \gen{x^9} & > 1 \\
+            \gen{x^{15}} & > 1 \\
+            1 = \gen{x^0} & \qh
+        \end{align*}
+    \end{sol}
+    \item If $x$ is an element of the finite group $G$ and $\abs x = \abs G$, prove that $G = \gen x$. Give an explicit example to show that this result need not be true if $G$ is an infinite group.
+    \begin{sol}
+        For some $x \in G$ where $\abs x = \abs G = n$, then \autoref{prop2.2} says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ generates only the even integers.
+    \end{sol}
+    \item Find all generators for $\intmod[48]$.
+    \begin{sol}
+        Using \autoref{prop2.5} and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$. We then have $a = 1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47$.
+    \end{sol}
+    \item Find all generators for $\intmod[202]$.
+    \begin{sol}
+        Note that $202 = 2 \cdot 101$, which are both prime numbers. Then its generators is every number between 1 and 202, except 101 and even numbers.
+    \end{sol}
+    \item Find the number of generators for $\intmod[49000]$.
+    \begin{sol}
+        Let $\phi$ denote the Euler-$\phi$ function. Then
+        \begin{align*}
+            \phi(49000) & = \phi(2^3)\phi(5^3)\phi(7^2) \\
+            & = 2^2(2 - 1)5^2(5 - 1)7(7 - 1) \\
+            & = 16800 \qh
+        \end{align*}
+    \end{sol}
+    \item In $\intmod[48]$ write out all elements of $\gen{\bar a}$ for every $\bar a$. Find all inclusions between subgroups in $\intmod[48]$.
+    \begin{sol}
+        \begin{multicols}{2}
+        The elements of each subgroup are
+            \begin{align*}
+                \intmod[48] = \gen{\bar 1} & = \set{\bar 0, \bar 1, \bar 2, \ldots, \widebar{46}, \widebar{47}} \\
+                \gen{\bar 2} & = \set{\bar 0, \bar 2, \bar 4, \ldots, \widebar{44}, \widebar{46}} \\
+                \gen{\bar 3} & = \set{\bar 0, \bar 3, \bar 6, \ldots, \widebar{42}, \widebar{45}} \\
+                \gen{\bar 4} & = \set{\bar 0, \bar 4, \bar 8, \ldots, \widebar{40}, \widebar{44}} \\
+                \gen{\bar 6} & = \set{\bar 0, \bar 6, \widebar{12}, \ldots, \widebar{36}, \widebar{42}} \\
+                \gen{\bar 8} & = \set{\bar 0, \bar 8, \widebar{16}, \widebar{24}, \widebar{32}, \widebar{40}} \\
+                \gen{\widebar{12}} & = \set{\bar 0, \widebar{12}, \widebar{24}, \widebar{36}} \\
+                \gen{\widebar{16}} & = \set{\bar 0, \widebar{16}, \widebar{32}} \\
+                \gen{\widebar{24}} & = \set{\bar 0, \bar{24}} \\
+                \gen{\bar 0} & = \set{\bar 0}
+            \end{align*}
+            Moreover, the subgroup inclusions are
+            \begin{align*}
+                \gen{\bar 1} & \geq \gen{\bar 0}, \gen{\bar 1}, \gen{\bar 2}, \gen{\bar 3}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
+                \gen{\bar 2} & \geq \gen{\bar 0}, \gen{\bar 2}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
+                \gen{\bar 3} & \geq \gen{\bar 3}, \gen{\bar 6}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
+                \gen{\bar 4} & \geq \gen{\bar 0}, \gen{\bar 4}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
+                \gen{\bar 6} & \geq \gen{\bar 0}, \gen{\bar 6}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
+                \gen{\bar 8} & \geq \gen{\bar 0}, \gen{\bar 8}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
+                \gen{\widebar{12}} & \geq \gen{\bar 0}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
+                \gen{\widebar{16}} & \geq \gen{0}, \gen{\bar 16} \\
+                \gen{\widebar{24}} & \geq \gen{0}, \gen{\widebar{24}} \\
+                \gen{\bar 0} & \geq \gen{\bar 0}
+            \end{align*}
+        \end{multicols}
+    \end{sol}
+    \item Let $Z_{48} = \gen x$ and use the isomorphism $\intmod[48] \cong Z_{48}$ given by $\bar 1 \mapsto x$ to list all subgroups of $Z_{48}$ as computed in the preceding exercise.
+    \begin{sol}
+        The subgroups of $Z_{48}$ are $\gen x, \gen{x^2}, \gen {x^3}, \gen{x^4}, \gen{x^6}, \gen{x^8}, \gen{x^{12}}, \gen{x^{16}}, \gen{x^{24}}$, and 1.
+    \end{sol}
+    \item Let $Z_{48} = \gen x$. For which integers $a$ does the map $\phi_a$ defined by $\phi_a : \bar 1 \mapsto x^a$ extend to an isomorphism from $\intmod[48]$ to $Z_{48}$?
+    \begin{sol}
+        Let $a$ such that $(a, 48) = d > 1$, and put $b = 48/d$. Since $\phi_a$ is a homomorphism, then
+        \[\phi_a(\bar b) = \phi_a(b \cdot \bar 1) = \phi_a(\bar 1)^b = x^{ab} = (x^{48})^{a/d} = 1 = \phi_a(\bar 0)\]
+        Since $\bar 1 \in \ker(\phi_a)$, then $\phi_a$ is not injective. Now suppose we pick $a$ such that $(a, 48) = 1$. Suppose $\bar b = \bar c$ in $\intmod[48]$. Then $b - c = 48k$ for some $k \in \z$, and
+        \[\phi_a(\bar b) = \phi_a(b \cdot \bar 1) = x^{ab} = x^{ac + 48ka} = x^{ac} = \phi_a(\bar c)\]
+        so that $\phi_a$ is well-defined when $a$ is relatively prime to 48. Moreover,
+        \[\phi_a(\bar b + \bar c) = x^{a(b + c)} = x^{ab + ac} = x^{ab}x^{ac} = \phi_a(\bar b)\phi_a(\bar c)\]
+        so that $\phi_a$ is a homomorphism. Now suppose $\phi_a(\bar b) = \phi_a(\bar c)$ for $\bar b, \bar c \in \intmod[48]$. Then $x^{ab} = x^{ac}$, or $x^{a(b - c)} = 1$. Then $48 \mid a(b - c)$, and since $(a, 48) = 1$, then $48 \mid b - c$ so that $\bar b = \bar c$, and $\phi_a$ is injective. Moreover, $\abs{\intmod[48]} = \abs{Z_{48}}$ implies that $\phi_a$ is also surjective, hence it is an isomorphism.
+    \end{sol}
+    \item Let $Z_{36} = \gen x$. For which integers $a$ does the map $\psi_a$ defined by $\psi_a : \bar 1 \mapsto x^a$ extend to a \textit{well defined homomorphism} from $\intmod[48]$ into $Z_{36}$. Can $\psi_a$ ever be a surjective homomorphism?
+    \begin{sol}
+        Suppose $\bar b = \bar c$ for $\bar b, \bar c \in \intmod[48]$. Suppose $\psi_a$ is already well-defined. Then $\psi_a(\bar b) = \psi_a(\bar c)$, or $x^{ab} = x^{ac}$, which implies that $x^{a(b - c)} = 1$. Then $36 \mid a(b - c)$, but recall that $48 \mid b - c$. Then $36m = a(b - c)$ and $48n = b - c$ for $m, n \in \z$, or $36m = 48an$. If we choose $b, c$ such that $n = 1$, then this reduces to $36m = 48a$ so that $36 \mid 48a$. Equivalently, we may reduce by $(36, 48)$ so that $3 \mid 4a$. Since $3 \nmid 4$, it must be that $3 \mid a$ so that $\psi_a$ is well-defined only when $3 \mid a$. Moreover,
+        \[\psi_a(\bar b + \bar c) = x^{a(b + c)} = x^{ab}x^{ac} = \psi_a(\bar b)\psi_a(\bar c)\]
+        so that $\psi_a$ is a homomorphism. Lastly, if $\psi_a$ were to be surjective, then $x^a$ must have order 36. But by \autoref{prop2.5}, we have $\abs{x^a} = 36/(36, a)$, and $(36, a) \geq 3$ because $3 \mid a$. Hence, $\psi_a$ can never be surjective.
+    \end{sol}
+\end{problems}
