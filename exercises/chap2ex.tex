@@ -629,4 +629,102 @@
         \[\psi(x^{k + 1}) = \psi(x^kx) = h^kh = h^{k + 1}\]
         so that $\psi = \phi$ by induction.
     \end{sol}
+    \item Show that if $H$ is any group and $h$ is an element of $H$, then there is a unique homomorphism from $\z$ to $H$ such that $1 \mapsto h$.
+    \begin{sol}
+        Define the map $\phi : \z \to H$ as
+        \[\phi(n) = h^n\]
+        Then $\phi(1) = h$. Moreover, for any $s, t \in \z$, then
+        \[\phi(s + t) = h^{s + t} = h^sh^t = \phi(s)\phi(t)\]
+        so that $\phi$ is a homomorphism. Lastly, if $\psi : \z \to H$ is another homomorphism such that $\psi(1) = h$, it must satisfy $\psi(n) = \psi(n \cdot 1) = \psi(1)^n = h^n$.
+    \end{sol}
+    \item Let $p$ be a prime and let $n$ be a positive integer. Show that if $x$ is an element of the group $G$ such that $x^{p^n} = 1$, then $\abs x = p^m$ for some $m \leq n$.
+    \begin{sol}
+        If $x^{p^n} = 1$, then \autoref{prop2.3} says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
+    \end{sol}
+    \item Let $p$ be an odd prime and let $n$ be a positive integer. Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
+    \begin{sol}
+        We proceed by induction. For $n = 1$, we have the following:
+        \[(1 + p)^p = \sum_{k = 0}^p \binom pk p^k = 1 + p^2 + \sum_{k = 2}^p \binom pk p^k\]
+        where $1$ and $p^2$ are for $k = 0$ and $k = 1$ respectively. Note that for $k \geq 2$, then $\binom pk$ is divisible by $p$ because dividing by $p!$ by $(p - k)!$ results in $p(p - 1) \cdots (p - k + 1)$, and $k!$ must divide all other terms but $p$ because $p$ is prime. Then for terms $k \geq 2$, we result in $pm_kp^k$ for $k \geq 2$ where $pm_k$ denotes the expanded binomial coefficient $\binom pk$, and $p^k$ denotes the other term in the summation. For $k \geq 2$, this results in $p^{k + 1} m_k$ so that each term contains at least $p^3$ and is divisible by $p$. Thus, $(1 + p)^p \equiv 1 \bmod p$, and the base case is established. Moreover, we may write $(1 + p)^p = 1 + p^2 + M_1p^3 = 1 + p^2(1 + M_1p)$, where $M_1 \in \z$ corresponds to the rest of the summation terms with subscript 1 corresponding to $n = 1$. Now suppose it holds for some $n$, or that
+        \[(1 + p)^{p^{n - 1}} = 1 + p^n(1 + M_np)\]
+        where $M_n \in \z$ and reduces to $1 \bmod p^n$. Then for $n + 1$, we have
+        \[(1 + p)^{p^n} = (1 + p^n(1 + M_np))^p\]
+        where we set each side to the power of $p$. Using the Binomial Theorem, we have
+        \[(1 + p^n(1 + M_np))^p = \sum_{j = 0}^p \binom pj p^{nj}(1 + M_np)^j = 1 + p^{n + 1}(1 + M_np) + \sum_{j = 2}^p \binom pj p^{nj}(1 + M_np)^j\]
+        Note that for $j \geq 2$, we will have terms containing at least $p^{2n} = p^{n + 1}p^{n - 1}$ times some constant, which reduces to $0 \bmod p^{n + 1}$. Moreover, the $j = 1$ term reduces to $0 \bmod p^{n + 1}$ so that $(1 + p)^{p^n} \equiv 1 \bmod p^{n + 1}$ so that by the inductive hypothesis, we have $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$. If we put $n - 1$, then 
+        \[(1 + p)^{p^{n - 2}} = 1 + p^{n - 1}(1 + M_{n - 1}p) = 1 + p^{n - 1} + M_{n - 1}p^n\]
+        Taking this mod $p^n$, we have the left over term $1 + p^{n - 1} \neq 1$. Since any element in $\units[p^n]$ must have order that divide $p^{n - 1}(p - 1)$, we must only check powers of $p$, since $(1 + p)^k = 1 + kp + \cdots \equiv 1 \bmod p^2$ implies that $kp \equiv 0 \bmod p^2$ so that $p \mid k$. Since $p^{n - 1}$ results in 1 and $p^{n - 2}$ doesn't, it follows that $\abs{1 + p} = p^{n - 1}$.
+    \end{sol}
+    \item Let $n$ be an integer $\geq 3$. Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
+    \begin{sol}
+        Like Exercise 21, we will proceed by induction, so we analyze the base case $n = 3$. We have 
+        \[(1 + 2^2)^2 = 25 \equiv 1 \bmod 2^2\]
+        so it holds true. Suppose the relationship holds for some $n$. Before moving on to $n + 1$, we may rewrite $(1 + 2^2)^{2^{n - 2}}$ in a better form using the Binomial Theorem:
+        \[(1 + 2^2)^{2^{n - 2}} = \sum_{k = 0}^{2^{n - 2}} \binom{2^{n - 2}}k 2^{2k} = 1 + 2^n + \sum_{k = 2}^{2^{n - 2}} \frac{2^{n - 2}(2^{n - 2} - 1) \cdots (2^{n - 2} - k + 1)}{k!}2^{2k}\]
+        Evaluating the right most expression for each $k \geq 2$, we notice the following. Using the formula obtained in \hyperref[ex0.2.8]{Section 0.2, Exercise 8}, note that the largest power of 2 that $k!$ divides is $k - 1$:
+        \[\sum_{i = 1}^{\floor{\log_2(k)}} \floor*{\frac k{2^i}} \leq \sum_{i = 1}^{\floor{\log_2(k)}} \frac k{2^i} = \frac k2 + \frac k4 + \cdots < k\]
+        Moreover, this value must be an integer. Then it must be at most $k - 1$. The numerator contains at least $n - 2$ 2's, as the other terms contribute at most another 2, since they are either odd (such as $2^{n - 2} - 1$), or even (such as $2^{n - 2} - 2 = 2(2^{n - 3} - 1)$. Therefore, there are at least $n - 2$ 2's in the numerator. Coupling with the $2^{2k}$ term, there are $2k$ more 2's in the numerator as well. Counting all of these, we have $n - 2 + 2k - (k - 1) = n + k - 1$. Since we are considering only $k \geq 2$, then $n + k - 1 \geq n + 2 - 1 = n + 1 > n$ so that each term for $k \geq 2$ contains at least $2^n$. We may then rewrite the binomial expansion as
+        \[(1 + 2^2)^{2^{n - 2}} = 1 + M_n2^n\]
+        where $M_n$ is the associated constant for the case $n$ after factoring out $2^n$ out of each term in the summation $k = 1$ onward. Then for $n + 1$, we see that
+        \[(1 + 2^2)^{2^{n + 1 - 2}} = (1 + M_n2^n)^2 = 1 + M_n2^{n + 1} + M_n^2 2^{2n} = 1 + 2^n(2M_n + 2^nM_n^2) \equiv 1 \bmod 2^n\]
+        so that the result holds by the inductive hypothesis. Moreover, if we put $n - 1$ in the hypothesis, then
+        \[(1 + 2^2)^{2^{n - 3}} = 1 + M_n2^{n - 1} \not\equiv 1 \bmod 2^n\]
+        Using similar reasoning as in Exercise 21, we need only check powers of 2. Moreover, we do not need to check $2^{n - 1}$, because $5 \equiv 1 \bmod 4$, and if $x \equiv 1 \bmod 4$, this covers half of the order of $2^{n - 1}$, which is $2^{n - 2}$ (the other half is seen by some $x \equiv 3 \bmod 4$). Since $2^{n - 2}$ results in $1 \bmod 2^n$ and $2^{n - 3}$ does not, it follows that 5 has order $2^{n - 2}$ in $\units[2^n]$.
+    \end{sol}
+    \item Show that $\units[2^n]$ is not cyclic for any $n \ge 3$. [Find two distinct subgroups of order 2.]
+    \begin{sol}
+        By \autoref{theo2.7}, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic. However,
+        \[(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^{n}\]
+        and
+        \[(2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n\]
+        Since $n \geq 3$, then $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$. Hence, it cannot be cyclic.
+    \end{sol}
+    \item Let $G$ be a finite group and let $x \in G$.
+    \begin{problems}
+        \item Prove that if $g \in N_G(\gen x)$ then $gxg\inv = x^a$ for some $a \in \z$.
+        \item Prove conversely that if $gxg\inv = x^a$ for some $a \in \z$ then $g \in N_G(\gen x)$. [Show first that $gx^kg\inv = (gxg\inv)^k = x^{ak}$ for any integer $k$ so that $g\gen xg\inv \leq \gen x$. If $x$ has order $n$, show that the elements $gx^ig\inv, i = 0, 1, \ldots, n - 1$ are distinct, so that $\abs{g \gen xg\inv} = \abs{\gen x} = n$ and conclude that $g\gen xg\inv = \gen x$.]
+    \end{problems}
+    Note that this cuts down some of the work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.\
+    \begin{solalph}
+        \item Since $g \in N_G(\gen x)$, then $g\gen x g\inv = \gen x$ so that $gxg\inv \in \gen x$. Then $gxg\inv = x^a$ for some $a \in \z$.
+        \item We first prove $gx^kg\inv = (gxg\inv)^k$ for any $k \in \z$. $k = 0$ and $k = 1$ is trivial, while $(gxg\inv)\inv = gx\inv g\inv$ so that proving the result for positive integers will hold true for all integers. To that end, suppose $(gxg\inv)^k = gx^kg\inv$. Then
+        \[(gxg\inv)^{k + 1} = (gxg\inv)^k(gxg\inv) = gx^{k + 1}g\inv\]
+        so that it holds true by induction. Now if $y \in g\gen xg\inv$, then there is some $m \in \z$ such that $y = gx^mg\inv = x^{am}$ so that $g\gen x g\inv \leq \gen x$. Moreover, we know that conjugation is an isomorphism so that $|gxg\inv| = \abs x$. Then $|g\gen x g\inv| = \abs{\gen x}$ so that $g\gen xg\inv = \gen x$.
+    \end{solalph}
+    \item Let $G$ be a cyclic group of order $n$ and let $k$ be an integer relatively prime to $n$. Prove that the map $x \mapsto x^k$ is surjective. Use Lagrange's Theorem to prove that the same is true for any finite group of order $n$. (For such $k$ each element has a $k$th root in $G$. It follows from Cauchy's Theorem in Section 3.2 that if $k$ is not relatively prime to the order of $G$ then the map $x \mapsto x^k$ is not surjective.)
+    \begin{sol}
+        Fix $k \in \z$ such that $(k, n) = 1$, where $\abs G = n$. Then there exist $a, b \in \z$ such that $ak + bn = 1$. Pick some $g \in G$, where we note that $g^n = 1$ since $G$ is cyclic with order $n$. Then
+        \[\phi(g^a) = g^{ak} = g^{1 - bn} = g(g^n)^{-b} = g\]
+        so that $\phi$ is surjective.
+    \end{sol}
+    \item Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
+    \[\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n\]
+    \begin{problems}
+        \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
+        \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \bmod n$.
+        \item Prove that \textit{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
+        \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an abelian group of order $\phi(n)$).
+    \end{problems}
+    \begin{solalph}
+        \item Suppose $\sigma_a \in \aut(Z_n)$, and put $d = (n, a)$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$. If $Z_n = \gen x$, then
+        \[\sigma_a(x^s) = x^{as} = x^{dst} = x^{nt} = 1 = \sigma_a(1)\]
+        If $x^s \neq 1$, then $\sigma_a \not\in \aut(Z_n)$ as it would have a non-trivial kernel. It must be that $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
+        
+        Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
+        \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]
+        for some $x, y \in Z_n$. Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
+        \item Let $Z_n = \gen x$. If $\sigma_a = \sigma_b$, then $\sigma_a(x) = \sigma_b(x)$. In particular, $x^a = x^b$, or $x^{a - b} = 1$. By \autoref{prop2.3}, then $n \mid (a - b)$ or $a \equiv b \bmod n$.
+        
+        If $a \equiv b \bmod n$, then there is some $c \in \z$ such that $a = b + cn$. Then for any $x^m \in Z_n$, we have
+        \[\sigma_a(x^m) = x^{am} = x^{(b + cn)m} = x^{bm + cnm} = x^{bm}(x^n)^{cm} = x^{bm} = \sigma_b(x^m)\]
+        so that $\sigma_a = \sigma_b$.
+        \item Let $Z_n = \gen x$ again, and suppose $\phi \in \aut(Z_n)$ where $\phi(x) = x^k$ for some $k \in \z$. Then for any $x^m \in Z_n$, we have
+        \[\phi(x^m) = \phi(x)^m = x^{km} = \sigma_k(x^m)\]
+        so that $\phi = \sigma_k$.
+        \item It is clear for any $x^m \in Z_n$ that
+        \[\sigma_a(\sigma_b(x^m)) = \sigma_a(x^{bm}) = x^{abm} = \sigma_{ab}(x^m)\]
+        so that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Part (a) shows that $\bar a \in \units$ if and only if $\sigma_a \in Z_n$, so we may define the map
+        \[\psi : \units \to \aut(Z_n) \quad \text{where} \quad \bar a \mapsto \sigma_a\]
+        Moreover, the ``only if'' direction in part (b) shows that $\psi$ is well-defined, and the ``if'' direction shows that $\psi$ is injective. Also, part (c) shows that $\psi$ is surjective, hence $\units \cong \aut(Z_n)$.
+    \end{solalph}
 \end{problems}
