@@ -886,4 +886,59 @@
         
         Suppose that $H = \gen{x^p}$ for prime $p \mid n$. If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$. Since $p$ is prime, then either $d = 1$ or $p$. If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$. If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$. It follows that $H$ is maximal.
     \end{solalph}
+    \item This is an exercise involving Zorn's Lemma. Prove that every nontrivial finitely generated group possesses maximal subgroups.  
+    Let $G$ be a finitely generated group, say $G=\langle g_1, g_2, \ldots, g_n\rangle$, and let $\mathcal{S}$ be the set of all proper subgroups of $G$.  
+    Then $\mathcal{S}$ is partially ordered by inclusion. Let $\mathcal{C}$ be a chain in $\mathcal{S}$.
+    \begin{problems}
+        \item Prove that the union $H$ of all the subgroups in $\mathcal{C}$ is a subgroup of $G$.
+        \item Prove that $H$ is a proper subgroup.  
+        \item Use Zorn's Lemma to show that $\mathcal{S}$ has a maximal element (which is, by definition, a maximal subgroup).
+    \end{problems}
+    \begin{solalph}
+        \item Let $\cc \subseteq \ss$ be a chain. Put
+        \[H = \bigcup_{K \in \cc}K\]
+        Since at least one subgroup is in $\cc$ and subgroups are nonempty, then $\cc$ is nonempty. Suppose $g, h \in H$. Then $g \in K_1$ and $h \in K_2$ for some $K_1, K_2 \in \cc$ such that $K_1 \leq K_2$ or $K_2 \leq K_1$, or both. Without loss of generality, suppose $K_1 \leq K_2$. Then $g \in K_2$ as well so that $gh\inv \in K_2 \subseteq H$. Then $H \leq G$.
+        \item If $H$ was not a proper subgroup, then $H$ must contain all generators $g_i$. Associate each generator with a (not necessarily distinct) subgroup $K_i$ so that $g_i \in K_i$ for every $1 \leq i \leq n$. Since $\cc$ is a chain, then we may order the subgroups such that $K_j \leq K_{j + 1}$ for all $1 \leq j \leq n - 1$. It follows that $K_n$ contains every generator $g_i$ so that $K_n = G$, contradicting that $\cc$ is a chain of proper subgroups of $G$. 
+        \item Because $G$ is nontrivial, then $\set 1 \in \ss$ so that $\ss$ is nonempty. Moreover, $H \in \ss$ by the previous part, and for any $K \in \cc$, we have $K \leq H$ so that $H$ is an upper bound for $\cc$. Then every chain in $\ss$ has an upper bound, so by Zorn's Lemma, $\ss$ must have a maximal element.
+    \end{solalph}
+    \item Let $p$ be a prime and let $Z = \{z\in \mathbb{C} \mid z^{p^n}=1 \text{ for some } n\in \mathbb{Z}^+\}$ (so $Z$ is the multiplicative group of all $p$-power roots of unity in $\mathbb{C}$). For each $k\in \mathbb{Z}^+$ let $H_k = \{z\in Z \mid z^{p^k}=1\}$ (the group of $p^k$th roots of unity).  
+    Prove:
+    \begin{problems}
+        \item $H_k \le H_m$ if and only if $k\le m$.
+        \item $H_k$ is cyclic for all $k$.
+        \item Every proper subgroup of $Z$ equals $H_k$ for some $k$.  
+        In particular, every proper subgroup of $Z$ is finite and cyclic.
+        \item $Z$ is not finitely generated.
+    \end{problems}
+    \begin{solalph}
+        \item Note that $|H_k| = p^k$ for any $k$ as there are exactly $p^k$ roots of unity. Now, if $H_k \leq H_m$, then $p^k \mid p^m$ by Lagrange's Theorem. Then $p^k \leq p^m$, or $k \leq m$ since $p > 0$.
+        
+        If $k \leq m$, then $p^k \leq p^m$. In particular, $p^k \mid p^m$. Then for any $z \in H_k$, we have
+        \[z^{p^m} = (z^{p^k})^{p^{m - k}} = 1\]
+        so that $z \in H_m$. Then $H_k \leq H_m$.
+        \item Let $\theta = e^{2\pi i/p^k}$. Note that $\gen\theta$ has order $p^k$, and $\gen\theta \subseteq H_k$. Now for some $z \in H_k$, we have $z = e^{2\pi ix/p^k}$ for some $0 \leq x < p^k$. Then $z = (e^{2\pi i/p^k})^x \in \gen\theta$ so that $\gen\theta = H_k$.
+        \item Let $H$ be a proper subgroup of $Z$. Note that every element in $Z$ has order $p^i$ for some $i \in \zp$, so elements of $H$ will have similar orders. Define the set
+        \[S = \set{n \in \zp \mid \abs h = p^n \text{ for some $h \in H$}}\]
+        so that $S$ is the set of integers $n$ such that $H$ contains a $p^n$--th root of unity. Moreover, $H$ is trivially nonempty if we define $H_0 = \{z \in Z \mid z^{p^0} = z = 1\}$ so that the trivial proper subgroup $\set 1$ of $Z$ allows $1 \in H$.
+        
+        Suppose now that $S$ is infinite. For any $n \in \zp$, there exists $h \in H$ and $m \in \zp$ such that $\abs h = p^m > p^n$, for otherwise it would be that every $h \in H$ has order $\abs h \leq p^n$, meaning that $n$ is an upper bound for $S$. Then $\abs h = p^m$ so that $H_m = \gen h$, and $H_m \leq H$. Since $H_n \leq H_m$ for every $n \in \zp$, then
+        \[Z = \bigcup_{n \in \zp} H_n \subseteq H\]
+        which shows $Z \leq H$. But $H \leq Z$, hence $Z = H$, which contradicts that $Z = H$. It must be that $S$ is finite, so it has some maximal element $s$. Because $s \in S$, then there is $h_0 \in H$ where $\abs{h_0} = p^s$ so that $H_s = \gen{h_0} \leq H$. Suppose $h \in H$ with $\abs h = p^k$ for some $k \in \zp$. Then $k \in S$ where $k \leq s$ so that $H_k \leq H_s$. Since $h \in H_k$, then $h \in H_s$ so $H \leq H_s$. Hence, $H = H_s$.
+        \item Put $Z = \gen{z_1, z_2, \ldots, z_n}$ for some $n \in \zp$ such that $\abs{z_i} = p^{x_i}$. Let $x = \max(x_1, x_2, \ldots, x_n)$. Then $z_i \in H_x$ for every $1 \leq i \leq n$ so that $Z \leq H_x$. But recall that $Z$ comprises every $p$-power roots of unity so that $H_x \leq H_x$, contradicting part (a). It must be that $Z$ is infinitely generated.
+    \end{solalph}
+    \item A nontrivial abelian group $A$ (written multiplicatively) is called \emph{divisible} if for each element $a\in A$ and each nonzero integer $k$ there is an element $x\in A$ such that $x^k=a$.  
+    \begin{problems}
+        \item Prove that the additive group of rational numbers $\mathbb{Q}$ is divisible.
+        \item Prove that no finite abelian group is divisible.
+    \end{problems}
+    \begin{solalph}
+        \item Suppose $p/q \in \q$. Then $(p/qn)n = p/q$, where $p/qn \in \q$.
+        \item Suppose we have a finite abelian group $G$ with $\abs G = n$. Pick some nonidentity $g \in G$. Then there is no such $h \in $ where $h^n = g$, since $h^n = 1$.
+    \end{solalph}
+    \item Prove that if $A$ and $B$ are nontrivial abelian groups, then $A\times B$ is divisible if and only if both $A$ and $B$ are divisible.
+    \begin{sol}
+        Suppose $A \times B$ is divisible, and let $a \in A, b \in B$, and $k \in \zp$. Then there exists $(c, d) \in A \times B$ such that $(c, d)^k = (c^k, d^k) = (a, b)$. But then $c^k = a$ and $d^k = b$ so that $A$ and $B$ are divisible.
+        
+        If $A$ and $B$ are both divisible, pick $(a, b) \in A \times B$ and let $k \in \zp$. Then there exists $c \in A$ and $d \in B$ such that $c^k = a$ and $d^k = b$. Then $(c, d)^k = (c^k, d^k) = (a, b)$ so that $A \times B$ is divisible.
+    \end{sol}
 \end{problems}
