@@ -942,3 +942,119 @@
         If $A$ and $B$ are both divisible, pick $(a, b) \in A \times B$ and let $k \in \zp$. Then there exists $c \in A$ and $d \in B$ such that $c^k = a$ and $d^k = b$. Then $(c, d)^k = (c^k, d^k) = (a, b)$ so that $A \times B$ is divisible.
     \end{sol}
 \end{problems}
+
+\subsection{The Lattice of Subgroups of a Group}
+
+\begin{problems}
+    \item Let $H$ and $K$ be subgroups of $G$. Exhibit all possible sublattices which show only $G, 1, H, K$ and their joins and intersections. What distinguishes the different drawings?
+    \begin{sol}
+        \begin{multicols}{2}
+            If $H$ and $K$ are distinct with nontrivial intersection and properly contained in their join, then we have the following lattice:
+            \begin{center}
+                \begin{tikzpicture}[every node/.style=on grid]
+                    \node (g) at (0, 0) {$G$};
+                    \node (hk) [below= of g] {$\gen{H, K}$};
+                    \node (h) [below left=of hk] {$\gen H$};
+                    \node (k) [below right=of hk] {$\gen K$};
+                    \node (huk) [below right=of h] {$H \cap K$};
+                    \node (1) [below=of huk] {1};
+    
+                    \draw (g) -- (hk) -- (h) -- (huk) -- (1);
+                    \draw (huk) -- (k) -- (hk);
+                \end{tikzpicture}
+            \end{center}
+            Remaining scenarios include if $H = K$ or if $H \leq K$ (or the other way), in which case $\gen{H, K} = H \cap K$ or $\gen{H, K} = H$ and $H \cap K = K$ respectively:
+            \begin{center}
+                \begin{tikzpicture}[every node/.style=on grid]
+                    \node (g) at (0, 0) {$G$};
+                    \node (hek) [below=of g] {$H = K$};
+                    \node (1) [below=of hek] {1};
+    
+                    \draw (1) -- (hek) -- (g);
+    
+                    \node (g2) at (3, 0) {$G$};
+                    \node (k) [below=of g2] {$K$};
+                    \node (h) [below=of k] {$H$};
+                    \node (1) [below=of h] {1};
+    
+                    \draw (1) -- (h) -- (k) -- (g2);
+                \end{tikzpicture}
+            \end{center}
+            In further scenarios, we may have that some of the groups are trivial. \qh
+        \end{multicols}
+    \end{sol}
+    \item In each of (a) to (d) list all subgroups of $D_{16}$ that satisfy the given condition.
+    \begin{problems}
+        \item Subgroups that are contained in $\gen{sr^2, r^4}$
+        \item Subgroups that are contained in $\gen{sr^7, r^4}$
+        \item Subgroups that contain $\gen{r^4}$
+        \item Subgroups that contain $\gen s$.
+    \end{problems}
+    \begin{solalph}
+        \item $\gen{sr^2, r^4}, \gen {sr^6}, \gen{sr^2}, \gen{r^4}, 1$.
+        \item Note $sr^7 = sr^3$, so $\gen{sr^3, r^4}, \gen{r^4}, \gen{sr^3}, \gen{sr^7}, 1$.
+        \item $\gen{r^4}, \gen{sr^2, r^4}, \gen{s, r^4}, \gen{r^2}, \gen{sr^3, r^4}, \gen{sr^5, r^4}, \gen{s, r^2}, \gen r, \gen{sr, r^2}, D_{16}$.
+        \item $\gen s, \gen{s, r^4}, \gen{s, r^2}, D_{16}$.
+    \end{solalph}
+    \item Show that the subgroup $\gen{s, r^2}$ of $D_8$ is isomorphic to $V_4$.
+    \begin{sol}
+        Note $V_4 = \set{1, a, b, c}$ and $\gen{s, r^2} = \set{1, s, r^2, sr^2}$, and that both groups are abelian and of order 4. Define the mapping $\phi : \gen{s, r^2} \to V_4$ given by
+        \[\phi(1) = 1, \quad \phi(s) = a, \quad \phi(r^2) = b, \quad \phi(sr^2) = c\]
+        To check $\phi$ is a homomorphism, note that it is sufficient to check the squares of all elements and all pairs of elements:
+        \begin{align*}
+            \phi(s^2) & = \phi(1) = 1 = c^2 = \phi(s)^2 \\
+            \phi(sr^2) & = c = ab = \phi(s)\phi(r^2) \\
+            \phi(r^4) & = \phi(1) = 1 = b^2 = \phi(r^2)^2 \\
+            \phi(ssr^2) & = \phi(r^2) = b = ac = \phi(s)\phi(sr^2) \\
+            \phi((sr^2)^2) & = \phi(1) = 1 = c^2 = \phi(sr^2)^2 \\
+            \phi(r^2sr^2) & = \phi(s) = a = bc = \phi(r^2)\phi(sr^2)
+        \end{align*}
+        so that $\phi$ is indeed a homomorphism. This is necessarily bijective so that $\gen{s, r^2} \cong V_4$.
+    \end{sol}
+    \item Use the given lattice to find all pairs of elements that generate $D_8$ (there are 12 pairs).
+    \begin{sol}
+        Note that $D_8 = \gen{s, r}$. Moreover, $s \neq rs$, and $r \in \gen{s, rs}$ so that $\gen{s, rs} = D_8$. Since $r = r^3$, we also have $\gen{s, r^3} = D_8$. We may also replace the reflection $s$ with $sr^2$, since combinations of a reflection with an odd rotation and a reflection with an even rotation contain $r$ and thus generates $D_8$. It follows that the pairs of elements that generate $D_8$ are:
+        \[\gen{s, r}, \gen{s, r^3}, \gen{s, rs}, \gen{s, r^3s}, \gen{r^2s, r}, \gen{r^2s, r^3}, \gen{r^2s, rs}, \gen{r^2s, r^3s}, \gen{r, rs}, \gen{r^3, rs}, \gen{r, r^3s}, \gen{r^3, r^3s} \qh\]
+    \end{sol}
+    \item Use the given lattice to find all elements $x \in D_{16}$ such that $D_{16} = \gen{x, s}$ (there are 8 such elements $x$).
+    \begin{sol}
+        Note that $\gen r= \gen{r^3} = \gen{r^5} = \gen{r^7}$. We then pair each generator with an $s$ so that we obtain just the rotation to then generate $D_{16}$: $x = r, r^3, r^5, r^7, sr, sr^3, sr^5, sr^7$.
+    \end{sol}
+    \item Use the given lattices to help find the centralizers of every element in the following groups:
+    \begin{problems}
+        \item $D_8$
+        \item $Q_8$
+        \item $S_3$
+        \item $D_{16}$.
+    \end{problems}
+    \begin{solalph}
+        \item To calculate the centralizer of an element $a$, start with the cyclic subgroup that contains $a$ and see if any other elements are contained in $\gen a$. For example, to calculate $C_{D_8}(rs)$, start with $\gen{rs}$ in the subgroup lattice. Since $r^4, sr^5 \in C_{D_8}(rs)$, then $C_{D_8}(rs) \leq \gen{sr^5, r^4}$. Checking the next subgroup, it follows that $r^2 \in C_{D_8}(rs)$ so that $C_{D_8}(rs) \leq \gen{rs, r^2}$. Since $r \not\in C_{D_8}(rs)$, then $C_{D_8}(rs) \neq D_{16}$ so that $C_{D_8}(rs) = \gen{rs, r^2}$. We use similar reasoning to deduce the other centralizers:
+        \begin{align*}
+            C_{D_8}(1) & = D_8 \\
+            C_{D_8}(r) & = \gen r \\
+            C_{D_8}(r^2) & = D_8 \\
+            C_{D_8}(r^3) & = \gen r \\
+            C_{D_8}(s) & = \gen{s, r^2} \\
+            C_{D_8}(rs) & = \gen{rs, r^2} \\
+            C_{D_8}(r^2s) & = \gen{s, r^2} \\
+            C_{D_8}(r^3s) & = \gen{sr, r^2}
+        \end{align*}
+        \item Note that $1, -1 \in Z(Q_8)$, while none of $i, j$, and $k$ commute with anything but themselves. Then:
+        \begin{align*}
+            C_{Q_8}(1) & = C_{Q_8}(-1) = Q_8 \\
+            C_{Q_8}(i) & = C_{Q_8}(-i) = \gen i \\
+            C_{Q_8}(j) & = C_{Q_8}(-j) = \gen j \\
+            C_{Q_8}(k) & = C_{Q_8}(-k) = \gen k
+        \end{align*}
+        \item Since no element in $S_3$ commutes with each other, then $C_{S_3}(a) = \gen a$ for all $a \in S_3 - \set 1$, where $C_{S_3}(1) = S_3$.
+        \item Use similar reasoning as in part (a) to obtain the centralizers:
+        \begin{align*}
+            C_{D_{16}}(1) = C_{D_{16}}(r^4) & = D_{16} \\
+            C_{D_{16}}(r^k) & = \gen r \text{ for all $k = 1, 2, 3, 5, ,6, $} \\
+            C_{D_{16}}(s) = C_{D_{16}}(sr^4) & = \gen{s, r^4} \\
+            C_{D_{16}}(sr) = C_{D_{16}}(sr^5) & = \gen{sr^5, r^4} \\
+            C_{D_{16}}(sr^2) = C_{D_{16}}(sr^6) & = \gen{sr^2, r^4} \\
+            C_{D_{16}}(sr^3) = C_{D_{16}}(sr^7) & = \gen{sr^3, r^4} \qh
+        \end{align*}
+    \end{solalph}
+\end{problems}
