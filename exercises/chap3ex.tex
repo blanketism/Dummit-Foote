@@ -1,0 +1,92 @@
+\section{Quotient Groups and Homomorphisms}
+
+\subsection{Definitions and Examples}
+
+Let $G$ and $H$ be groups.
+
+\begin{problems}
+    \item Let $\phi : G \to H$ be a homomorphism and let $E$ be a subgroup of $H$. Prove that $\phi\inv(E) \leq G$ (i.e., the preimage or pullback of a subgroup under a homomorphism is a subgroup). If $E \nsub H$ prove that $\phi\inv(E) \nsub G$. Deduce that $\ker(\phi) \nsub G$.
+    \begin{sol}
+        Since $E \leq H$, then $1_H \in E$. Since $\phi(1_G) = 1_H \in E$, then $1_G \in \phi\inv(E)$ so that it is nonempty. Suppose $x, y \in \phi\inv(E)$. Then $\phi(x), \phi(y) \in E$ so that $\phi(x)\phi(y)\inv = \phi(xy\inv) \in E$. Then $xy\inv \in \phi\inv(E)$, hence $\phi\inv(E) \leq G$.
+        
+        If $E \nsub H$, then $heh\inv \in E$ for every $e \in E$ and $h \in H$. Let $x \in \phi\inv(E)$ and $g \in G$. Note that $\phi(g) \in H$. Then
+        \[\phi(g)\phi(x)\phi(g)\inv = \phi(gxg\inv) \in E\]
+        so that $gxg\inv \in \phi\inv(E)$. Then $\phi\inv(E) \nsub G$, and since $\ker(\phi) = \phi\inv(1_H)$, then $\ker(\phi) \nsub G$ as well.
+    \end{sol}
+    \item Let $\varphi : G \to H$ be a homomorphism of groups with kernel $K$ and let $a,b \in \varphi(G)$. Let $X \in G/K$ be the fiber above $a$ and let $Y$ be the fiber above $b$, i.e.,
+    $X = \varphi^{-1}(a)$, $Y = \varphi^{-1}(b)$. Fix an element $u \in X$ (so $\varphi(u)=a$). Prove that if $XY = Z$ in the quotient group $G/K$ and $w$ is any member of $Z$, then there is some $v \in Y$ such that $uv = w$. [Show $u^{-1}w \in Y$.]
+    \begin{sol}
+        To show that $v = u\inv w \in Y$, then
+        \[\phi(v) = \phi(u\inv w) = \phi(u)\inv \phi(w) = a\inv (ab) = b \in Y \qh\]
+    \end{sol}
+    \item Let $A$ be an abelian group and let $B$ be a subgroup of $A$.
+    Prove that $A/B$ is abelian. Give an example of a non-abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is abelian.
+    \begin{sol}
+        Let $aB, a'B \in A/B$. Then
+        \[(aB)(a'B) = (aa')B = (a'a)B = (a'B)(aB)\]
+        so that $A/B$ is abelian.
+
+        To produce an abelian quotient group from a non-abelian group, a good thought is to consider the centers of non-abelian groups. In this case, we may choose $G = D_8$ with $Z(D_8) = \gen{r^2} \nsub D_8$. Since $D_8/\gen{r^2} \cong V_4$, then the quotient group is abelian.
+    \end{sol}
+    \item Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \mathbb{Z}$.
+    \begin{sol}
+        Note that $(gN)^0 = 1N = g^0N$, and $(gN)\inv = g\inv N$ by \autoref{prop3.5}. It suffices to show that the relationship holds for $\alpha \in \zp$. To that end, note that $\alpha = 1$ holds. Supposing it holds for some $\alpha$, then
+        \[(gN)^{\alpha + 1} = (gN)^\alpha (gN) = (g^\alpha N)(gN) = g^{\alpha + 1}N\]
+        so that the result is true by induction.
+    \end{sol}
+    \item Use the preceding exercise to prove that the order of the element $gN$ in $G/N$ is $n$, where $n$ is the smallest positive integer such that $g^n \in N$ (and $gN$ has infinite order if no such positive integer exists). Give an example to show that the order of $gN$ in $G/N$ may be strictly smaller than the order of $g$ in $G$.
+    \begin{sol}
+        Let $gN \in G/N$. If possible, let $n \in \zp$ be the smallest integer such that $g^n \in N$. Then $g^nN = (gN)^n = 1N$ so that $|gN| \leq n$. Moreover, if $m \in \zp$ is an integer such that $(gN)^m = 1N$, then $g^mN = 1N$ so that $g^m \in N$. By minimality of $n$, then $|gN| \geq n$ so that $|gN| = n$.
+
+        If there is no such $n$, then $g^k \not\in N$ for every $k \in \zp$. Suppose for contradiction that $gN$ has infinite order $x$. Then $(gN)^x = g^xN = 1N$, or that $g^x \in N$, contradicting our previous assumption. It follows that $gN$ has infinite order. Moreover, let $G$ be a nontrivial group with nonidentity $g \in G$. Noting that $G \nsub G$, then $gG \in G/N$ has order 1, but $\abs g > 1$.
+    \end{sol}
+    \item Define $\varphi : \mathbb{R}^{\times} \to \{\pm 1\}$ by letting $\varphi(x)$ be $x$ divided by the absolute value of $x$. Describe the fibers of $\varphi$ and prove that $\varphi$ is a homomorphism.
+    \begin{sol}
+        The fibers of $\phi$ are as follows: the positive reals map to 1, and the negative reals map to $-1$. Moreover, for any $x, y \in \r\unt$, then
+        \[\phi(xy) = \frac{xy}{\abs{xy}} = \frac{x}{\abs x} \cdot \frac{y}{\abs y} = \phi(x)\phi(y) \qh\]
+    \end{sol}
+    \item Define $\pi : \mathbb{R}^2 \to \mathbb{R}$ by $\pi((x,y)) = x + y$. Prove that $\pi$ is a surjective homomorphism and describe the kernel and fibers of $\pi$ geometrically.
+    \begin{sol}
+        Let $(x, y), (a, b) \in \r^2$. Then
+        \begin{align*}
+            \pi((x, y) + (a, b)) & = \pi((x + a, y + b)) \\
+            & = (x + a) + (y + b) \\
+            & = (x + y) + (a + b) \\
+            & = \pi((x, y)) + \pi((a, b))
+        \end{align*}
+        so that $\pi$ is a homomorphism. Moreover, for any $a \in \r$, then $\pi((a, 0)) = a$ so that $\pi$ is surjective. $\ker(\pi)$ is the diagonal line in $\r$ with equation $y = -x$, and the fiber $\phi\inv(a)$ for any $a \in \r$ is the diagonal line $y = -x + a$, or just a vertical translation of the kernel.
+    \end{sol}
+    \item Let $\varphi : \mathbb{R}^{\times} \to \mathbb{R}^{\times}$ be the map sending $x$ to the absolute value of $x$. Prove that $\varphi$ is a homomorphism and find the image of $\varphi$. Describe the kernel and the fibers of $\varphi$.
+    \begin{sol}
+        Let $x, y \in \r\unt$. Then
+        \[\phi(xy) = |xy| = |x||y| = \phi(x)\pi(y)\]
+        so that $\phi$ is a homomorphism. Moreover, $\phi(\pm a) = a$ for any $a \in \r^+$ so that $\im(\phi)$ is the positive reals. $\ker(\phi) = \set{1, -1}$ since no other real number has an absolute value of 1, and the fiber of $\phi$ over $a$ is the pair of reals $\{a, -a\}$.
+    \end{sol}
+    \item Define $\varphi : \mathbb{C}^{\times} \to \mathbb{R}^{\times}$ by $\varphi(a+bi) = a^2 + b^2$. Prove that $\varphi$ is a homomorphism and find the image of $\varphi$. Describe the kernel and the fibers of $\varphi$ geometrically (as subsets of the plane).
+    \begin{sol}
+        Let $a + bi, c + di \in \c\unt$. Then
+        \begin{align*}
+            \phi((a + bi)(c + di)) & = \phi((ac - bd) + (ad + bc)i) \\
+            & = (ac - bd)^2 + (ad + bc)^2 \\
+            & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2 \\
+            & = c^2(a^2 + b^2) + d^2(a^2 + b^2) \\
+            & = (a^2 + b^2)(c^2 + d^2) \\
+            & = \phi(a + bi)\phi(c + di)
+        \end{align*}
+        and $\phi$ is a homomorphism. Note that $a^2 + b^2 > 0$ for any $a, b$ where at least one of them is nonzero, so $\im(\phi) \subseteq \r^+$. Also, $\phi(\sqrt a + 0i) = a$ for any $a \in \r^+$, so $\im(\phi) = \r^+$. $\ker(\phi) = \{a + bi \in \c\unt \mid a^2 + b^2 = 1\}$ is simply the circle of radius 1, and the fiber of $\phi$ over some $a \in \r\unt$ is the circle with radius $\sqrt a$.
+    \end{sol}
+    \item Let $\phi : \intmod[8] \to \intmod[4]$ by $\phi(\bar  a) = \bar  a$. Show that this is a well defined, surjective homomorphism and describe its fibers and kernel explicitly (showing that $\phi$ is well defined involves the fact that $\bar  a$ has a different meaning in the domain and range of $\phi$).
+    \begin{sol}
+        Suppose $\bar  a = \bar  b$ for $\bar  a, \bar  b \in \intmod[8]$. Then $a = b + 8k$ for $k \in \z$, and
+        \[\phi(\bar  a) = \bar  a = \bar{b + 8k} = \bar{b + 4(2k)} = \bar  b = \phi(\bar  b)\]
+        Moreover, this is a homomorphism as
+        \[\phi(\bar  a + \bar  b) = \phi(\bar{a + b}) = \bar{a + b} = \bar  a + \bar  b = \phi(\bar  a) + \phi(\bar  b)\]
+        and is clearly surjective as $\phi(\bar  a) = \bar  a$ for any $\bar  a \in \intmod[4]$. The fibers are the following, noting that $\ker(\phi) = \phi\inv(\bar  0)$:
+        \begin{align*}
+            \phi\inv(\bar  0) & = \set{\bar  0, \bar  4} \\
+            \phi\inv(\bar  1) & = \set{\bar  1, \bar  5} \\
+            \phi\inv(\bar  2) & = \set{\bar  2, \bar  6} \\
+            \phi\inv(\bar  3) & = \set{\bar  3, \bar  7} \qh
+        \end{align*}
+    \end{sol}
+\end{problems}
