@@ -89,4 +89,236 @@ Let $G$ and $H$ be groups.
             \phi\inv(\bar  3) & = \set{\bar  3, \bar  7} \qh
         \end{align*}
     \end{sol}
+    \item Let $F$ be a field and let
+    \[G = \set*{\left.
+    \begin{pmatrix}
+        a & b \\
+        0 & c 
+    \end{pmatrix}~\right|~a, b, c \in F, ac \neq 0} \leq \gl_2(F)\]
+    \begin{problems}
+        \item Prove that the map
+        \[\phi : 
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix} \mapsto a\]
+        is a surjective homomorphism from $G$ onto $F\unt$ (recall that $F\unt$ is the multiplicative group of nonzero elements in $F$). Describe the fibers and kernel of $\phi$.
+        \item Prove that the map
+        \[\psi : 
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix} \mapsto (a, c)\]
+        is a surjective homomorphism from $G$ onto $F\unt \times F\unt$. Describe the fibers and kernel of $\psi$. 
+        \item Let
+        \[H = \set*{\left .
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix} ~\right\vert~b \in F}\]
+        Prove that $H$ is isomorphic to the additive group $F$.
+    \end{problems}
+    \begin{solalph}
+        \item Note that
+        \[\phi\left(
+        \begin{pmatrix}
+            a & 1 \\
+            0 & 1
+        \end{pmatrix}\right) = a\]
+        so that $\phi$ is surjective. Moreover, for any $a, b, c, d, e, f \in F$ with $ac \neq 0$ and $df \neq 0$, we have
+        \[\phi\left(
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix}
+        \begin{pmatrix}
+            d & e \\
+            0 & f
+        \end{pmatrix}\right) = 
+        \phi\left(
+        \begin{pmatrix}
+            ad & ae + bf \\
+            0 & cf
+        \end{pmatrix}\right) = ad = 
+        \phi\left(
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix}\right)
+        \phi\left(
+        \begin{pmatrix}
+            d & e \\
+            0 & f
+        \end{pmatrix}\right)\]
+        and $\phi$ is then a homomorphism. The fiber of $a \in F\unt$ over $\phi$ is
+        \[\phi\inv(a) = 
+        \set*{\left.
+        \begin{pmatrix}
+            a & s \\
+            0 & t
+        \end{pmatrix}~\right|~s, t \in F, t \neq 0}\]
+        with $\ker(\phi) = \phi\inv(1)$.
+        \item Showing that $\psi$ is a surjective homomorphism is very similar to the previous part. The fiber of any $(a, c) \in F\unt \times F\unt$ is
+        \[\psi\inv((a, c)) = 
+        \set*{\left.
+        \begin{pmatrix}
+            a & s \\
+            0 & c
+        \end{pmatrix}~\right|~s \in F}\]
+        with $\ker(\psi) = \psi\inv((1, 1))$.
+        \item Define the mapping $\pi : H \to F$ given by
+        \[\pi\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}\right) = b\]
+        Then its inverse $\pi\inv : F \to H$ given by
+        \[\pi\inv(b) = 
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}\]
+        is a two-sided inverse of $\pi$ so that $\pi$ is a bijection. Moreover, for $b, c \in F$, then
+        \[\pi\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & c \\
+            0 & 1
+        \end{pmatrix}\right) = 
+        \pi\left(
+        \begin{pmatrix}
+            1 & b + c \\
+            0 & 1
+        \end{pmatrix}\right) = b + c = 
+        \pi\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}\right) + 
+        \pi\left(
+        \begin{pmatrix}
+            1 & c \\
+            0 & 1
+        \end{pmatrix}\right)\]
+        so that $\pi$ is a homomorphism. Then $\pi$ is an isomorphism, and $H \cong F$.
+    \end{solalph}
+    \item Let $G$ be the additive group of real numbers, let $H$ be the multiplicative group of complex numbers of absolute value $1$ (the unit circle $S^1$ in the complex plane) and let $\varphi : G \to H$ be the homomorphism $\varphi : r \mapsto e^{2\pi i r}$. Draw the points on a real line which lie in the kernel of $\varphi$. Describe similarly the elements in the fibers of $\varphi$ above the points $-1$, $i$, and $e^{4\pi i/3}$ of $H$.
+    \begin{sol}
+        Since $e^{2\pi ir} = 1$ if and only if $r$ is an integer, then $\ker(\phi) = \z$. On a number line, this is shown as
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[<->] (-4.5, 0) -- (4.5, 0);
+    
+                \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4}
+                    \fill (\x, 0) circle (1.5pt);
+
+                \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4}
+                    \node at (\x, -0.3) {$\x$};
+            \end{tikzpicture}
+        \end{center}
+        Moreover, note that $-1 = e^{-2\pi i/2}$ and $i = e^{2\pi i/4}$. Then the fibers of these elements are just the integral differences of $1/2, 1/4$, and $2/3$ respectively, since $4\pi i/3 = 2/3(2\pi i)$:
+        \begin{align*}
+            \phi\inv(-1) & = \frac 12 + \z = \set*{\left.\frac 12 + n~\right|~n \in \z} \\
+            \phi\inv(i) & = \frac 14 + \z = \set*{\left.\frac 14 + n~\right|~n \in \z} \\
+            \phi\inv(e^{4\pi i/3}) & = \frac 23 + \z = \set*{\left.\frac 23 + n~\right|~n \in \z} \qh
+        \end{align*}
+    \end{sol}
+    \item Repeat the preceding exercise with the map $\varphi$ replaced by the map $\varphi : r \mapsto e^{4\pi i r}$.
+    \begin{sol}
+        The kernel of $\phi$ is $\frac12\z$, or
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[<->] (-4.5, 0) -- (4.5, 0);
+    
+                \foreach \x in {-4, -3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4}
+                    \fill (\x, 0) circle (1.5pt);
+
+                \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4}
+                    \node at (\x, -0.3) {$\x$};
+            \end{tikzpicture}
+        \end{center}
+        Moreover, the fibers are just all halved, so
+        \begin{align*}
+            \phi\inv(-1) & = \frac14 + \frac12 \z = \set*{\left.\frac14 + \frac n2~\right|~n \in \z} \\
+            \phi\inv(-i) & = \frac18 + \frac12 \z = \set*{\left.\frac18 + \frac n2~\right|~n \in \z} \\
+            \phi\inv(e^{4\pi i/3}) & = \frac13 + \frac12 \z = \set*{\left.\frac13 + \frac n2~\right|~n \in \z} \qh
+        \end{align*}
+    \end{sol}
+    \item Consider the additive quotient group $\mathbb{Q}/\mathbb{Z}$.
+    \begin{problems}
+        \item Show that every coset of $\mathbb{Z}$ in $\mathbb{Q}$ contains exactly one representative $q \in \mathbb{Q}$ in the range $0 \le q < 1$.
+        \item Show that every element of $\mathbb{Q}/\mathbb{Z}$ has finite order but that there are elements of arbitrarily large order.
+        \item Show that $\mathbb{Q}/\mathbb{Z}$ is the torsion subgroup of $\mathbb{R}/\mathbb{Z}$ (cf.\ Exercise 6, Section 2.1).
+        \item Prove that $\mathbb{Q}/\mathbb{Z}$ is isomorphic to the multiplicative group of roots of unity in $\mathbb{C}^\times$.
+    \end{problems}
+    \begin{solalph}
+        \item Suppose $t \in \q$, and put $t = a/b$ in lowest terms. Then there exists unique $q, r$ such that $a = bq + r$, or that $t = q + r/b$, where $0 \leq r < 1$. Then $t + \z = q + r/b + \z = r/b + \z$. Since $r$ is unique, then $r/b$ is the representative of $t + \z$ such that $0 \leq r < 1$.
+        \item Suppose $t = p/q \in \q$. Then $|t + \z| \leq q$, since $q(t + \z) = qt + \z = \z$ so that $t + \z$ has finite order. Moreover, $1/k + \z \in \q/\z$ has order $k$, but because $k \in \z$ can be made arbitrarily large, then $1/k + \z$ has arbitrarily large order.
+        \item Note that $\q/\z \subseteq \tor(\r/\z)$ by the previous exercise, so it remains to show that cosets with irrational representatives do not have finite order. If $x + \z \in \r/\z$ with finite order $n$, and $x \in \r - \q$, then $n(x + \z) = nx + \z = \z$ implies that $nx \in \z$. But since $n \in \zp$, this implies that $x \in \z$, contradicting that it was irrational. Hence, $\tor(\r/\z) = \q/\z$.
+        \item By Exercise 3.1.12, we have $\r/\z \cong S^1$. Note that $\tor(S^1)$ consists of $z \in \c\unt$ such that $z^n = 1$, which is precisely the set of roots of unity. Since $\tor(\r/\z) = \q/\z$, then $\q/\z$ is isomorphic to the set of roots of unity.
+    \end{solalph}
+    \item Prove that a quotient of a divisible abelian group by any proper subgroup is also divisible. Deduce that $\mathbb{Q}/\mathbb{Z}$ is divisible (cf.\ Exercise 19, Section 2.4).
+    \begin{sol}
+        Let $A$ be a divisible abelian group, and let $B$ be a proper subgroup of $A$. Pick $aB \in A/B$. Since $A$ is divisible, there exists $x \in A$ such that $x^n = a$ for $x \in A$ and $n \in \z$. Then $(xB)^n = x^nB = aB$ so that $A/B$ is divisible. Since $\q$ is divisible, and $\z < \q$ is proper, then $\q/\z$ is also divisible.
+    \end{sol}
+    \item Let $G$ be a group, let $N$ be a normal subgroup of $G$, and let $\bar{G} = G/N$. Prove that if $G = \langle x, y \rangle$ then $\bar{G} = \langle \bar{x}, \bar{y} \rangle$. Prove more generally that if $G = \langle S \rangle$ for any subset $S$ of $G$, then $\bar{G} = \langle \bar{S} \rangle$.
+    \begin{sol}
+        If $G = \gen S$, then for every $g \in G$, we have
+        \[g = s_1s_2 \dots s_n \quad \text{where $s_i \in S$ for $1 \le i \le n$}\]
+        Let $\bar S = \{sN \mid s \in S\}$. Then for any $\bar g \in \bar G$, we have
+        \[gN = (s_1s_2 \ldots s_n)N = (s_1N)(s_2N) \dots (s_nN)\]
+        so that $\bar g \in \bar S$. Hence, $\bar G = \gen{\bar S}$. The case where $\bar G = \gen{\bar x, \bar y}$ is similar, where every element $g \in G$ is of the form $g = w(x, y)$, where $w(x, y)$ denotes a word in $\gen{x, y}$.
+    \end{sol}
+    \item Let $G$ be the dihedral group of order $16$ (whose lattice appears in Section 2.5): $G = \langle r,s \mid r^8 = s^2 = 1,\ rs = sr^{-1} \rangle$, and let $\bar{G} = G/\langle r^4 \rangle$ be the quotient of $G$ by the subgroup generated by $r^4$ (this subgroup is the center of $G$, hence is normal).
+    \begin{problems}
+        \item Show that the order of $\bar{G}$ is $8$.
+        \item Exhibit each element of $\bar{G}$ in the form $\bar{s}^a \bar{r}^b$, for some integers $a$ and $b$.
+        \item Find the order of each of the elements of $\bar{G}$ exhibited in (b).
+        \item Write each of the following elements of $\bar{G}$ in the form $\bar{s}^a \bar{r}^b$, for some integers $a$ and $b$ as in (b): $\bar{rs}$, $\bar{sr^{-2}s}$, $\bar{s^{-1}r^{-1}sr}$.
+        \item Prove that $\bar{H} = \langle \bar{s}, \bar{r}^2 \rangle$ is a normal subgroup of $\bar{G}$ and $\bar{H}$ is isomorphic to the Klein $4$-group. Describe the isomorphism type of the complete preimage of $\bar{H}$ in $G$.
+        \item Find the center of $\bar G$ and describe the isomorphism type of $\bar G/Z(\bar G)$.
+    \end{problems}
+    \begin{solalph}
+        \item Since $\gen{r^4} = \set{1, r^4}$, each coset in $\bar G$ has 2 elements and partitions $G$ into 8 sets. Hence, $\abs{\bar G} = 8$.
+        \item The elements of $\bar G$ are
+        \begin{align*}
+            \bar 1 & = \{1, r^4\}, & \bar{s} & = \{s, sr^4\} \\
+            \bar r & = \{r, r^5\}, & \bar{sr} & = \{sr, sr^5\} \\
+            \bar r^2 & = \{r^2, r^6\}, & \bar{sr^2} & = \{sr^2, sr^6\} \\
+            \bar r^3 & = \{r^3, r^7\}, & \bar{sr^3} & = \{sr^3, sr^7\}
+        \end{align*}
+        \item The orders of the elements of $\bar G$ are
+        \[
+        \begin{array}{c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar r & \bar r^2 & \bar r^3 & \bar s & \bar{sr} & \bar{sr^2} & \bar{sr^3} \\
+            \hline
+            \abs x & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
+        \end{array}
+        \]
+        \item $\bar{rs} = \bar{sr^3}, \bar{sr^{-2}s} = \bar r^2, \bar{s\inv r\inv sr} = \bar r^2$.
+        \item We first note that $\bar H = \{1, \bar r^2, \bar s, \bar{sr^2}\}$. To show that $\bar H \nsub \bar G$, we simplify the process by noting that elements of $\bar G$ are of the form $\bar r^k$ or $\bar{sr^k}$. If an element is of the former, we have
+        \begin{align*}
+            \bar{r^kr^2r^{-k}} = \bar r^2 \in \bar H \\
+            \bar{r^ksr^{-k}} = \bar{s(r^2)^{-k}} \in \bar H
+        \end{align*}
+        If it is of the latter, then
+        \begin{align*}
+            \bar{(sr^k)r^2(r^{-k}s)} = \bar{r^{-2}} \in H \\
+            \bar{(sr^k)s(r^{-k}s)} = \bar{s(r^2)^k} \in H
+        \end{align*}
+        where $\bar{sr^k}\inv = \bar{r^{-k}s}$. The above calculations show that for every $\bar g \in \bar G$, then $\bar{gr^2g\inv}, \bar{gsg\inv} \in H$ so that $\bar{gHg\inv} = \bar H$, hence $\bar H \nsub \bar G$. Moreover, it is easy to see that every element of $\bar H$ is of order 2 so that $\bar H \cong V_4$.
+
+        Let $\pi : G \to \bar G$ be the natural projection of $G$ onto $\bar G$. Then $\pi\inv(\bar H)$ is the complete preimage of $\bar H$, or the set of elements that map to a coset in $\bar H$. Using part (b), we see that
+        \[\pi\inv(\bar H) = \{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6\}\]
+        Note that $|\pi\inv(\bar H)| = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$. Then the mapping $\phi : D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective. Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
+        \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$. Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, then $\bar r^2 \in Z(\bar G)$. However, $\bar{rs} \neq \bar{sr}$ and $\bar{r^3s} \neq \bar{sr^3}$. Additionally, none of $\bar{sr}, \bar{sr^2}$, nor $\bar{sr^3}$ commute with $\bar r$ so that $Z(\bar G) = \{\bar 1, \bar r^2\}$. The elements of $\widehat G = \bar G/Z(\bar G)$ are as follows:
+        \begin{align*}
+            \hat 1 & = \{\bar 1, \bar r^2\} & \hat s & = \{\bar s, \bar{sr^2}\} \\
+            \hat r & = \{\bar r, \bar r^3\} & \widehat{sr} & = \{\bar{sr}, \bar{sr^3}\}
+        \end{align*}
+        One can see that each nonidentity element of $\widehat G$ has order 2 so that $\widehat G \cong V_4$.
+    \end{solalph}
 \end{problems}
