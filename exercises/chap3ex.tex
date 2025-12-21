@@ -546,4 +546,68 @@ Let $G$ and $H$ be groups.
         
         Let us first examine $Q_8/\gen{-1} = \{\bar 1, \bar i, \bar j, \bar k\}$. Since $\bar i^2 = \bar{-1} = \bar 1$, then $\abs{\bar i} = 2$. We can argue that $\abs{\bar j} = \abs{\bar k} = 2$ so that $Q_8/\gen{-1} \cong V_4$. The quotient group $Q_8/\gen i = \{\bar 1, \bar j\}$ has order 2 so $Q_8/\gen i \cong Z_2$. By symmetry, $Q_8/\gen j \cong Q_8/\gen k \cong Z_2$.
     \end{sol}
+    \item Find all normal subgroups of $D_8$ and for each of these find the isomorphism type of its corresponding quotient. [You may use the lattice of subgroups for $D_8$ in Section 2.5.]
+    \begin{sol}
+        Again, $D_8/1 \cong D_8$ and $D_8/D_8 \cong 1$. Examining the three maximal subgroups $\gen{s, r^2}, \gen r$, and $\gen{rs, r^2}$. observe the following:
+        \begin{align*}
+            r\gen{s, r^2}r\inv & = \{1, sr^2. r^2, s\} = \gen{s, r^2} \\
+            s\gen r s\inv & = \{1, r^3, r^2, r\} = \gen r \\
+            r\gen{rs, r^2}r\inv & = \{1, sr, r^2, sr^3\} = \gen{rs, r^2}
+        \end{align*}
+        so that the normalizers of each of the subgroups contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = Q_8$. Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $Q_8/\gen{s, r^2} \cong Q_8/\gen r \cong Q_8/\gen{rs, r^2} \cong Z_2$.
+
+        Now we examine $\gen{r^2} = Z(D_8)$ so it is clearly normal. Then $D_8/\gen{r^2} = \{\bar 1, \bar r, \bar s, \bar{sr}\}$. Note that the nonidentity elements have order 2, and so $D_8/\gen{r^2} \cong V_4$.
+
+        For the remaining subgroups of order 2, observe that
+        \begin{align*}
+            r\gen{s}r\inv & = \{1, sr^2\} \neq \gen s \\
+            r\gen{sr}r\inv & = \{1, rs\} \neq \gen{sr} \\
+            r\gen{sr^2}r\inv & = \{1, s\} \neq \gen{sr^2} \\
+            r\gen{sr^3}r\inv & = \{1, sr\} \neq \gen{sr^3}
+        \end{align*}
+        so that none of the subgroups of order 2 contain $r$, hence none of them are normal.
+    \end{sol}
+    \item Let $D_{2n} = \langle r,s \mid r^n = s^2 = 1,\ rs = sr^{-1} \rangle$ be the usual presentation of the dihedral group of order $2n$ and let $k$ be a positive integer dividing $n$.
+    \begin{problems}
+        \item Prove that $\langle r^k \rangle$ is a normal subgroup of $D_{2n}$.
+        \item Prove that $D_{2n}/\langle r^k \rangle \cong D_{2k}$.
+    \end{problems}
+    \begin{solalph}
+        \item Observe that $\gen{r^k} = \{1, r^k, r^{2k}, \ldots, r^{n - k}\}$. It is clear that $r\gen{r^k}r\inv = \gen{r^k}$, and observe that $sr^ks\inv = r^{-k} = r^{n - k}$ so that $s\gen{r^k}s\inv = \gen{r^k}$. Since $r, s \in N_{D_{2n}}(\gen{r^k})$, then $\gen{r^k} \nsub D_{2n}$.
+        \item Consider $D_{2n}/\gen{r^k}$. Since $k \mid n$, then the order of $\gen{r^k}$ is $n/k$, and the number of cosets in the quotient group is $2n/(n/k) = 2k$. Now consider the cosets $\bar r$ and $\bar s$:
+        \[\bar r = \{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}\} \quad \text{and} \quad \bar s = \{s, sr^k, sr^{2k}, \ldots, sr^{n - k}\}\]
+        It is clear that $\bar s \neq \bar 1$, and $\bar s^2 = \bar 1$ so that $\abs{\bar s} = 2$. Moreover, $\bar r^k = \bar 1$, hence $\abs{\bar r} \leq k$. However, note that $\bar r^i = \bar 1$ when $i \mid k$ so that $\abs{\bar r} = k$. This clearly satisfies the relations for $D_{2k}$, hence $D_{2n}/\gen{r^k} \cong D_{2k}$. 
+    \end{solalph}
+    \item Prove that $\speciallinear_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. Exercise 9, Section 2.1).
+    \begin{sol}
+        We know that $\speciallinear_n(F) \leq \gl_n(F)$, so we just need to show that $A \speciallinear_n(F) A\inv = \speciallinear_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speciallinear_n(F)$ and $X \in \gl_n(F)$, we have $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speciallinear_n(F)X\inv \subseteq \speciallinear_n(F)$, and $\speciallinear_n(F) \nsub \gl_n(F)$.
+
+        Recall that when a subgroup is normal, it is actually the kernel of some homomorphism. Observe that every element of $\speciallinear_n(F)$ has determinant 1, so if we consider the mapping $A \mapsto \det(A)$ for some $A \in \gl_n(F)$, then the kernel of this homomorphism is clearly $\speciallinear_n(F)$. We may then consider the mapping $\phi : \gl_n(F)/\speciallinear_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
+
+        We now show that this mapping is well defined. To that end, suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speciallinear_n(F)$. Recall that the elements of $\bar A$ are of the form $AS$ for $A \in \gl_n(F)$ and some $S \in \speciallinear_n(F)$. Since $\bar A = \bar B$, then for $AS \in \bar A$ there exists $S' \in \speciallinear_n(F)$ such that $AS = BS_0$. Then
+        \[\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)\]
+        so that $\phi$ is well defined.
+        
+        To show that $\phi$ is injective, suppose $\phi(\bar A) = \phi(\bar B)$. Then $\det(A) = \det(B)$. Pick some $AS \in \bar A$, where $S \in \speciallinear_n(F)$. Observe that $B\inv AS \in \speciallinear_n(F)$, since $\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1$, hence $B\inv AS = S'$ for some $S' \in \speciallinear_n(F)$. Then $AS = BS'$, and $AS \in \bar B$ so that $\bar A \subseteq \bar B$. A similar argument shows that $\bar B \subseteq \bar A$ so that $\bar A = \bar B$, and $\phi$ is injective. Moreover, for some $f \in F\unt$, then $\det(fI_n) = f\det(I_n) = f$ so that $\phi$ is surjective. Lastly, for $\bar A, \bar B \in \speciallinear_n(F)$, then 
+        \[\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)\]
+        so that $\phi$ is a homomorphism. Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speciallinear_n(F) \cong F\unt$. 
+    \end{sol}
+    \item Prove that if $G/Z(G)$ is cyclic then $G$ is abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \mathbb{Z}$ and some element $z \in Z(G)$.]
+    \begin{sol}
+        Suppose $G/Z(G) = \gen{xZ(G)}$ for some $x \in G$. Then cosets are of the form $x^aZ(G)$ for some $a \in \z$. Suppose $g, h \in G$. Since both $g$ and $h$ belong to some coset in $G/Z(G)$, then $g = x^mz$ and $h = x^nz'$ for some $m, n \in \z$ and $z, z' \in Z(G)$. Then
+        \[ab = (x^mz)(x^nz') = (x^nz')(x^mz) = ba\]
+        so that $G$ is abelian.
+    \end{sol}
+    \item Let $A$ and $B$ be groups. Show that $\{(a,1) \mid a \in A\}$ is a normal subgroup of $A \times B$ and the quotient of $A \times B$ by this subgroup is isomorphic to $B$.
+    \begin{sol}
+        Let $C$ be the the given set. It is clear that $C \leq A \times B$. Suppose $(a, b) \in A \times B$. Then for any $(a', 1) \in C$, we have
+        \[(a, b)(a', 1)(a, b)\inv = (aa'a\inv, b1b\inv) = (aa'a\inv, 1) \in C\]
+        so that $C \nsub A \times B$.
+
+        Consider the mapping $\phi : A \times B/C \to B$ given by $\phi(\bar{(a, b)}) = b$. To show that this is well-defined, suppose $\bar{(a, b)} = \bar{(a', b')}$. Then $(a, b)C = (a', b')C$, which implies that $C = (a\inv, b\inv)(a', b')C$, or that $(a\inv a', b\inv b') \in C$. Then $b\inv b' = 1$, or $b = b'$ so that $\phi$ is well-defined.
+
+        Now suppose $\phi(\bar{(a, b)}) = \phi(\bar{(a', b')})$. Then $b = b'$ so that $(a, b)C = (a', b')C$, hence $\phi$ is injective. Moreover, $\phi(\bar{(1, b)}) = b$ so that $\phi$ is surjective. Lastly, for $\bar{(a, b)}, \bar{(a', b')} \in A \times B/C$, then 
+        \[\phi(\bar{(a, b)}\bar{(a', b')}) = \phi(\bar{(aa', bb')}) = bb' = \phi(\bar{(a, b)})\phi(\bar{(a', b')})\]
+        so that $\phi$ is a bijective homomorphism. Hence, $A \times B/C \cong B$.
+    \end{sol}
 \end{problems}
