@@ -1300,7 +1300,7 @@ The next three examples lead to two nonisomorphic groups that have the same latt
     \begin{sol}
         Using the presentation for $Z_2 \times Z_4$ in Exercise 12, note that $u^2 = (v^2)^4 = 1$, and $v^2u = vuv^5 = uv^{10} = uv^2$, then $\gen{u, v^2}$ is an abelian subgroup of $M$, and the map $\phi : Z_2 \times Z_4 \to \gen{u, v^2}$ defined by
         \[\phi(a) = u, \quad \phi(b) = v^2\]
-        is a homomorphism. Moreover, $\phi$ is surjective by construction as $\gen{u, v^2} = \gen{\phi(a), \phi(b)}$. Since $\abs{Z_2 \times Z_4} = \abs{\gen{u, v^2}}$, then $\phi$ is bijective so that $Z_2 \times Z_4 \cong \gen{u, v^2}$. Now, $\gen v$ has order 8, and $\gen{uv} = \set{1, ,uv, uv^3, uv^5, uv^7, v^2, v^4, v^6}$ so that $\gen{uv}$ also has order 8. Then $\gen v \cong Z_8$ and $\gen{uv} \cong 8$ since cyclic groups of the same order are isomorphic. Then the lattice of subgroups of $M$ is the same as the lattice of $Z_2 \times Z_8$, where $x = u$ and $y = v$:
+        is a homomorphism. Moreover, $\phi$ is surjective by construction as $\gen{u, v^2} = \gen{\phi(a), \phi(b)}$. Since $\abs{Z_2 \times Z_4} = \abs{\gen{u, v^2}}$, then $\phi$ is bijective so that $Z_2 \times Z_4 \cong \gen{u, v^2}$. Now, $\gen v$ and $\gen{uv}$ are both subgroups of order 8. Then $\gen v \cong Z_8$ and $\gen{uv} \cong Z_8$ since cyclic groups of the same order are isomorphic. Then the lattice of subgroups of $M$ is the same as the lattice of $Z_2 \times Z_8$, where $x = u$ and $y = v$:
         \begin{center}
             \begin{tikzpicture}[every node/.style=on grid]
                 \node (G) {$G$};
