@@ -614,7 +614,7 @@ Let $G$ and $H$ be groups.
     \begin{sol}
         Since $A$ is abelian, then $A \times A$ is abelian, hence any subgroup is normal so that $D \nsub A \times A$.
 
-        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
+        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when we have $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
         \begin{align*}
             \phi(\bar{(a_1, b_1)(a_2, b_2)}) & = \phi(\bar{(a_1a_2, b_1b_2)}) \\
             & = (a_1a_2)(b_1b_2)\inv \\
@@ -627,7 +627,7 @@ Let $G$ and $H$ be groups.
     \begin{sol}
         Let $\alpha, \beta \in S_3$, where $\alpha = 1$ and $\beta = (1\ 2\ 3)$ so that $\alpha\inv = \alpha$ and $\beta\inv \neq \beta$. For $\gamma = (1\ 2) \in S_3$, consider $\alpha\gamma\alpha\inv$ and $\beta\gamma\beta\inv$. Observe that $\alpha\gamma\alpha\inv = \gamma$, while $\beta\gamma\beta\inv = (1\ 2\ 3)(1\ 2)(3\ 2\ 1) = (2\ 3) \neq (1\ 2) = \gamma$. Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, (2\ 3))$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
     \end{sol}
-    \item Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \textit{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
+    \item \label{ex3.1.40}Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \textit{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
     \begin{sol}
         \rightimp Suppose $\bar{xy} = \bar{yx}$. Then $xyN = yxN$. Then there exists $n, n' \in N$ such that $xyn = yxn'$, or $x\inv y\inv xy = n'n\inv$ so that $x\inv y\inv xy \in N$.
 
@@ -723,8 +723,8 @@ Let $G$ be a group.
         \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{problems}
     \begin{solalph}
-        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. To show that this is a bijection, suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
-        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is given by $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
+        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. Now suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
+        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is some $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
         \item Let $\alpha, \beta, \gamma \in \ss$. $\sim$ is clearly reflexive since $\alpha$ is a cyclic permutation of itself. 
         
         Suppose $\alpha \sim \beta$. Then $\beta$ is a cyclic permutation of $\alpha$, hence $\alpha$ is a cyclic permutation of $\beta$, so that $\beta \sim \alpha$ and $\sim$ is symmetric. 
