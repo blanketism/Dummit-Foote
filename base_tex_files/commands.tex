@@ -109,8 +109,21 @@
 \DeclareMathOperator{\orb}{orb}
 \DeclareMathOperator{\cl}{Cl}
 \DeclareMathOperator{\im}{im}
-\DeclareMathOperator{\argmin}{\arg\,\min}
-\DeclareMathOperator{\argmax}{\arg\,\max}
+\DeclareMathOperator{\syl}{Syl}
+\DeclareMathOperator{\hol}{Hol}
+\newcommand{\unt}{^\times}
+\newcommand{\nsub}{\trianglelefteq}
+\let\oldrtimes\rtimes
+\renewcommand{\rtimes}{%
+  \mathbin{\raisebox{-0.15ex}{\scalebox{1}[1.4]{$\oldrtimes$}}}%
+}
+\newcommand{\semidir}{\rtimes}
+\newcommand{\units}[1][n]{(\z/{#1}\z)^\times}
+\newcommand{\intmod}[1][n]{\z/{#1}\z}
+
+% Topology/Analysis Commands
+
+\DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\syl}{Syl}
