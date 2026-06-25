@@ -976,5 +976,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{sol}
+    Recall that $H \nsub G$. It is clear to see that $G/H = \set{H, Hk}$ for $k \in H$, since $H$ consists of elements $hk$ with trivial $k$ component. Then for any $hk \in Hk$, and noting the fact that $kh = h\inv k$ for all $h \in H$, we have
+    \[(hk)^2 = h(kh)k = h(h\inv k)k = kk = 1.\]
+    If $hk = 1$, then $h = k\inv \in H \cap K = 1$, so $hk = 1$ if and only if $h = k = 1$. Hence, every element of $G - H$ has order 2.
     
+    If $G$ is abelian, then for any $h \in H$ and $k \in K$, we have $hk = kh$. Moreover, $kh = h\inv k$, hence $hk = h\inv k$, so $h^2 = 1$. Conversely, if $h^2 = 1$ for all $h \in H$, then any $h \in H$ and $k \in K$ commute, because $kh = h\inv k = hk$ by $h^2 = 1$. Then for any $h_1, h_2 \in H$ and $k_1, k_2 \in K$, we have
+    \[(h_1k_1)(h_2k_2) = h_1(h_2k_1)k_2 = (h_2h_1)(k_2k_1) = (h_2k_2)(h_1k_1),\]
+    so $G$ is abelian.
 \end{sol}
