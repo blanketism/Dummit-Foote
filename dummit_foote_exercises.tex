@@ -38,6 +38,10 @@
     uu/.style = {lattice edge, to path={(\tikztostart.north) -- (\tikztotarget)\tikztonodes}},
 }
 
+\input{misc_environments/breakable algorithm.tex}
+\input{base_tex_files/commands.tex}
+\input{base_tex_files/exerciseenvs.tex}
+
 \urlstyle{same}
 
 \pagecolor{pagecolor!50}
@@ -47,11 +51,6 @@
 \fancyhead[R]{\rightmark}
 \setlength{\headheight}{14pt}
 \addtolength{\topmargin}{-0.5pt}
-\DeclareMathOperator{\ut}{UT}
-
-\input{misc_environments/breakable algorithm.tex}
-\input{base_tex_files/commands.tex}
-\input{base_tex_files/exerciseenvs.tex}
 
 % Extra Commands
 
@@ -62,7 +61,7 @@
 \setlength{\jot}{2pt}
 \setlength{\parindent}{0.5cm}
 
-\includeonly{exercises/chap5ex}
+% \includeonly{exercises/chap5ex}
 
 \begin{document}
 
