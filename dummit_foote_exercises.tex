@@ -24,18 +24,6 @@
     urlcolor=cyan,
     }
 
-\newcommand{\tocex}{\subsection*{Exercises}
-\addcontentsline{toc}{subsection}{\protect\numberline{}Exercises}}
-
-\tikzset{
-    lattice edge/.style = {draw, -},
-}
-
-\tikzset{
-    u/.style = {lattice edge, to path={(\tikztostart) -- (\tikztotarget.south)\tikztonodes}},
-    uu/.style = {lattice edge, to path={(\tikztostart.north) -- (\tikztotarget)\tikztonodes}},
-}
-
 \urlstyle{same}
 
 \pagecolor{pagecolor!50}
@@ -56,7 +44,7 @@
 \setlength{\jot}{2pt}
 \setlength{\parindent}{0.75cm}
 
-% \includeonly{exercises/chapter1/1-7.tex}
+\includeonly{exercises/chapter2/2-5.tex}
 
 \begin{document}
 
@@ -78,5 +66,11 @@
 \include{exercises/chapter1/1-5.tex}
 \include{exercises/chapter1/1-6.tex}
 \include{exercises/chapter1/1-7.tex}
+
+\include{exercises/chapter2/2-1.tex}
+\include{exercises/chapter2/2-2.tex}
+\include{exercises/chapter2/2-3.tex}
+\include{exercises/chapter2/2-4.tex}
+\include{exercises/chapter2/2-5.tex}
 
 \end{document}
