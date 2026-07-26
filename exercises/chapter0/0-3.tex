@@ -68,9 +68,8 @@
 \begin{sol}
     Consider the following calculations mod 29, where we note that $37 \equiv 8 \bmod 29$:
     \begin{align*}
-        8^2 \bmod 29 & \equiv 6 & 8^{16} \bmod 29 & \equiv 23 \\
-        8^4 \bmod 29 & \equiv 7 & 8^{32} \bmod 29 & \equiv 7 \\
-        8^8 \bmod 29 & \equiv 20 & 8^{64} \bmod 29 & \equiv 20
+        8^2 \bmod 29 & \equiv 6 & 8^8 \bmod 29 & \equiv 20 & 8^{32} \bmod 29 & \equiv 7 \\
+        8^4 \bmod 29 & \equiv 7 & 8^{16} \bmod 29 & \equiv 23 & 8^{64} \bmod 29 & \equiv 20
     \end{align*}
     Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \bmod 29$.
 \end{sol}
@@ -84,9 +83,8 @@
 \begin{sol}
     Doing repeated squaring, we have
     \begin{align*}
-        9^2 \bmod 100 & \equiv 81 & 9^{16} \bmod 100 & \equiv 61 \\
-        9^4 \bmod 100 & \equiv 61 & 9^{32} \bmod 100 & \equiv 21 \\
-        9^8 \bmod 100 & \equiv 21 & 9^{64} \bmod 100 & \equiv 41
+        9^2 \bmod 100 & \equiv 81 & 9^8 \bmod 100 & \equiv 21 & 9^{32} \bmod 100 & \equiv 21 \\
+        9^4 \bmod 100 & \equiv 61 & 9^{16} \bmod 100 & \equiv 61 & 9^{64} \bmod 100 & \equiv 41
     \end{align*}
     Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$.
 	Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$.
@@ -98,12 +96,7 @@
 \end{exercise}
 
 \begin{sol}
-    \begin{align*}
-        0^2 & = 0 \equiv 0 \bmod 4 \\
-        1^2 & = 1 \equiv 1 \bmod 4 \\
-        2^2 & = 4 \equiv 0 \bmod 4 \\
-        3^2 & = 9 \equiv 1 \bmod 4 \qh
-    \end{align*}
+    $0^2 \equiv 0 \bmod 4$, $1^2 \equiv 1 \bmod 4$, $2^2 \equiv 0 \bmod 4$, and $3^2 \equiv 1 \bmod 4$.
 \end{sol}
 
 \begin{exercise}[0.3.7]
@@ -113,14 +106,7 @@
 \end{exercise}
 
 \begin{sol}
-    By \exref{0.3.6}, $a^2$ and $b^2$ are both either $0 \bmod 4$ or $1 \bmod 4$, so their sum can be:
-    \begin{align*}
-        0 + 0 \equiv 0 \bmod 4 \\
-        0 + 1 \equiv 1 \bmod 4 \\
-        1 + 0 \equiv 1 \bmod 4 \\
-        1 + 1 \equiv 2 \bmod 4
-    \end{align*}
-    In any of the sums, there is no remainder of $3$ when dividing by $4$.
+    By \exref{0.3.6}, $a^2$ and $b^2$ are either 0 or 1 mod 4, so their sum cannot be 3 mod 4.
 \end{sol}
 
 \begin{exercise}[0.3.8]

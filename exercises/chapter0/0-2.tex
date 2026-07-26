@@ -65,11 +65,9 @@
 \end{exercise}
 
 \begin{sol}
-    \begin{align*}
-        ax + by & = a\left(x_0 + \frac bdt\right) + b\left(y_0 - \frac adt\right) \\
-        & = ax_0 + \frac{ab}{d}t + by_0 - \frac{ab}{d}t \\
-        & = ax_0 + by_0 = N \qh
-    \end{align*}
+    \[
+        a\left(x_0 + \frac bdt\right) + b\left(y_0 - \frac adt\right) = ax_0 + by_0 + \frac{abt}{d} - \frac{abt}{d} = N. \qh
+    \]
 \end{sol}
 
 \begin{exercise}[0.2.5]
@@ -99,8 +97,8 @@
 
 \begin{sol}
     Suppose $S$ has no minimal element, and let $T$ be $\zp \setminus S$, the set of nonnegative integers not in $S$.
-	Since $0$ is minimal in $\zp$, then $0 \notin S$, hence $0 \in T$.
-	Fix $k \in \zp$, and suppose every $j$ such that $0 \leq j \leq k$ is in $T$.
+	Since 1 is minimal in $\zp$, then $1 \notin S$, hence $1 \in T$.
+	Fix $k \in \zp$, and suppose every $j$ such that $1 \leq j \leq k$ is in $T$.
 	Observe $k + 1 \notin S$, for otherwise it would be minimal in $S$, since every integer less than or equal to $k$ is in $T$.
 	Then $k + 1 \in T$.
 	By induction, every nonnegative integer is in $T$, contradicting that $S$ is nonempty.
@@ -166,7 +164,7 @@
     	\phi(n) = \prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1) = N.
     \]
     Since each factor $p_i^{\alpha_i - 1}(p_i - 1)$ divides $N$, we have $p_i - 1 \leq N$, so $p_i \leq N + 1$, bounding the number of possible primes.
-	For the exponents, $p_i^{\alpha_i - 1} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$.
+	For the exponents, $\smash{p_i^{\alpha_i - 1}} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$.
 	With finitely many choices for each $p_i$ and $\alpha_i$, there are only finitely many $n$ with $\phi(n) = N$.
 
     If $\phi$ did not tend to infinity, there would exist some $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$.
