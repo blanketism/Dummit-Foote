@@ -297,7 +297,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[3.3.8]
-    Let $p$ be a prime and let $G$ be the group of $p$-power roots  of $1$ in $\cbb$ (cf. \exref{2.4.18}).
+    Let $p$ be a prime and let $G$ be the group of $p$-power roots of $1$ in $\cbb$ (cf. \exref{2.4.18}).
 	Prove that the map $z \mapsto z^p$ is a surjective homomorphism.
 	Deduce that $G$ is isomorphic to a proper quotient of itself.
 \end{exercise}
@@ -305,11 +305,12 @@ Let $G$ be a group.
 \begin{sol}
     Let $\phi(z) = z^p$ be the map.
 	For any $z, w \in G$, then $\phi(zw) = (zw)^p = z^p w^p = \phi(z)\phi(w)$, hence $\phi$ is a homomorphism.
-	Moreover, for any $y \in G$, there is some $n \in \zp$ such that $y^{p^n} = 1$.
-	Then let $z = y^{p^{n - 1}}$, so that $z^p = y^{p^n} = 1$, hence $z \in G$ and $\phi(z) = y$.
-	It follows that $\phi$ is surjective.
-	By the First Isomorphism Theorem, we have $G/\ker\phi \cong G$.
-	Since $\ker\phi$ contains all $p$-power roots of unity of order dividing $p$, then $\ker\phi$ is non-trivial, hence $G$ is isomorphic to a proper quotient of itself.
+	Suppose $y \in G$.
+    Then $y$ is a $p^n$-th root of unity for some $n \in \zp$, so that $y = e^{2\pi i k/p^n}$ for some $k \in \zbb$.
+	Let $z = e^{2\pi i k/p^{n+1}}$, so that $z^p = e^{2\pi i k/p^n} = y$. Then $z \in G$, hence $\phi$ is surjective.
+
+    Additionally, we have $\ker\phi = \set{z \in G \mid z^p = 1} = \set{e^{2\pi i k/p} \mid k = 0, 1, \ldots, p - 1}$, which is a nontrivial subgroup of $G$.
+    By the First Isomorphism Theorem, we have $G/\ker\phi \cong \phi(G) = G$, hence $G$ is isomorphic to a proper quotient of itself.
 \end{sol}
 
 \begin{spex}[3.3.9]

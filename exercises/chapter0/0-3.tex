@@ -132,23 +132,12 @@
 \end{exercise}
 
 \begin{sol}
-    We consider $a^2 + b^2 = 3c^2$ in mod 4.
-	By \exref{0.3.7}, $a^2 + b^2$ is either 0, 1, or 2 mod 4.
-	By \exref{0.3.6}, $c^2$ is either 0 or 1 mod 4, so that $3c^2$ is either 0 or 3 mod 4.
-	Thus, both sides must be 0 mod 4.
-
-    It is clear that $4 \mid 3 c^2$ implies $4 \mid c^2$, and hence $2 \mid c$.
-	Observe that if $a$ and $b$ were both odd, then $a^2 + b^2 \equiv 2 \mod 4$.
-	If one of $a$ or $b$ were odd and the other even, then $a^2 + b^2 \equiv 1 \mod 4$.
-	Thus, both $a$ and $b$ must be even.
-	Put $a = 2\alpha$, $b = 2\beta$, and $c = 2\gamma$ for nonzero $\alpha, \beta, \gamma \in \zbb$.
-	Substituting into the original equation gives
-    \[
-    	 (2\alpha)^2 + (2\beta)^2 = 3(2\gamma)^2.
-    \]
-    We may divide by 4 to obtain $\alpha^2 + \beta^2 = 3\gamma^2$, which is the same form as the original equation but with integers with smaller absolute values.
-	Repeating this process leads to an infinite descent, which is impossible.
-	Therefore, there are no solutions in nonzero integers $a, b,$ and $c$.
+    Considering the equation modulo 4, we know that $a^2 + b^2 \equiv 0, 1, 2 \bmod 4$ by \exref{0.3.7}, but $3c^2 \equiv 0, 3 \bmod 4$ by \exref{0.3.6}.
+    Hence, both sides must be congruent to 0 mod 4.
+    Since $3c^2 \equiv 0 \bmod 4$, we have $c^2 \equiv 0 \bmod 4$, so that $c$ is even.
+    Then $3c^2$ has a factor of 4, so that $a^2 + b^2$ has a factor of 4, and hence both $a$ and $b$ are even.
+    Divide each of $a, b$ and $c$ by 2 to get a smaller solution to the original equation.
+    By infinite descent, we can iterate the process to obtain no solution in nonzero integers $a, b$ and $c$.
 \end{sol}
 
 \begin{exercise}[0.3.9]

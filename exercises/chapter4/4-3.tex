@@ -217,14 +217,12 @@ Let $G$ be a group.
 
 \begin{sol}
 	Suppose $\sigma \in Z(S_n)$ for some $n \geq 3$.
-	Then $\sigma$ commutes with every element of $S_n$.
-	In particular, $\sigma$ commutes with all transpositions (the set of which generate $S_n$).
-	Let $(a\ b)$ be any transposition in $S_n$.
-	Then we have $\sigma(a\ b)\sigma\inv = (a\ b)$.
-	This implies that $(\sigma(a)\ \sigma(b)) = (a\ b)$, so $\sigma(a) = a$ and $\sigma(b) = b$.
-	Since $a$ and $b$ were arbitrary, $\sigma$ fixes every element of $\set{1, 2, \ldots, n}$.
-	Therefore, $\sigma$ is the identity permutation.
-	Hence, $Z(S_n) = \set{1}$ for all $n \geq 3$.
+	Pick some $a \in \set{1, 2, \ldots, n}$.
+	Pick some $b, c \in \set{1, 2, \ldots, n} \setminus \set{a}$ with $b \neq c$.
+	Then $\sigma(a\ b)\sigma\inv = (\sigma(a)\ \sigma(b)) = (a\ b)$, so $\set{\sigma(a), \sigma(b)} = \set{a, b}$.
+	Moreover, $\sigma(a\ c)\sigma\inv = (\sigma(a)\ \sigma(c)) = (a\ c)$, so $\set{\sigma(a), \sigma(c)} = \set{a, c}$.
+	Then $\sigma(a) \in \set{a, b}$ and $\sigma(a) \in \set{a, c}$, so $\sigma(a) = a$.
+	Since $a$ was arbitrary, $\sigma$ fixes all elements of $\set{1, 2, \ldots, n}$.
 \end{sol}
 
 \begin{exercise}[4.3.9]

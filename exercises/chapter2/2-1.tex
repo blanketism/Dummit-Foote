@@ -14,7 +14,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group and $H$ be the subset in question.
+    Let $G$ be the group and $H$ be the subset in question. Assume $H$ is a subgroup of $G$.
     \begin{subexercises}
         \item Since $0 + 0i \in H$, then $H$ is nonempty.
         For $a + ai, b + bi \in H$,
@@ -32,13 +32,12 @@
         \item Fix $n \in \zp$.
         Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty.
         Let $a/b, c/d \in H$ such that $b \mid n$ and $d \mid n$.
-        Then there exist $x, y \in \zp$ such that $bx = n$ and $dy = n$.
         Then
         \[
-        	\frac ab - \frac cd = \frac{ax - cy}{n}.
+            \frac ab - \frac cd = \frac{ad - bc}{bd}.
         \]
-        Reducing this fraction still yields a denominator that divides $n$.
-        Then $H \leq G$.
+        Reducing the fraction to lowest terms, the denominator must divide $bd$, which divides $n$ since $b \mid n$ and $d \mid n$.
+        Hence, the denominator of the reduced fraction divides $n$, so that $H \leq G$.
         \item Fix $n \in \zp$.
         Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, then $0 \in H$ so that $H$ is nonempty.
         Let $a/b, c/d \in H$ such that $(a, c) = 1$, $(b, n) = 1$, and $(d, n) = 1$.
@@ -133,8 +132,7 @@
 
 \begin{sol}
    If $H \leq G$ with $|H| = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem.
-	This implies $kn - k = n$, or equivalently $n = k/(k - 1)$.
-	Since $k = 2$ implies $n = 2$ and $k \geq 3$ implies $n \notin \zp$, then there is no such subgroup $H$.
+   But since $1 < n/(n - 1) < 2$ for all $n > 2$, no such $k$ can exist.
 \end{sol}
 
 \begin{spex}[2.1.6]

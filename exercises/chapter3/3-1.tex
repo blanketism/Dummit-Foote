@@ -928,11 +928,11 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $gN = Ng$.
-	Let $n \in N$.
-	For some $n' \in N$, we have $ng = gn'$, or $n'g = gn$.
-	Then $gng\inv = n'$, so that $gNg\inv \subseteq N$.
-	By \exref{3.1.27}, this implies that $gNg\inv = N$, hence $g \in N_G(N)$.
+    \item [\rightimp] Suppose $gN = Ng$, and let $n \in N$.
+    Then there exists $n' \in N$ such that $gn = n'g$.
+    Then $gng\inv = n' \in N$, hence $gNg\inv \subseteq N$.
+    Similarly, there exists $n'' \in N$ such that $ng = gn''$, so that $n = gn''g\inv \in gNg\inv$, hence $N \subseteq gNg\inv$.
+    Then $gNg\inv = N$, so that $g \in N_G(N)$.
     \item [\leftimp] Suppose $g \in N_G(N)$.
 	Let $n \in N$.
 	Since $n \in gNg\inv$, there exists $n' \in N$ such that $n = gn'g\inv$.

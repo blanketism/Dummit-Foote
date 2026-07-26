@@ -35,8 +35,8 @@
 	\begin{align*}
 		(1\ 2) \cdot 1 & = (1\ 2) && \sigma_{(1\ 2)}(1) = 2 \\
 		(1\ 2) \cdot (1\ 2) & = 1 && \sigma_{(1\ 2)}(2) = 1 \\
-		(1\ 2) \cdot (2\ 3) & = (1\ 3\ 2) && \sigma_{(1\ 2)}(4) = 5 \\
-		(1\ 2) \cdot (1\ 3) & = (1\ 2\ 3) && \sigma_{(1\ 2)}(3) = 6 \\
+		(1\ 2) \cdot (2\ 3) & = (1\ 2\ 3) && \sigma_{(1\ 2)}(4) = 5 \\
+		(1\ 2) \cdot (1\ 3) & = (1\ 3\ 2) && \sigma_{(1\ 2)}(3) = 6 \\
 		(1\ 2) \cdot (1\ 2\ 3) & = (2\ 3) && \sigma_{(1\ 2)}(5) = 3 \\
 		(1\ 2) \cdot (1\ 3\ 2) & = (1\ 3) && \sigma_{(1\ 2)}(6) = 4
 	\end{align*}
@@ -198,8 +198,9 @@
 \begin{sol}
 	Let $G$ act by left multiplication on the set of left cosets of $H$ in $G$.
 	Then we have the homomorphism $\phi : G \to S_n$, which is the permutation representation of $G$ on $G/H$.
-	Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gH = H$.
-	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $|G : K| = |G/K| = |\phi(G)|$ divides $n!$.
+	Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gxH = xH$ for all $x \in G$.
+	Taking $x = 1$, we have $gH = H$, so that $g \in H$.
+	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $|G : K| = |G/K| = |\phi(G)|$ divides $|S_n| = n!$.
 	Therefore, $|G : K| \leq n!$.
 \end{sol}
 
