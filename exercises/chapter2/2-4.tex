@@ -7,7 +7,7 @@
 \begin{sol}
     It is clear that $H \subseteq \gen H$.
 	Recall that $\gen H$ is the intersection of all subgroups of $G$ that contain $H$.
-	Since $H$ is itself a subgroup of $G$ that contains $H$, then $\gen H \subseteq H$.
+	Since $H$ is itself a subgroup of $G$ that contains $H$, $\gen H \subseteq H$.
 	Hence, $\gen H = H$.
 \end{sol}
 
@@ -17,8 +17,8 @@
 \end{exercise}
 
 \begin{sol}
-    Since $\gen B$ is the smallest subgroup of $G$ that contains $B$, and $A \subseteq B$, then $A \subseteq \gen B$.
-	Since $\gen A$ is the smallest subgroup of $G$ that contains $A$, then $\gen A \subseteq \gen B$, so that $\gen A \leq \gen B$.
+    Since $\gen B$ is the smallest subgroup of $G$ that contains $B$, and $A \subseteq B$, $A \subseteq \gen B$.
+	Since $\gen A$ is the smallest subgroup of $G$ that contains $A$, $\gen A \subseteq \gen B$, so that $\gen A \leq \gen B$.
 
     Take $G = \zbb$ with $A = \set 1$ and $B = \set{1, 2}$.
 	Then $A \subseteq B$ with $A \ne B$, but $\gen A = \gen B = \zbb$.
@@ -99,7 +99,7 @@
 
 \begin{sol}
     Let $\alpha = (1\ 2\ 3\ 4)$ and $\beta = (1\ 2\ 4\ 3)$.
-	Since $\abs\alpha = 4$ and $\abs{\alpha\beta} = \abs{(1\ 3\ 2)} = 3$, then $\gen{\alpha, \beta}$ must have order 12 or 24 by Lagrange's.
+	Since $\abs\alpha = 4$ and $\abs{\alpha\beta} = \abs{(1\ 3\ 2)} = 3$, $\gen{\alpha, \beta}$ must have order 12 or 24 by Lagrange's.
 	Observe that $\alpha^2 = (1\ 3)(2\ 4)$ and $\alpha^3\beta\alpha^3 = (1\ 2)$.
 	Then $\gen{\alpha, \beta}$ has a subgroup of order 8 by \exref{2.4.7}, so $\gen{\alpha, \beta}$ must have order 24 and hence equals $S_4$.
 \end{sol}
@@ -277,7 +277,7 @@
 
 \begin{sol}
     Let $P$ be the set in question and $\qbb_+\unt$ be the multiplicative group of positive rationals.
-	Since $\gen P \leq \qbb_+\unt$, then $(1 / p)\inv = p \in \gen P$, so $p^k \in \gen P$ for $k \in \zbb$.
+	Since $\gen P \leq \qbb_+\unt$, $(1 / p)\inv = p \in \gen P$, so $p^k \in \gen P$ for $k \in \zbb$.
 	Then for any $q \in \qbb_+\unt$ with $q = m/n$ for $m, n \in \zp$, we may write $m$ and $n$ as products of primes.
 	Then $m/n = q \in \gen P$, hence $\qbb_+\unt \leq \gen P$.
 \end{sol}
@@ -293,7 +293,7 @@
 \end{spex}
 
 \begin{solenum}
-    \item Since $G$ is finite and generates itself, then $G = \gen G$. 
+    \item Since $G$ is finite and generates itself, $G = \gen G$. 
     \item $\zbb = \gen 1$.
     \item Let $H = \gen A$, where
     \[
@@ -359,15 +359,15 @@
 	Otherwise, construct subgroups $H_i$ such that $H_i < H_{i + 1} < G$.
 	Since $G$ is finite, this process must terminate at some $H_k$ which is maximal.
 	Then $H_k$ is a maximal subgroup with $H < H_k$.
-    \item Since $s \notin \gen r$, then $\gen r < D_{2n}$.
+    \item Since $s \notin \gen r$, $\gen r < D_{2n}$.
 	If $\gen r$ is not maximal, there exists $H < G$ such that $sr^k \in H$ for $1 \leq k < n$.
-	Since $r^{n - k} \in H$, then $sr^kr^{n - k} = s \in H$, which implies $H = D_{2n}$, contradicting that $H$ is a proper subgroup.
+	Since $r^{n - k} \in H$, $sr^kr^{n - k} = s \in H$, which implies $H = D_{2n}$, contradicting that $H$ is a proper subgroup.
 	It follows that $\gen r$ is maximal.
     \item
     \begin{itemize}
         \item [\rightimp] Suppose $H$ is maximal, and put $H = \gen{x^k}$ and $d = (n, k)$.
 	Note that $d > 1$ for the subgroup to be proper.
-	Since $d \mid k$, then $H \leq \gen{x^d}$.
+	Since $d \mid k$, $H \leq \gen{x^d}$.
 	By maximality of $H$, we must have either $H = \gen{x^d}$ or $\gen{x^d} = G$.
 	In the first case, $d = k$ so that $k \mid n$.
 	In the second case, $\gen{x^d} = G$, so that $d = 1$.
@@ -377,7 +377,7 @@
 	Then $k$ must be prime.
         \item [\leftimp] Suppose that $H = \gen{x^p}$ for prime $p \mid n$.
 	If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$.
-	Since $p$ is prime, then either $d = 1$ or $p$.
+	Since $p$ is prime, either $d = 1$ or $p$.
 	If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$.
 	If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$.
 	It follows that $H$ is maximal. \qh
@@ -403,7 +403,7 @@
     \[
     	H = \bigcup_{K \in \ccal}K
     \]
-    Since at least one subgroup is in $\ccal$ and subgroups are nonempty, then $\ccal$ is nonempty.
+    Since at least one subgroup is in $\ccal$ and subgroups are nonempty, $\ccal$ is nonempty.
 	Suppose $g, h \in H$.
 	Then $g \in K_1$ and $h \in K_2$ for some $K_1, K_2 \in \ccal$ such that $K_1 \leq K_2$ or $K_2 \leq K_1$, or both.
 	Without loss of generality, suppose $K_1 \leq K_2$.
@@ -411,7 +411,7 @@
 	Then $H \leq G$.
     \item If $H$ was not a proper subgroup, then $H$ must contain all generators $g_i$.
 	Associate each generator with a (not necessarily distinct) subgroup $K_i$ so that $g_i \in K_i$ for every $1 \leq i \leq n$.
-	Since $\ccal$ is a chain, then we may order the subgroups such that $K_j \leq K_{j + 1}$ for all $1 \leq j \leq n - 1$.
+	Since $\ccal$ is a chain, we may order the subgroups such that $K_j \leq K_{j + 1}$ for all $1 \leq j \leq n - 1$.
 	It follows that $K_n$ contains every generator $g_i$ so that $K_n = G$, contradicting that $\ccal$ is a chain of proper subgroups of $G$. 
     \item Because $G$ is non-trivial, then $\set 1 \in \scal$ so that $\scal$ is nonempty.
 	Moreover, $H \in \scal$ by the previous part, and for any $K \in \ccal$, we have $K \leq H$ so that $H$ is an upper bound for $\ccal$.
@@ -460,7 +460,7 @@
     Suppose now that $S$ is infinite.
 	For any $n \in \zp$, there exists $h \in H$ and $m \in \zp$ such that $\abs h = p^m > p^n$, for otherwise it would be that every $h \in H$ has order $\abs h \leq p^n$, meaning that $n$ is an upper bound for $S$.
 	Then $\abs h = p^m$ so that $H_m = \gen h$, and $H_m \leq H$.
-	Since $H_n \leq H_m$ for every $n \in \zp$, then
+	Since $H_n \leq H_m$ for every $n \in \zp$,
     \[
     	Z = \bigcup_{n \in \zp} H_n \subseteq H
     \]
@@ -470,7 +470,7 @@
 	Because $s \in S$, then there is $h_0 \in H$ where $\abs{h_0} = p^s$ so that $H_s = \gen{h_0} \leq H$.
 	Suppose $h \in H$ with $\abs h = p^k$ for some $k \in \zp$.
 	Then $k \in S$ where $k \leq s$ so that $H_k \leq H_s$.
-	Since $h \in H_k$, then $h \in H_s$ so $H \leq H_s$.
+	Since $h \in H_k$, $h \in H_s$ so $H \leq H_s$.
 	Hence, $H = H_s$.
     \item Put $Z = \gen{z_1, z_2, \ldots, z_n}$ for some $n \in \zp$ such that $\abs{z_i} = p^{x_i}$.
 	Let $x = \max(x_1, x_2, \ldots, x_n)$.

@@ -116,7 +116,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	If $N = A_3$, let $n \in N$ be a non-identity element.
 	Then $hnh\inv \in N$ for every $h$.
 	However, \exref{5.5.1} says that $\ker\psi = C_K(H)$.
-	Since $\psi$ is injective (an isomorphism, actually), then $C_K(H) = 1$, so $n$ does not commute with some $h_0 \in H$, i.e., $nh_0n\inv \neq h_0$.
+	Since $\psi$ is injective (an isomorphism, actually), $C_K(H) = 1$, so $n$ does not commute with some $h_0 \in H$, i.e., $nh_0n\inv \neq h_0$.
 	However, from $N \nsub G$, we know that $h_0nh_0\inv \in N$. 
     
     Observe that $h_0nh_0\inv = (h_0nh_0\inv n\inv)n = [h_0, n]n$.
@@ -165,7 +165,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \begin{enumerate}
         \item Suppose $K$ is infinite.
 	By conjugate subgroups, we know that $\phi_2(K) = \phi_2(K^a)$, where $K^a = \set{k^a \mid k \in K}$.
-	Since $\phi_2$ is injective, then $K^a = K$, forcing $a = \pm 1$.
+	Since $\phi_2$ is injective, $K^a = K$, forcing $a = \pm 1$.
 	Then $\theta((h, k)) = (\sigma\inv(h), k^a)$ is a 2-sided inverse of $\psi$, so $\psi$ is bijective.
         \item We first prove a lemma: if $m \mid n$, then the map defined by
         \[
@@ -307,7 +307,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         	G \cong P \semidir_{\phi_1} S \cong (Z_7 \semidir Z_4) \times Z_2.
         \]
         \item For $S \cong Z_8$, let $S = \gen s$.
-	Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, then the only non-trivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$.
+	Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, the only non-trivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$.
 	Moreover, cyclicity of $S$ guarantees uniqueness of the homomorphism.
 	Then $sps\inv = p\inv$, and
         \[
@@ -378,7 +378,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \]
         If we pick $\phi_2$, then $s$ acts on $P$, and $sps\inv = p\inv$.
 	Moreover, note that $r$ centralizes $P$, hence $|rp| = 28$.
-	Since $s(rp)s = srps\inv = (srs\inv)(sps\inv) = r\inv p\inv = (rp)\inv$, then
+	Since $s(rp)s = srps\inv = (srs\inv)(sps\inv) = r\inv p\inv = (rp)\inv$,
         \[
         	G \cong P \semidir_{\phi_2} S \cong D_{56}.
         \]
@@ -390,7 +390,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Note that the stabilizer of any non-identity element $s \in S$ is a subgroup of $P$, hence $|G_s| = 1$ or 7.
 	If $|G_s| = 7$, then the orbit is trivial, hence $psp\inv = s$, or $p = sps\inv \in P$, which contradicts that $|s|$ is a power of 2.
 	Then $|G_s| = 1$, so the orbit $\ocal_s$ of $s$ has size 7.
-	Since $|S - 1| = 7$, then $\ocal_s$ contains all non-identity elements of $S$.
+	Since $|S - 1| = 7$, $\ocal_s$ contains all non-identity elements of $S$.
 	Hence, all non-identity elements of $S$ have the same order.
     
     If they all had order 8, then $s^2$ would have order 4, but $(s^2)^4 = s^8 = 1$.
@@ -399,10 +399,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \item Let $H = Z_2 \times Z_2 \times Z_2$ and $K = \gen k \cong Z_7$.
 	Then $\aut(H) \cong \gl_3(\fbb_2)$, which has order 168.
 	Let $\phi : K \to \aut(H)$ be a homomorphism.
-	Since $|K| = 7$, then $|\phi(K)| = 1$ or 7.
+	Since $|K| = 7$, $|\phi(K)| = 1$ or 7.
 	If $|\phi(K)| = 1$, then the resulting semidirect product is Abelian, which is a contradiction.
 	Hence, $|\phi(K)| = 7$.
-	Since $\aut(H)$ has order 168, then there exists a unique subgroup of order 7 in $\aut(H)$, call it $\psi$.
+	Since $\aut(H)$ has order 168, there exists a unique subgroup of order 7 in $\aut(H)$, call it $\psi$.
 	Then $\phi : K \to \aut(H)$ given by $\phi(k) = \psi$ is a homomorphism, and the resulting semidirect product $H \semidir_\phi K$ has order $|H||K| = 8 \cdot 7 = 56$.
 	We now claim that $K$ is not normal in $H \semidir_\phi K$.
     
@@ -414,7 +414,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
     To see that $H \semidir_\phi K$ is unique, let $\phi_1, \phi_2 : K \to \aut(H)$ be two homomorphisms such that $|\phi_1(K)| = |\phi_2(K)| = 7$.
 	Then $\phi_1(K)$ and $\phi_2(K)$ are conjugate subgroups of $\aut(H)$.
-	Since $|\aut(H) = 2^3 \cdot 3 \cdot 7$, then $\phi_1(K), \phi_2(K) \in \syl_7(\aut(H))$, so they are conjugate by the Sylow theorems.
+	Since $|\aut(H) = 2^3 \cdot 3 \cdot 7$, $\phi_1(K), \phi_2(K) \in \syl_7(\aut(H))$, so they are conjugate by the Sylow theorems.
 	Hence, by \exref{5.5.6}, we have $H \semidir_{\phi_1} K \cong H \semidir_{\phi_2} K$.
 	Therefore, $H \semidir_\phi K$ is unique.
 \end{solenum}
@@ -437,18 +437,18 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \begin{itemize}
         \item Suppose $P \cong Z_{25}$.
 	Then $\aut(P) \cong \units[25]$, which has order 20.
-	Since $|Q| = 3$, then the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{25} \times Z_3$.
+	Since $|Q| = 3$, the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{25} \times Z_3$.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$.
-	Since $|\aut(Q)| = 2$, then the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
+	Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
         \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\fbb_5)$, which has order 480.
-	Since $|Q| = 3$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$.
+	Since $|Q| = 3$, there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$.
 	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems.
 	Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
 	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-Abelian.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$.
-	Since $|\aut(Q)| = 2$, then the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
+	Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
     \end{itemize}
 \end{sol}
 
@@ -477,14 +477,14 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	\]
     where, once entries are taken mod 19, results in $I_2$, hence $|M| = 5$.
 	Moreover, we know that $1805 = 19^2 \cdot 5$.
-	Since $n_{19} \equiv 1 \bmod 19$ and $n_{19} \mid 5$, then $n_{19} = 1$, so $P \in \syl_{19}(G)$ is normal.
+	Since $n_{19} \equiv 1 \bmod 19$ and $n_{19} \mid 5$, $n_{19} = 1$, so $P \in \syl_{19}(G)$ is normal.
 	Moreover, we have $P \cong Z_{361}$ or $P \cong Z_{19} \times Z_{19}$.
 	If $P \cong Z_{361}$, then $\aut(P) \cong \units[361]$, which has order 19 * 18 = 342.
-	Since $|Q| = 5$, then the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{361} \times Z_5$.
+	Since $|Q| = 5$, the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{361} \times Z_5$.
 
     If $P \cong Z_{19} \times Z_{19}$, then $\aut(P) \cong \gl_2(\fbb_{19})$, which has order 123120.
 	If we take $\phi$ to be the trivial homomorphism, then $G \cong Z_{19} \times Z_{19} \times Z_5$.
-	Now, since $|Q| = 5$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 123120$ and $(123120, 5) = 5$.
+	Now, since $|Q| = 5$, there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 123120$ and $(123120, 5) = 5$.
 	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_5(\aut(P))$, so they are conjugate by the Sylow theorems.
 	Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
 	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-Abelian.
@@ -530,10 +530,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Hence, the unique Sylow 7-subgroup is normal.
     \item Let $P \cong Z_{49}$ and $Q \cong Z_3$.
 	Then $\aut(P) \cong \units[49]$, which has order $7 \cdot 6 = 42$.
-	Since $|Q| = 3$, then there exists non-trivial homomorphisms $\phi : Q \to \aut(P)$, where $q \in Q = \gen q$ is mapped to a generator of the unique subgroup of order 3 in $\aut(P)$, say $\alpha$.
+	Since $|Q| = 3$, there exists non-trivial homomorphisms $\phi : Q \to \aut(P)$, where $q \in Q = \gen q$ is mapped to a generator of the unique subgroup of order 3 in $\aut(P)$, say $\alpha$.
 	Then either $q \mapsto \alpha$ or $q \mapsto \alpha^2$.
 	Let $\phi_1, \phi_2 : Q \to \aut(P)$ be the two homomorphisms defined by $\phi_1(q) = \alpha$ and $\phi_2(q) = \alpha^2$.
-	Since $\phi_1(Q) = \phi_2(Q) = \gen\alpha$, then by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
+	Since $\phi_1(Q) = \phi_2(Q) = \gen\alpha$, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
 	Hence, there is a unique non-Abelian group of order 147 whose Sylow 7-subgroup is cyclic.
     \item Recall that $|\gl_2(\fbb_7)| = (7^2 - 1)(7^2 - 7) = 48 \cdot 42 = 2016 = 2^5 \cdot 3^2 \cdot 7$.
 	Observe that
@@ -558,7 +558,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Moreover, $t_1t_2 = t_2t_1$, so $P = \gen{t_1}\gen{t_2}$.
 	To see that this is isomorphic to $\gen{t_1} \times \gen{t_2}$, note that $\gen{t_1} \cap \gen{t_2} = 1$.
 	Moreover, commutativity shows that ${t_1} \nsub P$ and ${t_2} \nsub P$, so $P \cong \gen{t_1} \times \gen{t_2} \cong Z_3 \times Z_3$.
-	Since $|P| = 9$, then $P$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$.
+	Since $|P| = 9$, $P$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$.
 
     Let $R$ be a subgroup of order 3 in $\gl_2(\fbb_7)$.
 	Then $R \leq gPg\inv$ for some $g \in \gl_2(\fbb_7)$ by the Sylow theorems.
@@ -610,7 +610,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Now, consider $G_3$, and let $z \in Z(G_3)$.
 	We first consider when $z \in Z(G_3) \cap (\gen a \times \gen b)$.
 	Then $z = a^ib^j$ for some $0 \leq i, j \leq 6$.
-	Since $z$ commutes with $q$, then 
+	Since $z$ commutes with $q$, 
     \[
     	a^ib^j = z = qzq\inv = qa^ib^jq\inv = qaq\inv qbq\inv = a^{2i}b^{2j}.
     \]
@@ -618,11 +618,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Hence, $Z(G_3) \cap (\gen a \times \gen b) = 1$.
 	Now, consider when $z \in Z(G_3) - (\gen a \times \gen b)$.
 	Then $z = a^ib^jq^k$ for some $0 \leq i, j \leq 6$ and $1 \leq k \leq 2$.
-	Since $z$ commutes with $a$, then 
+	Since $z$ commutes with $a$, 
     \[
     	a^ib^jq^k = z = aza\inv = aa^ib^jq^ka\inv = a^{i+1}b^jq^ka\inv = a^{i+1}b^jq^ka^{-1}.
     \]
-    However, since $q$ does not centralize $\gen a$, then this is a contradiction.
+    However, since $q$ does not centralize $\gen a$, this is a contradiction.
 	Hence, $Z(G_3) - (\gen a \times \gen b) = 1$, so $Z(G_3) = 1$.
 	A similar argument shows that $Z(G_4) = 1$.
     \item To show that $G_3 \not\cong G_4$, we first observe that $G_3$ and $G_4$ have the same subgroups of order 7, since $Z_7 \times Z_7$ is the unique Sylow 7-subgroup of both groups.
@@ -644,10 +644,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \]
     so $q$ does not stabilize $\gen{ab}$.
 	Hence, $\gen{ab}$ is not normal in $G_4$.
-	Since $G_3$ and $G_4$ have different numbers of normal subgroups of order 7, then $G_3 \not\cong G_4$.
+	Since $G_3$ and $G_4$ have different numbers of normal subgroups of order 7, $G_3 \not\cong G_4$.
     \item By part (b), every group of order 147 has a normal Sylow 7-subgroup.
 	Let $P \in \syl_7(G)$ and $Q \in \syl_3(G)$.
-	Since $P \cap Q = 1$ because (49, 3) = 1, and $|G| = |P||Q|$, then $G = PQ$, and $G \cong P \semidir Q$.
+	Since $P \cap Q = 1$ because (49, 3) = 1, and $|G| = |P||Q|$, $G = PQ$, and $G \cong P \semidir Q$.
 	If the homomorphism is trivial, then we have the two Abelian groups from part (a).
 	If the homomorphism is non-trivial and $P$ is cyclic, then we have the unique non-Abelian group from part (c).
 	If the homomorphism is non-trivial and $P$ is not cyclic, then $\phi(Q)$ is a subgroup of order 3 in $\aut(P) \cong \gl_2(\fbb_7)$.
@@ -732,7 +732,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \[
         	\phi_1 : s \mapsto \id, \quad \phi_2 : s \mapsto \alpha, \quad \phi_3 : s \mapsto \alpha^2, \quad \phi_4 : s \mapsto \alpha^3
         \]
-        Since $\phi_1$ is trivial, then $G \cong P \semidir_{\phi_1} S \cong P \times S \cong Z_5 \times Z_4$.
+        Since $\phi_1$ is trivial, $G \cong P \semidir_{\phi_1} S \cong P \times S \cong Z_5 \times Z_4$.
 	Also observe that $\ker\phi_2 = \ker\phi_4 = 1$ while $\ker\phi_3 = \gen{s^2}$.
 	Then the resulting semidirect products from $\phi_2$ and $\phi_4$ are isomorphic, since $\phi_2(S) = \phi_4(S) = \gen\alpha$, so by \exref{5.5.6}, we have $P \semidir_{\phi_2} S \cong P \semidir_{\phi_4} S$.
 	Moreover, $\ker\phi_3 = \gen{s^2}$, which is the unique subgroup of order 2 in $\aut(P)$, so $P \semidir_{\phi_3} S$ is not isomorphic to $P \semidir_{\phi_2} S$.
@@ -870,15 +870,15 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Hence, $n_3 = 4$.
 	Again, each $PQ_i$ intersect non-trivially at $P$, and $P$ commutes with the non-identity elements of each $PQ_i$.
 	Then there are $5 + 10 \cdot 4 = 45$ elements in $C_G(P)$.
-	Since $C_G(P) \leq G$, then $|C_G(P)| = 60$ so that $C_G(P) = G$, showing that $P \leq Z(G)$.
+	Since $C_G(P) \leq G$, $|C_G(P)| = 60$ so that $C_G(P) = G$, showing that $P \leq Z(G)$.
     
     Consider $G/P$, where $|G/P| = 12$.
 	If we consider $\pi$ to be the natural projection map from $G$ to $G/P$, we claim that the map $\psi : \syl_3(G) \to \syl_3(G/P)$ given by $\psi(Q_i) \to \pi(Q_i)$ is a bijection.
-	Note that this is a well-defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, then $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$.
+	Note that this is a well-defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$.
 	To see that $\psi$ is injective, suppose that $\psi(Q_i) = \psi(Q_j)$, then $Q_iP/P = Q_jP/P$, which implies that $Q_iP = Q_jP$.
-	Since $|Q_iP| = |Q_jP| = 15$, and $n_3(Q_iP) \equiv 1 \bmod 3$ and $n_3(Q_iP) \mid 5$, then $n_3(Q_iP) = 1$.
+	Since $|Q_iP| = |Q_jP| = 15$, and $n_3(Q_iP) \equiv 1 \bmod 3$ and $n_3(Q_iP) \mid 5$, $n_3(Q_iP) = 1$.
 	Hence, $Q_i = Q_j$, so $\psi$ is injective.
-	Since $n_3(G) = 4$, then $|\syl_3(G/P)| \geq 4$.
+	Since $n_3(G) = 4$, $|\syl_3(G/P)| \geq 4$.
 	By injectivity, it must be that $\psi$ is a bijection, hence $n_3(G/P) = 4$.
 	We now consider the classification of groups of order 12, which are $Z_{12}, Z_2 \times Z_6, D_{12}, A_4$, and $Z_3 \semidir Z_4$.
     \begin{itemize}
@@ -891,22 +891,22 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Then the only possibility is that $G/P \cong A_4$.
 
     Let $T_1, T_2 \in \syl_2(G)$ be distinct, and consider $T_1P$ and $T_2P$.
-	Since $P \leq Z(G)$, then $T_iP \cong T_i \times P$ for $i = 1, 2$.
+	Since $P \leq Z(G)$, $T_iP \cong T_i \times P$ for $i = 1, 2$.
 	If there was some $t \in T_1$ such that $t \in T_2P$, observe that $|t|$ is divisible by 4.
-	Since all non-identity elements of $P$ have order 5, then $t \in T_2$.
+	Since all non-identity elements of $P$ have order 5, $t \in T_2$.
 	But $T_1$ and $T_2$ are distinct by assumption, hence there must be some $t^* \in T_1$ such that $t^* \notin T_2P$.
 	Then $T_1P \neq T_2P$, and $T_1P/P, T_2P/P \in \syl_2(G/P)$.
-	Since $n_2(G/P) = 1$, then $T_1P/P = T_2P/P$, which implies that $T_1P = T_2P$.
+	Since $n_2(G/P) = 1$, $T_1P/P = T_2P/P$, which implies that $T_1P = T_2P$.
 	But this is a contradiction, so there is a unique Sylow 2-subgroup of $G$, which we call $T$.
 
     Consider $TQ$.
 	It is clear that $T \cap Q = 1$, and $|TQ| = 12$.
-	If $Q \nsub TQ$, then since $P \leq Z(G)$ also normalizes $Q$, then $Q \nsub G$, which is a contradiction.
+	If $Q \nsub TQ$, then since $P \leq Z(G)$ also normalizes $Q$, $Q \nsub G$, which is a contradiction.
 	Then $n_3(TQ) \neq 1$, and by a similar argument as above, we conclude that $TQ \cong A_4$.
 	If we now consider $\phi : TQ \to \aut(P)$, note that $\phi$ is trivial since $TQ$ is generated by 3-cycles, while $\aut(P) \cong Z_4$ has no elements of order 3.
 	Then $G \cong P \times TQ \cong Z_5 \times A_4$.
     \item If $P$ and $Q$ are both normal in $G$, then we have $PQ \nsub G$.
-	Since $P \cap Q = 1$, then $PQ \cong P \times Q \cong Z_5 \times Z_3 \cong Z_{15}$.
+	Since $P \cap Q = 1$, $PQ \cong P \times Q \cong Z_5 \times Z_3 \cong Z_{15}$.
 	Put $P = \gen p$ and $Q = \gen q$.
 	Let $T \in \syl_2(G)$, and consider a homomorphism from $T$ to $\aut(Z_{15})$, where $\aut(Z_{15}) \cong Z_4 \times Z_2$.
 	From the text, we know that there are exactly 3 automorphisms of order 2:
@@ -1164,14 +1164,14 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Hence, $A$ is similar to the diagonal matrix with entries $1$ and $-1$. 
 
     Let $|G| = 2p^2$, $P \in \syl_p(G)$, and $Q \in \syl_2(G)$.
-	Since $n_p \equiv 1 \bmod p$ and $n_p \mid 2$, then $p$ being odd implies that $n_p = 1$, hence $P \nsub G$.
+	Since $n_p \equiv 1 \bmod p$ and $n_p \mid 2$, $p$ being odd implies that $n_p = 1$, hence $P \nsub G$.
 	Moreover, $|P| = p^2$ implies that $P \cong Z_{p^2}$, or $Z_p \times Z_p$.
 	Put $Q = \gen q$.
 	We split by cases:
     \begin{itemize}
         \item The Abelian case is $Z_{p^2} \times Z_2$.
 	If $P = \gen x \cong Z_{p^2}$, then $\aut(P) \cong Z_{p(p - 1)}$.
-	Since $|q| = 2$ and $p$ is odd, then $p - 1$ is even and $\aut(P)$ has even order, hence it has a unique subgroup of order 2 generated by some $\alpha \in \aut(P)$, namely the inversion map.
+	Since $|q| = 2$ and $p$ is odd, $p - 1$ is even and $\aut(P)$ has even order, hence it has a unique subgroup of order 2 generated by some $\alpha \in \aut(P)$, namely the inversion map.
 	We then have $qxq\inv = x\inv$.
 	It follows that
         \[
@@ -1288,7 +1288,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item For $G_3$, we have $r - 1 = 2^{n - 1}$, hence $i \equiv 0 \bmod 2$.
 	Then $Z(G_3) = \gen{a^2} \cong Z_{2^{n - 1}}$.
         \item For $G_4$, we have $r - 1 = 2^{n - 1} - 2$, hence $2i(2^{n - 2} - 1) \equiv 0 \bmod 2^n$.
-	Since $2^{n - 2} - 1$ is odd, then $i \equiv 0 \bmod 2^{n - 1}$.
+	Since $2^{n - 2} - 1$ is odd, $i \equiv 0 \bmod 2^{n - 1}$.
 	Then $Z(G_4) = \gen{a^{2^{n - 1}}} \cong Z_2$.
     \end{itemize}
     We see that $Z(G_2) \cong Z(G_4)$, but $Z(G_3)$ is not isomorphic to either of them.
@@ -1381,16 +1381,16 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     	|N_\kappa| \leq |\aut(\pi(H))| = |\aut(H)|.
     \]
     Hence, $|N| = n|N_\kappa| \leq n|\aut(H)| = |G|$.
-	Since $\pi$ is injective, then $|G| = |\pi(G)| \leq |N|$.
+	Since $\pi$ is injective, $|G| = |\pi(G)| \leq |N|$.
 	Hence, $|N| = |G|$, and $\pi(G) = N$.
     \item Let $\sigma \in S_n$ be an $n$-cycle.
 	Then $\gen\sigma \cong Z_n$ acts transitively on the set $\set{1, 2, \ldots, n}$, hence the associated permutation representation is the regular representation of $Z_n$.
-	Since any subgroup of $S_n$ isomorphic to $Z_n$ are conjugate in $S_n$, then the normalizer of any subgroup generated by an $n$-cycle is isomorphic to the normalizer of $\gen\sigma$.
+	Since any subgroup of $S_n$ isomorphic to $Z_n$ are conjugate in $S_n$, the normalizer of any subgroup generated by an $n$-cycle is isomorphic to the normalizer of $\gen\sigma$.
 	By part (b), we have
     \[
     	N_{S_n}(\gen\sigma) \cong N_{S_n}(\pi(Z_n)) \cong \hol(Z_n).
     \]
-    Since $\aut(Z_n) \cong \units[n]$, then $|N_{S_n}(\gen\sigma)| = |\hol(Z_n)| = n\phi(n)$.
+    Since $\aut(Z_n) \cong \units[n]$, $|N_{S_n}(\gen\sigma)| = |\hol(Z_n)| = n\phi(n)$.
 \end{solenum}
 
 \begin{exercise}[5.5.20]
@@ -1420,21 +1420,21 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Then $H_0$ is a characteristic subgroup of $H$ of order $p^2$ or $p^3$ by \exref{5.4.9}.
 	If $|H_0| = p^2$, then $H_0$ is characteristic in $H$ where $H \nsub P$, so $H_0 \nsub P$, and $H_0 \cong Z_p \times Z_p$, and we can take $U = H_0$.
 	If $|H_0| = p^3$, let $P$ act on $H$ by conjugation.
-	Since $Z \leq Z(P)$, then we may have $P$ act on $\bar H$ by conjugation.
+	Since $Z \leq Z(P)$, we may have $P$ act on $\bar H$ by conjugation.
 	We use the class equation, but we instead consider the action of $P$ on $\bar H$ by conjugation.
-	Since $|\bar H| = p^2$, then the class equation gives
+	Since $|\bar H| = p^2$, the class equation gives
     \[
     	|\bar H| = |C_{\bar H}(P)| + \sum_{i = 1}^k |P : C_P(\bar x[i])|,
     \]
     where $\bar x[1], \ldots, \bar x[k]$ are representatives of the non-singleton orbits of the $P$-conjugation on $\bar H$.
 	Note that $|P : C_P(\bar x[i])|$ is a power of $p$, hence $|C_{\bar H}(P)| \equiv |\bar H| \equiv 0 \bmod p$.
-	Since $\bar 1 \in C_{\bar H}(P)$, then $|C_{\bar H}(P)| \geq p$.
+	Since $\bar 1 \in C_{\bar H}(P)$, $|C_{\bar H}(P)| \geq p$.
 	Then there exists some $\bar h \in C_{\bar H}(P)$ with $\bar h \neq \bar 1$.
 	Let $h \in H$ be the preimage of $\bar h$ in $H$.
 	Then $h \notin Z$, and $h^p \in Z$.
 	Let $U = \gen{h, Z}$.
 	Then $|U| = p^2$.
-	Since $Z \nsub P$ is clear, we observe that for any $g \in P$, then $ghg\inv \in \bar h \subseteq U$, hence $U \nsub P$.
+	Since $Z \nsub P$ is clear, we observe that for any $g \in P$, $ghg\inv \in \bar h \subseteq U$, hence $U \nsub P$.
 	Moreover, $h^p = 1$, since $H_0 = H$, and $|h| = p$ with $h \notin Z$, hence $\gen h \cap Z = 1$.
 	Lastly, $Z \leq Z(P)$ implies that $h$ commutes with all of $Z$.
 	Then $U \cong Z_p \times Z_p$, and we are done.

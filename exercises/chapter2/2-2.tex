@@ -18,7 +18,7 @@
 	Then $gz = zg$, or $gzg\inv = z$.
 	Then $g \in C_G(Z(G))$, hence $G \subseteq C_G(Z(G))$.
 	It follows that $C_G(Z(G)) = G$.
-	Since $C_G(Z(G)) \leq N_G(Z(G)) \leq G$, then $N_G(Z(G)) = G$.
+	Since $C_G(Z(G)) \leq N_G(Z(G)) \leq G$, $N_G(Z(G)) = G$.
 \end{sol}
 
 \begin{exercise}[2.2.3]
@@ -30,7 +30,7 @@
 	Then $gbg\inv = b$ for all $b \in B$.
 	In particular, $gag\inv = a$ for all $a \in A$ because $A \subseteq B$.
 	Then $C_G(B) \subseteq C_G(A)$.
-	Since $C_G(B)$ and $C_G(A)$ are subgroups of $G$, then $C_G(B) \leq C_G(A)$.
+	Since $C_G(B)$ and $C_G(A)$ are subgroups of $G$, $C_G(B) \leq C_G(A)$.
 \end{sol}
 
 \begin{spex}[2.2.4]
@@ -42,7 +42,7 @@
     Note that $Z(G)$ is the intersection of all centralizers of $G$, so that we can compute $Z(G)$ after computing all centralizers.
 	Note that $C_G(1) = G$ for any group $G$, so we only need to compute the centralizers of the non-identity elements.
 	Beginning with $S_3$, we know by \exref{1.3.20} that $(1\ 2)$ and $(1\ 3)$ generate $S_3$, hence $C_{S_3}((1\ 2))$ cannot be the whole group.
-	Since $\set{1, (1\ 2)} \leq C_{S_3}((1\ 2))$, then $|C_{S_3}((1\ 2))| = 2$.
+	Since $\set{1, (1\ 2)} \leq C_{S_3}((1\ 2))$, $|C_{S_3}((1\ 2))| = 2$.
 	By symmetry, the same argument holds for $(1\ 3)$ and $(2\ 3)$, so that
     \[
     	C_{S_3}((1\ 3)) = \set{1, (1\ 3)}, \quad C_{S_3}((2\ 3)) = \set{1, (2\ 3)}.
@@ -92,7 +92,7 @@
     \]
     so that $(1\ 2) \in N_G(A)$.
 	Hence, $|N_G(A)| = 6$ and $N_G(A) = G$.
-    \item Since $|A| = 4$, then 4 divides $|C_G(A)|$ and $|C_G(A)|$ divides 8 by Lagrange's Theorem.
+    \item Since $|A| = 4$, 4 divides $|C_G(A)|$ and $|C_G(A)|$ divides 8 by Lagrange's Theorem.
 	Observe that $r \notin C_G(A)$ since $rs = sr^3 \neq sr$.
 	Then $|C_G(A)| \neq 8$, hence $|C_G(A)| = 4$ and $C_G(A) = A$.
 	Then 4 divides $|N_G(A)|$ and $|N_G(A)|$ divides 8 by Lagrange's Theorem.
@@ -104,7 +104,7 @@
     so that $r \in N_G(A)$.
 	Then $|N_G(A)| = 8$ and $N_G(A) = G$.
     \item Note 5 divides $|C_G(A)|$ and $|C_G(A)|$ divides 10 by Lagrange's Theorem.
-	Since $s \notin C_G(A)$ because $sr \neq rs$, then $C_G(A) = A$.
+	Since $s \notin C_G(A)$ because $sr \neq rs$, $C_G(A) = A$.
 	Then 5 divides $|N_G(A)|$ which divides 10 by Lagrange's.
 	A similar computation shows $sAs\inv = \set{1, r^4, r^3, r^2, r} = A$, hence $N_G(A) = G$.
 \end{solenum}
@@ -136,7 +136,7 @@
 	Hence, $H$ is Abelian.
         \item [\leftimp] Suppose $H$ is Abelian, and let $h_1 \in H$.
 	Then for any $h_2 \in H$, we have $h_1 h_2 = h_2 h_1$, so that $h_1 \in C_G(H)$.
-	Since $h_1$ was arbitrary, then $H \leq C_G(H)$. \qh
+	Since $h_1$ was arbitrary, $H \leq C_G(H)$. \qh
     \end{itemize}
 \end{solenum}
 
@@ -151,7 +151,7 @@
 \begin{sol}
     We claim that $Z(D_{2n})$ contains no reflections and contains $r^i$ if and only if $n \mid 2i$.
 	To see the first part, suppose $sr^j \in Z(D_{2n})$ for some $0 \leq j < n$.
-	Since it must commute with $r$, then
+	Since it must commute with $r$,
     \[
     	sr^j r = r sr^j \implies sr^{j + 1} = sr^{j - 1} \implies r^2 = 1.
     \]
@@ -159,17 +159,17 @@
 	Hence, no reflections are in $Z(D_{2n})$.
 
     Now consider $r^i \in Z(D_{2n})$ for some $0 \leq i < n$.
-	Since it must commute with $s$, then
+	Since it must commute with $s$,
     \[
     	r^i s = s r^i \implies r^is = r^{-i} s \implies r^{2i} = 1,
     \]
     so that $n \mid 2i$.
     \begin{subexercises}
         \item If $n$ is odd, then $n \mid 2i$ implies that $n \mid i$.
-	    Since $0 \leq i < n$, then $i = 0$ and $Z(D_{2n}) = \set 1$.
+	    Since $0 \leq i < n$, $i = 0$ and $Z(D_{2n}) = \set 1$.
         \item If $n = 2k$, then $n \mid 2i$ implies that $2k \mid 2i$.
 	    Simplifying, we have $k \mid i$.
-	    Since $0 \leq i < 2k$, then $i = 0$ or $i = k$, so that $Z(D_{2n}) = \set{1, r^k}$. \qh
+	    Since $0 \leq i < 2k$, $i = 0$ or $i = k$, so that $Z(D_{2n}) = \set{1, r^k}$. \qh
     \end{subexercises}
 \end{sol}
 
@@ -183,7 +183,7 @@
     The fact that $G_i$ stabilizes $i$ under the action of $G$ on $\set{1, 2, \ldots, n}$ by permutation implies that $G_i$ is a subgroup of $G$.
 
     To find $|G_i|$, observe that any $\sigma \in G_i$ is completely determined by its action on the set $\set{1, 2, \ldots, n} \setminus \set{i}$, which has $n - 1$ elements.
-	Since $\sigma$ is a permutation, then there are $(n - 1)!$ ways to permute these $n - 1$ elements.
+	Since $\sigma$ is a permutation, there are $(n - 1)!$ ways to permute these $n - 1$ elements.
 	It follows that $|G_i| = (n - 1)!$.
 \end{sol}
 
@@ -203,7 +203,7 @@
 	By definition, then $h \in N_H(A)$.
 	It follows that $N_G(A) \cap H \subseteq N_H(A)$.
 	Hence, $N_H(A) = N_G(A) \cap H$.
-	Since $N_G(A) \leq G$ and $H \leq G$, and $N_H(A)$ is the intersection of these two subgroups, then $N_H(A) \leq H$ by \exref{2.1.10}.
+	Since $N_G(A) \leq G$ and $H \leq G$, and $N_H(A)$ is the intersection of these two subgroups, $N_H(A) \leq H$ by \exref{2.1.10}.
 \end{sol}
 
 \begin{exercise}[2.2.10]
@@ -221,7 +221,7 @@
     	gHg\inv = \set{g(1)g\inv, g h g\inv} = \set{1, g h g\inv} = H = \set{1, h}
     \]
     It follows that $g h g\inv = h$, so that $g \in C_G(H)$.
-	Since $g$ was arbitrary, then $N_G(H) \subseteq C_G(H)$, hence $N_G(H) = C_G(H)$.
+	Since $g$ was arbitrary, $N_G(H) \subseteq C_G(H)$, hence $N_G(H) = C_G(H)$.
 
     Now suppose $N_G(H) = G$.
 	Then $C_G(H) = G$, so that for any $g \in G$, we have $g h g\inv = h$.
@@ -239,7 +239,7 @@
 	Conversely, for any $a \in A$, we have $a = zaz\inv$ for some $a \in A$ since $z \in Z(G)$.
 	Hence $A \subseteq zAz\inv$.
 	It follows that $zAz\inv = A$, so that $z \in N_G(A)$.
-	Since $z$ was arbitrary, then $Z(G) \leq N_G(A)$.
+	Since $z$ was arbitrary, $Z(G) \leq N_G(A)$.
 \end{sol}
 
 \begin{exercise}[2.2.12]
@@ -309,7 +309,7 @@
     	\phi(s) \phi(r) = (1\ 2)(1\ 3\ 2\ 4) = (1\ 3)(2\ 4) = (1\ 4\ 2\ 3)(1\ 2) = \phi(r)\inv \phi(s),
     \]
 	then $\phi$ is a homomorphism.
-	Since $\phi$ is clearly surjective and $|D_8| = |K| = 8$, then $\phi$ is an isomorphism, so that $K \cong D_8$.
+	Since $\phi$ is clearly surjective and $|D_8| = |K| = 8$, $\phi$ is an isomorphism, so that $K \cong D_8$.
     \item The permutations that stabilize $(x_1 + x_2)(x_3 + x_4)$ must either swap 1 and 2 or fix them, and either swap 3 and 4 or fix them.
 	Additionally, it may swap the pairs $(1\ 2)$ and $(3\ 4)$.
 	These are exactly the same permutations found in part (e). \qh
@@ -325,7 +325,7 @@
 \end{exercise}
 
 \begin{sol}
-    Since $\id(i) = i$ for all $1 \leq i \leq n$, then $\id \cdot p = p$ for any $p \in R$.
+    Since $\id(i) = i$ for all $1 \leq i \leq n$, $\id \cdot p = p$ for any $p \in R$.
 	Let $\sigma, \tau \in S_n$, then
     \begin{align*}
         \sigma \cdot (\tau \cdot p(x_1, x_2, \ldots, x_n)) & = \sigma \cdot p(x_{\tau(1)}, x_{\tau(2)}, \ldots, x_{\tau(n)}) \\
@@ -352,7 +352,7 @@
     \]
     so that $af + b + e = dc + e + b$.
 	Simplifying, we have $af = dc$.
-	Since this must hold for all $d, f \in F$, then $a = 0$ and $c = 0$.
+	Since this must hold for all $d, f \in F$, $a = 0$ and $c = 0$.
 	It follows that
     \[
     	Z(H(F)) = \set{(0, x, 0) \mid x \in F}

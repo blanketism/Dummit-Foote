@@ -14,7 +14,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     Observe that $1_G \in \phi\inv(E)$ since $\phi(1_G) = 1_H \in E$.
 	Let $x, y \in \phi\inv(E)$ so that $\phi(x), \phi(y) \in E$.
-	Since $E \leq H$, then $\phi(xy\inv) = \phi(x)\phi(y)\inv \in E$, hence $xy\inv \in \phi\inv(E)$.
+	Since $E \leq H$, $\phi(xy\inv) = \phi(x)\phi(y)\inv \in E$, hence $xy\inv \in \phi\inv(E)$.
 	Therefore, $\phi\inv(E) \leq G$.
 
     Suppose $E \nsub H$.
@@ -348,7 +348,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Since $e^{2\pi ir} = 1$ if and only if $r$ is an integer, then $\ker(\phi) = \zbb$.
+    Since $e^{2\pi ir} = 1$ if and only if $r$ is an integer, $\ker(\phi) = \zbb$.
 	On a number line, this is shown as
     \begin{center}
         \begin{tikzpicture}
@@ -411,13 +411,13 @@ Let $G$ and $H$ be groups.
 	Then $a/b + \zbb = r/b + \zbb$.
 	If there exists some other representative $s/t$ in $0 \leq s/t < 1$ such that $a/b + \zbb = s/t + \zbb$, then $r/b + \zbb = s/t + \zbb$, or that $r/b - s/t \in \zbb$.
 	Then there exists some integer $k$ such that $rt - sb = kbt$.
-	Since $0 \leq r < b$ and $0 \leq s < t$, then $0 \leq rt < bt$ and $0 \leq sb < bt$.
+	Since $0 \leq r < b$ and $0 \leq s < t$, $0 \leq rt < bt$ and $0 \leq sb < bt$.
 	Combining these two inequalities, we get $-bt < rt - sb < bt$, so that $-1 < k < 1$.
-	Since $k$ is an integer, then $k = 0$, and $rt - sb = 0$, or $r/b = s/t$.
+	Since $k$ is an integer, $k = 0$, and $rt - sb = 0$, or $r/b = s/t$.
 	Hence, the representative in $0 \leq q < 1$ is unique.
     \item Let $a/b \in \qbb$.
 	Then $b(a/b + \zbb) = ab + \zbb = \zbb$, so that $a/b + \zbb$ has finite order.
-	Moreover, $1/k + \zbb \in \qbb/\zbb$ has order $k$, and since $k$ can be made arbitrarily large, then there are elements of arbitrarily large order.
+	Moreover, $1/k + \zbb \in \qbb/\zbb$ has order $k$, and since $k$ can be made arbitrarily large, there are elements of arbitrarily large order.
     \item By the previous exercise, $\qbb/\zbb \subseteq \tor(\rbb/\zbb)$.
 	Let $x + \zbb \in \tor(\rbb/\zbb)$.
 	Then $|x + \zbb|$ is finite, so there exists some $n \in \zbb$ such that $n(x + \zbb) = nx + \zbb = \zbb$.
@@ -427,7 +427,7 @@ Let $G$ and $H$ be groups.
     \item By \exref{3.1.12}, we have $\rbb/\zbb \cong S^1$.
 	By definition, $\tor(S^1)$ consists of $z \in \cbb\unt$ such that $z^n = 1$ for some $n \in \zp$.
 	This is precisely the set of roots of unity.
-	Since $\tor(\rbb/\zbb) = \qbb/\zbb$, then $\qbb/\zbb$ is isomorphic to the set of roots of unity.
+	Since $\tor(\rbb/\zbb) = \qbb/\zbb$, $\qbb/\zbb$ is isomorphic to the set of roots of unity.
 \end{solenum}
 
 \begin{exercise}[3.1.15]
@@ -456,7 +456,7 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     We prove the general case.
-	Since $G = \gen S$, then for any $g \in G$, we have
+	Since $G = \gen S$, for any $g \in G$, we have
     \[
     	g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \zbb
     \]
@@ -467,7 +467,7 @@ Let $G$ and $H$ be groups.
     \]
     so that $\bar g \in \gen{\bar S}$.
 	Hence, $\bar G \subseteq \gen{\bar S}$.
-	Since $\bar s \in \bar G$ for any $s \in S$, then $\gen{\bar S} \subseteq \bar G$.
+	Since $\bar s \in \bar G$ for any $s \in S$, $\gen{\bar S} \subseteq \bar G$.
 	Therefore, $\bar G = \gen{\bar S}$.
 
     The case of $G = \gen{x, y}$ is a special case where $S = \set{x, y}$.
@@ -531,7 +531,7 @@ Let $G$ and $H$ be groups.
 	Then the mapping $\phi : D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective.
 	Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
     \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$.
-	Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, then $\bar r^2 \in Z(\bar G)$.
+	Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, $\bar r^2 \in Z(\bar G)$.
 	However, $\bar{rs} \neq \bar{sr}$ and $\bar{r^3s} \neq \bar{sr^3}$.
 	Additionally, none of $\bar{sr}, \bar{sr^2}$, nor $\bar{sr^3}$ commute with $\bar r$ so that $Z(\bar G) = \set{\bar 1, \bar r^2}$.
 	The elements of $\widehat G = \bar G/Z(\bar G)$ are as follows:
@@ -680,7 +680,7 @@ Let $G$ and $H$ be groups.
     extends to a unique homomorphism.
 	Now suppose $\phi(a^sb^t) = \phi(a^ub^v)$.
 	Then $\bar{xy}^s\bar x^t = \bar{xy}^u\bar x^v$.
-	Since $\gen{\bar{xy}} \cap \gen{\bar x}$ is trivial, then $\bar{xy}^{s - u} = \bar x^{v - t}$ imply that both quantities must be one.
+	Since $\gen{\bar{xy}} \cap \gen{\bar x}$ is trivial, $\bar{xy}^{s - u} = \bar x^{v - t}$ imply that both quantities must be one.
 	Then $\bar{xy}^s = \bar{xy}^u$ and $\bar x^v = \bar x^t$.
 	Then $s \equiv u \bmod 2$ and $v \equiv t \bmod 4$, so that $a^sb^t = a^ub^t$ since $\abs a = 2$ and $\abs b = 4$.
 	Then $\phi$ is injective.
@@ -697,7 +697,7 @@ Let $G$ and $H$ be groups.
 \begin{solenum}
     \item Observe that $H \cap K \leq G$ since $H \leq G$ and $K \leq G$.
 	Let $g \in G$ and $x \in H \cap K$.
-	Since $H \nsub G$ and $K \nsub G$, then $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$.
+	Since $H \nsub G$ and $K \nsub G$, $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$.
 	Then $g(H \cap K)g\inv \subseteq H \cap K$.
 	By Theorem 3.6, then $H \cap K \nsub G$.
     \item Let $G$ be a group and $I$ be a nonempty set of indices, possibly not countable.
@@ -725,7 +725,7 @@ Let $G$ and $H$ be groups.
     \[
     	n = n_1n_2 \dots n_k \quad \text{where $n_i \in N_i$ for some $i \in I$}
     \]
-    Since $N_i \nsub G$, then $gn_ig\inv \in N_i$ for each $1 \leq i \leq k$.
+    Since $N_i \nsub G$, $gn_ig\inv \in N_i$ for each $1 \leq i \leq k$.
 	Then
     \[
     	gng\inv = g(n_1n_2 \ldots n_k)g\inv = (gn_1g\inv)(gn_2g\inv) \cdots (gn_kg\inv)
@@ -740,8 +740,8 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     We know $N \cap H \leq G$, so pick $h \in H$ and $x \in N \cap H$.
-	Since $N \nsub G$, then $hxh\inv \in N$.
-	Since $H \leq G$, then $hxh\inv \in H$ so that $hxh\inv \in N \cap H$.
+	Since $N \nsub G$, $hxh\inv \in N$.
+	Since $H \leq G$, $hxh\inv \in H$ so that $hxh\inv \in N \cap H$.
 	Then $N \cap H \nsub H$.
 \end{sol}
 
@@ -820,15 +820,11 @@ Let $G$ and $H$ be groups.
     so that $(gag\inv)\inv = ga\inv g\inv$.
     \item If $S$ is empty, then $N = \gen\varnothing = 1$ is trivial.
 	Otherwise, suppose $S$ is nonempty, and let $n \in N$.
-	Since $N = \gen S$, then
+	Since $N = \gen S$,
     \[
     	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
     \]
-    Since
-    \[
-    	gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
-    \]
-    for every $g \in G$, and $gSg\inv \subseteq N$, then the right hand side is also in $N$, hence $gNg\inv \subseteq N$ so that $N \nsub G$.
+    Since$1, the right hand side is also in $N$, hence $gNg\inv \subseteq N$ so that $N \nsub G$.
     \item
     \begin{itemize}
         \item[\rightimp] Immediate from the definition of a normal subgroup.
@@ -872,15 +868,11 @@ Let $G$ and $H$ be groups.
 
     \item [\leftimp] If $S$ is empty, then $N$ is trivial, hence is normal.
 	Otherwise, suppose $S$ is nonempty, and let $n \in N$.
-	Since $N = \gen S$, then
+	Since $N = \gen S$,
     \[
     	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
     \]
-    Since
-    \[
-    	gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
-    \]
-    for every $g \in G$, and $gSg\inv \subseteq N$, then the right hand side is also in $N$, hence $gNg\inv \subseteq N$.
+    Since$1, the right hand side is also in $N$, hence $gNg\inv \subseteq N$.
 	Since $N$ is finite, we may use the previous exercise to conclude that $g \in N_G(N)$.
 \end{solitem}
 
@@ -910,7 +902,7 @@ Let $G$ and $H$ be groups.
     	gsg\inv = \wh tt_{k + 1}st_{k + 1}\inv \wh t\inv = \wh t(t_{k + 1}st_{k + 1}\inv)\wh t\inv
     \]
     where $t_{k + 1}st_{k + 1}\inv \in N$ because $tSt\inv \subseteq N$ for every $t \in T$.
-	Since $N = \gen S$, then
+	Since $N = \gen S$,
     \[
     	t_{k + 1}st_{k + 1}\inv = s_1s_2 \ldots s_m, \quad s_i \in S \text{ for each } i = 1, 2, \ldots, m.
     \]
@@ -949,7 +941,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     If $h \in H$, then $hNh\inv = N$ because $N \nsub H$, hence $h \in N_G(N)$.
 	Because $N_G(N) \leq G$, then $H \subseteq N_G(N)$ implies $H \leq N_G(N)$.
-	Moreover, since every subgroup such that $N$ is normal in is a subgroup of $N_G(N)$, then $N_G(N)$ is the largest subgroup in which $N$ is normal.
+	Moreover, since every subgroup such that $N$ is normal in is a subgroup of $N_G(N)$, $N_G(N)$ is the largest subgroup in which $N$ is normal.
 \end{sol}
 
 \begin{exercise}[3.1.32]
@@ -961,7 +953,7 @@ Let $G$ and $H$ be groups.
     By the lattice, the subgroups of $Q_8$ are 1, $\gen{-1}, \gen i, \gen j, \gen k$, and $Q_8$.
 	It is clear that $Q_8/1 \cong Q_8$, and $Q_8/Q_8 \cong 1$.
 	Now, the lattice shows that $\gen i, \gen j$, and $\gen k$ are all maximal subgroups, so their normalizers must either be themselves, or $Q_8$.
-	Since $j\gen i (-j) = \gen i$, then $j \in N_{Q_8}(\gen i)$ so that $N_{Q_8}(\gen i) = Q_8$.
+	Since $j\gen i (-j) = \gen i$, $j \in N_{Q_8}(\gen i)$ so that $N_{Q_8}(\gen i) = Q_8$.
 	We may similarly argue that $N_{Q_8}(\gen j) = N_{Q_8}(\gen k) = Q_8$.
 	Moreover, $Z(Q_8) = \gen{-1}$, and every center of a group is normal.
 	It follows that every subgroup of $Q_8$ is normal.
@@ -1012,9 +1004,9 @@ Let $G$ and $H$ be groups.
 \begin{solenum}
     \item Observe that $\gen{r^k} = \set{1, r^k, r^{2k}, \ldots, r^{n - k}}$.
 	It is clear that $r\gen{r^k}r\inv = \gen{r^k}$, and observe that $sr^ks\inv = r^{-k} = r^{n - k}$ so that $s\gen{r^k}s\inv = \gen{r^k}$.
-	Since $r, s \in N_{D_{2n}}(\gen{r^k})$, then $\gen{r^k} \nsub D_{2n}$.
+	Since $r, s \in N_{D_{2n}}(\gen{r^k})$, $\gen{r^k} \nsub D_{2n}$.
     \item Consider $D_{2n}/\gen{r^k}$.
-	Since $k \mid n$, then the order of $\gen{r^k}$ is $n/k$, and the number of cosets in the quotient group is $2n/(n/k) = 2k$.
+	Since $k \mid n$, the order of $\gen{r^k}$ is $n/k$, and the number of cosets in the quotient group is $2n/(n/k) = 2k$.
 	Now consider the cosets $\bar r$ and $\bar s$:
     \[
     	\bar r = \set{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}} \quad \text{and} \quad \bar s = \set{s, sr^k, sr^{2k}, \ldots, sr^{n - k}}
@@ -1037,7 +1029,7 @@ Let $G$ and $H$ be groups.
     	\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1
     \]
     so that $XSX\inv \in \splin_n(F)$.
-	Then $X\splin_n(F)X\inv \subseteq \splin_n(F)$ for every $X \in \gl_n(F)$, and since conjugation is an isomorphism, then $X\splin_n(F)X\inv = \splin_n(F)$.
+	Then $X\splin_n(F)X\inv \subseteq \splin_n(F)$ for every $X \in \gl_n(F)$, and since conjugation is an isomorphism, $X\splin_n(F)X\inv = \splin_n(F)$.
 	Hence, $\splin_n(F) \nsub \gl_n(F)$.
 
     Observe that a normal subgroup corresponds to the kernel of some homomorphism.
@@ -1198,8 +1190,8 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $x \in H$ and $y \in K$.
-	Since $H \nsub G$, then $y\inv xy \in H$, hence $[x, y] \in H$.
-	Since $K \nsub G$, then $x\inv y\inv x\in K$, hence $[x, y] \in K$.
+	Since $H \nsub G$, $y\inv xy \in H$, hence $[x, y] \in H$.
+	Since $K \nsub G$, $x\inv y\inv x\in K$, hence $[x, y] \in K$.
 	Then $[x, y] \in H \cap K = 1$ so that $[x, y] = 1$.
 	It follows that $x\inv y\inv xy = 1$, or $xy = yx$.
 \end{sol}
@@ -1212,7 +1204,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     For any $g \in G$, let $\wt g \in \pcal$ denote the element such that $g \in \wt g$.
 	We now show that $\wt 1 \leq G$.
-	Since $1 \in \wt 1$, then $\wt 1$ is nonempty.
+	Since $1 \in \wt 1$, $\wt 1$ is nonempty.
 	Suppose $g, h \in \wt 1$.
 	Then
     \[

@@ -16,13 +16,13 @@
 \begin{sol}
     Let $G$ be the group and $H$ be the subset in question. Assume $H$ is a subgroup of $G$.
     \begin{subexercises}
-        \item Since $0 + 0i \in H$, then $H$ is nonempty.
+        \item Since $0 + 0i \in H$, $H$ is nonempty.
         For $a + ai, b + bi \in H$,
         \[
         	(a + ai) - (b + bi) = (a - b) + (a - b)i \in H
         \]
         so that $H \leq G$.
-        \item Since $\abs 1 = 1$, then $1 \in H$ so that it is nonempty.
+        \item Since $\abs 1 = 1$, $1 \in H$ so that it is nonempty.
         For $z, w \in H$, we first note that $|w\inv| = 1/|w| = 1/1 = 1$.
         Then
         \[
@@ -30,7 +30,7 @@
         \]
         so that $zw\inv \in H$, hence $H \leq G$.
         \item Fix $n \in \zp$.
-        Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty.
+        Since $0 = 0/k$ for some $k$ such that $k \mid n$, $0 \in H$ so that $H$ is nonempty.
         Let $a/b, c/d \in H$ such that $b \mid n$ and $d \mid n$.
         Then
         \[
@@ -39,7 +39,7 @@
         Reducing the fraction to lowest terms, the denominator must divide $bd$, which divides $n$ since $b \mid n$ and $d \mid n$.
         Hence, the denominator of the reduced fraction divides $n$, so that $H \leq G$.
         \item Fix $n \in \zp$.
-        Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, then $0 \in H$ so that $H$ is nonempty.
+        Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, $0 \in H$ so that $H$ is nonempty.
         Let $a/b, c/d \in H$ such that $(a, c) = 1$, $(b, n) = 1$, and $(d, n) = 1$.
         Then
         \[
@@ -48,7 +48,7 @@
         If $(bd, n) \neq 1$, then there exists some prime $p$ such that $p \mid bd$ and $p \mid n$.
         Then $p \mid b$ or $p \mid d$, contradicting our assumption.
         Hence, $(bd, n) = 1$, so that $H \leq G$.
-        \item Since $1 = 1^2 = 1/1$, then $1 \in H$ so that $H$ is nonempty.
+        \item Since $1 = 1^2 = 1/1$, $1 \in H$ so that $H$ is nonempty.
         For $x, y \in H$, then $x^2, y^2 \in \qbb$.
         Then
         \[
@@ -144,7 +144,7 @@
 
 \begin{sol}
     Let the torsion subgroup be denoted as $\tor(G)$.
-	Since $|1| = 1$, then $1 \in \tor(G)$.
+	Since $|1| = 1$, $1 \in \tor(G)$.
 	If $g, h \in \tor(G)$ such that $|g| = m$ and $|h| = n$, we have
     \[
     	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,
@@ -214,12 +214,12 @@
 	If $H \subseteq K$, then we are done.
 	Suppose that $H \nsubseteq K$.
 	Then there exists some $h \in H$ such that $h \notin K$.
-	Since $H \cup K$ is a subgroup, then for any $k \in K$, we have $hk \in H \cup K$.
+	Since $H \cup K$ is a subgroup, for any $k \in K$, we have $hk \in H \cup K$.
     
     Observe that $k\inv \in K$ since $K \leq G$.
 	If $hk \in K$, then $h = (hk)k\inv \in K$, contradicting our assumption.
 	It must be that $hk \in H$.
-	Since $h \in H$, then $h\inv \in H$ as $H \leq G$.
+	Since $h \in H$, $h\inv \in H$ as $H \leq G$.
 	Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
     \item[\leftimp] If $H \subseteq K$, then $H \cup K = K \leq G$.
 	Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
@@ -236,7 +236,7 @@
 \end{spex}
 
 \begin{sol}
-    Since $\det(I_n) = 1$, then $I_n \in \splin_n(F)$.
+    Since $\det(I_n) = 1$, $I_n \in \splin_n(F)$.
 	Suppose $A, B \in \splin_n(F)$.
 	Then
     \[
@@ -260,10 +260,10 @@
     \[
     	H = \bigcap_{i \in I} H_i
     \]
-    Since $1 \in H_i$ for all $i \in I$, then $1 \in H$.
+    Since $1 \in H_i$ for all $i \in I$, $1 \in H$.
 	Suppose $a, b \in H$.
 	Then $a, b \in H_i$ for all $i \in I$.
-	Since each $H_i$ is a subgroup of $G$, then $ab\inv \in H_i$ for all $i \in I$.
+	Since each $H_i$ is a subgroup of $G$, $ab\inv \in H_i$ for all $i \in I$.
 	Hence, $ab\inv \in H$, and $H \leq G$.
 \end{sol}
 
@@ -280,7 +280,7 @@
 \begin{sol}
     Let $C$ be the set in each part.
     \begin{subexercises}
-        \item Since $1 \in A$, then $(1, 1) \in C$ so that $C$ is nonempty.
+        \item Since $1 \in A$, $(1, 1) \in C$ so that $C$ is nonempty.
         Suppose $(a_1, 1), (a_2, 1) \in C$.
         Then
         \[
@@ -288,7 +288,7 @@
         \]
         since $a_1a_2\inv \in A$.
         Hence, $C \leq A \times B$.
-        \item Since $1 \in B$, then $(1, 1) \in C$ so that $C$ is nonempty.
+        \item Since $1 \in B$, $(1, 1) \in C$ so that $C$ is nonempty.
         Suppose $(1, b_1), (1, b_2) \in C$.
         Then
         \[
@@ -296,7 +296,7 @@
         \]
         since $b_1b_2\inv \in B$.
         Hence, $C \leq A \times B$.
-        \item Since $1 \in A$, then $(1, 1) \in C$ so that $C$ is nonempty.
+        \item Since $1 \in A$, $(1, 1) \in C$ so that $C$ is nonempty.
         Suppose $(a_1, a_1), (a_2, a_2) \in C$.
         Then
         \[
@@ -319,7 +319,7 @@
 \begin{sol}
     Let $B$ be the sets in question.
     \begin{subexercises}
-        \item Since $1 = 1^n$, then $1 \in B$ so that $B$ is nonempty.
+        \item Since $1 = 1^n$, $1 \in B$ so that $B$ is nonempty.
         Suppose $a^n, b^n \in B$.
         Then
         \[
@@ -327,7 +327,7 @@
         \]
         where the last equality follows from the fact that $A$ is Abelian.
 	    Hence, $B \leq A$.
-        \item Since $1^n = 1$, then $1 \in B$ so that $B$ is nonempty.
+        \item Since $1^n = 1$, $1 \in B$ so that $B$ is nonempty.
         Suppose $a, b \in B$.
         Then
         \[
@@ -351,13 +351,13 @@
 	Moreover, we may assume without loss of generality that $a/b > 0$, for otherwise we may take $-a/b$ since $H$ contains additive inverses.
 	We now use $a/b$ to generate $\qbb$.
 
-    Since $a/b \in H$, then $b(a/b) = a \in H$ so that $1/a \in H$.
+    Since $a/b \in H$, $b(a/b) = a \in H$ so that $1/a \in H$.
 	Then $a(1/a) = 1 \in H$.
 	From this, we can see that $\zbb \subseteq H$.
 	Now let $c/d \in \qbb$ for some $c, d \in \zbb$ with $d \neq 0$.
-	Since $1 \in H$, then $d(1) = d \in H$ so that $1/d \in H$.
+	Since $1 \in H$, $d(1) = d \in H$ so that $1/d \in H$.
 	Then $c(1/d) = c/d \in H$.
-	Since $c/d$ was arbitrary, then $\qbb \subseteq H$.
+	Since $c/d$ was arbitrary, $\qbb \subseteq H$.
 	Hence, $H = \qbb$.
 \end{sol}
 
@@ -386,7 +386,7 @@
 	Let $a, b \in H$ so that there exists $m, n \in \zp$ where $a \in H_m$ and $b \in H_n$.
 	Put $k = \max(m, n)$.
 	It follows that $H_m \subseteq H_k$ and $H_n \subseteq H_k$, so that $a, b \in H_k$.
-	Since $H_k \leq G$, then $ab\inv \in H_k$, hence $ab\inv \in H$.
+	Since $H_k \leq G$, $ab\inv \in H_k$, hence $ab\inv \in H$.
 	Therefore, $H \leq G$.
 \end{sol}
 
@@ -424,14 +424,14 @@
 
 \begin{sol}
     Let $H$ be the set in question.
-	Since the diagonal of $I_n$ is only 1's, then $I_n \in H$.
+	Since the diagonal of $I_n$ is only 1's, $I_n \in H$.
 	Suppose $A, B \in H$.
 	By the previous exercise, $A, B \in \ut_n(F)$, so it remains to show that $a_{ii} = b_{ii} = 1$ for all $1 \leq i \leq n$.
 	Then
     \[
     	(AB)_{ii} = \sum_{k = 1}^n a_{ik}b_{ki}
     \]
-    Since $a_{ik} = 0$ for $k < i$ and $b_{ki} = 0$ for $k > i$, then the sum evaluates to $a_{ii}b_{ii} = 1$.
+    Since $a_{ik} = 0$ for $k < i$ and $b_{ki} = 0$ for $k > i$, the sum evaluates to $a_{ii}b_{ii} = 1$.
 	Then $H$ is closed under multiplication.
 	Moreover, suppose $D \in \ut_n(F)$ such that $DA = I_n$.
 	Then
