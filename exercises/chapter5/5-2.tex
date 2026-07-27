@@ -217,9 +217,15 @@
         \item $Z_{36} \cong Z_4 \times Z_9$.
     \end{itemize}
     Thus, the 2-power part of $A$ is $Z_4 \times Z_4 \times Z_4$.
-	Elements of order 2 in $A$ are elements of the 2-power part as well as trivial parts of the other groups.
-	The 2-power map sends $(a, b, c)$ to $(2a, 2b, 2c)$, so the kernel of the 2-power map is $\set{0, 2} \times \set{0, 2} \times \set{0, 2}$, which has 8 elements, 7 of which have order 2.
-	Thus, there are 7 elements of order 2 in $A$.
+	Elements of order 2 in $A$ consist of elements of order 2 in the 2-power part of $A$ and elements of order 1 in the other parts of $A$.
+    The 2-power map sends $(a, b, c) \in A$ to $(2a, 2b, 2c)$, so the kernel of the 2-power map is $\set{0, 2} \times \set{0, 2} \times \set{0, 2}$, which has order $2^3 = 8$.
+    The kernel contains 7 non-identity elements, so there are 7 elements of order 2 in $A$.
+
+    To see the number of subgroups of index 2 in $A$, note that index 2 subgroups of $A$ are kernels of surjective homomorphisms from $A$ to $Z_2$.
+    Since $A$ is Abelian, then any homomorphism from $A$ to $Z_2$ is determined by the images of the generators of $A$.
+    Note that there are exactly 2 homomorphisms from $Z_4$ to $Z_2$, which is $x \mapsto 1$ and $x \mapsto y$ for $Z_2 = \gen y$ and $Z_4 = \gen x$.
+    Thus, there are $2^3 = 8$ homomorphisms from the 2-power part of $A$ to $Z_2$.
+    Since one of these homomorphisms is the trivial homomorphism, there are 7 surjective homomorphisms from the 2-power part of $A$ to $Z_2$, hence there are 7 subgroups of index 2 in $A$.
 \end{sol}
 
 \begin{exercise}[5.2.10]

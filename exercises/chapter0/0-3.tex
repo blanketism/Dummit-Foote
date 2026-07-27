@@ -25,7 +25,7 @@
 
 \begin{sol}
     Let $m \in \zbb$.
-	By the Division Algorithm, there exists unique $q, r \in \zbb$ such that
+	By the Division Algorithm, there exist unique $q, r \in \zbb$ such that
     \[
     	m = nq + r, \quad 0 \leq r < n.
     \]
@@ -53,7 +53,7 @@
 \end{exercise}
 
 \begin{sol} 
-    Using the hint, then
+    Using the hint, we have
     \begin{align*}
         a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
         & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
@@ -83,8 +83,8 @@
 \begin{sol}
     Doing repeated squaring, we have
     \begin{align*}
-        9^2 \bmod 100 & \equiv 81 & 9^8 \bmod 100 & \equiv 21 & 9^{32} \bmod 100 & \equiv 21 \\
-        9^4 \bmod 100 & \equiv 61 & 9^{16} \bmod 100 & \equiv 61 & 9^{64} \bmod 100 & \equiv 41
+        9^2 \bmod 100 & \equiv 81 & 9^8 \bmod 100 & \equiv 21 & 9^{32} \bmod 100 & \equiv 81 \\
+        9^4 \bmod 100 & \equiv 61 & 9^{16} \bmod 100 & \equiv 41 & 9^{64} \bmod 100 & \equiv 61
     \end{align*}
     Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$.
 	Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$.

@@ -60,12 +60,12 @@ Let $G$ be a group.
 \begin{sol}
     If $G$ is Abelian, then we are done.
 	Suppose $G$ is not Abelian, so that $Z(G)$ is a proper subgroup of $G$.
-	Assume, by way of contradicition, that $Z(G) \neq 1$.
+	Suppose $Z(G) \neq 1$.
 	By Lagrange's Theorem, the possible orders of $Z(G)$ are $p$ or $q$.
 	Without loss of generality, assume $|Z(G)| = p$.
 	Then $|G/Z(G)| = |G|/|Z(G)| = pq/p = q$, which is prime.
 	By Corollary 3.10, $G/Z(G) \cong Z_q$, which is cyclic.
-	By \exref{3.1.36}, then $G$ is Abelian, a contradiction.
+	By \exref{3.1.36}, $G$ is Abelian, a contradiction.
 	Hence, $Z(G) = 1$.
 \end{sol}
 
@@ -342,12 +342,11 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $p$ be a prime.
-	Note that $\units[p] = \set{\bar 1, \bar 2, \ldots, \bar{p - 1}}$.
-	For any $a \in \zbb$, then we either have $a \mid p$ or $a \nmid p$.
-	If $a \mid p$, then $a \equiv 0 \bmod p$, hence $a^p \equiv 0 \equiv a \bmod p$.
-	If $a \nmid p$, then $\bar a \in \units[p]$.
+	For any $a \in \zbb$, then we either have $p \mid a$ or $p \nmid a$.
+	If $p \mid a$, then $a \equiv 0 \bmod p$, hence $a^p \equiv 0 \equiv a \bmod p$.
+	If $p \nmid a$, then $\bar a \in \units[p]$.
 	By Lagrange's Theorem and Corollary 3.9, $\abs{\bar a}$ divides $\abs{\units[p]} = p - 1$, hence $\bar a^{p - 1} = \bar 1$.
-	Then $a^{p - 1} \equiv 1 \bmod p$, or $a^p \equiv a \bmod p$.
+	Then $a^{p - 1} \equiv 1 \bmod p$, so $a^p \equiv a \bmod p$.
 \end{sol}
 
 \begin{exercise}[3.2.17]

@@ -36,7 +36,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
     If $x$ is not a power of $r$, then $x$ is a reflection, i.e., $x = sr^k$ for some $0 \leq k < n$.
 	Then
     \[
-    	rx = r(sr^k) = (rs)r^k = (sr^{-1})r^k = s(r^{-1}r^k) = s r^{k - 1} = (sr^k) r^{-1} = x r^{-1} \qh
+    	rx = r(sr^k) = (rs)r^k = (sr^{-1})r^k = s(r^{-1}r^k) = s r^{k - 1} = (sr^k) r^{-1} = x r^{-1}. \qh
     \]
 \end{sol}
 
@@ -50,7 +50,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \begin{sol}
     If an element is not a power of $r$, then it is a reflection.
 	See \exref{1.2.1} as to why every reflection has order $2$.
-	Moreover, for any $r^k, sr^k \in D_{2n}$ for $0 \leq k < n$, we may rewrite them as
+	Moreover, for any $0 \leq k < n$, we can rewrite $r^k$ and $sr^k$ in terms of $s$ and $sr$ as follows:
     \[
     	r^k = (s(sr))^k \quad \text{and} \quad sr^k = s(s(sr))^k,
     \]
@@ -84,8 +84,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Using the same argument as the previous exercise and the odd case in \exref{1.1.33}, then $w$ cannot be a rotation since $r^k \neq r^{-k}$.
-	The reflection case is also the same as the previous exercise.
+    By the same argument as \exref{1.2.4} and the odd case in \exref{1.1.33}, $w$ cannot be a rotation. The reflection case is the same as in \exref{1.2.4}, and we conclude that $w = 1$.
 \end{sol}
 
 \begin{exercise}[1.2.6]
@@ -94,10 +93,10 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Since $|x| = |y| = 2$, then $x = x\inv$ and $y = y\inv$.
+    Since $|x| = |y| = 2$, $x = x\inv$ and $y = y\inv$.
 	Then
     \[
-    	tx = (xy)x = x(yx) = x(xy)\inv = x t\inv \qh
+    	tx = (xy)x = x(yx) = x(xy)\inv = x t\inv. \qh
     \]
 \end{sol}
 
@@ -132,7 +131,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     Label the vertices of a tetrahedron 1 through 4.
-	Vertex 1 has 4 choices, vertex 2 has 3 remaining choices, and vertices 3 and 4 are determined after.
+	Vertex 1 has 4 choices, vertex 2 has 3 remaining choices, and vertices 3 and 4 are determined thereafter.
 	It follows that $4(3) = 12$ symmetries.
 \end{sol}
 
@@ -196,7 +195,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Note that $y_1^2 = 1$, then $y_1\inv = y_1$.
+    Note that $y_1^2 = 1$, so $y_1\inv = y_1$.
 	Then
     \[
     	(x_1y_1)^2 = 1 \iff x_1y_1x_1y_1 = 1 \iff x_1y_1x_1 = y_1\inv = y_1 \iff x_1y_1 = y_1x_1\inv
@@ -245,7 +244,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
     \[
     	x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1
     \]
-    so that $X_{2n} = {1, y}$ where $y^2 = 1$.
+    so that $X_{2n} = \set{1, y}$ where $y^2 = 1$.
 	It follows that $|X_{2n}| = 2$.
 \end{solenum}
 

@@ -20,9 +20,9 @@
             (a) & 1 & 260 & 2(20) - 3(13) \\
             (b) & 3 & 8556 & 27(69) - 5(372) \\
             (c) & 11 & 19800 & 8(792) - 23(275) \\
-            (d) & 3 & 21540381 & 253(5673) - 126(11391) \\
+            (d) & 3 & 21540381 & -126(11391) + 253(5673) \\
             (e) & 1 & 2759487 & -105(1761) + 118(1567) \\
-            (f) & 691 & 44693880 & 142(60808) - 17(507885)
+            (f) & 691 & 44693880 & -17(507885) + 142(60808)
         \end{array}
     \]
     Here, the $\lcm$ was computed using $ab = (a, b)\lcm(a, b)$.
@@ -158,6 +158,8 @@
 
 \begin{sol}
     Fix $N \in \zp$, and consider $n \in \zp$ such that $\phi(n) = N$.
+    If $N = 1$, then $n = 1$ or $n = 2$, so there are finitely many such $n$.
+    Otherwise, suppose $N > 1$.
 	Let $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ be the prime factorization of $n$.
 	Then
     \[
