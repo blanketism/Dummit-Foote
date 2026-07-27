@@ -10,7 +10,7 @@
 	If $G$ is the trivial group, then $G \cong Z_1$.
 	Suppose $G$ is non-trivial, and let $g \in G$ be non-identity.
 	Then $\gen g \leq G$.
-	Since $g \neq 1$ and $G$ is simple, then $\gen g = G$, hence $G$ is cyclic.
+	Since $g \neq 1$ and $G$ is simple, $\gen g = G$, hence $G$ is cyclic.
 
     Assume, by way of contradiction, that $\abs G$ is not prime.
 	We have two cases:
@@ -19,7 +19,7 @@
 	Then $G \cong \zbb$ has infinitely many proper non-trivial subgroups, contradicting the simplicity of $G$.
         \item Suppose $\abs G$ is finite and composite.
 	Then there exists some divisor $d$ of $\abs G$ such that $1 < d < \abs G$.
-	Since $G$ is cyclic, then there exists a unique subgroup of $G$ of order $d$, contradicting the simplicity of $G$.
+	Since $G$ is cyclic, there exists a unique subgroup of $G$ of order $d$, contradicting the simplicity of $G$.
     \end{itemize}
     Therefore, $\abs G$ is prime, and $G \cong Z_p$ for some prime $p$.
 \end{sol}
@@ -58,7 +58,7 @@
 
 \begin{sol}
     A clear composition series is $1 \nsub \gen{\sigma^4} \nsub \gen{\sigma^2} \nsub \gen{\sigma} \nsub QD_{16}$, with each composition factor isomorphic to $Z_2$.
-	Since all composition factors are Abelian, then $QD_{16}$ is solvable.
+	Since all composition factors are Abelian, $QD_{16}$ is solvable.
 \end{sol}
 
 \begin{exercise}[3.4.4]
@@ -78,7 +78,7 @@
     If $n$ is not prime, then $n = kp$ for some prime divisor $p$ of $n$.
 	Since $p \mid m$, there exists an element $h \in G$ where $\abs h = p$ by Cauchy's Theorem.
 	Then $\gen h$ has order $p$, and $G/\gen h$ is a finite Abelian group of order $m/p < m$.
-	Since $n$ divides $m$, then $k$ divides $m/p$.
+	Since $n$ divides $m$, $k$ divides $m/p$.
 	By the inductive hypothesis, there exists a subgroup $\bar H$ of $G/\gen h$ such that $\abs{\bar H} = k$.
 	By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ containing $\gen h$ such that $H/\gen h = \bar H$.
 	Then $\abs H = \abs{\bar H} \abs{\gen h} = kp = n$, hence $H$ is a subgroup of $G$ of order $n$.
@@ -104,14 +104,14 @@
 	It is clear that $H_i \leq H_{i + 1}$ for each $0 \leq i \leq n - 1$.
 	To show that $H_i \nsub H_{i + 1}$, let $g \in H_{i + 1}$ and $x \in H_i$.
 	Then $g \in G_{i + 1}$ and $x \in G_i$.
-	Since $G_i \nsub G_{i + 1}$, then $gxg\inv \in G_i$.
-	Since $g, x \in H$, then $gxg\inv \in H$, hence $gxg\inv \in H_i$.
+	Since $G_i \nsub G_{i + 1}$, $gxg\inv \in G_i$.
+	Since $g, x \in H$, $gxg\inv \in H$, hence $gxg\inv \in H_i$.
 	It follows that $H_i \nsub H_{i + 1}$.
 	By the Second Isomorphism Theorem, we have
     \[
     	H_{i + 1}/H_i \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i
     \]
-    Since $G_{i + 1}/G_i$ is Abelian, then so is $H_{i + 1}/H_i$.
+    Since $G_{i + 1}/G_i$ is Abelian, so is $H_{i + 1}/H_i$.
 	Therefore, $H$ is solvable with the chain
     \[
     	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H
@@ -128,14 +128,14 @@
     	(gn_1)(hn_2)(gn_1)\inv = g n_1 h n_2 n_1\inv g\inv = g(n_1 h n_2 n_1\inv)g \inv
     \]
     Note that $n_1 hn_2n_1\inv \in N_i$ since $h \in G_i \leq G$ and $N \nsub G$.
-	Since $G_i \nsub G_{i + 1}$, then $g(n_1 h n_2 n_1\inv)g \inv \in G_i \subseteq N_i$.
+	Since $G_i \nsub G_{i + 1}$, $g(n_1 h n_2 n_1\inv)g \inv \in G_i \subseteq N_i$.
 	It follows that $N_i \nsub N_{i + 1}$.
 
     Lastly, by the Lattice Isomorphism Theorem, then $N_i/N \nsub N_{i + 1}/N$, and the Third Isomorphism Theorem concludes that
     \[
     	(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i \cong G_{i + 1}/(G_iN \cap G_{i + 1}) = G_{i + 1}/G_i
     \]
-    Since $G_{i + 1}/G_i$ is Abelian, then so is $(N_{i + 1}/N)/(N_i/N)$.
+    Since $G_{i + 1}/G_i$ is Abelian, so is $(N_{i + 1}/N)/(N_i/N)$.
 	Therefore, $G/N$ is solvable with the chain
     \[
     	1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N. \qh
@@ -157,7 +157,7 @@
     	1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N
     \]
     for some $k \in \zp$.
-	Since $N \nsub G$ and $G/N$ is simple, then the chain
+	Since $N \nsub G$ and $G/N$ is simple, the chain
     \[
     	1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N \nsub G
     \]
@@ -175,19 +175,19 @@
 	If $\abs G = 1$, the result is trivial.
 	Suppose $\abs G > 1$, and assume the result is true for all groups with order less than $\abs G$.
 
-    Since $H$ is proper, then $\abs H < \abs G$, hence we have a composition series
+    Since $H$ is proper, $\abs H < \abs G$, hence we have a composition series
     \[
     	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H
     \]
     by the inductive hypothesis.
 	Now consider the quotient group $G/H$.
-	Since $\abs{G/H} < \abs G$, then by the inductive hypothesis, there exists a composition series
+	Since $\abs{G/H} < \abs G$, by the inductive hypothesis, there exists a composition series
     \[
     	1 = K_0/H \nsub K_1/H \nsub \cdots \nsub K_n/H = G/H
     \]
     for some $n \in \zp$.
 	By the Lattice Isomorphism Theorem, we have $H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G$.
-	Since each $K_{i + 1}/K_i \cong (K_{i + 1}/H)/(K_i/H)$ is simple, then the chain
+	Since each $K_{i + 1}/K_i \cong (K_{i + 1}/H)/(K_i/H)$ is simple, the chain
     \[
     	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G
     \]
@@ -238,13 +238,13 @@
     \]
     such that $B_{j + 1}/B_j$ is cyclic.
 	Now consider the quotient group $A/\gen a$.
-	Since $\abs{A/\gen a} < \abs A$, then by the inductive hypothesis, there exists a chain of subgroups
+	Since $\abs{A/\gen a} < \abs A$, by the inductive hypothesis, there exists a chain of subgroups
     \[
     	1 = C_0/\gen a \nsub C_1/\gen a \nsub \cdots \nsub C_\ell/\gen a = A/\gen a
     \]
     for some $\ell \in \zp$.
 	By the Lattice Isomorphism Theorem, we have $\gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A$.
-	Since each $C_{i + 1}/C_i \cong (C_{i + 1}/\gen a)/(C_i/\gen a)$ is cyclic, then the chain
+	Since each $C_{i + 1}/C_i \cong (C_{i + 1}/\gen a)/(C_i/\gen a)$ is cyclic, the chain
     \[
     	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A
     \]
@@ -266,9 +266,9 @@
 	We prove this by induction on $\abs G$.
 	If $\abs G = 1$, the result is trivial.
 	Suppose $\abs G > 1$ and that the result holds for all groups of order less than $\abs G$.
-	Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, then $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$.
+	Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$.
 	If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order.
-	Since $\abs{H_{s - 1}} < \abs G$, then by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order.
+	Since $\abs{H_{s - 1}} < \abs G$, by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order.
 	Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$.
 	Then $Z_n$ has a proper, non-trivial subgroup $\gen{a^m}$ of order $k$.
 	Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$.
@@ -287,7 +287,7 @@
 	Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$.
 	By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$.
 	It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$.
-	Since $M$ is minimal normal in $G$, then this intersection is either 1 or $M$.
+	Since $M$ is minimal normal in $G$, this intersection is either 1 or $M$.
 	If it were $M$, then $M$ would be Abelian, contradicting that $M/N$ is non-trivial.
 	Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is Abelian.
 
@@ -305,7 +305,7 @@
 \begin{sol}
     Consider $H = N_{r - 1} \cap M_1$.
 	Then $H \nsub M_1$.
-	Since $M_1/1 \cong M_1$ is simple, then either $H = 1$ or $H = M_1$.
+	Since $M_1/1 \cong M_1$ is simple, either $H = 1$ or $H = M_1$.
 	If $H = M_1$, then $N_{r - 1} \nsub M_1$.
 	By simplicity of $M_1$, it must be that $N_{r - 1} = M_1$ so that $r = 2$.
 	Both composition series are then the same, so we now suppose $H = 1$.
@@ -375,7 +375,7 @@
     It is clear that appending $N_{r - 1}$ to the series \eqref{eqstar} gives a composition series for $N_{r - 1}$.
 	Similarly, we get a composition series for $M_{s - 1}$.
 	Moreover, there are $r - 2$ factors for the series for $N_{r - 1}$ and $s - 2$ factors for the series for $M_{s - 1}$.
-	Since $\min\set{r - 1, s - 1} = k - 1 < k$, then by the inductive hypothesis, both series have the same number of factors and the same composition factors up to isomorphism.
+	Since $\min\set{r - 1, s - 1} = k - 1 < k$, by the inductive hypothesis, both series have the same number of factors and the same composition factors up to isomorphism.
 	Therefore, $r - 2 = s - 2$ so that $r = s$.
 	In \eqref{eqclubsuit} and \eqref{eqspadesuit}, both series have $r - 2$ factors isomorphic to \eqref{eqstar} up to some order, and the last 2 factors in \eqref{eqheartsuit} and \eqref{eqdiamondsuit} are isomorphic to $G/N_{r - 1}$ and $G/M_{s - 1}$ respectively.
 	The result then follows by induction.
@@ -393,14 +393,14 @@
     where $G_{i + 1}/G_i$ is Abelian.
 	Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$.
 	Since $H$ is non-trivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$.
-	Since $H_n = H$, then $I$ is nonempty.
+	Since $H_n = H$, $I$ is nonempty.
 	By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$.
 	Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$.
 	Moreover, by the Second Isomorphism Theorem, we have
     \[
     	H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}
     \]
-    Since $G_k/G_{k - 1}$ is Abelian, then so is $H_k$.
+    Since $G_k/G_{k - 1}$ is Abelian, so is $H_k$.
 	Therefore, $A = H_k$ is a non-trivial, Abelian normal subgroup of $G$ contained in $H$.
 \end{sol}
 
@@ -415,8 +415,8 @@
 \begin{sol}
     \textbf{(i) \rightimp (ii)} Suppose every group of odd order is solvable.
 	Let $G$ be a simple group of odd order.
-	Since $G$ is solvable, then by the characterization of solvable groups, all composition factors of $G$ are of prime order.
-	Since $G$ is simple, then its only composition series is $1 \nsub G$, hence $G$ is of prime order.
+	Since $G$ is solvable, by the characterization of solvable groups, all composition factors of $G$ are of prime order.
+	Since $G$ is simple, its only composition series is $1 \nsub G$, hence $G$ is of prime order.
 
     \noindent \textbf{(ii) \rightimp (i)} Suppose the only simple groups of odd order are those of prime order.
 	Let $G$ be a group of odd order.

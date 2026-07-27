@@ -152,7 +152,7 @@
 \end{exercise}
 
 \begin{sol}
-    For each $n \in \zp$, consider the permutation $\sigma_n = (1\ n)$.
+    For each $n \geq 2$, consider the permutation $\sigma_n = (1\ n)$.
 	Then $\sigma_n \in S_\Omega$ and $\sigma_n \neq \sigma_m$ for $n \neq m$, since they move different elements.
 	Hence, $S_{\Omega}$ contains an infinite collection of distinct elements, so $S_\Omega$ is infinite.
 \end{sol}
@@ -225,8 +225,8 @@
     are all distinct.
 	Suppose $(1 + xi)_m = (1 + yi)_m$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$.
 	Then $i(x - y) \equiv 0 \bmod m$.
-	Since $(m, i) = 1$, then $m \mid (x - y)$.
-	However, since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$.
+	Since $(m, i) = 1$, $m \mid (x - y)$.
+	However, since $1 - m \leq x - y \leq m - 1$, the only choice for $x - y$ is 0, or that $x = y$.
 	Then we have exactly $m$ distinct integers so that
     \[
     	\sigma^i = (1\ (1 + i)_m\ (1 + 2i)_m\ \ldots\ (1 + (m - 1)i)_m).
@@ -251,7 +251,7 @@
 	Then there exist $s, t \in \zbb$ such that $d = as + bt$.
 	Consider $cd = acs + bct$.
 	Then $d' = (ac, bc)$ implies that $d' \mid cd$.
-	Since $d \mid a$ and $d \mid b$, then $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$.
+	Since $d \mid a$ and $d \mid b$, $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$.
 	Then $d' = cd$ or $d' = c(a, b)$.
     \end{lemma}
     
@@ -271,10 +271,10 @@
 \begin{solitem}
     \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = 2$.
 	Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition.
-	Since $\sigma \neq \id$ and $\sigma^2 = 1$, then $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$.
+	Since $\sigma \neq \id$ and $\sigma^2 = 1$, $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$.
 	Then $m = 2$, and the cycle is a 2-cycle.
     \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$.
-	Since each 2-cycle has order 2, and the 2-cycles commute, then $\sigma^2 = \id$.
+	Since each 2-cycle has order 2, and the 2-cycles commute, $\sigma^2 = \id$.
 	Because $\sigma \neq \id$, then $\abs\sigma = 2$.
 \end{solitem}
 
@@ -291,7 +291,7 @@
 	Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition.
 	By \exref{1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$.
 	Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$.
-	Since $p$ is prime, then $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
+	Since $p$ is prime, $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
         \item [\leftimp] Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle.
 	Since the cycles are disjoint, they commute.
 	Moreover, $\tau_i^t$ is a non-trivial $p$-cycle for $t < p$ by \exref{1.3.11}.
@@ -359,7 +359,7 @@
 \begin{sol}
     We have $n$ from 1 to 7.
 	We can have 2 and 5-cycles and 3 and 4-cycles.
-	Then $n = 10$ and 12.
+	We also have $n = 10$ and 12.
 \end{sol}
 
 \begin{exercise}[1.3.20]

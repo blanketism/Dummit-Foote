@@ -9,7 +9,7 @@ Let $G$ be a group.
 
 \begin{sol}
     In \exref{3.1.35}, we showed that $\splin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\splin_n(F) \cong F\unt$.
-	Since $F$ is a finite field of order $q$, then $\abs{F\unt} = q - 1$.
+	Since $F$ is a finite field of order $q$, $\abs{F\unt} = q - 1$.
 	We then have that $|\gl_n(F) : \splin_n(F)| = \abs{F\unt} = q - 1$.
 \end{sol}
 
@@ -25,9 +25,9 @@ Let $G$ be a group.
     	\phi : \acal \to \bar{\acal} \quad \text{by} \quad \phi(A) = \bar A = A/N
     \]
     We first show that $\phi(A) \leq \bar G$.
-	Since $1 \in A$ for any $A \in \acal$, then $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty.
+	Since $1 \in A$ for any $A \in \acal$, $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty.
 	Let $\bar a, \bar b \in \bar A$, where $a, b \in A$.
-	Since $A \leq G$, then $ab\inv \in A$, hence
+	Since $A \leq G$, $ab\inv \in A$, hence
     \[
     	\bar a \bar b\inv = \bar{ab\inv} \in \bar A
     \]
@@ -36,8 +36,8 @@ Let $G$ be a group.
     Next, we show that $\phi$ is surjective.
 	Let $\bar A \in \bar{\acal}$, and let $\pi : G \to \bar G$ be the natural projection homomorphism.
 	Consider $\pi\inv(\bar A)$.
-	Since $\pi$ is a homomorphism, then $\pi\inv(\bar A) \leq G$.
-	Moreover, since $\bar 1 \in \bar A$, then $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \acal$.
+	Since $\pi$ is a homomorphism, $\pi\inv(\bar A) \leq G$.
+	Moreover, since $\bar 1 \in \bar A$, $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \acal$.
 	Note that
     \[
     	\phi(\pi\inv(\bar A)) = \pi\inv(\bar A)/N = \bar A
@@ -53,7 +53,7 @@ Let $G$ be a group.
         \begin{itemize}
             \item[\rightimp] Suppose $A \leq B$ for $A, B \in \acal$.
 	Let $\bar a \in \bar A$ for some $a \in A$.
-	Since $A \leq B$, then $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
+	Since $A \leq B$, $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
             \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \acal$.
 	Let $a \in A$ for some $a \in A$.
 	Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$.
@@ -109,11 +109,11 @@ Let $G$ be a group.
             \[
             	(\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}
             \]
-            Since $A \nsub G$, then $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$.
+            Since $A \nsub G$, $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$.
 	It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
             \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \acal$.
 	Let $g \in G$ and $a \in A$.
-	Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, then $gag\inv N \in A/N$, hence $gag\inv \in A$.
+	Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, $gag\inv N \in A/N$, hence $gag\inv \in A$.
 	It follows that $A \nsub G$. \qh
         \end{itemize}
     \end{enumerate}
@@ -128,15 +128,13 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Since $H \nsub G$ and $K \leq G$, then $HK \leq G$ by Corollary 3.15.
+    Since $H \nsub G$ and $K \leq G$, $HK \leq G$ by Corollary 3.15.
 	By Proposition 3.14, $HK = KH$.
 	By \exref{3.2.11}, we have
     \[
     	|G : H| = |G : HK| \cdot |HK : H|
     \]
-    Since $|G : H| = p$, we have two cases:
-    \begin{enumerate}
-        \item If $|G : HK| = 1$, then $G = HK = KH$.
+    Since$1, $G = HK = KH$.
 	By the Second Isomorphism Theorem, we have
         \[
         	K/(K \cap H) \cong KH/H = G/H
@@ -321,17 +319,17 @@ Let $G$ be a group.
 \end{spex}
 
 \begin{sol}
-    Since $P \cap N \leq P$, then $|P \cap N|$ divides $|P| = p^a$.
-	Similarly, since $P \cap N \leq N$, then $|P \cap N|$ divides $|N| = p^b n$.
+    Since $P \cap N \leq P$, $|P \cap N|$ divides $|P| = p^a$.
+	Similarly, since $P \cap N \leq N$, $|P \cap N|$ divides $|N| = p^b n$.
 	It follows that $|P \cap N|$ divides $\gcd(p^a, p^b n) = p^b$, hence $|P \cap N| = p^c$ for some $c \leq b$.
 	By the Second Isomorphism Theorem, we have
     \[
     	PN/N \cong P/(P \cap N)
     \]
     so that $|PN/N| = |P|/|P \cap N| = p^{a - c}$.
-	Since $PN/N \leq G/N$, then $|PN/N|$ divides $|G/N|$.
+	Since $PN/N \leq G/N$, $|PN/N|$ divides $|G/N|$.
 	It follows that $p^{a - c}$ divides $|G|/|N| = (p^a m)/(p^b n) = p^{a - b}(m/n)$.
-	Since $p$ does not divide $m/n$, then $p^{a - c}$ divides $p^{a - b}$, hence $c \geq b$.
+	Since $p$ does not divide $m/n$, $p^{a - c}$ divides $p^{a - b}$, hence $c \geq b$.
 	Therefore, $c = b$ so that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$.
 \end{sol}
 

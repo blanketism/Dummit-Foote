@@ -114,7 +114,7 @@
     \]
     so that $x^{a (r - s)} = 1$ whenever $48 \mid (r - s)$.
 	This occurs if and only if $36 \mid a(r - s)$ whenever $48 \mid (r - s)$.
-	Since $(36, 48) = 12$, then $36/12 = 3 \mid a$.
+	Since $(36, 48) = 12$, $36/12 = 3 \mid a$.
 	Hence, $\psi_a$ is well-defined if and only if $3 \mid a$.
 
     Surjectivity requires that $x^a$ generates $Z_{36}$.
@@ -277,7 +277,7 @@
 
 \begin{sol}
     If $x^{p^n} = 1$, then Proposition 2.3 says that $|x|$ divides $p^n$.
-	Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
+	Since $p$ is prime, $|x|$ must also be a power of $p$ that is at most $n$.
 \end{sol}
 
 \begin{spex}[2.3.21]
@@ -302,7 +302,7 @@
         \]
     \end{lemma}
     Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor.
-	Since this is multiplied by $p^k$ in the summation, then each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
+	Since this is multiplied by $p^k$ in the summation, each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
 
     Now consider $(1 + p)^{p^{n - 2}}$.
 	Using the binomial theorem, this expands to $1 + p^{n - 1} +$ terms that are divisible by $p^n$.
@@ -325,9 +325,9 @@
     \[
     	\sum_{i = 1}^n \floor*{\frac{k}{2^i}} < \sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k
     \]
-    Since infinity is never achieved, then we may take this as strict, hence the greatest power of 2 is at most $k - 1$.
+    Since infinity is never achieved, we may take this as strict, hence the greatest power of 2 is at most $k - 1$.
 	With $2^{2k}$, the entire term contains at least $2^{n - 2 - (k - 1) + 2k} = 2^{n + k - 1}$ as a factor.
-	Since $k \geq 2$, then $n + k - 1 \geq n + 1 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor.
+	Since $k \geq 2$, $n + k - 1 \geq n + 1 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor.
 	Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired.
 	
     Considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$.
@@ -347,7 +347,7 @@
     \[
     	(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n.
     \]
-    Since $n \geq 3$, then $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$.
+    Since $n \geq 3$, $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$.
 	Hence, it cannot be cyclic.
 \end{sol}
 
@@ -384,7 +384,7 @@
     \]
     so that $g \gen x g\inv \leq \gen x$.
 	Since conjugation is an isomorphism, it is trivial to see that $\abs x = \abs{gxg\inv}$.
-	If $\abs x = n$, then the elements $gx^ig\inv$ for $i = 0, 1, \ldots, n - 1$ are distinct since if $gx^ig\inv = gx^jg\inv$ for some $0 \leq i < j \leq n - 1$, then $x^i = x^j$ which contradicts the order of $x$.
+	If $\abs x = n$, then the elements $gx^ig\inv$ for $i = 0, 1, \ldots, n - 1$ are distinct since if $gx^ig\inv = gx^jg\inv$ for some $0 \leq i < j \leq n - 1$, $x^i = x^j$ which contradicts the order of $x$.
 	Hence, $\abs{g \gen x g\inv} = \abs{\gen x} = n$, so that $g \gen x g\inv = \gen x$.
 	Therefore, $g \in N_G(\gen x)$.
 \end{solenum}
@@ -399,7 +399,7 @@
 \begin{sol}
     Fix $k \in \zp$ such that $(k, n) = 1$.
 	Let $\phi : x \mapsto x^k$.
-	Since $G$ is cyclic, then $G = \gen x$ for some $x \in G$.
+	Since $G$ is cyclic, $G = \gen x$ for some $x \in G$.
 	For any $y \in G$, there exists some integer $m$ such that $y = x^m$.
 	Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$.
 	Then
@@ -411,7 +411,7 @@
     Now let $G$ be any finite group of order $n$.
 	For any $y \in G$, consider the subgroup $\gen y$.
 	If $\abs{\gen y} = m$, then by Lagrange's Theorem, $m \mid n$.
-	Since $(k, n) = 1$, then $(k, m) = 1$ as well.
+	Since $(k, n) = 1$, $(k, m) = 1$ as well.
 	By the previous result, there exists some $z \in \gen y$ such that $z^k = y$.
 	Hence, the map $x \mapsto x^k$ is surjective.
 \end{sol}
@@ -442,10 +442,10 @@
         	\sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1
         \]
         If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism.
-	Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
+	Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, $s = n$ so that $d = 1$.
         \item [\leftimp] Suppose that $(a, n) = 1$.
 	By the previous exercise, then $\sigma_a$ is a surjective map.
-	Since $Z_n$ is finite, then $\sigma_a$ is also bijective.
+	Since $Z_n$ is finite, $\sigma_a$ is also bijective.
 	Moreover,
         \[
         	\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)

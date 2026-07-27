@@ -42,7 +42,7 @@
 	\end{align*}
 	Thus, we have $(1\ 2) \mapsto (1\ 2)(3\ 6\ 4\ 5)$.
 	We calculate that $(2\ 3) \mapsto (1\ 3\ 5\ 2)(4\ 6)$.
-	Since $(1\ 2)(2\ 3) = (1\ 2\ 3)$, then
+	Since $(1\ 2)(2\ 3) = (1\ 2\ 3)$,
 	\[
 		(1\ 2\ 3) \mapsto (1\ 2)(3\ 6\ 4\ 5)(1\ 3\ 5\ 2)(4\ 6) = (1\ 5\ 6)(2\ 4\ 3)
 	\]
@@ -125,7 +125,7 @@
 		\pi_H(r^3) & = (1\ 4\ 3\ 2) & \pi_H(sr^3) & = (1\ 4)(2\ 3)
 	\end{align*}
 	so that the subgroup $\gen{\pi_H(r), \pi_H(s)} \leq S_4$ is isomorphic to $D_8$.
-	Since the kernel of $\pi_H$ is trivial, then the representation is faithful.
+	Since the kernel of $\pi_H$ is trivial, the representation is faithful.
 	\item The new labelling affords the permutations $\pi_H(r) = (1\ 3\ 2\ 4)$ and $\pi_H(s) = (3\ 4)$.
 	We have the following images:
 	\begin{align*}
@@ -164,7 +164,7 @@
 		\pi_N(r^2) & = 1 & \pi_N(sr^2) & = (1\ 3)(2\ 4) \\
 		\pi_N(r^3) & = (1\ 2)(3\ 4) & \pi_N(sr^3) & = (1\ 4)(2\ 3)
 	\end{align*}
-	Since $\ker(\pi_N)$ contains the non-trivial element $r^2$, then the representation is not faithful.
+	Since $\ker(\pi_N)$ contains the non-trivial element $r^2$, the representation is not faithful.
 	Moreover, we have $\pi_N(D_8) = \set{1, (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3)}$, which is isomorphic to the Klein 4-group.
 \end{sol}
 
@@ -181,13 +181,13 @@
 	\item Let $Q_8$ act on a set $A$ of order $n \leq 7$.
 	For any $a \in A$, consider the orbit $\ocal_a$ of $a$ under this action.
 	By Proposition 4.2, we have $|\ocal_a| = |Q_8 : (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
-	Since $|\ocal_a|$ divides $|A| \leq 7$, then $|\ocal_a|$ must be 1, 2, 4, or 7.
-	However, since $Q_8$ has no subgroup of index 7, then $|\ocal_a|$ cannot be 7.
+	Since $|\ocal_a|$ divides $|A| \leq 7$, $|\ocal_a|$ must be 1, 2, 4, or 7.
+	However, since $Q_8$ has no subgroup of index 7, $|\ocal_a|$ cannot be 7.
 	If $|\ocal_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
 	If $|\ocal_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$.
 	If $|\ocal_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$.
 	Therefore, in all cases, the stabilizer $(Q_8)_a$ contains $\langle -1 \rangle$.
-	Since this holds for all $a \in A$, then $\langle -1 \rangle$ is contained in the kernel of the action.
+	Since this holds for all $a \in A$, $\langle -1 \rangle$ is contained in the kernel of the action.
 	The action is not faithful, hence $Q_8$ cannot be isomorphic to a subgroup of $S_n$ for any $n \leq 7$.
 \end{solenum}
 
@@ -212,13 +212,13 @@
 \begin{sol}
 	Let $H$ be a subgroup of $G$ with index $p$.
 	Then $|G : H| = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi : G \to S_p$.
-	Since $|G| = p^\alpha$, then by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$.
+	Since $|G| = p^\alpha$, by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$.
 	However, the only subgroups of $S_p$ whose order divides $p^\alpha$ are the trivial group and groups of order $p$.
-	Since $\phi(G)$ acts transitively on the $p$ cosets of $H$, then $\phi(G)$ cannot be trivial.
+	Since $\phi(G)$ acts transitively on the $p$ cosets of $H$, $\phi(G)$ cannot be trivial.
 	Therefore, $|\phi(G)| = p$, which is prime, so $\phi(G)$ is cyclic and hence Abelian.
 	The kernel of $\phi$ is a normal subgroup of $G$ contained in $H$.
-	Since the image $\phi(G)$ has order $p$, then by the First Isomorphism Theorem, we have $|G : \ker(\phi)| = p$.
-	But since $\ker(\phi) \subseteq H$ and both have index $p$, then $\ker(\phi) = H$.
+	Since the image $\phi(G)$ has order $p$, by the First Isomorphism Theorem, we have $|G : \ker(\phi)| = p$.
+	But since $\ker(\phi) \subseteq H$ and both have index $p$, $\ker(\phi) = H$.
 	Therefore, $H$ is normal in $G$.
 
 	To deduce that every group of order $p^2$ has a normal subgroup of order $p$, let $G$ be a group of order $p^2$.
@@ -235,12 +235,12 @@
 	Note that $2 \mid 6$ and $3 \mid 6$.
 	By Cauchy's Theorem, there exists subgroups $H$ and $K$ of orders 2 and 3 respectively.
 	Let $H = \set{1, h}$, suppose it is normal, and let $g \in G - H$.
-	Since $H \nsub G$, then $gHg\inv = H$.
+	Since $H \nsub G$, $gHg\inv = H$.
 	In particular, $ghg\inv \in H$, so either $ghg\inv = 1$ or $ghg\inv = h$.
 	Since the first case implies $h = 1$, it must be that $ghg\inv = h$, or $gh = hg$.
 	Then $h$ commutes with every element.
 	Moreover, we may use \exref{3.3.3} to conclude that $G = HK$ since $H \nsub G$.
-	Since $K$ is also Abelian as it is cyclic, then $G = hk$ for $h \in H$ and $k \in K$, implying that $G$ is Abelian, a contradiction.
+	Since $K$ is also Abelian as it is cyclic, $G = hk$ for $h \in H$ and $k \in K$, implying that $G$ is Abelian, a contradiction.
 	Therefore, $H$ is not normal in $G$.
 
 	To classify groups of order 6, let $G$ be a group of order 6.
@@ -250,9 +250,9 @@
 	Then $G = HK$.
 	Let $G$ act by left multiplication on the left cosets of $K$ in $G$.
 	This action gives a homomorphism $\phi : G \to S_3$.
-	Since $H$ is not normal in $G$, then the action is non-trivial, so $\phi$ is injective.
+	Since $H$ is not normal in $G$, the action is non-trivial, so $\phi$ is injective.
 	Therefore, $G \cong \phi(G) \leq S_3$.
-	Since $|G| = 6 = |S_3|$, then $\phi(G) = S_3$, and hence $G \cong S_3$.
+	Since $|G| = 6 = |S_3|$, $\phi(G) = S_3$, and hence $G \cong S_3$.
 \end{sol}
 
 \begin{exercise}[4.2.11]
@@ -265,9 +265,9 @@
 	Let $x \in G$ with $\abs x = n$.
 	Consider the action of $\langle x \rangle$ on $G$ by left multiplication.
 	The orbit of any $g \in G$ under this action is $\ocal_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$.
-	Since $\abs x = n$, then $|\ocal_g| = n$ for all $g \in G$.
+	Since $\abs x = n$, $|\ocal_g| = n$ for all $g \in G$.
 	By Proposition 4.2, we have $|\ocal_g| = |\langle x \rangle : (\langle x \rangle)_g|$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
-	Since $|\ocal_g| = n$, then $(\langle x \rangle)_g$ is trivial for all $g \in G$.
+	Since $|\ocal_g| = n$, $(\langle x \rangle)_g$ is trivial for all $g \in G$.
 	Therefore, the orbits of this action partition $G$ into subsets of size $n$.
 	Since $|G| = mn$, there are exactly $m$ such orbits.
 	Each orbit corresponds to an $n$-cycle in the permutation $\pi(x)$.
@@ -288,7 +288,7 @@
 	Recall the $\ep$ homomorphism from Proposition 3.23.
 	Moreover, $\pi$ is a homomorphism from $G$ to $S_G$.
 	Consider the composition $\ep \circ \pi : G \to \set{\pm 1}$.
-	Since $\pi(G)$ contains an odd permutation, then $\ep \circ \pi$ is surjective.
+	Since $\pi(G)$ contains an odd permutation, $\ep \circ \pi$ is surjective.
 	By the First Isomorphism Theorem, we have $G/\ker(\ep \circ \pi) \cong \set{\pm 1}$, so that $|\ker(\ep \circ \pi)| = |G|/2$.
 	Therefore, $\ker(\ep \circ \pi)$ is a subgroup of $G$ of index 2.
 \end{sol}
@@ -300,7 +300,7 @@
 \begin{sol}
 	By Cauchy's Theorem, there exists $x \in G$ such that $\abs x = 2$.
 	Then $\pi(x)$ is of order 2 and is hence a product of disjoint transpositions.
-	Since $|G| = 2k$ with $k$ odd, then use $m = k$ and $n = 2$ in \exref{4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation.
+	Since $|G| = 2k$ with $k$ odd, use $m = k$ and $n = 2$ in \exref{4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation.
 	By the \exref{4.2.12}, $G$ has a subgroup of index 2.
 \end{sol}
 
