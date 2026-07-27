@@ -824,7 +824,12 @@ Let $G$ and $H$ be groups.
     \[
     	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
     \]
-    Since$1, the right hand side is also in $N$, hence $gNg\inv \subseteq N$ so that $N \nsub G$.
+    Since
+    \[
+        gng\inv = g(s_1s_2 \cdots s_k)g\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
+    \]
+    for every $g \in G$ and $gSg\inv \subseteq N$, it follows that $gng\inv \in N$.
+    Hence, $gNg\inv \subseteq N$ for every $g \in G$, so that $N \nsub G$.
     \item
     \begin{itemize}
         \item[\rightimp] Immediate from the definition of a normal subgroup.
@@ -872,7 +877,12 @@ Let $G$ and $H$ be groups.
     \[
     	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
     \]
-    Since$1, the right hand side is also in $N$, hence $gNg\inv \subseteq N$.
+    Since
+    \[
+        gng\inv = g(s_1s_2 \cdots s_k)g\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
+    \]
+    for every $g \in G$ and $gSg\inv \subseteq N$, it follows that $gng\inv \in N$.
+    Thus, $gNg\inv \subseteq N$.
 	Since $N$ is finite, we may use the previous exercise to conclude that $g \in N_G(N)$.
 \end{solitem}
 

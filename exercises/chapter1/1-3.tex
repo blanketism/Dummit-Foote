@@ -192,14 +192,12 @@
 \end{exercise}
 
 \begin{sol}
-    Assume all subscripts of $a$ are taken mod $m$.
-	Inducting on $i = 1$, the base case is clear.
+    Assume all subscripts of $a$ use the least positive residues mod $m$.
+	Inducing on $i$, the base case $i = 1$ is clear.
 	If $\sigma^i(a_k) = a_{k + i}$ for $1 \leq i \leq m - 1$, then
     \[
     	\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}.
     \]
-    The result follows by induction.
-    
     To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \set{1,2,\dots,m}$, so that $\sigma^m = \id$.
 	If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$.
 	Hence, $|\sigma| = m$.
@@ -246,7 +244,7 @@
     \item Put $\sigma = (1\ 3\ 5\ 7\ 9\ 2\ 4\ 6\ 8\ 10)$.
 	Then $\sigma^2 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 2$.
     \item We first prove the following lemma:
-    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \zbb$.}
+    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \zp$.}
         Let $d = (a, b)$ and $d' = (ac, bc)$.
 	Then there exist $s, t \in \zbb$ such that $d = as + bt$.
 	Consider $cd = acs + bct$.
