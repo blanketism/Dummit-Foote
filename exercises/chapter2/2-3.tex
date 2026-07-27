@@ -129,8 +129,8 @@
 
 \begin{sol}
     By Proposition 2.5, we have $\abs{\bar 1} = 54$.
-	Since $(54, 30) = 6$, then $|\bar{30}| = 9$.
-	Then $\bar{30} = \bar 6$, hence
+	Since $(54, 30) = 6$, $|\bar{30}| = 9$.
+	Then $\gen{\bar{30}} = \gen{\bar 6}$, hence
     \[
     	\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}.
     \]
@@ -194,10 +194,10 @@
 	We may use the division algorithm to see that each $a = 12q + r$ for integers $q$ and $r$ such that $0 \leq r < 12$.
 	Then $\sigma^a = \sigma^r$.
     \begin{align*}
-        \sigma^{13} & = \sigma^{12 + 1} & \sigma^{-6} = \sigma^{-1(12) + 6} \\
-        \sigma^{65} & = \sigma^{5(12) + 5} & \sigma^{-81} = \sigma^{-7(12) + 3} \\
-        \sigma^{626} & = \sigma^{52(12) + 2} & \sigma^{-570} = \sigma^{-48(12) + 6} \\
-        \sigma^{1195} & = \sigma^{99(12) + 7} & \sigma^{-1211} = \sigma^{-101(12) + 1} \qh
+        && \sigma^{13} & = \sigma^{12 + 1} = \sigma^1 & \sigma^{-6} = & \sigma^{-12 + 6} = \sigma^6 \\
+        && \sigma^{65} & = \sigma^{5(12) + 5} = \sigma^5 & \sigma^{-81} = & \sigma^{-84 + 3} = \sigma^3 \\
+        && \sigma^{626} & = \sigma^{52(12) + 2} = \sigma^2 & \sigma^{-570} = & \sigma^{-48(12) + 6} = \sigma^6 \\
+        && \sigma^{1195} & = \sigma^{99(12) + 7} = \sigma^7 & \sigma^{-1211} = & \sigma^{-101(12) + 1} = \sigma^1 && \qh
     \end{align*}
 \end{sol}
 
@@ -206,8 +206,7 @@
 \end{exercise}
 
 \begin{sol}
-    If it were cyclic, then all subgroups are also cyclic, by Theorem 2.7.
-	But $\zbb \times \zbb$ is not cyclic.
+    By Theorem 2.7, if $\qbb \times \qbb$ was cyclic, then subgroups of $\qbb \times \qbb$ would also be cyclic. By \exref{2.3.12} (c), $\zbb \times \zbb$ is not cyclic, hence $\qbb \times \qbb$ is not cyclic.
 \end{sol}
 
 \begin{exercise}[2.3.16]
@@ -327,10 +326,11 @@
     	\sum_{i = 1}^n \floor*{\frac{k}{2^i}} < \sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k
     \]
     Since infinity is never achieved, then we may take this as strict, hence the greatest power of 2 is at most $k - 1$.
-	With $2^{2k}$, the entire term contains at least $2^{n - 1 - (k - 1) + 2k} = 2^{n + k}$ as a factor.
-	Since $k \geq 2$, then $n + k \geq n + 2 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor.
+	With $2^{2k}$, the entire term contains at least $2^{n - 2 - (k - 1) + 2k} = 2^{n + k - 1}$ as a factor.
+	Since $k \geq 2$, then $n + k - 1 \geq n + 1 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor.
 	Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired.
-	Moreover, considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$.
+	
+    Considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$.
 	Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$.
 	Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
 \end{sol}

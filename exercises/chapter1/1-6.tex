@@ -35,6 +35,9 @@
 
 \begin{sol}
     Let $x \in G$.
+    If $|x| = \infty$, then $\phi(x)^n = \phi(x^n) \neq 1_H$ for all $n \in \zp$, so that $|\phi(x)| = \infty$.
+    A similar argument shows that if $|\phi(x)| = \infty$, then $|x| = \infty$.
+    Hence, we may assume that $|x|$ and $|\phi(x)|$ are both finite.
 	Let $\abs x = m$ and $\abs{\phi(x)} = n$.
 	Then
     \[
@@ -47,12 +50,10 @@
     \]
     so that $m \leq n$.
 	It follows that $m = n$, i.e., $|\phi(x)| = |x|$.
-	In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order.
-	In particular, if either $|x|$ or $|\phi(x)|$ had infinite order and the other finite, then this would contradict both having finite order.
-	Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
+	Moreover, since $\phi$ is bijective, it induces a bijection between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
 	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 
-    The result is not true if $\phi$ is only assumed to be a homomorphism: the map $\phi : G \to 1$ is a homomorphism for any group $G$, but $G$ may have elements of various orders while $1$ has only the identity element of order 1.
+    The result is not true if $\phi$ is only assumed to be a homomorphism. Consider a non-trivial group $G$ and the trivial homomorphism $\phi : G \to 1$. Then $G$ contains non-identity elements whose order is greater than 1, but only $1 \in 1$ has order 1.
 \end{sol}
 
 \begin{exercise}[1.6.3]
@@ -64,17 +65,19 @@
     Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
     \begin{itemize}
         \item [\rightimp] Suppose that $G$ is Abelian.
-	Then for $h_1 = \phi(g_1), h_2 = \phi(g_2) \in H$ for some $g_1, g_2 \in G$, we have
+        Given $h_1, h_2 \in H$, there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
+        Then
         \[
-        	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1.
+            h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1,
         \]
-        Hence, $H$ is Abelian.
+        so that $H$ is Abelian.
         \item [\leftimp] Suppose that $H$ is Abelian.
-	Then for $g_1 = \phi\inv(h_1), g_2 = \phi\inv(h_2) \in G$ for some $h_1, h_2 \in H$, we have
+        Given $g_1, g_2 \in G$, there exist $h_1, h_2 \in H$ such that $\phi\inv(h_1) = g_1$ and $\phi\inv(h_2) = g_2$.
+        Then
         \[
-        	g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1.
+            g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1,
         \]
-        Hence, $G$ is Abelian.
+        so that $G$ is Abelian.
     \end{itemize}
     Let $\phi : G \to H$ be a homomorphism.
 	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
@@ -100,11 +103,20 @@
 
 \begin{exercise}[1.6.6]
     Prove that the additive groups $\zbb$ and $\qbb$ are not isomorphic.
+
+    \mnote{In fact, no non-trivial homomorphism exists from $\zbb$ to $\qbb$.}
 \end{exercise}
 
 \begin{sol}
-    Every nonzero element of $\zbb$ has infinite order.
-	However, $1/k \in \qbb$ has order $k$.
+    Suppose that $\phi : \qbb \to \zbb$ is an isomorphism.
+    Injectivity of $\phi$ and $1 \neq 0$ implies $\phi(1) \neq 0$.
+    Put $\phi(1) = r \in \zbb \setminus \set 0$.
+    Then
+    \[
+        r = \phi(1) = \phi\underbrace{\left(\frac{1}{n} + \frac{1}{n} + \cdots + \frac{1}{n}\right)}_{n\text{ times}} = \underbrace{\phi\left(\frac{1}{n}\right) + \phi\left(\frac{1}{n}\right) + \cdots + \phi\left(\frac{1}{n}\right)}_{n\text{ times}} = n\phi\left(\frac{1}{n}\right),
+    \]
+    so $\phi(1/n) = r/n \in \zbb$, contradicting that $r/n \notin \zbb$ for $n > |r|$.
+    Hence, $\phi$ cannot be an isomorphism.
 \end{sol}
 
 \begin{exercise}[1.6.7]
@@ -112,7 +124,7 @@
 \end{exercise}
 
 \begin{sol}
-    $D_8$ has only 1 element of order 4, while $Q_8$ has 3 elements of order 4.
+    $D_8$ has only 2 elements of order 4, while $Q_8$ has 6 elements of order 4.
 \end{sol}
 
 \begin{exercise}[1.6.8]
@@ -147,7 +159,7 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows their composition is a bijection.
+    \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows that their composition is a bijection.
 	Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
     \item Consider the mapping 
     \[
@@ -203,7 +215,8 @@
     	\phi : G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
     \]
     for all $a \in A$, $b \in B$, and $c \in C$.
-	The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
+	The proof is similar to the previous exercise and is omitted.
+    We conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
 \begin{spex}[1.6.13]
@@ -255,8 +268,8 @@
 
 \begin{sol}
     Denote the kernel of $\phi$ by $\ker\phi$.
-	Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty.
-	To show closure, let $g_1, g_2 \in \ker\phi$.
+	Since $\phi(1_G) = 1_H$, $\ker\phi$ is nonempty.
+    Let $g_1, g_2 \in \ker\phi$.
 	Then
     \[
     	\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H
@@ -302,7 +315,8 @@
 \end{exercise}
 
 \begin{sol}
-    The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms.
+    The proof is similar to the previous exercise and is omitted.
+    We conclude that $\pi_1$ and $\pi_2$ are homomorphisms.
 	Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$.
 	If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$.
 	Hence,
@@ -317,12 +331,12 @@
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $\phi$ is a homomorphism.
+    \item [\rightimp] Suppose $\phi : g \mapsto g\inv$ is a homomorphism.
 	Then for $g, h \in G$, we have
     \[
-    	(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = h\inv g\inv.
+        gh = (h\inv g\inv)\inv = \phi(h\inv g\inv) = \phi(h\inv)\phi(g\inv) = hg,
     \]
-    Since inverses are unique, then $hg = gh$ so that $G$ is Abelian.
+    so $G$ is Abelian.
     \item [\leftimp] Suppose $G$ is Abelian.
 	Then for $g, h \in G$, we have
     \[
@@ -346,7 +360,7 @@
 \end{exercise}
 
 \begin{sol}
-    Since $G \subseteq \cbb$, then $G$ is Abelian.
+    Since $G \subseteq \cbb$, $G$ is Abelian.
 	Let $\phi : z \to z^k$.
 	Hence, for any $z, w \in G$, we have
     \[
@@ -354,12 +368,12 @@
     \]
     so that $\phi$ is a homomorphism.
 	To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$.
-	Note that $w^{1/k} \in G$ because $(z^{1/k})^{nk} = z^n = 1$.
-	Then
+	Then there exists $z \in \cbb$ such that $z^k = w$.
+    Then
     \[
-    	\phi(z^{1/k}) = (z^{1/k})^k = z
+        z^{nk} = (z^k)^n = w^n = 1
     \]
-    so that $\phi$ is surjective.
+    so that $z \in G$ and $\phi(z) = z^k = w$. Hence, $\phi$ is surjective.
 	Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$.
 	Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
@@ -371,21 +385,21 @@
 \end{spex}
 
 \begin{sol}
-    Observe that $\aut(G)$ is associative under function composition and has identity through the identity map $\id : G \to G$ given by $\id(g) = g$.
-	Moreover, $\phi \circ \psi$ for $\phi, \psi \in \aut(G)$ is a bijection.
-	Then for any $g, h \in G$, we have
+    Recall that function composition is associative.
+    Observe that $\aut(G)$ contains the identity map $\id : G \to G$ defined by $\id(g) = g$ for all $g \in G$.
+    Also recall that the composition of two bijections is a bijection. Then for any $\phi, \psi \in G$ and $g, h \in G$, we have
     \[
-    	(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
+        (\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
     \]
-    so that $\phi \circ \psi$ is a homomorphism.
-	Hence, $\phi \circ \psi \in \aut(G)$, and $\aut(G)$ is closed under function composition.
-	Finally, for any $\phi \in \aut(G)$, then $\phi\inv$ exists and is a bijection.
-	Then
+    so $\phi \circ \psi$ is a homomorphism, and $\psi \circ \phi \in \aut(G)$.
+    Then $\aut(G)$ is closed under function composition.
+    Finally, for any $\phi \in \aut(G)$, $\phi\inv$ exists and is also a bijection. 
+    Then for any $g, h \in G$, we have
     \[
-    	\phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),
+        \phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),
     \]
-    so that $\phi\inv$ is a homomorphism.
-	Hence, $\phi\inv \in \aut(G)$, and $(\aut(G), \circ)$ is a group.
+    so $\phi\inv$ is a homomorphism, and $\phi\inv \in \aut(G)$.
+    Therefore, $(\aut(G), \circ)$ is a group.
 \end{sol}
 
 \begin{exercise}[1.6.21]

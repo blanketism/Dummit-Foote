@@ -18,7 +18,7 @@ Let $G$ and $H$ be groups.
 	Therefore, $\phi\inv(E) \leq G$.
 
     Suppose $E \nsub H$.
-	Then $heh\inv \in E$ for all $h \in H$ and $e \in H$.
+	Then $heh\inv \in E$ for all $h \in H$ and $e \in E$.
 	Let $x \in \phi\inv(E)$ and $g \in G$.
 	Then
     \[
@@ -390,7 +390,7 @@ Let $G$ and $H$ be groups.
     Moreover, the fibers are just all halved, so
     \begin{align*}
         \phi\inv(-1) & = \frac14 + \frac12 \zbb = \set*{\left.\frac14 + \frac n2~\right|~n \in \zbb} \\
-        \phi\inv(-i) & = \frac18 + \frac12 \zbb = \set*{\left.\frac18 + \frac n2~\right|~n \in \zbb} \\
+        \phi\inv(i) & = \frac18 + \frac12 \zbb = \set*{\left.\frac18 + \frac n2~\right|~n \in \zbb} \\
         \phi\inv(e^{4\pi i/3}) & = \frac13 + \frac12 \zbb = \set*{\left.\frac13 + \frac n2~\right|~n \in \zbb} \qh
     \end{align*}
 \end{sol}
@@ -602,10 +602,10 @@ Let $G$ and $H$ be groups.
         \begin{array}{c|c|c|c|c|c|c|c|c}
             \bar x & \bar 1 & \bar v & \bar v^2 & \bar v^3 & \bar u & \bar{uv} & \bar{uv^2} & \bar{uv^3} \\
             \hline
-            \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
+            \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 4 & 2 & 4
         \end{array}
     \]
-    \item $\bar{vu} = \bar{uv^5}, \bar{uv^{-2}u} = \bar u^2, \bar{u\inv v\inv uv} = \bar 1$.
+    \item $\bar{vu} = \bar{uv^5} = \bar{uv},\; \bar{uv^{-2}u} = \bar{v^2},\; \bar{u\inv v\inv uv} = \bar{v^2}$.
     \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is Abelian.
 	Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations.
 	Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
@@ -978,17 +978,16 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     Again, $D_8/1 \cong D_8$ and $D_8/D_8 \cong 1$.
 	Examining the three maximal subgroups $\gen{s, r^2}, \gen r$, and $\gen{rs, r^2}$.
-	observe the following:
+	Observe the following:
     \begin{align*}
-        r\gen{s, r^2}r\inv & = \set{1, sr^2.
-	r^2, s} = \gen{s, r^2} \\
+        r\gen{s, r^2}r\inv & = \set{1, sr^2, r^2, s} = \gen{s, r^2} \\
         s\gen r s\inv & = \set{1, r^3, r^2, r} = \gen r \\
         r\gen{rs, r^2}r\inv & = \set{1, sr, r^2, sr^3} = \gen{rs, r^2}
     \end{align*}
-    then the normalizers of each subgroup contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = Q_8$.
-	Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $Q_8/\gen{s, r^2} \cong Q_8/\gen r \cong Q_8/\gen{rs, r^2} \cong Z_2$.
+    then the normalizers of each subgroup contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = D_8$.
+	Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $D_8/\gen{s, r^2} \cong D_8/\gen r \cong D_8/\gen{rs, r^2} \cong Z_2$.
 
-    Now we examine $\gen{r^2} = Z(D_8)$ so it is clearly normal.
+    Now we examine $\gen{r^2} = Z(D_8)$, which is normal.
 	Then $D_8/\gen{r^2} = \set{\bar 1, \bar r, \bar s, \bar{sr}}$.
 	Note that the non-identity elements have order 2, and so $D_8/\gen{r^2} \cong V_4$.
 
