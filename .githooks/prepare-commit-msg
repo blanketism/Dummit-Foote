@@ -50,8 +50,8 @@ def collect_edits(diff_text):
 def build_message(found):
     chapters = sorted(found, key=int)
     subject = f"fix: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
-    body = "\n\n".join(
-        "\n".join(sorted(found[ch], key=lambda s: [int(x) for x in s.split(".")]))
+    body = "\n".join(
+        ", ".join(sorted(found[ch], key=lambda s: [int(x) for x in s.split(".")]))
         for ch in chapters
     )
     return subject + body + "\n"
