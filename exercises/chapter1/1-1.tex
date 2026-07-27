@@ -195,7 +195,14 @@ Let $G$ be a group.
 	The identity is $0 + 0\sqrt 2 = 0$, and the inverse of $a + b\sqrt 2$ is $-a - b\sqrt 2$.
 	Associativity is inherited from $\rbb$.
 	Hence, $G$ is a group under addition.
-    \item Note that multiplication of two elements in $G$ is given by
+    \item If $a + b\sqrt 2 \in G$ is nonzero, then $a + b\sqrt 2 \neq 0$, so at least one of $a$ or $b$ is nonzero.
+    If $a = 0$, then $b \neq 0$ with
+    \[
+        (b\sqrt 2)\inv = \frac{1}{b\sqrt 2} = \frac{1}{b\sqrt 2} \cdot \frac{\sqrt 2}{\sqrt 2} = \frac{1}{2b}\sqrt 2 \in G.
+    \]
+    If $b = 0$, then $a \neq 0$ with $a\inv = 1/a \in G$.
+    Otherwise, assume $a, b \neq 0$.
+    Note that multiplication of two elements in $G$ is given by
     \[
     	(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G.
     \]
@@ -472,7 +479,10 @@ Let $G$ be a group.
     \[
     	(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.
     \]
-    For $n < 0$, then $(ab)^n = ((ab)^{-n})\inv = (b^{-n} a^{-n})\inv = a^n b^n$.
+    For $n < 0$, then
+    \[
+        (ab)^n = ((ab)^{-n})\inv = (a^{-n} b^{-n})\inv = (b^{-n})\inv (a^{-n})\inv = b^n a^n = a^n b^n. \qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.1.25]
@@ -558,7 +568,7 @@ Let $G$ be a group.
     so that $A$ and $B$ are Abelian.
 	If $A$ and $B$ are both Abelian, then
     \[
-    	(a, b)(a', b) = (aa', bb') = (a'a, b'b) = (a', b')(a, b)
+    	(a, b)(a', b') = (aa', bb') = (a'a, b'b) = (a', b')(a, b)
     \]
     hence $A \times B$ is Abelian.
 \end{sol}
@@ -615,7 +625,7 @@ Let $G$ be a group.
     \]
     so that $|x| \leq b - a < n$, which is a contradiction.
 	Hence, the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct.
-	Since these elements are all in $G$, $|x| = n \leq |G|$.
+	Therefore, $G$ contains $n$ distinct elements, so $|x| = n \leq |G|$.
 \end{sol}
 
 \begin{exercise}[1.1.33]
@@ -681,7 +691,7 @@ Let $G$ be a group.
 	If $ab = a$, then $b = 1$, contradicting that $b \neq 1$.
 	If $ab = b$, then $a = 1$, contradicting that $a \neq 1$.
 	Hence, $ab = c$.
-	By uniqueness of inverses, we have $b = a\inv c = ac$.
+	By cancellation, we have $b = a\inv c = ac$.
 	Utilizing a similar contradiction, we may deduce $ba = c$ so that $c = ab = ba$.
 	Moreover, $b = ca\inv = ca$ so that $b = ac = ca$.
 	Lastly, $bc = b(ab) = (ba)b = cb$.

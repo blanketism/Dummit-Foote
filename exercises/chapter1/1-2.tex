@@ -65,7 +65,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
    
 \begin{sol}
-    Since $k \neq 1$, $r^k \neq 1$.
+    Since $n \geq 4$, we have $k \geq 2$ so that $r^k \neq 1$.
 	Moreover, $(r^k)^2 = r^n = 1$, hence $|r^k| = 2$.
 	Since $r^k$ commutes with other powers of $r$, consider $sr^j \in D_{2n}$ for $0 \leq j < n$.
 	Then
@@ -73,7 +73,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
     	r^k(sr^j) = (r^ks)r^j = (sr^{-k})r^j = s(r^{-k}r^j) = s r^{j-k} = (sr^j) r^k,
     \]
     Now let $w \in D_{2n}$ such that $wx = xw$ for all $x \in D_{2n}$.
-	If $w = r^m$ for $0 \leq m < n$, then commuting with $s$ gives $w = w\inv$, which implies $m = k$ by \exref{1.1.33}.
+	If $w = r^m$ for $0 < m < n$, then commuting with $s$ gives $w = w\inv$, which implies $m = k$ by \exref{1.1.33}.
 	If $w = sr^m$ instead, then commuting with $r$ implies $r = r\inv$, which cannot be true since $n \geq 4$.
 \end{sol}
 
@@ -93,7 +93,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Since $|x| = |y| = 2$, $x = x\inv$ and $y = y\inv$.
+    Since $|x| = |y| = 2$, we have $x = x\inv$ and $y = y\inv$.
 	Then
     \[
     	tx = (xy)x = x(yx) = x(xy)\inv = x t\inv. \qh
