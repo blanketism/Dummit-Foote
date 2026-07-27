@@ -64,7 +64,8 @@ def main():
         return
 
     diff = subprocess.run(
-        ["git", "diff", "--cached", "-U999999"], capture_output=True, text=True
+        ["git", "diff", "--cached", "-U999999", "--", "*.tex"],
+        capture_output=True, text=True
     ).stdout
 
     found = collect_edits(diff)
