@@ -17,12 +17,12 @@
         \begin{array}{c|c|c|c}
             & (a, b) & \lcm(a, b) & ax + by \\
             \hline
-            (a) & 1 & 260 & 2(20) - 3(13) \\
-            (b) & 3 & 8556 & 27(69) - 5(372) \\
-            (c) & 11 & 19800 & 8(792) - 23(275) \\
-            (d) & 3 & 21540381 & -126(11391) + 253(5673) \\
-            (e) & 1 & 2759487 & -105(1761) + 118(1567) \\
-            (f) & 691 & 44693880 & -17(507885) + 142(60808)
+            (\text a) & 1 & 260 & 2(20) - 3(13) \\
+            (\text b) & 3 & 8556 & 27(69) - 5(372) \\
+            (\text c) & 11 & 19800 & 8(792) - 23(275) \\
+            (\text d) & 3 & 21540381 & -126(11391) + 253(5673) \\
+            (\text e) & 1 & 2759487 & -105(1761) + 118(1567) \\
+            (\text f) & 691 & 44693880 & -17(507885) + 142(60808)
         \end{array}
     \]
     Here, the $\lcm$ was computed using $ab = (a, b)\lcm(a, b)$.
@@ -33,12 +33,12 @@
 \end{exercise}
 
 \begin{sol}
-    Since $k \mid a$ and $k \mid b$, there exist $x, y \in \zbb$ such that $a = kx$ and $b = ky$.
-	Then for any $s, t \in \zbb$, we have
+    Put $a = kx, b = ky$ for $x, y \in \zbb$.
+    Then for any $s, t \in \zbb$,
     \[
-    	as + bt = (kx)s + (ky)t = k(xs + yt),
+        as + bt = (kx)s + (ky)t = k(xs + yt),
     \]
-    which shows that $k \mid (as + bt)$.
+    so $k \mid as + bt$.
 \end{sol}
 
 \begin{exercise}[0.2.3]
@@ -112,15 +112,15 @@
 \end{exercise}
 
 \begin{sol}
-    Without loss of generality, suppose there exist nonzero integers $a, b$ such that $a^2 = pb^2$ and $(a, b) = 1$.
-	Then $p \mid a^2$, which implies $p \mid a$.
-	Put $a = pk$ for $k \in \zbb$.
-	Then
+    Suppose there exist $a, b \in \zbb \nzero$ such that $a^2 = pb^2$ and $(a, b) = 1$.
+    Then $p \mid a^2$, so $p \mid a$.
+    Put $a = pk$ for some $k \in \zbb$.
+    Then
     \[
-    	a^2 = (pk)^2 = p^2k^2 = pb^2,
+        a^2 = p^2k^2 = pb^2 \implies b^2 = pk^2,
     \]
-    hence $b^2 = pk^2$.
-	But then $p \mid b$, contradicting that $(a, b) = 1$.
+    so $p \mid b^2$, hence $p \mid b$.
+    But then $p \mid (a, b)$, contradicting $(a, b) = 1$.
 \end{sol}
 
 \begin{spex}[0.2.8]
@@ -131,13 +131,12 @@
 \end{spex}
 
 \begin{sol}
-    In the product $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$.
-	Hence, there are $\floor{n/p}$ factors of $p$ in $n!$.
-	Similarly, a factor of $p^2$ appears in each of the integers $p^2, 2p^2, \ldots, \floor{n/p^2}p^2$, so there are $\floor{n/p^2}$ factors of $p^2$ in $n!$.
-	This contributes an additional factor of $p$ that was counted only once in the previous step.
-	Continuing this process, we find that the largest power of $p$ which divides $n!$ is
+    In $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$, giving $\floor{n/p}$ factors of $p$.
+    A factor of $p^2$ appears in each of the integers $p^2, 2p^2, \ldots, \floor{n/p^2}p^2$.
+    Each such multiple of $p^2$ contributes an additional factor of $p$ beyond the $\floor{n/p}$ factors already counted, giving $\floor{n/p^2}$ additional factors of $p$.
+    Continuing in this way, we see that the largest power of $p$ which divides $n!$ is
     \[
-    	\floor*{\frac np} + \floor*{\frac{n}{p^2}} + \cdots + \floor*{\frac{n}{p^m}} = \sum_{i=1}^{m} \floor*{\frac{n}{p^i}},
+        \floor*{\frac np} + \floor*{\frac{n}{p^2}} + \cdots + \floor*{\frac{n}{p^m}} = \sum_{i=1}^m \floor*{\frac{n}{p^i}},
     \]
     where $m = \floor{\log_p n}$ is the largest integer such that $p^m \leq n$.
 \end{sol}
@@ -147,7 +146,7 @@
 \end{exercise}
 
 \begin{sol}
-    Please see \verb|euclidean_algorithm.py| for the solution.
+    See \verb|euclidean_algorithm.py| for the solution.
 \end{sol}
 
 \begin{exercise}[0.2.10]
@@ -164,6 +163,7 @@
     \[
     	\phi(n) = \prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1) = N.
     \]
+    
     Since each factor $p_i^{\alpha_i - 1}(p_i - 1)$ divides $N$, we have $p_i - 1 \leq N$, so $p_i \leq N + 1$, bounding the number of possible primes.
 	For the exponents, $\smash{p_i^{\alpha_i - 1}} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$.
 	With finitely many choices for each $p_i$ and $\alpha_i$, there are only finitely many $n$ with $\phi(n) = N$.
@@ -179,13 +179,13 @@
 
 \begin{sol}
     Let $n \in \zp$ with $d \mid n$.
-	Put their prime factorizations as
+    Put their prime factorizations as
     \[
-    	n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}, \quad d = p_1^{\beta_1} p_2^{\beta_2} \cdots p_j^{\beta_j},
+        n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k} \quad \text{and} \quad d = p_1^{\beta_1} p_2^{\beta_2} \cdots p_j^{\beta_j},
     \]
-    where $j \leq k$ and $1 \leq \beta_i \leq \alpha_i$ for all $1 \leq i \leq j$.
-	Then $\phi(d) \mid \phi(n)$, since
+    where $j \leq k$ is the number of distinct primes dividing $d$ and $1 \leq \beta_i \leq \alpha_i$ for $1 \leq i \leq j$.
+    Then
     \[
-    	\frac{\phi(n)}{\phi(d)} = \prod_{i = 1}^j \frac{p_i^{\alpha_i - 1}(p_i - 1)}{p_i^{\beta_i - 1}(p_i - 1)} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) = \prod_{i = 1}^j p_i^{\alpha_i - \beta_i} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) \in \zbb. \qh
+        \frac{\phi(n)}{\phi(d)} = \frac{\prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1)}{\prod_{i=1}^j p_i^{\beta_i - 1}(p_i - 1)} = \prod_{i=1}^j p_i^{\alpha_i - \beta_i} \prod_{i=j+1}^k p_i^{\alpha_i - 1}(p_i - 1) \in \zp,
     \]
 \end{sol}

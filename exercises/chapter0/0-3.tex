@@ -24,17 +24,19 @@
 \end{exercise}
 
 \begin{sol}
-    Let $m \in \zbb$.
-	By the Division Algorithm, there exist unique $q, r \in \zbb$ such that
+    Let $m \in \zbb$ be given.
+    By the Division Algorithm there exist unique $q, r \in \zbb$ such that
     \[
-    	m = nq + r, \quad 0 \leq r < n.
+        m = nq + r, \quad 0 \leq r < n.
     \]
-    Then $m \equiv r \bmod n$, so $m \in \bar r$.
-	By definition, $\bar r$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
-	Thus, every equivalence class in $\intmod$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
-	Moreover, they are all distinct.
-	Otherwise, if $\bar x = \bar y$ for $0 \leq x, y < n$, then $x \equiv y \bmod n$, or $n \mid (x - y)$.
-	However, since $-n < x - y < n$, we must have $x - y = 0$, or $x = y$.
+
+    Then $m \equiv r \bmod n$ so that $\bar m = \bar r$. Since $0 \leq r < n$, $\bar r \in \set{\bar 0, \bar 1, \ldots, \bar{n - 1}}$.
+    It follows that every equivalence class $\bar m$ is equal to one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
+    
+    To see that they are distinct, suppose $\bar x = \bar y$ for $0 \leq x, y < n$.
+    Then $x \equiv y \bmod n$ so that $n \mid (x - y)$.
+    Since $-n < x - y < n$, we must have $x - y = 0$, so that $x = y$.
+    Hence, $\bar 0, \bar 1, \ldots, \bar{n - 1}$ are distinct.
 \end{sol}
 
 \begin{exercise}[0.3.3]
@@ -46,18 +48,17 @@
     \[
     	a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9.
     \]
-
     \hint{Use the fact that $10 \equiv 1 \bmod 9$.}
 
     \note{Note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
 \end{exercise}
 
-\begin{sol} 
-    Using the hint, we have
+\begin{sol}
+    \vspace{-\abovedisplayskip}
     \begin{align*}
         a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
         & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
-        & = (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9 \qh
+        & \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9 \qh
     \end{align*}
 \end{sol}
 
@@ -77,7 +78,7 @@
 \begin{exercise}[0.3.5]
     Compute the last two digits of $9^{1500}$.
 
-    \note{One may also do this by considering the binomial expansion of $(10 - 1)^{1500}$, but we will maintain the approach of using modular arithmetic.}
+    \mnote{One may also do this by considering the binomial expansion of $(10 - 1)^{1500}$, but we will maintain the approach of using modular arithmetic.}
 \end{exercise}
 
 \begin{sol}
@@ -140,14 +141,15 @@
 \end{spex}
 
 \begin{sol}
-    It suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
+    Recall that $\phi(n)$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$.
+    Hence, it suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
     \begin{itemize}
         \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
-	Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
-	Thus, $(a, n) = 1$.
+	    Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
+	    Thus, $(a, n) = 1$.
         \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
-	We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
-	Thus, $\bar a \in \units$. \qh
+	    We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
+	    Thus, $\bar a \in \units$. \qh
     \end{itemize}
 \end{sol}
 
@@ -213,7 +215,7 @@
 \end{exercise}
 
 \begin{sol}
-    Use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair $(a, n)$.
+    We use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair $(a, n)$.
 	Then $ax \equiv 1 \bmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
         \item 17.
