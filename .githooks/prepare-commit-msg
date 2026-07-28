@@ -54,7 +54,7 @@ def build_message(found):
         ", ".join(sorted(found[ch], key=lambda s: [int(x) for x in s.split(".")]))
         for ch in chapters
     )
-    return subject + body + "\n"
+    return subject + body
 
 
 def main():
