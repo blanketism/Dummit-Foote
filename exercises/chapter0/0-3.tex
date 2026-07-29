@@ -1,6 +1,6 @@
 \subsection{\texorpdfstring{$\intmod$: The Integers Modulo $n$}{Z/nZ: The Integers Modulo n}}
 
-\begin{exercise}[0.3.1]
+\begin{exercise}{0.3.1}
     Write down explicitly all the elements in the residue classes of $\intmod[18]$.
 \end{exercise}
 
@@ -17,7 +17,7 @@
     \end{align*}
 \end{sol}
 
-\begin{exercise}[0.3.2]
+\begin{exercise}{0.3.2}
     Prove that the distinct equivalence classes in $\intmod$ are precisely $\bar 0, \bar 1, \bar 2, \ldots, \bar{n - 1}$.
 
     \hint{Use the Division Algorithm.}
@@ -39,7 +39,7 @@
     Hence, $\bar 0, \bar 1, \ldots, \bar{n - 1}$ are distinct.
 \end{sol}
 
-\begin{exercise}[0.3.3]
+\begin{exercise}{0.3.3}
     Prove that if
     \[
     	a = a_n 10^n + a_{n - 1}10^{n - 1} + \cdots + a_1 10 + a_0
@@ -62,7 +62,7 @@
     \end{align*}
 \end{sol}
 
-\begin{exercise}[0.3.4]
+\begin{exercise}{0.3.4}
     Compute the remainder when $37^{100}$ is divided by $29$.
 \end{exercise}
 
@@ -75,7 +75,7 @@
     Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \bmod 29$.
 \end{sol}
 
-\begin{exercise}[0.3.5]
+\begin{exercise}{0.3.5}
     Compute the last two digits of $9^{1500}$.
 
     \mnote{One may also do this by considering the binomial expansion of $(10 - 1)^{1500}$, but we will maintain the approach of using modular arithmetic.}
@@ -92,7 +92,7 @@
 	Thus, the last two digits of $9^{1500}$ are $01$.
 \end{sol}
 
-\begin{exercise}[0.3.6]
+\begin{exercise}{0.3.6}
     Prove that the square of the elements in $\intmod[4]$ are just $\bar 0$ and $\bar 1$.
 \end{exercise}
 
@@ -100,7 +100,7 @@
     $0^2 \equiv 0 \bmod 4$, $1^2 \equiv 1 \bmod 4$, $2^2 \equiv 0 \bmod 4$, and $3^2 \equiv 1 \bmod 4$.
 \end{sol}
 
-\begin{exercise}[0.3.7]
+\begin{exercise}{0.3.7}
     Prove that for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$.
 
     \hint{Use \exref{0.3.6}.}
@@ -110,7 +110,7 @@
     By \exref{0.3.6}, $a^2$ and $b^2$ are either 0 or 1 mod 4, so their sum cannot be 3 mod 4.
 \end{sol}
 
-\begin{exercise}[0.3.8]
+\begin{exercise}{0.3.8}
     Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$.
     
     \hint{Consider the equation mod 4 as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
@@ -127,7 +127,7 @@
     By infinite descent, we can iterate the process to obtain no solution in nonzero integers $a, b$ and $c$.
 \end{sol}
 
-\begin{exercise}[0.3.9]
+\begin{exercise}{0.3.9}
     Prove that the square of any odd integer always leaves a remainder of $1$ when divided by $8$.
 \end{exercise}
 
@@ -136,7 +136,7 @@
 	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
-\begin{spex}[0.3.10]
+\begin{spex}{0.3.10}
     Prove that the number of elements of $\units$ is $\phi(n)$, where $\phi$ denotes the Euler $\phi$-function.
 \end{spex}
 
@@ -153,7 +153,7 @@
     \end{itemize}
 \end{sol}
 
-\begin{exercise}[0.3.11]
+\begin{exercise}{0.3.11}
     Prove that if $\bar a, \bar b \in \units$, then $\bar a \cdot \bar b \in \units$.
 \end{exercise}
 
@@ -166,7 +166,7 @@
     so that $\bar a \cdot \bar b \in \units$.
 \end{sol}
 
-\begin{exercise}[0.3.12]
+\begin{exercise}{0.3.12}
     Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
 \end{exercise}
@@ -182,7 +182,7 @@
 	However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
-\begin{exercise}[0.3.13]
+\begin{exercise}{0.3.13}
     Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
 
@@ -194,7 +194,7 @@
 	Then $ac \equiv 1 \bmod n$.
 \end{sol}
 
-\begin{exercise}[0.3.14]
+\begin{exercise}{0.3.14}
     Conclude from the previous two exercises that $\units$ is the set of elements $\bar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4.
 	Verify this directly in the case $n = 12$.
 \end{exercise}
@@ -204,7 +204,7 @@
 	For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
 \end{sol}
 
-\begin{exercise}[0.3.15]
+\begin{exercise}{0.3.15}
     For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
         \item $a = 13, n = 20$
@@ -225,7 +225,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise}[0.3.16]
+\begin{exercise}{0.3.16}
     Write a computer program to add and multiply mod $n$, for any $n$ given as input.
 	The output of these operations should be the least residues of the sums and products of two integers.
 	Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. 

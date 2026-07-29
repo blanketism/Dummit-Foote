@@ -1,6 +1,6 @@
 \subsection{Homomorphisms and Isomorphisms}
 
-\begin{exercise}[1.6.1]
+\begin{exercise}{1.6.1}
     Let $\phi : G \to H$ be a homomorphism.
     \begin{subexercises}
         \item Prove that $\phi(x^n) = \phi(x)^n$ for all $n \in \zp$.
@@ -27,7 +27,7 @@
     \]
 \end{solenum}
 
-\begin{spex}[1.6.2]
+\begin{spex}{1.6.2}
     If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
 	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
@@ -56,7 +56,7 @@
     The result is not true if $\phi$ is only assumed to be a homomorphism. Consider a non-trivial group $G$ and the trivial homomorphism $\phi : G \to 1$. Then $G$ contains non-identity elements whose order is greater than 1, but only $1 \in 1$ has order 1.
 \end{sol}
 
-\begin{exercise}[1.6.3]
+\begin{exercise}{1.6.3}
     If $\phi : G \to H$ is an isomorphism, prove that $G$ is Abelian if and only if $H$ is Abelian.
 	If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is Abelian, then so is $H$?
 \end{exercise}
@@ -84,15 +84,15 @@
 	Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
 \end{sol}
 
-\begin{exercise}[1.6.4]
+\begin{exercise}{1.6.4}
     Prove that the multiplicative groups $\rbb - \set{0}$ and $\cbb- \set{0}$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
-    Note that $i \in \cbb\nz$ has order 4, but there is no element in $\rbb \nz$ that has order 4.
+    Note that $i \in \cbb \nzero$ has order 4, but there is no element in $\rbb \nzero$ that has order 4.
 \end{sol}
 
-\begin{exercise}[1.6.5]
+\begin{exercise}{1.6.5}
     Prove that the additive groups $\rbb$ and $\qbb$ are not isomorphic.
 \end{exercise}
 
@@ -101,7 +101,7 @@
 	But bijections preserve cardinality.
 \end{sol}
 
-\begin{exercise}[1.6.6]
+\begin{exercise}{1.6.6}
     Prove that the additive groups $\zbb$ and $\qbb$ are not isomorphic.
 
     \mnote{In fact, no non-trivial homomorphism exists from $\zbb$ to $\qbb$.}
@@ -119,7 +119,7 @@
     Hence, $\phi$ cannot be an isomorphism.
 \end{sol}
 
-\begin{exercise}[1.6.7]
+\begin{exercise}{1.6.7}
     Prove that $D_8$ and $Q_8$ are not isomorphic.
 \end{exercise}
 
@@ -127,7 +127,7 @@
     $D_8$ has only 2 elements of order 4, while $Q_8$ has 6 elements of order 4.
 \end{sol}
 
-\begin{exercise}[1.6.8]
+\begin{exercise}{1.6.8}
     Prove that if $n \neq m$, then $S_n$ and $S_m$ are not isomorphic.
 \end{exercise}
 
@@ -135,7 +135,7 @@
     If $n \neq m$, then $n! \neq m!$ so that $|S_n| \neq |S_m|$.
 \end{sol}
 
-\begin{exercise}[1.6.9]
+\begin{exercise}{1.6.9}
     Prove that $D_{24}$ and $S_4$ are not isomorphic.
 \end{exercise}
 
@@ -143,7 +143,7 @@
     $D_{24}$ has elements of order 12, but $S_4$ does not.
 \end{sol}
 
-\begin{exercise}[1.6.10]
+\begin{exercise}{1.6.10}
     Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection.
 	Define
     \[
@@ -185,7 +185,7 @@
 	By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
 \end{solenum}
 
-\begin{exercise}[1.6.11]
+\begin{exercise}{1.6.11}
     Let $A$ and $B$ be groups.
 	Prove that $A \times B \cong B \times A$.
 \end{exercise}
@@ -204,7 +204,7 @@
 	Therefore, $\phi$ is an isomorphism and $A \times B \cong B \times A$.
 \end{sol}
 
-\begin{exercise}[1.6.12]
+\begin{exercise}{1.6.12}
     Let $A$, $B$, and $C$ be groups and let $G = A \times B$ and $H = B \times C$.
 	Prove that $G \times C \cong A \times H$.
 \end{exercise}
@@ -219,9 +219,9 @@
     We conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
-\begin{spex}[1.6.13]
+\begin{spex}{1.6.13}
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
-	Prove that the image of $\phi$, $\phi(G)$, is a \defref{subgroup} of $H$.
+	Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$.
 	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{spex}
 
@@ -258,8 +258,7 @@
 	Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
-\begin{spex}[1.6.14]
-    \label{def:kernel}
+\begin{spex}{1.6.14}
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
 	Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
 	Prove that the kernel of $\phi$ is a subgroup of $G$.
@@ -290,7 +289,7 @@
     \end{itemize}
 \end{sol}
 
-\begin{exercise}[1.6.15]
+\begin{exercise}{1.6.15}
     Define a map $\pi : \rbb^2 \to \rbb$ by $\pi((x,y)) = x$.
 	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
 \end{exercise}
@@ -309,7 +308,7 @@
     \]
 \end{sol}
 
-\begin{exercise}[1.6.16]
+\begin{exercise}{1.6.16}
     Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$.
 	Prove that the maps $\pi_1 : G \to A$ and $\pi_2 : G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
 \end{exercise}
@@ -325,7 +324,7 @@
     \]
 \end{sol}
 
-\begin{exercise}[1.6.17]
+\begin{exercise}{1.6.17}
     Let $G$ be any group.
 	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
@@ -345,7 +344,7 @@
     so that $\phi$ is a homomorphism.
 \end{solitem}
 
-\begin{exercise}[1.6.18]
+\begin{exercise}{1.6.18}
     Let $G$ be any group.
 	Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
@@ -354,7 +353,7 @@
     The proof is similar to \exref{1.6.17}, hence we omit the details.
 \end{sol}
 
-\begin{exercise}[1.6.19]
+\begin{exercise}{1.6.19}
     Let $G = \set{ z \in \cbb\mid z^n = 1 \text{ for some } n \in \zbb^+ }$.
 	Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
 \end{exercise}
@@ -378,8 +377,7 @@
 	Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
-\begin{spex}[1.6.20]
-    \label{def:automorphism group}
+\begin{spex}{1.6.20}
     Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$.
 	Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
 \end{spex}
@@ -402,7 +400,7 @@
     Therefore, $(\aut(G), \circ)$ is a group.
 \end{sol}
 
-\begin{exercise}[1.6.21]
+\begin{exercise}{1.6.21}
     Prove that for each fixed nonzero $k \in \qbb$ the map from $\qbb$ to itself defined by $q \mapsto kq$ is an automorphism of $\qbb$.
 \end{exercise}
 
@@ -416,7 +414,7 @@
 	Bijectivity is clear, hence $\phi \in \aut(\qbb)$.
 \end{sol}
 
-\begin{exercise}[1.6.22]
+\begin{exercise}{1.6.22}
     Let $A$ be an Abelian group and fix some $k \in \zbb$.
 	Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself.
 	If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
@@ -432,7 +430,7 @@
 	For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
-\begin{spex}[1.6.23]
+\begin{spex}{1.6.23}
     Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$.
 	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
 
@@ -463,7 +461,7 @@
     Since $\sigma$ is injective, $gh = hg$ and $G$ is Abelian.
 \end{sol}
 
-\begin{exercise}[1.6.24]
+\begin{exercise}{1.6.24}
     Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$.
 	Prove that $G \cong D_{2n}$, where $n = |xy|$.
 \end{exercise}
@@ -498,7 +496,7 @@
     It follows that $G$ has $2n$ elements and is generated by $x$ and $t$ satisfying the relations of the generators of $D_{2n}$, so that $G \cong D_{2n}$.
 \end{sol}
 
-\begin{exercise}[1.6.25]
+\begin{exercise}{1.6.25}
     Let $n \in \zbb^+$, let $r$ and $s$ be the usual generators of $D_{2n}$ and let $\theta = 2\pi / n$.
     \begin{subexercises}
         \item Prove that the matrix 
@@ -592,7 +590,7 @@
     Therefore, the only element in $\ker\phi$ is the identity element of $D_{2n}$, so that $\phi$ is injective.
 \end{solenum}
 
-\begin{exercise}[1.6.26]
+\begin{exercise}{1.6.26}
     Let $i$ and $j$ be the generators of $Q_8$ described in Section 5.
 	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\cbb)$ defined on generators by
     \[

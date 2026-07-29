@@ -1,6 +1,6 @@
 \subsection{Properties of the Integers}
 
-\begin{exercise}[0.2.1]
+\begin{exercise}{0.2.1}
     For each of the following pairs of integers $a$ and $b$, determine their greatest common divisor, their least common multiple, and write their greatest common divisor in the form $ax + by$ for some integers $x$ and $y$.
     \begin{subexercises}
         \item $a = 20, b = 13$
@@ -28,7 +28,7 @@
     Here, the $\lcm$ was computed using $ab = (a, b)\lcm(a, b)$.
 \end{sol}
 
-\begin{exercise}[0.2.2]
+\begin{exercise}{0.2.2}
     Prove that if the integer $k$ divides the integers $a$ and $b$, then $k$ divides $as + bt$ for every pair of integers $s$ and $t$. 
 \end{exercise}
 
@@ -41,7 +41,7 @@
     so $k \mid as + bt$.
 \end{sol}
 
-\begin{exercise}[0.2.3]
+\begin{exercise}{0.2.3}
     Prove that if $n$ is composite, then there are integers $a$ and $b$ such that $n$ divides $ab$, but $n$ does not divide either $a$ or $b$.
 \end{exercise}
 
@@ -50,7 +50,7 @@
 	Then $n \mid ab$, but $n \nmid a$ and $n \nmid b$.
 \end{sol}
 
-\begin{exercise}[0.2.4]
+\begin{exercise}{0.2.4}
     Let $a, b$ and $N$ be fixed integers with $a$ and $b$ nonzero, and let $d = (a, b)$ be the greatest common divisor of $a$ and $b$.
 	Suppose $x_0$ and $y_0$ are particular solutions to $ax + by = N$.
 	Prove, for any integer $t$, that the integers
@@ -70,7 +70,7 @@
     \]
 \end{sol}
 
-\begin{exercise}[0.2.5]
+\begin{exercise}{0.2.5}
     Determine the value $\phi(n)$ for each integer $n \leq 30$, where $\phi$ denotes the Euler $\phi$-function.
 \end{exercise}
 
@@ -91,7 +91,7 @@
     \]
 \end{sol}
 
-\begin{exercise}[0.2.6]
+\begin{exercise}{0.2.6}
     Prove the Well Ordering Property of $\zbb$ by induction, and prove the minimal element is unique.
 \end{exercise}
 
@@ -107,7 +107,7 @@
     If $s_1, s_2 \in S$ are both minimal, then $s_1 \leq s_2$ and $s_2 \leq s_1$ imply $s_1 = s_2$.
 \end{sol}
 
-\begin{exercise}[0.2.7]
+\begin{exercise}{0.2.7}
     If $p$ is a prime, prove that there do not exist nonzero integers $a$ and $b$ such that $a^2 = pb^2$.
 \end{exercise}
 
@@ -123,7 +123,7 @@
     But then $p \mid (a, b)$, contradicting $(a, b) = 1$.
 \end{sol}
 
-\begin{spex}[0.2.8]
+\begin{spex}{0.2.8}
     Let $p$ be a prime, $n \in \zp$.
 	Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$.
 
@@ -141,7 +141,7 @@
     where $m = \floor{\log_p n}$ is the largest integer such that $p^m \leq n$.
 \end{sol}
 
-\begin{exercise}[0.2.9]
+\begin{exercise}{0.2.9}
     Write a computer program to determine the greatest common divisor $(a, b)$ of two integers $a$ and $b$ and to express $(a, b)$ in the form $ax + by$ for some integers $x$ and $y$.
 \end{exercise}
 
@@ -149,7 +149,7 @@
     See \verb|euclidean_algorithm.py| for the solution.
 \end{sol}
 
-\begin{exercise}[0.2.10]
+\begin{exercise}{0.2.10}
     Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function.
 	Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
 \end{exercise}
@@ -173,7 +173,7 @@
 	Hence $\phi(n) \to \infty$ as $n \to \infty$.
 \end{sol}
 
-\begin{exercise}[0.2.11]
+\begin{exercise}{0.2.11}
     Prove that if $d$ divides $n$ then $\phi(d)$ divides $\phi(n)$ where $\phi$ denotes Euler's $\phi$-function.
 \end{exercise}
 

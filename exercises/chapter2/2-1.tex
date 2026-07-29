@@ -2,7 +2,7 @@
 
 \subsection{Definitions and Examples}
 
-\begin{exercise}[2.1.1]
+\begin{exercise}{2.1.1}
     In each of (a)--(e) prove that the specified subset is a subgroup of the given group.
     \begin{subexercises}
         \item The set of complex numbers of the form $a + ai$, $a \in \rbb$ (under addition).
@@ -58,7 +58,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise}[2.1.2]
+\begin{exercise}{2.1.2}
     In each of (a) -- (e) prove that the specified subset is \emph{not} a subgroup of the given group.
     \begin{subexercises}
         \item The set of $2$-cycles in $S_n$ for $n \ge 3$.
@@ -82,7 +82,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise}[2.1.3]
+\begin{exercise}{2.1.3}
     Show that the following subsets of the dihedral group $D_8$ are actually subgroups:
     \begin{subexercises}
         \item $\set{1, r^2, s, sr^2}$
@@ -116,7 +116,7 @@
     Both tables show closure, since no product is an element outside the subset.
 \end{solenum}
 
-\begin{exercise}[2.1.4]
+\begin{exercise}{2.1.4}
     Give an explicit example of a group $G$ and an infinite subset $H$ of $G$ that is closed under the group operation but is not a subgroup of $G$.
 \end{exercise}
 
@@ -126,7 +126,7 @@
 	Hence, $H$ is not a subgroup of $G$.
 \end{sol}
 
-\begin{exercise}[2.1.5]
+\begin{exercise}{2.1.5}
     Prove that $G$ cannot have a subgroup $H$ with $|H| = n - 1$, where $n = |G| > 2$.
 \end{exercise}
 
@@ -135,8 +135,7 @@
    But since $1 < n/(n - 1) < 2$ for all $n > 2$, no such $k$ can exist.
 \end{sol}
 
-\begin{spex}[2.1.6]
-    \label{def:torsion subgroup}
+\begin{spex}{2.1.6}
     Let $G$ be an Abelian group.
 	Prove that $\set{ g \in G \mid |g| < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$).
 	Give an explicit example where this set is not a subgroup when $G$ is non-Abelian.
@@ -186,9 +185,9 @@
 	Hence, $|AB| = \infty$, so $AB \notin \tor(G)$.
 \end{sol}
 
-\begin{exercise}[2.1.7]
+\begin{exercise}{2.1.7}
     Fix some $n \in \zbb$ with $n>1$.
-	Find the \defref{torsion subgroup} of $\zbb \times (\zbb/n\zbb)$.
+	Find the torsion subgroup of $\zbb \times (\zbb/n\zbb)$.
 	Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
@@ -204,7 +203,7 @@
 	Hence, $H$ is not a subgroup of $\zbb \times \intmod$.
 \end{sol}
 
-\begin{exercise}[2.1.8]
+\begin{exercise}{2.1.8}
     Let $H$ and $K$ be subgroups of $G$.
 	Prove that $H \cup K$ is a subgroup if and only if either $H \subseteq K$ or $K \subseteq H$.
 \end{exercise}
@@ -225,7 +224,7 @@
 	Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
 \end{solitem}
 
-\begin{spex}[2.1.9]
+\begin{spex}{2.1.9}
     Let $G = \gl_n(F)$, where $F$ is any field.
 	Define
     \[
@@ -246,7 +245,7 @@
 	It follows that $\splin_n(F) \leq \gl_n(F)$.
 \end{sol}
 
-\begin{exercise}[2.1.10]
+\begin{exercise}{2.1.10}
     \begin{subexercises}
         \item Prove that if $H$ and $K$ are subgroups of $G$ then so is their intersection $H \cap K$.
         \item Prove that the intersection of an arbitrary nonempty collection of subgroups of $G$ is again a subgroup of $G$ (do not assume the collection is countable).
@@ -267,7 +266,7 @@
 	Hence, $ab\inv \in H$, and $H \leq G$.
 \end{sol}
 
-\begin{exercise}[2.1.11]
+\begin{exercise}{2.1.11}
     Let $A$ and $B$ be groups.
 	Prove that the following sets are subgroups of the direct product $A \times B$:
     \begin{subexercises}
@@ -307,7 +306,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise}[2.1.12]
+\begin{exercise}{2.1.12}
     Let $A$ be an Abelian group and fix some $n \in \zbb$.
 	Prove that the following sets are subgroups of $A$.
     \begin{subexercises}
@@ -338,7 +337,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise}[2.1.13]
+\begin{exercise}{2.1.13}
     Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$.
 	Prove that $H = 0$ or $\qbb$.
 \end{exercise}
@@ -361,7 +360,7 @@
 	Hence, $H = \qbb$.
 \end{sol}
 
-\begin{exercise}[2.1.14]
+\begin{exercise}{2.1.14}
     Show that $\set{ x \in D_{2n} \mid x^2 = 1 }$ is \emph{not} a subgroup of $D_{2n}$ (here $n \ge 3$).
 \end{exercise}
 
@@ -371,7 +370,7 @@
 	In particular, $s$ and $sr$ are in $H$, but $r = s(sr) \notin H$ since $\abs r = n > 2$.
 \end{sol}
 
-\begin{exercise}[2.1.15]
+\begin{exercise}{2.1.15}
     Let $H_1 \subseteq H_2 \subseteq \cdots$ be an ascending chain of subgroups of $G$.
 	Prove that
     \[
@@ -390,7 +389,7 @@
 	Therefore, $H \leq G$.
 \end{sol}
 
-\begin{exercise}[2.1.16]
+\begin{exercise}{2.1.16}
     Let $n \in \zbb^+$ and let $F$ be a field.
 	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j }$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
 \end{exercise}
@@ -417,7 +416,7 @@
 	Hence, $A\inv \in \ut_n(F)$.
 \end{sol}
 
-\begin{exercise}[2.1.17]
+\begin{exercise}{2.1.17}
     Let $n \in \zbb^+$ and let $F$ be a field.
 	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i }$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
