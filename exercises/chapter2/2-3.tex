@@ -13,7 +13,7 @@
         \gen{x^5} & > \gen{x^{15}} \\
         \gen{x^9} & > 1 \\
         \gen{x^{15}} & > 1 \\
-        1 = \gen{x^0} & \qh
+        1 = \gen{x^0} & \qedhere
     \end{align*}
 \end{sol}
 
@@ -36,7 +36,7 @@
     Using Proposition 2.5 and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$.
 	We have the integers
     \[
-    	a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qh
+    	a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qedhere
     \]
 \end{sol}
 
@@ -59,7 +59,7 @@
     \begin{align*}
         \phi(49000) & = \phi(2^3)\phi(5^3)\phi(7^2) \\
         & = 2^2(2 - 1)5^2(5 - 1)7(7 - 1) \\
-        & = 16800 \qh
+        & = 16800 \qedhere
     \end{align*}
 \end{sol}
 
@@ -197,7 +197,7 @@
         && \sigma^{13} & = \sigma^{12 + 1} = \sigma^1 & \sigma^{-6} = & \sigma^{-12 + 6} = \sigma^6 \\
         && \sigma^{65} & = \sigma^{5(12) + 5} = \sigma^5 & \sigma^{-81} = & \sigma^{-84 + 3} = \sigma^3 \\
         && \sigma^{626} & = \sigma^{52(12) + 2} = \sigma^2 & \sigma^{-570} = & \sigma^{-48(12) + 6} = \sigma^6 \\
-        && \sigma^{1195} & = \sigma^{99(12) + 7} = \sigma^7 & \sigma^{-1211} = & \sigma^{-101(12) + 1} = \sigma^1 && \qh
+        && \sigma^{1195} & = \sigma^{99(12) + 7} = \sigma^7 & \sigma^{-1211} = & \sigma^{-101(12) + 1} = \sigma^1 && \qedhere
     \end{align*}
 \end{sol}
 
@@ -298,7 +298,7 @@
     \begin{lemma}{$k!$ contains at most $p^{k - 1}$ as a factor.}
         Using the formula from \exref{0.2.8}, we obtain
         \[
-        	\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qh
+        	\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qedhere
         \]
     \end{lemma}
     Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor.

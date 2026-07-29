@@ -37,7 +37,7 @@ Let $G$ be a group.
 
 \begin{solenum}
     \item $[a, bc] = a\inv (bc)\inv a(bc) = a\inv c\inv b\inv a b c = a\inv c\inv a c (c\inv a\inv b\inv a b c) = [a, c](c\inv [a, b]c)$.
-    \item $[ab, c] = (ab)\inv c\inv (ab)c = b\inv a\inv c\inv a b c = b\inv a\inv c\inv a c (c\inv a\inv b\inv a b c) = (b\inv[a, c]b)[b, c]$. \qh
+    \item $[ab, c] = (ab)\inv c\inv (ab)c = b\inv a\inv c\inv a b c = b\inv a\inv c\inv a c (c\inv a\inv b\inv a b c) = (b\inv[a, c]b)[b, c]$. \qedhere
 \end{solenum}
 
 \begin{exercise}[5.4.4]
@@ -55,7 +55,7 @@ Let $G$ be a group.
 
     By \exref{3.5.9}, we know that $V_4 \nsub A_4$ and $A_4/V_4 \cong Z_3$, which is Abelian, so $[A_4, A_4] \leq V_4$.
 	On the other hand, $A_4$ is non-Abelian, so $[A_4, A_4]$ is non-trivial.
-	Since $V_4$ is the only non-trivial subgroup of $A_4$ that is normal, we must have $[A_4, A_4] = V_4$. \qh
+	Since $V_4$ is the only non-trivial subgroup of $A_4$ that is normal, we must have $[A_4, A_4] = V_4$. \qedhere
 \end{sol}
 
 \begin{exercise}[5.4.5]
@@ -83,7 +83,7 @@ Let $G$ be a group.
     \]
     For a 5-cycle $(a\ b\ c\ d\ e)$, we have that
     \[
-    	(a\ b\ c\ d\ e) = (a\ e\ d)\inv ((b\ e)(c\ d))\inv (a\ e\ d) ((b\ e)(c\ d)) = [(a\ e\ d), (b\ e)(c\ d)]. \qh
+    	(a\ b\ c\ d\ e) = (a\ e\ d)\inv ((b\ e)(c\ d))\inv (a\ e\ d) ((b\ e)(c\ d)) = [(a\ e\ d), (b\ e)(c\ d)]. \qedhere
     \]
 \end{sol}
 
@@ -130,7 +130,7 @@ Let $G$ be a group.
         & = (x^n y^n [y, x]^{\frac{n(n-1)}{2}})(xy) \\
         & = x^n y^n [y, x]^{\frac{n(n-1)}{2}} x y \\
         & = x^n y^n x y [y, x]^{\frac{n(n-1)}{2}} \\
-        & = x^{n+1} y^{n+1} [y, x]^{\frac{(n+1)n}{2}}. \qh
+        & = x^{n+1} y^{n+1} [y, x]^{\frac{(n+1)n}{2}}. \qedhere
     \end{align*}
 \end{sol}
 
@@ -192,7 +192,7 @@ Let $G$ be a group.
 	Moreover, since $H$ and $P_n$ have trivial intersection because $p_n^{\alpha_n}$ and $p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_{n-1}^{\alpha_{n-1}}$ are coprime, we have that $HP_n = H \times P_n$.
 	Since $|HP_n| = |H||P_n| = |G|$, we must have $HP_n = G$, so
     \[
-    	G = P_1 \times P_2 \times \cdots \times P_n. \qh
+    	G = P_1 \times P_2 \times \cdots \times P_n. \qedhere
     \]
 \end{sol}
 
@@ -250,7 +250,7 @@ Let $G$ be a group.
         \item $\alpha_1 = 1$: Then the 2-part of $n$ is $Z_2$ with $\aut(Z_2)$ trivial, so $\aut(Z_n) \cong Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if the orders $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise coprime and coprime to 2, which is equivalent to the condition in the previous case.
 	Hence, the same condition as $\alpha_1 = 0$ applies here.
         \item $\alpha_1 = 2$: Then the 2-part of $n$ is $Z_4$, so $\aut(Z_n) \cong \aut(Z_4) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if $k = 1$, similar to $\alpha_1 = 0$, or the $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise coprime and coprime to 2.
-        \item $\alpha_1 \geq 3$: Then the 2-part of $n$ is $Z_2 \times Z_{2^{\alpha_1 - 2}}$, so $\aut(Z_n) \cong \aut(Z_{2^{\alpha_1}}) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is not cyclic. \qh
+        \item $\alpha_1 \geq 3$: Then the 2-part of $n$ is $Z_2 \times Z_{2^{\alpha_1 - 2}}$, so $\aut(Z_n) \cong \aut(Z_{2^{\alpha_1}}) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is not cyclic. \qedhere
     \end{itemize}
 \end{sol}
 
