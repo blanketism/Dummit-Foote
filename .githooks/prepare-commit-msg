@@ -9,8 +9,8 @@ import subprocess
 import sys
 from collections import defaultdict
 
-EXERCISE_RE = re.compile(r"\\begin\{exercise\}\[(\d+)\.(\d+)\.(\d+)\]")
-UNLABELED_RE = re.compile(r"\\begin\{exercise\}(?!\[)")
+EXERCISE_RE = re.compile(r"\\begin\{exercise\}\{(\d+)\.(\d+)\.(\d+)\}")
+UNLABELED_RE = re.compile(r"\\begin\{exercise\}(?!\{)")
 SOL_START_RE = re.compile(r"\\begin\{sol\}")
 SOL_END_RE = re.compile(r"\\end\{sol\}")
 EXERCISE_END_RE = re.compile(r"\\end\{exercise\}")
