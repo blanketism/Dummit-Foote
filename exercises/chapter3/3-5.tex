@@ -163,7 +163,7 @@
 
 \begin{sol}
     Recall that $A_n$ contains only even permutations, while $S_{n - 2}$ contain both even and odd permutations.
-	Our homomorphism must then mapp odd permutations of $S_{n - 2}$ to even permutations of $A_n$, while ensuring that the original action of the permutation in $S_{n - 2}$ is preserved.
+	Our homomorphism must then map odd permutations of $S_{n - 2}$ to even permutations of $A_n$, while ensuring that the original action of the permutation in $S_{n - 2}$ is preserved.
 	Hence, we ``add'' on a transposition to odd permutations in $S_{n - 2}$ to make them even in $A_n$.
 	We then define the map $\phi: S_{n - 2} \to A_n$ by
     \[
@@ -240,7 +240,7 @@
 	Then $xy = (a\ d\ e\ b\ c)$ is a 5-cycle, hence $\gen{x, y}$ contains a subgroup of order 5.
 	Moreover, $yxy\inv = (b\ c\ d)$ and $xyx\inv = (b\ d\ e)$, both of which are distinct 3-cycles not equal to each other's inverses.
 	Hence, $\gen{x, y}$ contains a subgroup isomorphic to $A_4$, which has order 12.
-	By Langrange's Theorem then $\gen{x, y}$ must have order of at least 60, hence $\gen{x, y} = A_5$.
+	By Lagrange's Theorem then $\gen{x, y}$ must have order of at least 60, hence $\gen{x, y} = A_5$.
 \end{solenum}
 
 \begin{exercise}{3.5.17}
@@ -251,17 +251,17 @@
     There are 4 cases to consider:
     \begin{enumerate}
         \item If $x$ and $y$ act on the same 3 elements, they are either the same cycle or inverses of each other.
-	In this case, $\gen{x, y} = \gen x \cong Z_3$.
+		In this case, $\gen{x, y} = \gen x \cong Z_3$.
         \item If $x$ and $y$ act on 4 elements, they must fix a common element, hence $\gen{x, y} \cong A_4$ by part (a) of the previous exercise.
         \item If $x$ and $y$ act on 5 elements and do not fix a common element, then $\gen{x, y} = A_5$ by part (b) of the previous exercise.
         \item If $x$ and $y$ act on 6 elements, then they are disjoint and commute.
-	We show that $\gen{x, y} \cong Z_3 \times Z_3$.
-	Let $z \in Z_3$ such that $\gen z = Z_3$, and define the map $\phi : \gen{x, y} \to Z_3 \times Z_3$ by $\phi(x^a y^b) = (z^a, z^b)$ for $a, b \in \set{0, 1, 2}$.
-	It is clear that $\phi$ is a homomorphism.
-	Suppose $\phi(x^a y^b) = (1, 1)$.
-	Then $z^a = 1$ and $z^b = 1$, so that $a \equiv 0 \pmod 3$ and $b \equiv 0 \pmod 3$.
-	Therefore, $x^a y^b = 1$, showing that $\phi$ is injective.
-	It is clear that $|\gen{x, y}| = 9 = |Z_3 \times Z_3|$, since there are 3 choices for both $a$ and $b$.
-	Hence, $\phi$ is an isomorphism, and $\gen{x, y} \cong Z_3 \times Z_3$. \qedhere
+		We show that $\gen{x, y} \cong Z_3 \times Z_3$.
+		Let $z \in Z_3$ such that $\gen z = Z_3$, and define the map $\phi : \gen{x, y} \to Z_3 \times Z_3$ by $\phi(x^a y^b) = (z^a, z^b)$ for $a, b \in \set{0, 1, 2}$.
+		It is clear that $\phi$ is a homomorphism.
+		Suppose $\phi(x^a y^b) = (1, 1)$.
+		Then $z^a = 1$ and $z^b = 1$, so that $a \equiv 0 \pmod 3$ and $b \equiv 0 \pmod 3$.
+		Therefore, $x^a y^b = 1$, showing that $\phi$ is injective.
+		It is clear that $|\gen{x, y}| = 9 = |Z_3 \times Z_3|$, since there are 3 choices for both $a$ and $b$.
+		Hence, $\phi$ is an isomorphism, and $\gen{x, y} \cong Z_3 \times Z_3$. \qedhere
     \end{enumerate}
 \end{sol}

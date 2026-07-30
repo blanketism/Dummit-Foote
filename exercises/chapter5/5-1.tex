@@ -174,13 +174,13 @@
 	Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$.
 	Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$.
 	It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed.
-	The underlying reason for this is because if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\set{e_1, \ldots, e_n}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action.
+	The underlying reason for this is that if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\set{e_1, \ldots, e_n}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action.
 	If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\set{e_1, \ldots, e_n}$ extends to a left group action on sums by
     \[
     	\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.
     \]
-    The coefficient of $e_{\pi(i)}$ on the right hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$.
-	Thus the right hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$.
+    The coefficient of $e_{\pi(i)}$ on the right-hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$.
+	Thus, the right-hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$.
 	In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s).
 	If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism--it corresponds to a \emph{right} group action.)
 \end{exercise}
@@ -368,7 +368,7 @@
 \end{exercise}
 
 \begin{solenum}
-    \item To show well-definedness, let $\prod \alpha_i = \prod a_i$ and $\prod \beta_i = \prod b_i$.
+    \item To show that the operation is well-defined, let $\prod \alpha_i = \prod a_i$ and $\prod \beta_i = \prod b_i$.
 	Then $\alpha_i = a_i$ and $\beta_i = b_i$ for all $i$, so
     \[
     	\left(\prod_{i \in I} \alpha_i\right)\left(\prod_{i \in I} \beta_i\right) = \prod_{i \in I} (\alpha_i \star_i \beta_i) = \prod_{i \in I} (a_i \star_i b_i)

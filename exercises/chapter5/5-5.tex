@@ -122,7 +122,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Observe that $h_0nh_0\inv = (h_0nh_0\inv n\inv)n = [h_0, n]n$.
 	Observe that $h_0(nh_0\inv n\inv) \in H$ by definition of the semidirect product, so $[h_0, n] \in H$.
 	If $[h_0, n] = 1$, then $h_0nh_0\inv = n \in N$, contradicting our choice of $h_0$.
-	Hence $h_0nh_0\inv$ has non-trivial component in $H$, so $h_0nh_0\inv \notin N$, which is a contradiction.
+	Hence, $h_0nh_0\inv$ has non-trivial component in $H$, so $h_0nh_0\inv \notin N$, which is a contradiction.
 	Therefore, $N = 1$, so $\phi$ is injective, hence $G \cong \phi(G) \leq S_4$.
 	Since $|G| = |S_4| = 24$, we have $G \cong S_4$.
 \end{solenum}
@@ -216,7 +216,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \end{itemize}
         [For a particular $S$, two groups are not isomorphic if the kernels of the maps from $S$ into $\aut(Z_7)$ are not isomorphic.]
         \item Let $G$ be a group of order 56 with a non-normal Sylow 7-subgroup.
-	Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven non-identity elements of $S$ and deduce that they all have the same order.]
+	    Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven non-identity elements of $S$ and deduce that they all have the same order.]
         \item Prove that there is a unique group of order 56 with a non-normal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\fbb_2)| = 168$; for uniqueness use \exref{5.5.6}.]
     \end{subexercises}
 \end{spex}
@@ -234,11 +234,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Then $P = \gen p \cong Z_7$, and $\aut(P) \cong Z_6$.
     \begin{itemize}
         \item If $S \cong Z_2 \times Z_2 \times Z_2$, put $S = \gen a \times \gen b \times \gen c$.
-	Let $\phi : S \to \aut(P)$ be a homomorphism.
-	We disregard $a, b, c$ being sent to $\id$ as that is the trivial homomorphism.
-	Since $a, b, c$ have order 2, they can only be sent to elements of order 1 or 2 in $\aut(P)$.
-	Put $\alpha \in \aut(P)$ such that $|\alpha| = 2$, where $\alpha$ is unique since $\aut(P)$ is cyclic.
-	Then we have the following non-trivial homomorphisms:
+        Let $\phi : S \to \aut(P)$ be a homomorphism.
+        We disregard $a, b, c$ being sent to $\id$ as that is the trivial homomorphism.
+        Since $a, b, c$ have order 2, they can only be sent to elements of order 1 or 2 in $\aut(P)$.
+        Put $\alpha \in \aut(P)$ such that $|\alpha| = 2$, where $\alpha$ is unique since $\aut(P)$ is cyclic.
+        Then we have the following non-trivial homomorphisms:
         \[
         	\phi_1 = 
             \begin{cases}
@@ -260,17 +260,17 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         Note that $\ker\phi_1 = \gen b \times \gen c$, $\ker\phi_2 = \gen{ab, c}$, and $\ker\phi_3 = \gen{ab, ac}$.
-	Note that these are all isomorphic to $V_4$, hence the resulting semidirect products are isomorphic by \exref{5.5.6}.
-	Without loss of generality, consider $\phi_1$.
-	Then $a$ acts on $P$ by sending $p$ to the inversion automorphism of $P$, or $apa\inv = p\inv$.
-	It is clear that $b$ and $c$ centralize $P$ and commute with $a$.
-	Observe that $\gen{p, a \mid apa\inv = p\inv, a^2 = p^7 = 1} \cong D_{14}$ and has trivial intersection with $\gen b \times \gen c$, so
+        Note that these are all isomorphic to $V_4$, hence the resulting semidirect products are isomorphic by \exref{5.5.6}.
+        Without loss of generality, consider $\phi_1$.
+        Then $a$ acts on $P$ by sending $p$ to the inversion automorphism of $P$, or $apa\inv = p\inv$.
+        It is clear that $b$ and $c$ centralize $P$ and commute with $a$.
+        Observe that $\gen{p, a \mid apa\inv = p\inv, a^2 = p^7 = 1} \cong D_{14}$ and has trivial intersection with $\gen b \times \gen c$, so
         \[
         	G \cong P \semidir_{\phi_1} S \cong D_{14} \times Z_2 \times Z_2.
         \]
         \item Put $S = Z_4 \times Z_2 \cong \gen a \times \gen b$.
-	Let $\alpha \in \aut(P)$ be the unique element of order 2 again.
-	Then we have the following non-trivial homomorphisms:
+        Let $\alpha \in \aut(P)$ be the unique element of order 2 again.
+        Then we have the following non-trivial homomorphisms:
         \[
         	\phi_1 =
             \begin{cases}
@@ -289,34 +289,34 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         We have $\ker\phi_1 = \gen{a^2} \times \gen b, \ker\phi_2 = \gen a$, and $\ker\phi_3 = \gen{ab}$, where $|ab| = 4$.
-	Note that $\ker\phi_1 \cong V_4$, while $\ker\phi_2 \cong \ker\phi_3 \cong Z_4$.
-	We may consider $\phi_2$ first.
-	Then $b$ acts on $P$ by sending $p$ to the inversion automorphism of $P$, or $bpb\inv = p\inv$.
-	It is clear that $a$ centralizes $P$ and commutes with $b$.
-	Observe that $\gen{p, b \mid bpb\inv = p\inv, b^2 = p^7 = 1} \cong D_{14}$ and has trivial intersection with $\gen a$, so
+        Note that $\ker\phi_1 \cong V_4$, while $\ker\phi_2 \cong \ker\phi_3 \cong Z_4$.
+        We may consider $\phi_2$ first.
+        Then $b$ acts on $P$ by sending $p$ to the inversion automorphism of $P$, or $bpb\inv = p\inv$.
+        It is clear that $a$ centralizes $P$ and commutes with $b$.
+        Observe that $\gen{p, b \mid bpb\inv = p\inv, b^2 = p^7 = 1} \cong D_{14}$ and has trivial intersection with $\gen a$, so
         \[
         	G \cong P \semidir_{\phi_2} S \cong D_{14} \times Z_4.
         \]
         For $\phi_1$, we see that $\gen b$ centralizes $P$, and $a$ acts on $P$ by sending $p$ to the inversion automorphism of $P$.
-	Moreover, consider the subgroup $P_0 = \gen{p, a \mid apa\inv = p\inv, a^4 = p^7 = 1}$.
-	It is easy to see that $P \cap \gen a = 1$, so $|P_0| = |P||\gen a| = 28$.
-	Moreover, $pPp\inv = P$, and $aPa\inv = P$ since $apa\inv = p\inv$ under the action of $\phi_1$ restricted to $\gen a$.
-	Hence, $P_0 \cong Z_7 \semidir Z_4$.
-	It is clear that $P_0$ is normal in $G$, and $\gen b$ centralizes $P_0$, so
+        Moreover, consider the subgroup $P_0 = \gen{p, a \mid apa\inv = p\inv, a^4 = p^7 = 1}$.
+        It is easy to see that $P \cap \gen a = 1$, so $|P_0| = |P||\gen a| = 28$.
+        Moreover, $pPp\inv = P$, and $aPa\inv = P$ since $apa\inv = p\inv$ under the action of $\phi_1$ restricted to $\gen a$.
+        Hence, $P_0 \cong Z_7 \semidir Z_4$.
+        It is clear that $P_0$ is normal in $G$, and $\gen b$ centralizes $P_0$, so
         \[
         	G \cong P \semidir_{\phi_1} S \cong (Z_7 \semidir Z_4) \times Z_2.
         \]
         \item For $S \cong Z_8$, let $S = \gen s$.
-	Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, the only non-trivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$.
-	Moreover, cyclicity of $S$ guarantees uniqueness of the homomorphism.
-	Then $sps\inv = p\inv$, and
+        Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, the only non-trivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$.
+        Moreover, cyclicity of $S$ guarantees uniqueness of the homomorphism.
+        Then $sps\inv = p\inv$, and
         \[
         	G \cong P \semidir_\phi S \cong Z_7 \semidir Z_8.
         \]
         \item Let $S \cong Q_8 = \gen{i, j} = \set{1, i, i^2, i^3, j, ij, i^2j, i^3j}$.
-	If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Q_8$.
-	Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
-	We have three cases:
+        If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Q_8$.
+        Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
+        We have three cases:
         \[
         	\phi_1 = 
             \begin{cases}
@@ -335,21 +335,21 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         We have $\ker\phi_1 = \gen j, \ker\phi_2 = \gen i$, and $\ker\phi_3 = \gen{ij}$.
-	These are all isomorphic to $Z_4$, so the semidirect products will be isomorphic to each other.
-	Pick $\phi_1$ without loss of generality.
-	Then $i$ acts on $P$, and $ipi\inv = p\inv$.
-	Unlike the other cases, $j$ does not centralize $P$, since $jij\inv = i\inv$, so $jpj\inv = p\inv$.
-	Hence, we have
+        These are all isomorphic to $Z_4$, so the semidirect products will be isomorphic to each other.
+        Pick $\phi_1$ without loss of generality.
+        Then $i$ acts on $P$, and $ipi\inv = p\inv$.
+        Unlike the other cases, $j$ does not centralize $P$, since $jij\inv = i\inv$, so $jpj\inv = p\inv$.
+        Hence, we have
         \[
         	G \cong P \semidir_{\phi_1} S \cong Z_7 \semidir Q_8 = \set{p, i, j \mid i^4 = j^4 = 1, i^2 = j^2, iji\inv = j\inv, iji\inv = jpj\inv = p\inv}
         \]
         Note that non-triviality of the homomorphism implies that some $s \in S$ does not centralize $P$.
-	If $G$ could be written as a direct product, then $S$ would centralize $P$, which is a contradiction.
-	Hence, $G$ is not a direct product.
+        If $G$ could be written as a direct product, then $S$ would centralize $P$, which is a contradiction.
+        Hence, $G$ is not a direct product.
         \item Let $S \cong D_8 = \gen{r, s} = \set{1, r, r^2, r^3, s, rs, r^2s, r^3s}$.
-	If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times D_8$.
-	Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
-	We have three cases:
+        If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times D_8$.
+        Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
+        We have three cases:
         \[
         	\phi_1 = 
             \begin{cases}
@@ -368,17 +368,17 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         We have $\ker\phi_1 = \gen{r^2, s}, \ker\phi_2 = \gen r$, and $\ker\phi_3 = \gen{sr, r^2}$.
-	Then $\ker\phi_1 \cong \ker\phi_3 \cong V_4$, while $\ker\phi_2 \cong Z_4$.
-	Hence, the semidirect products corresponding to $\phi_1$ and $\phi_3$ are isomorphic to each other, but not to the semidirect product corresponding to $\phi_2$.
-	Pick $\phi_1$ without loss of generality.
-	Then $r$ acts on $P$, and $rpr\inv = p\inv$.
-	Moreover, $s$ centralizes $P$, hence
+        Then $\ker\phi_1 \cong \ker\phi_3 \cong V_4$, while $\ker\phi_2 \cong Z_4$.
+        Hence, the semidirect products corresponding to $\phi_1$ and $\phi_3$ are isomorphic to each other, but not to the semidirect product corresponding to $\phi_2$.
+        Pick $\phi_1$ without loss of generality.
+        Then $r$ acts on $P$, and $rpr\inv = p\inv$.
+        Moreover, $s$ centralizes $P$, hence
         \[
         	G \cong P \semidir_{\phi_1} S \cong Z_7 \semidir D_8 = \set{p, r, s \mid p^7 = r^4 = s^2 = 1, srs\inv = r\inv, rpr\inv = p\inv}.
         \]
         If we pick $\phi_2$, then $s$ acts on $P$, and $sps\inv = p\inv$.
-	Moreover, note that $r$ centralizes $P$, hence $|rp| = 28$.
-	Since $s(rp)s = srps\inv = (srs\inv)(sps\inv) = r\inv p\inv = (rp)\inv$,
+        Moreover, note that $r$ centralizes $P$, hence $|rp| = 28$.
+        Since $s(rp)s = srps\inv = (srs\inv)(sps\inv) = r\inv p\inv = (rp)\inv$,
         \[
         	G \cong P \semidir_{\phi_2} S \cong D_{56}.
         \]
@@ -436,19 +436,19 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We then have two cases to consider:
     \begin{itemize}
         \item Suppose $P \cong Z_{25}$.
-	Then $\aut(P) \cong \units[25]$, which has order 20.
-	Since $|Q| = 3$, the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{25} \times Z_3$.
+        Then $\aut(P) \cong \units[25]$, which has order 20.
+        Since $|Q| = 3$, the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{25} \times Z_3$.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$.
-	Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
+	    Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
         \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\fbb_5)$, which has order 480.
-	Since $|Q| = 3$, there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$.
-	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems.
-	Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
-	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-Abelian.
+        Since $|Q| = 3$, there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$.
+        We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems.
+        Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
+        Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-Abelian.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$.
-	Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
+        Since $|\aut(Q)| = 2$, the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
     \end{itemize}
 \end{sol}
 
@@ -512,7 +512,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         be elements of $\gl_2(\fbb_7)$.
 	    Prove $P = \gen{t_1, t_2}$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$, and that $P \cong Z_3 \times Z_3$.
 	    Deduce that every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$.
-        \item By Example 3 in Section 1, the group $P$ has four subgroups of order 3, and these are: $P_1 = \gen{t_1}, P_2 = \gen{t_2}, P_3 = \gen{t_1t_2}$, and $P_4 = \gen{t_1t_2^2}$.
+        \item From example 3 in Section 1, the group $P$ has four subgroups of order 3, and these are: $P_1 = \gen{t_1}, P_2 = \gen{t_2}, P_3 = \gen{t_1t_2}$, and $P_4 = \gen{t_1t_2^2}$.
 	    For $i = 1, 2, 3, 4$, let $G_i = (Z_7 \times Z_7) \semidir_{\phi_i} P_i$, where $\phi_i$ is an isomorphism of $Z_3$ with the subgroup $P_i$ of $\aut(Z_7 \times Z_7)$.
 	    For each $i$, describe $G_i$ in terms of generators and relations.
 	    Deduce that $G_1 \cong G_2$.
@@ -570,38 +570,38 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We check each $i$:
     \begin{itemize}
         \item For $i = 1$, we have $\phi_1 : Z_3 \to P_1$ given by $\phi_1(q) = t_1$.
-	Then $qaq\inv = \phi_1(q)(a) = t_1(a) = a^2$, and $qbq\inv = \phi_1(q)(b) = t_1(b) = b$.
-	Hence, we have for a na\"ive presentation of $G_1$:
+	    Then $qaq\inv = \phi_1(q)(a) = t_1(a) = a^2$, and $qbq\inv = \phi_1(q)(b) = t_1(b) = b$.
+	    Hence, we have for a na\"ive presentation of $G_1$:
         \[
         	G_1 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b}.
         \]
         However, note that $b$ is central in $G_1$ as it commutes with both $a$ and $q$.
-	It follows that $\gen b \nsub G_1$ with $|\gen b| = 7$.
-	Observe that $\gen b \cap \gen{a, q} = 1$ by construction.
-	To see that $\gen{a, q} \nsub G_1$, observe that $b\gen{a, q}b\inv = \gen{a, q}$ because $b \in Z(G_1)$.
-	Then $G_1 \cong Z_7 \times \gen{a, q}$.
+        It follows that $\gen b \nsub G_1$ with $|\gen b| = 7$.
+        Observe that $\gen b \cap \gen{a, q} = 1$ by construction.
+        To see that $\gen{a, q} \nsub G_1$, observe that $b\gen{a, q}b\inv = \gen{a, q}$ because $b \in Z(G_1)$.
+        Then $G_1 \cong Z_7 \times \gen{a, q}$.
 
         If we consider a homomorphism $\psi : Z_3 \to \aut(Z_7)$, then $q \mapsto \alpha$ or $q \mapsto \alpha^2$ such that $\alpha$ generates the unique subgroup of order 3 in $\aut(Z_7)$.
-	In either case, we have $\gen{a, q} \cong Z_7 \semidir_\psi Z_3$ as it satisfies the relations $qaq\inv = a^2$ in the na\"ive presentation.
-	Hence, we have
+        In either case, we have $\gen{a, q} \cong Z_7 \semidir_\psi Z_3$ as it satisfies the relations $qaq\inv = a^2$ in the na\"ive presentation.
+        Hence, we have
         \[
         	G_1 \cong Z_7 \times (Z_7 \semidir_\psi Z_3).
         \]
         \item For $i = 2$, simply note that $t_2$ takes the place of $t_1$ in the previous case, $aq = qa$, and $qbq\inv = b^2$.
-	Hence, we have
+	    Hence, we have
         \[
         	G_2 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a, qbq\inv = b^2}.
         \]
         By similar reasoning as the previous case, we have $G_2 \cong Z_7 \times (Z_7 \semidir_\psi Z_3)$, so $G_1 \cong G_2$.
         \item For $i = 3$, we have $\phi_3 : Z_3 \to P_3$ given by $\phi_3(q) = t_1t_2$.
-	Then $qaq\inv = \phi_3(q)(a) = t_1t_2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_3(q)(b) = t_1t_2(b) = t_1(b^2) = b^2$.
-	A presentation of $G_3$ is
+        Then $qaq\inv = \phi_3(q)(a) = t_1t_2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_3(q)(b) = t_1t_2(b) = t_1(b^2) = b^2$.
+        A presentation of $G_3$ is
         \[
         	G_3 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b^2}.
         \]
         \item For $i = 4$, we have $\phi_4 : Z_3 \to P_4$ given by $\phi_4(q) = t_1t_2^2$.
-	Then $qaq\inv = \phi_4(q)(a) = t_1t_2^2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_4(q)(b) = t_1t_2^2(b) = t_1(b^4) = b^4$.
-	Then a presentation of $G_4$ is
+        Then $qaq\inv = \phi_4(q)(a) = t_1t_2^2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_4(q)(b) = t_1t_2^2(b) = t_1(b^4) = b^4$.
+        Then a presentation of $G_4$ is
         \[
         	G_4 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b^4}.
         \]
@@ -670,17 +670,17 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We then have two cases to consider:
     \begin{itemize}
         \item Suppose $S \cong Z_4 = \gen s$.
-	If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Z_4$.
-	Now consider the non-trivial homomorphism that sends $s$ to $\alpha$, a generator of the unique subgroup of order 2 in $\aut(P)$.
-	Then $s$ acts on $P$, and $sps\inv = p\inv$.
-	Hence, we have
+        If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Z_4$.
+        Now consider the non-trivial homomorphism that sends $s$ to $\alpha$, a generator of the unique subgroup of order 2 in $\aut(P)$.
+        Then $s$ acts on $P$, and $sps\inv = p\inv$.
+        Hence, we have
         \[
         	G \cong P \semidir S \cong Z_7 \semidir Z_4 = \set{p, s \mid p^7 = s^4 = 1, sps\inv = p\inv}.
         \]
         \item Suppose $S \cong Z_2 \times Z_2 = \gen s \times \gen t$.
-	If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times (Z_2 \times Z_2)$.
-	Now consider a non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
-	We have the three homomorphisms
+        If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times (Z_2 \times Z_2)$.
+        Now consider a non-trivial homomorphism that sends some generator of $S$ to $\alpha$.
+        We have the three homomorphisms
         \[
         	\theta_1 = 
             \begin{cases}
@@ -699,11 +699,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         Observe that $\ker\theta_1 = \gen t, \ker\theta_2 = \gen s$, and $\ker\theta_3 = \gen{st}$.
-	Hence, the semidirect products corresponding to $\theta_1, \theta_2$, and $\theta_3$ are all isomorphic to each other.
-	Pick $\theta_1$ without loss of generality.
-	Then $s$ acts on $P$, and $sps\inv = p\inv$.
-	Moreover, $t$ centralizes $P$, hence $|tp| = 14$.
-	Since
+        Hence, the semidirect products corresponding to $\theta_1, \theta_2$, and $\theta_3$ are all isomorphic to each other.
+        Pick $\theta_1$ without loss of generality.
+        Then $s$ acts on $P$, and $sps\inv = p\inv$.
+        Moreover, $t$ centralizes $P$, hence $|tp| = 14$.
+        Since
         \[
         	s(tp)s\inv = stps\inv = (sts\inv)(sps\inv) = tp\inv = (tp)\inv,
         \]
@@ -728,25 +728,25 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We then have two cases to consider:
     \begin{itemize}
         \item If $S \cong Z_4 = \gen s$, then $s$ has four candidates to be sent to: $\id, \alpha$, $\alpha^2$, or $\alpha^3$, where $\aut(Z_5) = \gen\alpha$.
-	Define the homomorphisms
+	    Define the homomorphisms
         \[
         	\phi_1 : s \mapsto \id, \quad \phi_2 : s \mapsto \alpha, \quad \phi_3 : s \mapsto \alpha^2, \quad \phi_4 : s \mapsto \alpha^3
         \]
         Since $\phi_1$ is trivial, $G \cong P \semidir_{\phi_1} S \cong P \times S \cong Z_5 \times Z_4$.
-	Also observe that $\ker\phi_2 = \ker\phi_4 = 1$ while $\ker\phi_3 = \gen{s^2}$.
-	Then the resulting semidirect products from $\phi_2$ and $\phi_4$ are isomorphic, since $\phi_2(S) = \phi_4(S) = \gen\alpha$, so by \exref{5.5.6}, we have $P \semidir_{\phi_2} S \cong P \semidir_{\phi_4} S$.
-	Moreover, $\ker\phi_3 = \gen{s^2}$, which is the unique subgroup of order 2 in $\aut(P)$, so $P \semidir_{\phi_3} S$ is not isomorphic to $P \semidir_{\phi_2} S$.
-	Hence, we have two non-Abelian groups of order 20, and we have
+        Also observe that $\ker\phi_2 = \ker\phi_4 = 1$ while $\ker\phi_3 = \gen{s^2}$.
+        Then the resulting semidirect products from $\phi_2$ and $\phi_4$ are isomorphic, since $\phi_2(S) = \phi_4(S) = \gen\alpha$, so by \exref{5.5.6}, we have $P \semidir_{\phi_2} S \cong P \semidir_{\phi_4} S$.
+        Moreover, $\ker\phi_3 = \gen{s^2}$, which is the unique subgroup of order 2 in $\aut(P)$, so $P \semidir_{\phi_3} S$ is not isomorphic to $P \semidir_{\phi_2} S$.
+        Hence, we have two non-Abelian groups of order 20, and we have
         \[
         	G \cong P \semidir_{\phi_2} S \cong \set{p, s \mid p^5 = s^4 = 1, sps\inv = p^2} \cong F_{20}.
         \]
         In the case of $\phi_3$, we have $sps\inv = p\inv$.
-	Then
+	    Then
         \[
         	G \cong P \semidir_{\phi_3} S \cong \set{p, s \mid p^5 = s^4 = 1, sps\inv = p\inv} \cong Z_5 \semidir Z_4.
         \]
         \item If $S \cong Z_2 \times Z_2 = \gen s \times \gen t$, then we have the trivial homomorphism $\theta_1 : S \to \aut(P)$, which gives $G \cong P \semidir_{\theta_1} S \cong P \times S \cong Z_5 \times (Z_2 \times Z_2)$.
-	If $\alpha^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
+	    If $\alpha^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
         \[
         	\theta_2 = 
             \begin{cases}
@@ -765,11 +765,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         This is the same situation as in the previous exercise, since $\ker\theta_2 = \gen t, \ker\theta_3 = \gen s$, and $\ker\theta_4 = \gen{st}$.
-	Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other.
-	Pick $\theta_2$ without loss of generality.
-	Then $s$ acts on $P$, and $sps\inv = p\inv$.
-	Moreover, $t$ centralizes $P$, hence $|tp| = 10$.
-	Since
+        Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other.
+        Pick $\theta_2$ without loss of generality.
+        Then $s$ acts on $P$, and $sps\inv = p\inv$.
+        Moreover, $t$ centralizes $P$, hence $|tp| = 10$.
+        Since
         \[
         	s(tp)s\inv = stps\inv = (sts\inv)(sps\inv) = tp\inv = (tp)\inv,
         \]
@@ -793,31 +793,31 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We then have two cases to consider:
     \begin{itemize}
         \item If $S \cong Z_4 = \gen s$, then $s$ has different candidates to be sent to in $\aut(P) = \units[p]$, which has order $p - 1$.
-	If $p \equiv 3 \bmod 4$, then $p - 1 \equiv 2 \bmod 4$, hence $\phi(s)$ can only be sent to $\id$ or the unique element of order 2 in $\aut(P)$.
-	If we have the latter case, then $sqs\inv = q\inv$, and we have
+	    If $p \equiv 3 \bmod 4$, then $p - 1 \equiv 2 \bmod 4$, hence $\phi(s)$ can only be sent to $\id$ or the unique element of order 2 in $\aut(P)$.
+	    If we have the latter case, then $sqs\inv = q\inv$, and we have
         \[
         	G \cong P \semidir S \cong Z_p \semidir Z_4 = \set{q, s \mid q^p = s^4 = 1, sqs\inv = q\inv}.
         \]
         
         If $p \equiv 1 \bmod 4$, then $p - 1 \equiv 0 \bmod 4$, hence $\phi(s)$ can be sent to $\id$ or one of the two elements of order 4 in $\aut(P)$ (which are isomorphic since their images generate the same subgroup), or the unique element of order 2 in $\aut(P)$.
-	If $\aut(P) = \gen\alpha$, let $\rho = \alpha^{(p - 1)/4}$, which has order 4.
-	Then we have the three non-trivial homomorphisms
+	    If $\aut(P) = \gen\alpha$, let $\rho = \alpha^{(p - 1)/4}$, which has order 4.
+	    Then we have the three non-trivial homomorphisms
         \[
         	\phi_1 : s \mapsto \rho, \quad \phi_2 : s \mapsto \rho^3, \quad \phi_3 : s \mapsto \rho^2.
         \]
         We know that $\phi_1$ and $\phi_2$ give isomorphic semidirect products, since $\phi_1(S) = \phi_2(S) = \gen\rho$.
-	Hence, we have two non-Abelian groups of order $4p$, and we have
+	    Hence, we have two non-Abelian groups of order $4p$, and we have
         \[
-        	G \cong P \semidir_{\phi_1} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q^k}.
+        	G \cong P \semidir_{\phi_1} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q^k},
         \]
         for some $k \in \units[p]$ such that $|k| = 4$.
-	In the case of $\phi_3$, we have $sqs\inv = q\inv$.
-	Then
+	    In the case of $\phi_3$, we have $sqs\inv = q\inv$.
+	    Then
         \[
         	G \cong P \semidir_{\phi_3} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q\inv}.
         \]
         \item If $S \cong Z_2 \times Z_2 = \gen s \times \gen t$, then we have the trivial homomorphism $\theta_1 : S \to \aut(P)$, which gives $G \cong P \semidir_{\theta_1} S \cong P \times S \cong Z_p \times (Z_2 \times Z_2)$.
-	If $\rho^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
+	    If $\rho^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
         \[
         	\theta_2 = 
             \begin{cases}
@@ -836,11 +836,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         Again, we know that $\ker\theta_2 = \gen t, \ker\theta_3 = \gen s$, and $\ker\theta_4 = \gen{st}$.
-	Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other.
-	Pick $\theta_2$ without loss of generality.
-	Then $s$ acts on $P$, and $sqs\inv = q\inv$.
-	Moreover, $t$ centralizes $P$, hence $|tq| = 2p$.
-	Since
+        Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other.
+        Pick $\theta_2$ without loss of generality.
+        Then $s$ acts on $P$, and $sqs\inv = q\inv$.
+        Moreover, $t$ centralizes $P$, hence $|tq| = 2p$.
+        Since
         \[
         	s(tq)s\inv = stqs\inv = (sts\inv)(sqs\inv) = tq\inv = (tq)\inv,
         \]
@@ -989,10 +989,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \]
         \end{enumerate}
         \item Suppose $T = \gen u \times \gen v \cong Z_2 \times Z_2$.
-	While this may seem like a lot of cases, observe that $\beta_i^2 = \alpha_1$ for all $i = 1, 2, 3, 4$, since either $q \mapsto q\inv \mapsto q$, or $p \mapsto p^2 \mapsto p^4 = p\inv$ ($p^3$ is handled similarly).
-	Hence, we only need to consider the homomorphisms that send $u$ and $v$ to the the images of the $\alpha_i$'s in $\aut(Z_{15})$.
-	Moreover, we know by \exref{5.5.6} that homomorphisms from the cyclic subgroups of $T$, i.e., $\gen u, \gen v, \gen{uv}$, to $\aut(Z_{15})$ that have conjugate (same, since $\aut(Z_{15})$ is Abelian) images give isomorphic semidirect products.
-	For completeness, we will list all potential non-trivial homomorphisms, but group them by their images in $\aut(Z_{15})$:
+        While this may seem like a lot of cases, observe that $\beta_i^2 = \alpha_1$ for all $i = 1, 2, 3, 4$, since either $q \mapsto q\inv \mapsto q$, or $p \mapsto p^2 \mapsto p^4 = p\inv$ ($p^3$ is handled similarly).
+        Hence, we only need to consider the homomorphisms that send $u$ and $v$ to the images of the $\alpha_i$'s in $\aut(Z_{15})$.
+        Moreover, we know by \exref{5.5.6} that homomorphisms from the cyclic subgroups of $T$, i.e., $\gen u, \gen v, \gen{uv}$, to $\aut(Z_{15})$ that have conjugate (same, since $\aut(Z_{15})$ is Abelian) images give isomorphic semidirect products.
+        For completeness, we will list all potential non-trivial homomorphisms, but group them by their images in $\aut(Z_{15})$:
         \begin{itemize}
             \item With image $\gen{\alpha_1}$, we have the three homomorphisms
             \[
@@ -1203,18 +1203,18 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \end{cases}
         \]
         Note that $\phi_1 = \id$, hence that is the same Abelian case as before.
-	Moreover, if we let $S$ be the exchange matrix, then $S\phi_2(q)S\inv = \phi_3(q)$.
-	Hence the semidirect products corresponding to $\phi_2$ and $\phi_3$ are isomorphic.
-	We then have the following non-isomorphic groups:
+	    Moreover, if we let $S$ be the exchange matrix, then $S\phi_2(q)S\inv = \phi_3(q)$.
+	    Hence, the semidirect products corresponding to $\phi_2$ and $\phi_3$ are isomorphic.
+	    We then have the following non-isomorphic groups:
         \begin{itemize}
             \item $G_2 \cong (Z_p \times Z_p) \semidir_{\phi_2} Z_2$ has $y$ centralized, while $x$ is inverted.
-	We then have $\gen y \times \gen{q, x}$, where $\gen{q, x} \cong D_{2p}$.
-	Hence,
+	        We then have $\gen y \times \gen{q, x}$, where $\gen{q, x} \cong D_{2p}$.
+	        Hence,
             \[
             	G_2 \cong Z_p \times D_{2p}.
             \]
             \item $G_4 \cong (Z_p \times Z_p) \semidir_{\phi_4} Z_2$ has both $x$ and $y$ inverted by $q$.
-	Hence, it has presentation
+	        Hence, it has presentation
             \[
             	G_4 \cong \gen{x, y, q \mid x^p = y^p = q^2 = 1, qxq\inv = x\inv, qyq\inv = y\inv} \cong (Z_p \times Z_p) \semidir Z_2. \qedhere
             \]
@@ -1320,7 +1320,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \[
     	(1, \sigma)(h, 1)(1, \sigma)\inv = ( \sigma(h), 1).
     \]
-    Hence conjugation by $g$ restricted to $H$ gives the automorphism $\sigma$.
+    Hence, conjugation by $g$ restricted to $H$ gives the automorphism $\sigma$.
 	We remark that $G = \hol(H)$.
 \end{sol}
 

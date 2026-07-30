@@ -100,24 +100,24 @@ Let $G$ be a group.
     Let $S$ denote the set in each part.
     \begin{subexercises}
         \item $S$ has identity element 0, inverse element $-a/b$ for $a/b \in S$, and inherits associativity from $\qbb$.
-	Moreover, if $a/b, c/d \in S$ such that $(a, b) = (c, d) = 1$, then
+	    Moreover, if $a/b, c/d \in S$ such that $(a, b) = (c, d) = 1$, then
         \[
         	\frac ab + \frac cd = \frac{ad + bc}{bd},
         \]
         where $bd$ is odd.
-	Since an odd number cannot have a factor of 2, the denominator remains odd when reduced to lowest terms.
-	Hence, $S$ is closed under addition, and it is a group.
+	    Since an odd number cannot have a factor of 2, the denominator remains odd when reduced to lowest terms.
+	    Hence, $S$ is closed under addition, and it is a group.
         \item No: $1/2 \in S$, but $1/2 + 1/2 = 2/2 = 1/1 \notin S$.
         \item Same as (b).
         \item No: $3/2, 1 \in S$, but $3/2 - 1 = 1/2 \notin S$.
         \item Identity, inverses, and associativity are satisfied.
-	Let $a, b \in \zbb$.
-	Then
+	    Let $a, b \in \zbb$.
+	    Then
         \[
         	\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,
         \]
         where the last case is chosen without loss of generality.
-	Hence, $S$ is closed.
+	    Hence, $S$ is closed.
         \item No: $1/3, 1/2 \in S$, but $1/3 + 1/2 = 5/6 \notin S$. \qedhere
     \end{subexercises}
 \end{sol}
@@ -131,18 +131,18 @@ Let $G$ be a group.
     Let $x, y, z \in G$.
     \begin{itemize}
         \item Note that $0 \leq x + y < 2$.
-	If $x + y < 1$, then $[x + y] = 0$, and $x \star y = x + y \in G$.
-	If $1 \leq x + y < 2$, then $[x + y] = 1$, and $x \star y = x + y - 1 \in G$.
-	Hence, $x \star y \in G$, and $\star$ is well-defined.
+	    If $x + y < 1$, then $[x + y] = 0$, and $x \star y = x + y \in G$.
+	    If $1 \leq x + y < 2$, then $[x + y] = 1$, and $x \star y = x + y - 1 \in G$.
+	    Hence, $x \star y \in G$, and $\star$ is well-defined.
         \item $x \star 0 = x - [x] = x$.
-	Then $0$ is the identity element of $G$ under $\star$.
+	    Then $0$ is the identity element of $G$ under $\star$.
         \item $x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 0$.
-	Hence, $1 - x$ is the inverse of $x$ under $\star$.
-	For $x = 0$, the inverse is itself, since $0 \star 0 = 0$.
+	    Hence, $1 - x$ is the inverse of $x$ under $\star$.
+	    For $x = 0$, the inverse is itself, since $0 \star 0 = 0$.
         \item $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$.
-	Hence, $G$ is Abelian under $\star$.
+	    Hence, $G$ is Abelian under $\star$.
         \item Note that $[\alpha + \beta] = [\alpha] + \beta$ for $\beta \in \zbb$.
-	Then
+	    Then
         \begin{align*}
             (x \star y) \star z & = (x + y - [x + y]) \star z \\
             & = (x + y + z - [x + y]) - [x + y + z - [x + y]] \\
