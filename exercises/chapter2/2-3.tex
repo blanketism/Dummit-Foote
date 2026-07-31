@@ -286,7 +286,7 @@
 	Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     By the binomial theorem,
     \[
     	(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1}} \binom{p^{n - 1}}k p^k.
@@ -315,7 +315,7 @@
 	Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively.
 	For $k \geq 2$, we have the summand as
     \[

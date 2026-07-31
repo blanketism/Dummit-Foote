@@ -6,7 +6,7 @@
 	Deduce that $\inn(G) \trianglelefteq \aut(G)$. (The group $\aut(G)/\inn(G)$ is called the \emph{outer automorphism group} of $G$.)
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
 	For any $x \in G$, then
 	\[
 		(\sigma\phi_g\sigma\inv)(x) = \sigma(\phi_g(\sigma\inv(x))) = \sigma(g\sigma\inv(x)g\inv) = \sigma(g)\sigma(\sigma\inv(x))\sigma(g)\inv = \sigma(g)x\sigma(g)\inv = \phi_{\sigma(g)}(x).
@@ -19,7 +19,7 @@
 	Prove that if $G$ is an Abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
 	By Cauchy's Theorem, there are elements $g, h \in G$ such that $\abs g = p$ and $\abs h = q$.
 	Since $G$ is Abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$.
 	Therefore, $G = \gen{gh}$ is cyclic.
@@ -262,7 +262,7 @@
 	Prove that $\units[24]$ is an elementary Abelian group of order $8$. (We shall see later that $\units[n]$ is an elementary Abelian group if and only if $n \mid 24$.)
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
 	We first prove the lemma: let $a, b, m, n \in \zbb$ such that $(m, n) = 1$.
 	If $a \equiv b \bmod m$ and $a \equiv b \bmod n$, then $a \equiv b \bmod{mn}$.
 	Indeed, we have that

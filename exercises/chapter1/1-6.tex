@@ -33,7 +33,7 @@
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     Let $x \in G$.
     If $|x| = \infty$, then $\phi(x)^n = \phi(x^n) \neq 1_H$ for all $n \in \zp$, so that $|\phi(x)| = \infty$.
     A similar argument shows that if $|\phi(x)| = \infty$, then $|x| = \infty$.
@@ -225,7 +225,7 @@
 	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty.
 	To show closure, let $h_1, h_2 \in \phi(G)$.
 	Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
@@ -265,7 +265,7 @@
 	Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     Denote the kernel of $\phi$ by $\ker\phi$.
 	Since $\phi(1_G) = 1_H$, $\ker\phi$ is nonempty.
     Let $g_1, g_2 \in \ker\phi$.
@@ -382,7 +382,7 @@
 	Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     Recall that function composition is associative.
     Observe that $\aut(G)$ contains the identity map $\id : G \to G$ defined by $\id(g) = g$ for all $g \in G$.
     Also recall that the composition of two bijections is a bijection. Then for any $\phi, \psi \in G$ and $g, h \in G$, we have
@@ -437,7 +437,7 @@
     \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
     Define the map
     \[
     	f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
