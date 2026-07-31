@@ -26,6 +26,9 @@
     	zg = (z_1g_1, z_2g_2, \ldots, z_ng_n) = (g_1z_1, g_2z_2, \ldots, g_nz_n) = gz
     \]
     Thus, $z \in Z(G)$, and we have shown that $Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n) \subseteq Z(G)$.
+
+    In particular, if two groups $G_1$ and $G_2$ are Abelian, then $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so $Z(G_1 \times G_2) = Z(G_1) \times Z(G_2) = G_1 \times G_2$, which is Abelian.
+    Conversely, if $G_1 \times G_2$ is Abelian, then $Z(G_1 \times G_2) = G_1 \times G_2$, so $Z(G_1) \times Z(G_2) = G_1 \times G_2$, which implies that $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so both $G_1$ and $G_2$ are Abelian.
 \end{sol}
 
 \begin{exercise}{5.1.2}
@@ -169,12 +172,12 @@
     \end{align*}
     Noting that $\pi \in S_n$ is a bijection, consider the map $\phi_{\pi\inv} : G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)} \to G_1 \times G_2 \times \cdots \times G_n$ defined by
     \[
-    	\phi_{\pi\inv}(g_1, g_2, \ldots, g_n) = (g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)})
+    	\phi_{\pi\inv}(k_1, k_2, \ldots, k_n) = (k_{\pi(1)}, k_{\pi(2)}, \ldots, k_{\pi(n)})
     \]
     Then $\phi_{\pi\inv}$ is a homomorphism by the same argument as above.
 	Moreover, $\phi_{\pi\inv}$ is the inverse of $\phi_\pi$, since
     \[
-    	\phi_\pi(\phi_{\pi\inv}(g_1, g_2, \ldots, g_n)) = \phi_\pi(g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)}) = (g_1, g_2, \ldots, g_n)
+    	\phi_\pi(\phi_{\pi\inv}(k_1, k_2, \ldots, k_n)) = \phi_\pi(k_{\pi(1)}, k_{\pi(2)}, \ldots, k_{\pi(n)}) = (k_1, k_2, \ldots, k_n)
     \]
     and
     \[
