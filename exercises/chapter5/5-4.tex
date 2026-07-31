@@ -411,71 +411,71 @@ Let $G$ be a group.
     Let
     \[
     	X = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & a & b \\
             0 & 1 & c \\
             0 & 0 & 1
-        \end{bmatrix}, \quad
+        \end{pmatrix}, \quad
         Y = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & d & e \\
             0 & 1 & f \\
             0 & 0 & 1
-        \end{bmatrix} \in H(F).
+        \end{pmatrix} \in H(F).
 	\]
     Then we have
     \[
     	X\inv =
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & -a & ac - b \\
             0 & 1 & -c \\
             0 & 0 & 1
-        \end{bmatrix}, \quad
+        \end{pmatrix}, \quad
         Y\inv =
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & -d & df - e \\
             0 & 1 & -f \\
             0 & 0 & 1
-        \end{bmatrix}.
+        \end{pmatrix}.
 	\]
     Hence,
     \begin{align*}
         [X, Y] & = X\inv Y\inv XY \\
         & =
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & -a & ac - b \\
             0 & 1 & -c \\
             0 & 0 & 1
-        \end{bmatrix}
-        \begin{bmatrix}
+        \end{pmatrix}
+        \begin{pmatrix}
             1 & -d & df - e \\
             0 & 1 & -f \\
             0 & 0 & 1
-        \end{bmatrix}
-        \begin{bmatrix}
+        \end{pmatrix}
+        \begin{pmatrix}
             1 & a & b \\
             0 & 1 & c \\
             0 & 0 & 1
-        \end{bmatrix}
-        \begin{bmatrix}
+        \end{pmatrix}
+        \begin{pmatrix}
             1 & d & e \\
             0 & 1 & f \\
             0 & 0 & 1
-        \end{bmatrix} \\
+        \end{pmatrix} \\
         & =
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & 0 & af - cd \\
             0 & 1 & 0 \\
             0 & 0 & 1
-        \end{bmatrix}
+        \end{pmatrix}
     \end{align*}
     Recall that the center of $H(F)$ consists of all matrices of the form
     \[
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & 0 & z \\
             0 & 1 & 0 \\
             0 & 0 & 1
-        \end{bmatrix}
+        \end{pmatrix}
     \]
     for some $z \in F$.
 	Clearly, $af - cd \in F$, so $[X, Y] \in Z(H(F))$, hence $H(F)' \leq Z(H(F))$.

@@ -221,7 +221,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{subexercises}
 \end{spex}
 
-\begin{solenum}
+\begin{solenum}[spsol]
     \item Note that $56 = 2^3 \cdot 7$.
 	By the Fundamental Theorem of Finite Abelian Groups, the partitions of 3 are $3, 2 + 1, 1 + 1 + 1$, so the Abelian groups of order 56 are of the form $Z_8 \times Z_7$, $Z_4 \times Z_2 \times Z_7$, and $Z_2 \times Z_2 \times Z_2 \times Z_7$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
@@ -455,10 +455,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \begin{exercise}{5.5.9}
     Show that the matrix
     \[
-        \begin{bmatrix}
+        \begin{pmatrix}
             0 & -1 \\
             1 & 4
-        \end{bmatrix}
+        \end{pmatrix}
     \]
     is an element of order 5 in $\gl_2(\fbb_{19})$.
 	Use this matrix to construct a non-Abelian group of order 1805, and give a presentation of this group.
@@ -470,10 +470,10 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	It is easy to calculate that
     \[
     	M^5 = 
-        \begin{bmatrix}
+        \begin{pmatrix}
         -56 & -209 \\
         209 & 780
-        \end{bmatrix},
+        \end{pmatrix},
 	\]
     where, once entries are taken mod 19, results in $I_2$, hence $|M| = 5$.
 	Moreover, we know that $1805 = 19^2 \cdot 5$.
@@ -499,15 +499,15 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item Let
         \[
         	t_1 = 
-            \begin{bmatrix}
+            \begin{pmatrix}
                 2 & 0 \\
                 0 & 1
-            \end{bmatrix}, \quad
+            \end{pmatrix}, \quad
             t_2 = 
-            \begin{bmatrix}
+            \begin{pmatrix}
                 1 & 0 \\
                 0 & 2
-            \end{bmatrix}
+            \end{pmatrix}
         \]
         be elements of $\gl_2(\fbb_7)$.
 	    Prove $P = \gen{t_1, t_2}$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$, and that $P \cong Z_3 \times Z_3$.
@@ -522,7 +522,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{subexercises}
 \end{spex}
 
-\begin{solenum}
+\begin{solenum}[spsol]
     \item Note that $147 = 3 \cdot 7^2$.
 	By the Fundamental Theorem of Finite Abelian Groups, the partitions of 2 are $2, 1 + 1$, so the Abelian groups of order 147 are of the form $Z_{49} \times Z_3$ and $Z_7 \times Z_7 \times Z_3$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
@@ -539,20 +539,20 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Observe that
     \[
     	t_1^3 = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             8 & 0 \\
             0 & 1
-        \end{bmatrix}, \quad 
+        \end{pmatrix}, \quad 
         t_2^3 = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & 0 \\
             0 & 8
-        \end{bmatrix}, \quad
+        \end{pmatrix}, \quad
         t_1t_2 = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             2 & 0 \\
             0 & 2
-        \end{bmatrix} = t_2t_1.
+        \end{pmatrix} = t_2t_1.
 	\]
     Taking entries mod 7, then $t_1^3 = t_2^3 = I_2$, so $|t_1| = |t_2| = 3$.
 	Moreover, $t_1t_2 = t_2t_1$, so $P = \gen{t_1}\gen{t_2}$.
@@ -862,7 +862,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{subexercises}
 \end{spex}
 
-\begin{solenum}
+\begin{solenum}[spsol]
     \item Clear, from Corollary 4.22.
     \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10.
 	If $n_3 = 10$, then since $P \nsub G$, we know that $PQ_i$ is a subgroup of $G$ that is cyclic.
@@ -1152,14 +1152,14 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         Aw_1 & = A(v_1 + v_2) = Av_1 + Av_2 = v_2 + A v_2 = v_2 + A^2 v_1 = v_2 + v_1 = w_1, \\
         Aw_2 & = A(v_1 - v_2) = Av_1 - Av_2 = v_2 - A v_2 = v_2 - A^2 v_1 = v_2 - v_1 = -w_2.
     \end{align*}
-    Let $P = \begin{bmatrix} w_1 & w_2 \end{bmatrix}$.
+    Let $P = \begin{pmatrix} w_1 & w_2 \end{pmatrix}$.
 	Then
     \[
     	P\inv AP = 
-        \begin{bmatrix}
+        \begin{pmatrix}
             1 & 0 \\
             0 & -1
-        \end{bmatrix}.
+        \end{pmatrix}.
 	\]
     Hence, $A$ is similar to the diagonal matrix with entries $1$ and $-1$. 
 

@@ -165,23 +165,23 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Therefore, the other two Sylow 3-subgroups are 
 	\[
 		\gen C = \left\{I_2, 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			0 & 1 \\
 			2 & 2
-		\end{bmatrix}, 
+		\end{pmatrix}, 
 		\begin{matrix}
 			2 & 2 \\
 			1 & 0
 		\end{matrix} \right\}, \quad
 		\gen D = \left\{I_2,
-		\begin{bmatrix}
+		\begin{pmatrix}
 			0 & 2 \\
 			1 & 2
-		\end{bmatrix}, 
-		\begin{bmatrix}
+		\end{pmatrix}, 
+		\begin{pmatrix}
 			2 & 1 \\
 			2 & 0
-		\end{bmatrix} \right\}. \qedhere
+		\end{pmatrix} \right\}. \qedhere
 	\]
 \end{sol}
 
@@ -243,46 +243,46 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Consider the matrices
 	\[
 		A = 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			1 & 1 \\
 			0 & 1
-		\end{bmatrix}, \quad 
+		\end{pmatrix}, \quad 
 		B = 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			1 & 0 \\
 			1 & 1
-		\end{bmatrix}, \quad
+		\end{pmatrix}, \quad
 		Z = 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			a & b \\
 			c & d
-		\end{bmatrix}
+		\end{pmatrix}
 	\]
 	in $\splin_2(\fbb_3)$, where $Z \in Z(\splin_2(\fbb_3))$.
 	Then
 	\[
 		AZ = 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			a + c & b + d \\
 			c & d
-		\end{bmatrix} = 
-		\begin{bmatrix}
+		\end{pmatrix} = 
+		\begin{pmatrix}
 			a & a + b \\
 			c & c + d \\
-		\end{bmatrix} = ZA
+		\end{pmatrix} = ZA
 	\]
 	from which we can determine $c = 0$ and $a = d$.
 	Then
 	\[
 		BZ = 
-		\begin{bmatrix}
+		\begin{pmatrix}
 			a & b \\
 			a & a + b
-		\end{bmatrix} = 
-		\begin{bmatrix}
+		\end{pmatrix} = 
+		\begin{pmatrix}
 			a + b & b \\
 			a & a
-		\end{bmatrix} = ZB
+		\end{pmatrix} = ZB
 	\]
 	from which we can determine that $a \in \fbb_3$ and $b = 0$.
 	Then $Z = aI_2$.
