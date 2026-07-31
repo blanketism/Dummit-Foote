@@ -649,7 +649,7 @@ Let $G$ and $H$ be groups.
     \begin{subexercises}
         \item Show that the order of $\bar G$ is 8.
         \item Exhibit each element of $\bar G$ in the form $\bar x^a \bar y^b$ for some integers $a$ and $b$.
-        \item Find the order of each elements of $\bar G$ exhibited in (b).
+        \item Find the order of each element of $\bar G$ exhibited in (b).
         \item Prove that $\bar G \cong Z_4 \times Z_2$.
     \end{subexercises}
 \end{exercise}
@@ -894,7 +894,7 @@ Let $G$ and $H$ be groups.
 \begin{solitem}
     \item [\rightimp] Immediate, since $gNg\inv = N$ for every $g \in G$, so $tSt\inv \subseteq N$.
     \item [\leftimp] Let $S$ and $T$ be nonempty subsets of $G$, and let $g \in G$.
-	By assumpion, $g \in \gen T$ implies that
+	By assumption, $g \in \gen T$ implies that
     \[
     	g = t_1t_2 \dots t_k, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k.
     \]
@@ -1048,8 +1048,7 @@ Let $G$ and $H$ be groups.
 
     We now show that $\phi$ is well-defined.
 	Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\splin_n(F)$.
-	Then for some $AS \in \bar A$ for $S \in \splin_n(F)$.
-	there exists $S' \in \splin_n(F)$ such that $AS = BS'$.
+	Then for some $AS \in \bar A$ for $S \in \splin_n(F)$, there exists $S' \in \splin_n(F)$ such that $AS = BS'$.
 	Then
     \[
     	\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)
@@ -1154,10 +1153,10 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Let $\alpha, \beta \in S_3$, where $\alpha = 1$ and $\beta = (1\ 2\ 3)$ so that $\alpha\inv = \alpha$ and $\beta\inv \neq \beta$.
-	For $\gamma = (1\ 2) \in S_3$, consider $\alpha\gamma\alpha\inv$ and $\beta\gamma\beta\inv$.
-	Observe that $\alpha\gamma\alpha\inv = \gamma$, while $\beta\gamma\beta\inv = (1\ 2\ 3)(1\ 2)(3\ 2\ 1) = (2\ 3) \neq (1\ 2) = \gamma$.
-	Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, (2\ 3))$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
+    Let $\alpha, \beta \in S_3$, where $\alpha = 1$ and $\beta = \cyc{1 2 3}$ so that $\alpha\inv = \alpha$ and $\beta\inv \neq \beta$.
+	For $\gamma = \cyc{1 2} \in S_3$, consider $\alpha\gamma\alpha\inv$ and $\beta\gamma\beta\inv$.
+	Observe that $\alpha\gamma\alpha\inv = \gamma$, while $\beta\gamma\beta\inv = \cyc{1 2 3}\cyc{1 2}\cyc{3 2 1} = \cyc{2 3} \neq \cyc{1 2} = \gamma$.
+	Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, \cyc{2 3})$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
 \end{sol}
 
 \begin{spex}{3.1.40}

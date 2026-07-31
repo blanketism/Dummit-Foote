@@ -124,11 +124,11 @@
 	By the above result, $V_4 \cha S_4$.
 	\item Consider $A_4$.
 	Then $V_4 \cha A_4$ as shown previously.
-	Consider $H = \gen{(1\ 2)(3\ 4)} \leq V_4$.
+	Consider $H = \gen{\cyc{1 2}\cyc{3 4}} \leq V_4$.
 	Since $V_4$ is Abelian, $H \nsub V_4$.
-	However, taking $(1\ 2\ 3) \in A_4$, we have
+	However, taking $\cyc{1 2 3} \in A_4$, we have
 	\[
-		(1\ 2\ 3)(1\ 2)(3\ 4)(3\ 2\ 1) = (1\ 4)(2\ 3) \notin H
+		\cyc{1 2 3}\cyc{1 2}\cyc{3 4}\cyc{3 2 1} = \cyc{1 4}\cyc{2 3} \notin H
 	\]
 	so that $H$ is not normal in $A_4$.
 \end{solenum}
@@ -160,8 +160,8 @@
 	Therefore, the action is well-defined.
 
 	Consider $G = S_3$ and $A = S_3$ itself.
-	Then $\bar 1 = \bar{(1\ 2)}$ in $\bar G$.
-	However, for $a = (1\ 3)$, we have $\bar 1 \cdot a = a = (1\ 3)$ but, but $\bar{(1\ 2)} \cdot a = (1\ 2)(1\ 3)(1\ 2) = (2\ 3) \neq a$.
+	Then $\bar 1 = \bar{\cyc{1 2}}$ in $\bar G$.
+	However, for $a = \cyc{1 3}$, we have $\bar 1 \cdot a = a = \cyc{1 3}$ but, but $\bar{\cyc{1 2}} \cdot a = \cyc{1 2}\cyc{1 3}\cyc{1 2} = \cyc{2 3} \neq a$.
 	Therefore, the action is not well-defined if $A$ is non-Abelian.
 \end{sol}
 
@@ -388,25 +388,25 @@
 	By (b), we know that $\sigma$ sends transpositions to transpositions.
 	In particular,
 	\[
-		\sigma((1\ 2)) = (a\ b_2), \quad \sigma((1\ 3)) = (c\ d_3)
+		\sigma(\cyc{1 2}) = \cyc{a b_2}, \quad \sigma(\cyc{1 3}) = \cyc{c d_3}
 	\]
 	for distinct integers.
 	Note that if $\set{a, b_2} \cap \set{c, d_3} = \varnothing$, then
 	\[
-		\sigma((1\ 2)(1\ 3)) = \sigma((1\ 2))\sigma((1\ 3)) = (a\ b_2)(c\ d_3)
+		\sigma(\cyc{1 2}\cyc{1 3}) = \sigma(\cyc{1 2})\sigma(\cyc{1 3}) = \cyc{a b_2}\cyc{c d_3}
 	\]
 	is a product of two disjoint transpositions.
-	However, $(1\ 2)(1\ 3) = (1\ 3\ 2)$ is a 3-cycle, so this is impossible.
+	However, $\cyc{1 2}\cyc{1 3} = \cyc{1 3 2}$ is a 3-cycle, so this is impossible.
 	Therefore, $\set{a, b_2} \cap \set{c, d_3} \neq \varnothing$.
 	Without loss of generality, assume that $a = c$ since we may interchange the order within the transposition.
-	Repeating this argument for all transpositions $(1\ k)$ for $k = 4, \ldots, n$, we obtain the desired result.
+	Repeating this argument for all transpositions $\cyc{1 k}$ for $k = 4, \ldots, n$, we obtain the desired result.
 	Moreover, these integers must be distinct since $\sigma$ is injective.
-	\item Note that $(1\ 2), (1\ 3), \ldots, (1\ n)$ generate $S_n$ since any transposition $(i\ j)$ can be written as
+	\item Note that $\cyc{1 2}, \cyc{1 3}, \ldots, \cyc{1 n}$ generate $S_n$ since any transposition $\cyc{i j}$ can be written as
 	\[
-		(i\ j) = (1\ i)(1\ j)(1\ i).
+		\cyc{i j} = \cyc{1 i}\cyc{1 j}\cyc{1 i}.
 	\]
 	Therefore, any automorphism of $S_n$ is uniquely determined by its action on these elements.
-	By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $(1\ 2)$, $n - 1$ choices for the image of $(1\ 3)$, and so on.
+	By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $\cyc{1 2}$, $n - 1$ choices for the image of $\cyc{1 3}$, and so on.
 	Therefore, $|\aut(S_n)| \leq n!$.
 	However, $|\inn(S_n)| = |S_n/Z(S_n)| = n!$ since $Z(S_n)$ is trivial for $n \geq 3$.
 	Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.

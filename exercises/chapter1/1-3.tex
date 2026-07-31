@@ -14,7 +14,7 @@
 \end{exercise}
 
 \begin{sol}
-    We have $\sigma = (1\ 3\ 5)(2\ 4)$ and $\tau = (1\ 5)(2\ 3)$.
+    We have $\sigma = \cyc{1 3 5}\cyc{2 4}$ and $\tau = \cyc{1 5}\cyc{2 3}$.
     Then
     \begin{align*}
         \sigma^2 & = \cyc{1 5 3} & \tau\sigma & = \cyc{1 2 4 3} \\
@@ -39,7 +39,7 @@
 \end{exercise}
 
 \begin{sol}
-    $\sigma = (1\ 13\ 5\ 10)(3\ 15\ 8)(4\ 14\ 11\ 7\ 12\ 9)$ and $\tau = (1\ 14)(2\ 9\ 15\ 13\ 4)(3\ 10)(5\ 12\ 7)(8\ 11)$. Then
+    $\sigma = \cyc{1 13 5 10}\cyc{3 15 8}\cyc{4 14 11 7 12 9}$ and $\tau = \cyc{1 14}\cyc{2 9 15 13 4}\cyc{3 10}\cyc{5 12 7}\cyc{8 11}$. Then
     \begin{align*}
         \sigma^2 & = \cyc{1 5}\cyc{3 8 15}\cyc{4 11 12}\cyc{7 9 14}\cyc{10 13} & \tau\sigma & = \cyc{1 4}\cyc{2 9}\cyc{3 13 12 15 11 5}\cyc{8 10 14} \\
         \sigma\tau & = \cyc{1 11 3}\cyc{2 4}\cyc{5 9 8 7 10 15}\cyc{13 14} & \tau^2\sigma & = \cyc{1 2 15 8 3 4 14 11 12 13 7 5 10} \qedhere
@@ -121,7 +121,7 @@
 \end{solenum}
 
 \begin{exercise}{1.3.5}
-    Find the order of $(1\ 12\ 8\ 10\ 4)(2\ 13)(5\ 11\ 7)(6\ 9)$.
+    Find the order of $\cyc{1 12 8 10 4}\cyc{2 13}\cyc{5 11 7}\cyc{6 9}$.
 \end{exercise}
 
 \begin{sol}
@@ -152,7 +152,7 @@
 \end{exercise}
 
 \begin{sol}
-    For each $n \geq 2$, consider the permutation $\sigma_n = (1\ n)$.
+    For each $n \geq 2$, consider the permutation $\sigma_n = \cyc{1 n}$.
 	Then $\sigma_n \in S_\Omega$ and $\sigma_n \neq \sigma_m$ for $n \neq m$, since they move different elements.
 	Hence, $S_{\Omega}$ contains an infinite collection of distinct elements, so $S_\Omega$ is infinite.
 \end{sol}
@@ -161,11 +161,11 @@
      Let $\sigma$ be an $m$-cycle.
 	For which positive integers $i$ is $\sigma^i$ also an $m$-cycle?
     \begin{subexercises}
-        \item Let $\sigma$ be the 12-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12)$.
+        \item Let $\sigma$ be the 12-cycle $\cyc{1 2 3 4 5 6 7 8 9 10 11 12}$.
         For which positive integers $i$ is $\sigma^i$ also a 12-cycle?
-        \item Let $\tau$ be the 8-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8)$.
+        \item Let $\tau$ be the 8-cycle $\cyc{1 2 3 4 5 6 7 8}$.
         For which positive integers $i$ is $\tau^i$ also an 8-cycle?
-        \item Let $\omega$ be the 14-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12\ 13\ 14)$.
+        \item Let $\omega$ be the 14-cycle $\cyc{1 2 3 4 5 6 7 8 9 10 11 12 13 14}$.
         For which positive integers $i$ is $\omega^i$ also a 14-cycle?
     \end{subexercises}
     \remark{The reader should notice a pattern: integers $i$ such that $(m, i) = 1$ produce an $m$-cycle, while integers $i$ such that $(m, i) = k$ produce $k$ disjoint $m/k$-cycles.}
@@ -174,12 +174,12 @@
 \begin{solenum}
     \item Computing the cycle for each integer 0 to 12:
     \begin{align*}
-        \sigma^1 & = \sigma & \sigma^7 & = (1\ 8\ 3\ 10\ 5\ 12\ 7\ 2\ 9\ 4\ 11\ 6) \\
-        \sigma^2 & = (1\ 3\ 5\ 7\ 9\ 11)(2\ 4\ 6\ 8\ 10\ 12) & \sigma^8 & = (1\ 9\ 5)(2\ 10\ 6)(3\ 11\ 7)(4\ 12\ 8) \\
-        \sigma^3 & = (1\ 4\ 7\ 10)(2\ 5\ 8\ 11)(3\ 6\ 9\ 12) & \sigma^9 & = (1\ 10\ 7\ 4)(2\ 11\ 8\ 5)(3\ 12\ 9\ 6) \\
-        \sigma^4 & = (1\ 5\ 9)(2\ 6\ 10)(3\ 7\ 11)(4\ 8\ 12) & \sigma^{10} & = (1\ 11\ 9\ 7\ 5\ 3)(2\ 12\ 10\ 8\ 6\ 4) \\
-        \sigma^5 & = (1\ 6\ 11\ 4\ 9\ 2\ 7\ 12\ 5\ 10\ 3\ 8) & \sigma^{11} & = (1\ 12\ 11\ 10\ 9\ 8\ 7\ 6\ 5\ 4\ 3\ 2) \\
-        \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) & \sigma^{12} & = \id
+        \sigma^1 & = \sigma & \sigma^7 & = \cyc{1 8 3 10 5 12 7 2 9 4 11 6} \\
+        \sigma^2 & = \cyc{1 3 5 7 9 11}\cyc{2 4 6 8 10 12} & \sigma^8 & = \cyc{1 9 5}\cyc{2 10 6}\cyc{3 11 7}\cyc{4 12 8} \\
+        \sigma^3 & = \cyc{1 4 7 10}\cyc{2 5 8 11}\cyc{3 6 9 12} & \sigma^9 & = \cyc{1 10 7 4}\cyc{2 11 8 5}\cyc{3 12 9 6} \\
+        \sigma^4 & = \cyc{1 5 9}\cyc{2 6 10}\cyc{3 7 11}\cyc{4 8 12} & \sigma^{10} & = \cyc{1 11 9 7 5 3}\cyc{2 12 10 8 6 4} \\
+        \sigma^5 & = \cyc{1 6 11 4 9 2 7 12 5 10 3 8} & \sigma^{11} & = \cyc{1 12 11 10 9 8 7 6 5 4 3 2} \\
+        \sigma^6 & = \cyc{1 7}\cyc{2 8}\cyc{3 9}\cyc{4 10}\cyc{5 11}\cyc{6 12} & \sigma^{12} & = \id
     \end{align*}
     Hence, the set of integers that produce a 12-cycle is the set $\set{i + 12k \mid i \in \{1, 5, 7, 11}, k \in \zbb\}$.
     \item $\set{i + 8k \mid i \in \{1, 3, 5, 7}, k \in \zbb\}$.
@@ -187,7 +187,7 @@
 \end{solenum}
 
 \begin{exercise}{1.3.10}
-    Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \set{1,2,\dots,m}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$.
+    Prove that if $\sigma$ is the $m$-cycle $\cyc{a_1 a_2 dots a_m}$, then for all $i \in \set{1,2,\dots,m}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$.
 	Deduce that $|\sigma| = m$.
 \end{exercise}
 
@@ -204,7 +204,7 @@
 \end{sol}
 
 \begin{spex}{1.3.11}
-    Let $\sigma$ be the $m$-cycle $(1\ 2\ \dots\ m)$.
+    Let $\sigma$ be the $m$-cycle $\cyc{1 2 dots m}$.
 	Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
 \end{spex}
 
@@ -234,14 +234,14 @@
 
 \begin{exercise}{1.3.12}
     \begin{subexercises}
-        \item If $\tau = (1\ 2)(3\ 4)(5\ 6)(7\ 8)(9\ 10)$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
-        \item If $\tau = (1\ 2)(3\ 4\ 5)$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
+        \item If $\tau = \cyc{1 2}\cyc{3 4}\cyc{5 6}\cyc{7 8}\cyc{9 10}$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
+        \item If $\tau = \cyc{1 2}\cyc{3 4 5}$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
     \end{subexercises}
     \note{Part (a) can be done systematically once we have access to Lagrange's Theorem.}
 \end{exercise}
 
 \begin{solenum}
-    \item Put $\sigma = (1\ 3\ 5\ 7\ 9\ 2\ 4\ 6\ 8\ 10)$.
+    \item Put $\sigma = \cyc{1 3 5 7 9 2 4 6 8 10}$.
 	Then $\sigma^2 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 2$.
     \item We first prove the following lemma:
     \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \zp$.}
@@ -268,10 +268,10 @@
 
 \begin{solitem}
     \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = 2$.
-	Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition.
+	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
 	Since $\sigma \neq \id$ and $\sigma^2 = 1$, $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$.
 	Then $m = 2$, and the cycle is a 2-cycle.
-    \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$.
+    \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $\cyc{a_1 b_1}\cyc{a_2 b_2} \ldots \cyc{a_k b_k}$.
 	Since each 2-cycle has order 2, and the 2-cycles commute, $\sigma^2 = \id$.
 	Because $\sigma \neq \id$, then $\abs\sigma = 2$.
 \end{solitem}
@@ -286,7 +286,7 @@
     \leavevmode
     \begin{itemize}
         \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = p$.
-	Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition.
+	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
 	By \exref{1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$.
 	Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$.
 	Since $p$ is prime, $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
@@ -296,7 +296,7 @@
 	Then $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$ is a product of non-trivial $p$-cycles for $t < p$, so that $\sigma^t \neq 1$.
 	However, $\sigma^p = \tau_1^p\tau_2^p \ldots \tau_k^p = 1$, so that $\abs\sigma = p$.
     \end{itemize}
-    For a counterexample when $p$ is not prime, consider $\sigma = (1\ 2\ 3)(4\ 5)$ in $S_5$.
+    For a counterexample when $p$ is not prime, consider $\sigma = \cyc{1 2 3}\cyc{4 5}$ in $S_5$.
 	Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
 \end{sol}
 
@@ -324,7 +324,7 @@
     Note that in an $m$-cycle, there are $m$ integers to write.
 	The first integer has $n$ choices, the second $n - 1$ choices.
 	Continuing on, then the $m$-th integer has $n - m + 1$ choices.
-	However, each choice of $m$ integers has $m$ equivalent representations (such as $(1\ 2\ 3\ 4)$ being equivalent to $(2\ 3\ 4\ 1)$ by shifting each integer to the left one place).
+	However, each choice of $m$ integers has $m$ equivalent representations (such as $\cyc{1 2 3 4}$ being equivalent to $\cyc{2 3 4 1}$ by shifting each integer to the left one place).
 	Then take the product $n(n - 1)(n - 2) \ldots (n - m + 1)$ and divide by $m$.
 \end{sol}
 
@@ -365,9 +365,9 @@
 \end{exercise}
 
 \begin{sol}
-    Recall that $S_3 = \{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)\}$. 
+    Recall that $S_3 = \{1, \cyc{1 2}, \cyc{1 3}, \cyc{2 3}, \cyc{1 2 3}, \cyc{1 3 2}\}$. 
     Since $S_3$ contains no element of order 6, it is not cyclic, so at least two generators are needed. 
-    Put $\alpha = (1\ 2)$ and $\beta = (1\ 3)$. Direct computation gives $\alpha^2 = \beta^2 = 1$ and $(\alpha\beta)^3 = (1\ 3\ 2)^3 = 1$.
+    Put $\alpha = \cyc{1 2}$ and $\beta = \cyc{1 3}$. Direct computation gives $\alpha^2 = \beta^2 = 1$ and $(\alpha\beta)^3 = \cyc{1 3 2}^3 = 1$.
 
     We claim $S_3= \langle\, \alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1\,\rangle$. 
     The six elements $1, \alpha, \beta, \alpha\beta, \beta\alpha, \alpha\beta\alpha$ are distinct, which can be verified by direct computation. 

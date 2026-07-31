@@ -119,22 +119,22 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	Consider $\sigma = (1 2 3) \in S_3$.
 	Then we have the following mappings:
 	\begin{itemize}
-		\item $(1, 1) \mapsto (2, 2) \mapsto (3, 3) \mapsto (1, 1)$, which corresponds to the cycle $(1\ 2\ 3)$ in $S_9$.
-		\item $(1, 2) \mapsto (2, 3) \mapsto (3, 1) \mapsto (1, 2)$, which corresponds to the cycle $(4\ 8\ 7)$ in $S_9$.
-		\item $(2, 1) \mapsto (3, 2) \mapsto (1, 3) \mapsto (2, 1)$, which corresponds to the cycle $(5\ 9\ 6)$ in $S_9$.
+		\item $(1, 1) \mapsto (2, 2) \mapsto (3, 3) \mapsto (1, 1)$, which corresponds to the cycle $\cyc{1 2 3}$ in $S_9$.
+		\item $(1, 2) \mapsto (2, 3) \mapsto (3, 1) \mapsto (1, 2)$, which corresponds to the cycle $\cyc{4 8 7}$ in $S_9$.
+		\item $(2, 1) \mapsto (3, 2) \mapsto (1, 3) \mapsto (2, 1)$, which corresponds to the cycle $\cyc{5 9 6}$ in $S_9$.
 	\end{itemize}
-	Combining these cycles, we find that the cycle decomposition of $\sigma = (1 2 3)$ in $S_9$ is $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$.
+	Combining these cycles, we find that the cycle decomposition of $\sigma = (1 2 3)$ in $S_9$ is $\cyc{1 2 3}\cyc{4 8 7}\cyc{5 9 6}$.
 	The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
     \begin{itemize}
         \item $1 \in S_3$ is the same as $1 \in S_9$.
-        \item $(1 2)$: $(1\ 2)(4\ 5)(6\ 7)(8\ 9)$
-        \item $(1 3)$: $(1\ 3)(4\ 6)(5\ 7)(8\ 9)$
-        \item $(2 3)$: $(1\ 2)(2\ 3)(5\ 6)(7\ 8)$
-        \item $(1 2 3)$: $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$
-        \item $(1 3 2)$: $(1\ 3\ 2)(4\ 7\ 8)(5\ 6\ 9)$
+        \item $(1 2)$: $\cyc{1 2}\cyc{4 5}\cyc{6 7}\cyc{8 9}$
+        \item $(1 3)$: $\cyc{1 3}\cyc{4 6}\cyc{5 7}\cyc{8 9}$
+        \item $(2 3)$: $\cyc{1 2}\cyc{2 3}\cyc{5 6}\cyc{7 8}$
+        \item $(1 2 3)$: $\cyc{1 2 3}\cyc{4 8 7}\cyc{5 9 6}$
+        \item $(1 3 2)$: $\cyc{1 3 2}\cyc{4 7 8}\cyc{5 6 9}$
     \end{itemize}
 	For $\ocal_1$, we pick $a = (1, 1)$.
-	The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $(2\ 3)$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{(2\ 3)}$.
+	The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $\cyc{2 3}$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{\cyc{2 3}}$.
 	Moreover, we have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$ as expected.
 	For $\ocal_2$, we pick $a = (1, 2)$.
 	The only $\sigma \in S_3$ that fixes $(1, 2)$ is the identity permutation, so the stabilizer of $(1, 2)$ in $S_3$ is 1.
@@ -202,17 +202,17 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
 	\begin{itemize}
 		\item $1 \in S_3$ is the same as $1 \in S_{27}$.
-		\item $(1\ 2)$: $(1\ 14)(2\ 13)(3\ 15)(4\ 11)(5\ 10)(6\ 12)(7\ 17)(8\ 16)(9\ 18)(19\ 23)(20\ 22)(21\ 24)(25\ 26)$
-		\item $(1\ 3)$: $(1\ 27)(2\ 26)(3\ 25)(4\ 24)(5\ 23)(6\ 22)(7\ 21)(8\ 20)(9\ 19)(10\ 18)(11\ 17)(12\ 16)(13\ 15)$
-		\item $(2\ 3)$: $(2\ 3)(4\ 7)(5\ 9)(6\ 8)(10\ 19)(11\ 21)(12\ 20)(13\ 25)(14\ 27)(15\ 26)(16\ 22)(17\ 24)(18\ 23)$
-		\item $(1\ 2\ 3)$: $(1\ 14\ 27)(2\ 15\ 25)(3\ 13\ 26)(4\ 17\ 21)(5\ 18\ 19)(6\ 16\ 20)(7\ 11\ 24)(8\ 12\ 22)(9\ 10\ 23)$
-		\item $(1\ 3\ 2)$: $(1\ 27\ 14)(2\ 25\ 15)(3\ 26\ 13)(4\ 21\ 17)(5\ 19\ 18)(6\ 20\ 16)(7\ 24\ 11)(8\ 22\ 12)(9\ 23\ 10)$
+		\item $\cyc{1 2}$: $\cyc{1 14}\cyc{2 13}\cyc{3 15}\cyc{4 11}\cyc{5 10}\cyc{6 12}\cyc{7 17}\cyc{8 16}\cyc{9 18}\cyc{19 23}\cyc{20 22}\cyc{21 24}\cyc{25 26}$
+		\item $\cyc{1 3}$: $\cyc{1 27}\cyc{2 26}\cyc{3 25}\cyc{4 24}\cyc{5 23}\cyc{6 22}\cyc{7 21}\cyc{8 20}\cyc{9 19}\cyc{10 18}\cyc{11 17}\cyc{12 16}\cyc{13 15}$
+		\item $\cyc{2 3}$: $\cyc{2 3}\cyc{4 7}\cyc{5 9}\cyc{6 8}\cyc{10 19}\cyc{11 21}\cyc{12 20}\cyc{13 25}\cyc{14 27}\cyc{15 26}\cyc{16 22}\cyc{17 24}\cyc{18 23}$
+		\item $\cyc{1 2 3}$: $\cyc{1 14 27}\cyc{2 15 25}\cyc{3 13 26}\cyc{4 17 21}\cyc{5 18 19}\cyc{6 16 20}\cyc{7 11 24}\cyc{8 12 22}\cyc{9 10 23}$
+		\item $\cyc{1 3 2}$: $\cyc{1 27 14}\cyc{2 25 15}\cyc{3 26 13}\cyc{4 21 17}\cyc{5 19 18}\cyc{6 20 16}\cyc{7 24 11}\cyc{8 22 12}\cyc{9 23 10}$
 	\end{itemize}
-	For $\ocal_1$, pick $a = (1\ 1\ 1)$.
-	The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
+	For $\ocal_1$, pick $a = \cyc{1 1 1}$.
+	The elements that stabilize $a$ are the identity permutation and $\cyc{2 3}$, so the stabilizer of $a$ in $S_3$ is $\gen{\cyc{2 3}}$.
 	We have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$.
 	For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial.
-	For example, for $\ocal_2$, pick $a = (1\ 1\ 2)$.
+	For example, for $\ocal_2$, pick $a = \cyc{1 1 2}$.
 	The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1.
 	We have $|G_a||\ocal_2| = 1 \cdot 6 = 6 = |S_3|$.
 	The same logic applies to $\ocal_3$, $\ocal_4$, and $\ocal_5$.
@@ -237,17 +237,17 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	The cycle decompositions for all elements of $S_3$ acting on $\pcal(\set{1, 2, 3}) - \set{\varnothing}$ are as follows:
 	\begin{itemize}
 		\item $1 \in S_3$ is the same as $1 \in S_7$.
-		\item $(1\ 2)$: $(1\ 2)(5\ 6)$
-		\item $(1\ 3)$: $(1\ 3)(4\ 6)$
-		\item $(2\ 3)$: $(2\ 3)(4\ 5)$
-		\item $(1\ 2\ 3)$: $(1\ 2\ 3)(4\ 6\ 5)$
-		\item $(1\ 3\ 2)$: $(1\ 3\ 2)(4\ 5\ 6)$
+		\item $\cyc{1 2}$: $\cyc{1 2}\cyc{5 6}$
+		\item $\cyc{1 3}$: $\cyc{1 3}\cyc{4 6}$
+		\item $\cyc{2 3}$: $\cyc{2 3}\cyc{4 5}$
+		\item $\cyc{1 2 3}$: $\cyc{1 2 3}\cyc{4 6 5}$
+		\item $\cyc{1 3 2}$: $\cyc{1 3 2}\cyc{4 5 6}$
 	\end{itemize}
 	For $\ocal_1$, pick $a = \set{1}$.
-	The only elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
+	The only elements that stabilize $a$ are the identity permutation and $\cyc{2 3}$, so the stabilizer of $a$ in $S_3$ is $\gen{\cyc{2 3}}$.
 	We have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$.
 	For $\ocal_2$, pick $a = \set{1, 2}$.
-	The only elements that stabilize $a$ are the identity permutation and $(1\ 2)$, so the stabilizer of $a$ in $S_3$ is $\gen{(1\ 2)}$.
+	The only elements that stabilize $a$ are the identity permutation and $\cyc{1 2}$, so the stabilizer of $a$ in $S_3$ is $\gen{\cyc{1 2}}$.
 	We have $|G_a||\ocal_2| = 2 \cdot 3 = 6 = |S_3|$.
 	For $\ocal_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\set{1, 2, 3}$ in $S_3$ is all of $S_3$.
 	We have $|G_a||\ocal_3| = 6 \cdot 1 = 6 = |S_3|$.

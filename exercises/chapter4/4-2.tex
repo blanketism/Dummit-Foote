@@ -5,7 +5,7 @@
 	\begin{subexercises}
 		\item Label $1,a,b,c$ with the integers $1,2,4,3$, respectively, and prove that under the left regular representation of $G$ into $S_4$ the non-identity elements are mapped as follows:
 		\[
-			a \mapsto (1\ 2)(3\ 4), \quad b \mapsto (1\ 4)(2\ 3), \quad c \mapsto (1\ 3)(2\ 4).
+			a \mapsto \cyc{1 2}\cyc{3 4}, \quad b \mapsto \cyc{1 4}\cyc{2 3}, \quad c \mapsto \cyc{1 3}\cyc{2 4}.
 		\]
 		\item Relabel $1,a,b,c$ as $1,4,2,3$, respectively, and compute the image of each element of $G$ under the left regular representation of $G$ into $S_4$.
 		Show that the image of $G$ in $S_4$ under this labelling is the same \emph{subgroup} as the image of $G$ in part (a) (even though the non-identity elements individually map to different permutations under the two different labelling).
@@ -15,45 +15,45 @@
 \begin{solenum}
 	\item We have $a \cdot 1 = a$ so that $\sigma_a(1) = 2$.
 	Similarly, $\sigma_a(2) = 1$.
-	We also have $a \cdot b = c$ so that $\sigma_a(4) = 3$, and $\sigma_a(3) = 4$, and we have $a \mapsto (1\ 2)(3\ 4)$.
+	We also have $a \cdot b = c$ so that $\sigma_a(4) = 3$, and $\sigma_a(3) = 4$, and we have $a \mapsto \cyc{1 2}\cyc{3 4}$.
 	The others are computed similarly. 
 	\item Again, we have $a \cdot 1 = a$ so that $\sigma_a(1) = 4$.
 	Similarly, $\sigma_a(4) = 1$.
-	We also have $a \cdot b = c$ so that $\sigma_a(2) = 3$, and $\sigma_a(3) = 2$, and we have $a \mapsto (1\ 4)(2\ 3)$.
-	For $b$, we have $b \mapsto (1\ 2)(3\ 4)$, and for $c$, we have $c \mapsto (1\ 3)(2\ 4)$.
-	The image of $G$ in $S_4$ under this labelling is $\set{1, (1\ 4)(2\ 3), (1\ 2)(3\ 4), (1\ 3)(2\ 4)}$, which is the same subgroup as in part (a).
+	We also have $a \cdot b = c$ so that $\sigma_a(2) = 3$, and $\sigma_a(3) = 2$, and we have $a \mapsto \cyc{1 4}\cyc{2 3}$.
+	For $b$, we have $b \mapsto \cyc{1 2}\cyc{3 4}$, and for $c$, we have $c \mapsto \cyc{1 3}\cyc{2 4}$.
+	The image of $G$ in $S_4$ under this labelling is $\set{1, \cyc{1 4}\cyc{2 3}, \cyc{1 2}\cyc{3 4}, \cyc{1 3}\cyc{2 4}}$, which is the same subgroup as in part (a).
 \end{solenum}
 
 \begin{exercise}{4.2.2}
-	List the elements of $S_3$ as $1, (1\ 2), (2\ 3), (1\ 3), (1\ 2\ 3), (1\ 3\ 2)$ and label these with the integers $1,2,3,4,5,6$ respectively.
+	List the elements of $S_3$ as $1, \cyc{1 2}, \cyc{2 3}, \cyc{1 3}, \cyc{1 2 3}, \cyc{1 3 2}$ and label these with the integers $1,2,3,4,5,6$ respectively.
 	Exhibit the image of each element of $S_3$ under the left regular representation of $S_3$ into $S_6$.
 \end{exercise}
 
 \begin{sol}
-	Consider $(1\ 2)$.
+	Consider $\cyc{1 2}$.
 	Then we have the following computations:
 	\begin{align*}
-		(1\ 2) \cdot 1 & = (1\ 2) && \sigma_{(1\ 2)}(1) = 2 \\
-		(1\ 2) \cdot (1\ 2) & = 1 && \sigma_{(1\ 2)}(2) = 1 \\
-		(1\ 2) \cdot (2\ 3) & = (1\ 2\ 3) && \sigma_{(1\ 2)}(4) = 5 \\
-		(1\ 2) \cdot (1\ 3) & = (1\ 3\ 2) && \sigma_{(1\ 2)}(3) = 6 \\
-		(1\ 2) \cdot (1\ 2\ 3) & = (2\ 3) && \sigma_{(1\ 2)}(5) = 3 \\
-		(1\ 2) \cdot (1\ 3\ 2) & = (1\ 3) && \sigma_{(1\ 2)}(6) = 4
+		\cyc{1 2} \cdot 1 & = \cyc{1 2} && \sigma_{\cyc{1 2}}(1) = 2 \\
+		\cyc{1 2} \cdot \cyc{1 2} & = 1 && \sigma_{\cyc{1 2}}(2) = 1 \\
+		\cyc{1 2} \cdot \cyc{2 3} & = \cyc{1 2 3} && \sigma_{\cyc{1 2}}(4) = 5 \\
+		\cyc{1 2} \cdot \cyc{1 3} & = \cyc{1 3 2} && \sigma_{\cyc{1 2}}(3) = 6 \\
+		\cyc{1 2} \cdot \cyc{1 2 3} & = \cyc{2 3} && \sigma_{\cyc{1 2}}(5) = 3 \\
+		\cyc{1 2} \cdot \cyc{1 3 2} & = \cyc{1 3} && \sigma_{\cyc{1 2}}(6) = 4
 	\end{align*}
-	Thus, we have $(1\ 2) \mapsto (1\ 2)(3\ 6\ 4\ 5)$.
-	We calculate that $(2\ 3) \mapsto (1\ 3\ 5\ 2)(4\ 6)$.
-	Since $(1\ 2)(2\ 3) = (1\ 2\ 3)$,
+	Thus, we have $\cyc{1 2} \mapsto \cyc{1 2}\cyc{3 6 4 5}$.
+	We calculate that $\cyc{2 3} \mapsto \cyc{1 3 5 2}\cyc{4 6}$.
+	Since $\cyc{1 2}\cyc{2 3} = \cyc{1 2 3}$,
 	\[
-		(1\ 2\ 3) \mapsto (1\ 2)(3\ 6\ 4\ 5)(1\ 3\ 5\ 2)(4\ 6) = (1\ 5\ 6)(2\ 4\ 3)
+		\cyc{1 2 3} \mapsto \cyc{1 2}\cyc{3 6 4 5}\cyc{1 3 5 2}\cyc{4 6} = \cyc{1 5 6}\cyc{2 4 3}
 	\]
 	Continuing in this way, we find that the images of the elements of $S_3$ under the left regular representation are as follows:
 	\begin{align*}
 		1 & \mapsto 1 \\
-		(1\ 2) & \mapsto (1\ 2)(3\ 6\ 4\ 5) \\
-		(2\ 3) & \mapsto (1\ 3\ 5\ 2)(4\ 6) \\
-		(1\ 3) & \mapsto (1\ 4)(2\ 6)(3\ 5) \\
-		(1\ 2\ 3) & \mapsto (1\ 5\ 6)(2\ 4\ 3) \\
-		(1\ 3\ 2) & \mapsto (1\ 6\ 5)(2\ 3\ 4) \qedhere
+		\cyc{1 2} & \mapsto \cyc{1 2}\cyc{3 6 4 5} \\
+		\cyc{2 3} & \mapsto \cyc{1 3 5 2}\cyc{4 6} \\
+		\cyc{1 3} & \mapsto \cyc{1 4}\cyc{2 6}\cyc{3 5} \\
+		\cyc{1 2 3} & \mapsto \cyc{1 5 6}\cyc{2 4 3} \\
+		\cyc{1 3 2} & \mapsto \cyc{1 6 5}\cyc{2 3 4} \qedhere
 	\end{align*}
 \end{sol}
 
@@ -68,20 +68,20 @@
 \end{exercise}
 
 \begin{solenum}
-	\item We calculate $\sigma_r = (1\ 2\ 3\ 4)(5\ 8\ 7\ 6)$ and $\sigma_s = (1\ 5)(2\ 6)(3\ 7)(4\ 8)$.
+	\item We calculate $\sigma_r = \cyc{1 2 3 4}\cyc{5 8 7 6}$ and $\sigma_s = \cyc{1 5}\cyc{2 6}\cyc{3 7}\cyc{4 8}$.
 	Continuing in this way, we find that the images of the elements of $D_8$ under the left regular representation are as follows:
 	\begin{align*}
-		1 & \mapsto 1 & s & \mapsto (1\ 5)(2\ 6)(3\ 7)(4\ 8) \\
-		r & \mapsto (1\ 2\ 3\ 4)(5\ 8\ 7\ 6) & sr & \mapsto (1\ 6)(2\ 7)(3\ 8)(4\ 5) \\
-		r^2 & \mapsto (1\ 3)(2\ 4)(5\ 7)(6\ 8) & sr^2 & \mapsto (1\ 7)(2\ 8)(3\ 5)(4\ 6) \\
-		r^3 & \mapsto (1\ 4\ 3\ 2)(5\ 6\ 7\ 8) & sr^3 & \mapsto (1\ 8)(2\ 5)(3\ 6)(4\ 7)
+		1 & \mapsto 1 & s & \mapsto \cyc{1 5}\cyc{2 6}\cyc{3 7}\cyc{4 8} \\
+		r & \mapsto \cyc{1 2 3 4}\cyc{5 8 7 6} & sr & \mapsto \cyc{1 6}\cyc{2 7}\cyc{3 8}\cyc{4 5} \\
+		r^2 & \mapsto \cyc{1 3}\cyc{2 4}\cyc{5 7}\cyc{6 8} & sr^2 & \mapsto \cyc{1 7}\cyc{2 8}\cyc{3 5}\cyc{4 6} \\
+		r^3 & \mapsto \cyc{1 4 3 2}\cyc{5 6 7 8} & sr^3 & \mapsto \cyc{1 8}\cyc{2 5}\cyc{3 6}\cyc{4 7}
 	\end{align*}
 	\item The images of $D_8$ under the left regular representation with respect to this new labelling are as follows:
 	\begin{align*}
-		1 & \mapsto 1 & s & \mapsto (1\ 2)(3\ 4)(5\ 6)(7\ 8) \\
-		r & \mapsto (1\ 3\ 5\ 7)(2\ 8\ 6\ 4) & sr & \mapsto (1\ 4)(2\ 7)(3\ 6)(5\ 8) \\
-		r^2 & \mapsto (1\ 5)(3\ 7)(2\ 6)(4\ 8) & sr^2 & \mapsto (1\ 6)(2\ 5)(3\ 8)(4\ 7) \\
-		r^3 & \mapsto (1\ 7\ 5\ 3)(2\ 4\ 6\ 8) & sr^3 & \mapsto (1\ 8)(2\ 3)(4\ 5)(6\ 7)
+		1 & \mapsto 1 & s & \mapsto \cyc{1 2}\cyc{3 4}\cyc{5 6}\cyc{7 8} \\
+		r & \mapsto \cyc{1 3 5 7}\cyc{2 8 6 4} & sr & \mapsto \cyc{1 4}\cyc{2 7}\cyc{3 6}\cyc{5 8} \\
+		r^2 & \mapsto \cyc{1 5}\cyc{3 7}\cyc{2 6}\cyc{4 8} & sr^2 & \mapsto \cyc{1 6}\cyc{2 5}\cyc{3 8}\cyc{4 7} \\
+		r^3 & \mapsto \cyc{1 7 5 3}\cyc{2 4 6 8} & sr^3 & \mapsto \cyc{1 8}\cyc{2 3}\cyc{4 5}\cyc{6 7}
 	\end{align*}
 	Clearly, the two subgroups of $S_8$ obtained in parts (a) and (b) are different since, for example, the image of $r$ in part (a) is a product of two 4-cycles while the image of $r$ in part (b) is a product of two 4-cycles but with different elements.
 \end{solenum}
@@ -95,8 +95,8 @@
 	We label $Q_8$ as $1, -1, i, -i, j, -j, k, -k$ and label these with the integers $1,2 \ldots 8$ respectively.
 	We find that
 	\begin{align*}
-		i & \mapsto \sigma_i = (1\ 3\ 2\ 4)(5\ 7\ 6\ 8) \\
-		j & \mapsto \sigma_j = (1\ 5\ 2\ 6)(3\ 8\ 4\ 7)
+		i & \mapsto \sigma_i = \cyc{1 3 2 4}\cyc{5 7 6 8} \\
+		j & \mapsto \sigma_j = \cyc{1 5 2 6}\cyc{3 8 4 7}
 	\end{align*}
 	Hence $Q_8 \cong \gen{\sigma_i, \sigma_j} \leq S_8$.
 \end{sol}
@@ -116,32 +116,32 @@
 \end{exercise}
 
 \begin{solenum}
-	\item We have $\pi_H(r) = (1\ 2\ 3\ 4)$ and $\pi_H(s) = (2\ 4)$.
+	\item We have $\pi_H(r) = \cyc{1 2 3 4}$ and $\pi_H(s) = \cyc{2 4}$.
 	We continue in this way to find that the images of the elements of $D_8$ under $\pi_H$ are:
 	\begin{align*}
-		\pi_H(1) & = 1 & \pi_H(s) & = (2\ 4) \\
-		\pi_H(r) & = (1\ 2\ 3\ 4) & \pi_H(sr) & = (1\ 2)(3\ 4) \\
-		\pi_H(r^2) & = (1\ 3)(2\ 4) & \pi_H(sr^2) & = (1\ 3) \\
-		\pi_H(r^3) & = (1\ 4\ 3\ 2) & \pi_H(sr^3) & = (1\ 4)(2\ 3)
+		\pi_H(1) & = 1 & \pi_H(s) & = \cyc{2 4} \\
+		\pi_H(r) & = \cyc{1 2 3 4} & \pi_H(sr) & = \cyc{1 2}\cyc{3 4} \\
+		\pi_H(r^2) & = \cyc{1 3}\cyc{2 4} & \pi_H(sr^2) & = \cyc{1 3} \\
+		\pi_H(r^3) & = \cyc{1 4 3 2} & \pi_H(sr^3) & = \cyc{1 4}\cyc{2 3}
 	\end{align*}
 	so that the subgroup $\gen{\pi_H(r), \pi_H(s)} \leq S_4$ is isomorphic to $D_8$.
 	Since the kernel of $\pi_H$ is trivial, the representation is faithful.
-	\item The new labelling affords the permutations $\pi_H(r) = (1\ 3\ 2\ 4)$ and $\pi_H(s) = (3\ 4)$.
+	\item The new labelling affords the permutations $\pi_H(r) = \cyc{1 3 2 4}$ and $\pi_H(s) = \cyc{3 4}$.
 	We have the following images:
 	\begin{align*}
-		\pi_H(1) & = 1 & \pi_H(s) & = (3\ 4) \\
-		\pi_H(r) & = (1\ 3\ 2\ 4) & \pi_H(sr) & = (1\ 3)(2\ 4) \\
-		\pi_H(r^2) & = (1\ 2)(3\ 4) & \pi_H(sr^2) & = (1\ 2) \\
-		\pi_H(r^3) & = (1\ 4\ 2\ 3) & \pi_H(sr^3) & = (1\ 4)(2\ 3)
+		\pi_H(1) & = 1 & \pi_H(s) & = \cyc{3 4} \\
+		\pi_H(r) & = \cyc{1 3 2 4} & \pi_H(sr) & = \cyc{1 3}\cyc{2 4} \\
+		\pi_H(r^2) & = \cyc{1 2}\cyc{3 4} & \pi_H(sr^2) & = \cyc{1 2} \\
+		\pi_H(r^3) & = \cyc{1 4 2 3} & \pi_H(sr^3) & = \cyc{1 4}\cyc{2 3}
 	\end{align*}
-	Moreover, the subgroup is different from that in part (a) since, for example, the image of $r$ in part (a) is $(1\ 2\ 3\ 4)$ while the image of $r$ in this part is $(1\ 3\ 2\ 4)$.
-	\item Under $\pi_K$, we have $\pi_K(r) = (1\ 2\ 3\ 4)$ and $\pi_K(s) = (1\ 2)(3\ 4)$.
-	With respect to this labeling, we have the subgroup $\wh K = \gen{(1\ 2\ 3\ 4), (1\ 2)(3\ 4)}$.
+	Moreover, the subgroup is different from that in part (a) since, for example, the image of $r$ in part (a) is $\cyc{1 2 3 4}$ while the image of $r$ in this part is $\cyc{1 3 2 4}$.
+	\item Under $\pi_K$, we have $\pi_K(r) = \cyc{1 2 3 4}$ and $\pi_K(s) = \cyc{1 2}\cyc{3 4}$.
+	With respect to this labeling, we have the subgroup $\wh K = \gen{\cyc{1 2 3 4}, \cyc{1 2}\cyc{3 4}}$.
 	Let $\wh H$ be the subgroup obtained in part (a).
-	Note that $(1\ 2\ 3\ 4)$ is contained in both $\wh H$ and $\wh K$.
+	Note that $\cyc{1 2 3 4}$ is contained in both $\wh H$ and $\wh K$.
 	Moreover, we have following:
 	\[
-		(1\ 2\ 3\ 4)(2\ 4)(1\ 4\ 3\ 2) = (1\ 2)(3\ 4) \in \wh H \quad \text{and} \quad (1\ 2\ 3\ 4)^2(1\ 2)(3\ 4) = (2\ 4) \in \wh K
+		\cyc{1 2 3 4}\cyc{2 4}\cyc{1 4 3 2} = \cyc{1 2}\cyc{3 4} \in \wh H \quad \text{and} \quad \cyc{1 2 3 4}^2\cyc{1 2}\cyc{3 4} = \cyc{2 4} \in \wh K
 	\]
 	so that both subgroups contain the other generator of the other subgroup.
 	Therefore, $\wh H = \wh K$.
@@ -156,16 +156,16 @@
 \end{exercise}
 
 \begin{sol}
-	We have $\pi_N(r) = (1\ 2)(3\ 4)$ and $\pi_N(s) = (1\ 3)(2\ 4)$.
+	We have $\pi_N(r) = \cyc{1 2}\cyc{3 4}$ and $\pi_N(s) = \cyc{1 3}\cyc{2 4}$.
 	Continuing in this way, we find that the images of the elements of $D_8$ under $\pi_N$ are:
 	\begin{align*}
-		\pi_N(1) & = 1 & \pi_N(s) & = (1\ 3)(2\ 4) \\
-		\pi_N(r) & = (1\ 2)(3\ 4) & \pi_N(sr) & = (1\ 4)(2\ 3) \\
-		\pi_N(r^2) & = 1 & \pi_N(sr^2) & = (1\ 3)(2\ 4) \\
-		\pi_N(r^3) & = (1\ 2)(3\ 4) & \pi_N(sr^3) & = (1\ 4)(2\ 3)
+		\pi_N(1) & = 1 & \pi_N(s) & = \cyc{1 3}\cyc{2 4} \\
+		\pi_N(r) & = \cyc{1 2}\cyc{3 4} & \pi_N(sr) & = \cyc{1 4}\cyc{2 3} \\
+		\pi_N(r^2) & = 1 & \pi_N(sr^2) & = \cyc{1 3}\cyc{2 4} \\
+		\pi_N(r^3) & = \cyc{1 2}\cyc{3 4} & \pi_N(sr^3) & = \cyc{1 4}\cyc{2 3}
 	\end{align*}
 	Since $\ker(\pi_N)$ contains the non-trivial element $r^2$, the representation is not faithful.
-	Moreover, we have $\pi_N(D_8) = \set{1, (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3)}$, which is isomorphic to the Klein 4-group.
+	Moreover, we have $\pi_N(D_8) = \set{1, \cyc{1 2}\cyc{3 4}, \cyc{1 3}\cyc{2 4}, \cyc{1 4}\cyc{2 3}}$, which is isomorphic to the Klein 4-group.
 \end{sol}
 
 \begin{exercise}{4.2.7}

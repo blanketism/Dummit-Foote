@@ -39,16 +39,16 @@ Let $G$ be a group.
 	\item Discussed in the text, the conjugacy classes of $D_8$ are $\set{1}$, $\set{r^2}$, $\set{r, r^3}$, $\set{s, sr^2}$, and $\set{sr, sr^3}$ with sizes 1, 1, 2, 2, and 2 respectively.
 	\item Again discussed in the text, the conjugacy classes of $Q_8$ are $\set{1}$, $\set{-1}$, $\set{i, -i}$, $\set{j, -j}$, and $\set{k, -k}$ with sizes 1, 1, 2, 2, and 2 respectively.
 	\item We proceed similarly as the text.
-	The possible cycle types are $1, (1\ 2\ 3)$, and $(1\ 2)(3\ 4)$.
+	The possible cycle types are $1, \cyc{1 2 3}$, and $\cyc{1 2}\cyc{3 4}$.
 	
-	For $(1\ 2\ 3)$, we have $C_{A_4}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$ since the only permutation that fixes 1, 2, and 3 is the identity.
-	Therefore, the conjugacy class of $(1\ 2\ 3)$ has size $12/3 = 4$.
-	However, there are 8 3-cycles in $A_4$, so there exists a 3-cycle $\sigma \in A_4$ not in the conjugacy class of $(1\ 2\ 3)$.
+	For $\cyc{1 2 3}$, we have $C_{A_4}(\cyc{1 2 3}) = \gen{\cyc{1 2 3}}$ since the only permutation that fixes 1, 2, and 3 is the identity.
+	Therefore, the conjugacy class of $\cyc{1 2 3}$ has size $12/3 = 4$.
+	However, there are 8 3-cycles in $A_4$, so there exists a 3-cycle $\sigma \in A_4$ not in the conjugacy class of $\cyc{1 2 3}$.
 	By similar reasoning, the conjugacy class of $\sigma$ also has size 4.
 	There are then 2 conjugacy classes of size 4 corresponding to the 3-cycles.
 
-	For $(1\ 2)(3\ 4)$, it is trivial to calculate that the remaining double transpositions are in its conjugacy class.
-	Therefore, the conjugacy class of $(1\ 2)(3\ 4)$ has size 3.
+	For $\cyc{1 2}\cyc{3 4}$, it is trivial to calculate that the remaining double transpositions are in its conjugacy class.
+	Therefore, the conjugacy class of $\cyc{1 2}\cyc{3 4}$ has size 3.
 \end{solenum}
 
 \begin{exercise}{4.3.3}
@@ -73,8 +73,8 @@ Let $G$ be a group.
 	\begin{subexercises}
 		\item Let $Z_2 = \gen x$.
 		The conjugacy classes $\kcal_1$ and $\kcal_x$ of $Z_2$ have sizes 1 and 1 respectively.
-		For $S_3$, the partitions of 3 are 3 1-cycles, 2-cycle and 1-cycle, and a 3-cycle with representatives $1$, $(1\ 2)$, and $(1\ 2\ 3)$ respectively.
-		Since $C_{S_3}((1\ 2)) = \gen{(1\ 2)}$ and $C_{S_3}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$, the conjugacy classes $\kcal_1$, $\kcal_{(1\ 2)}$, and $\kcal_{(1\ 2\ 3)}$ of $S_3$ have sizes 1, 3, and 2 respectively.
+		For $S_3$, the partitions of 3 are 3 1-cycles, 2-cycle and 1-cycle, and a 3-cycle with representatives $1$, $\cyc{1 2}$, and $\cyc{1 2 3}$ respectively.
+		Since $C_{S_3}(\cyc{1 2}) = \gen{\cyc{1 2}}$ and $C_{S_3}(\cyc{1 2 3}) = \gen{\cyc{1 2 3}}$, the conjugacy classes $\kcal_1$, $\kcal_{\cyc{1 2}}$, and $\kcal_{\cyc{1 2 3}}$ of $S_3$ have sizes 1, 3, and 2 respectively.
 		Therefore, $Z_2 \times S_3$ has 6 conjugacy classes of size 1, 3, 2, 1, 3, and 2 respectively.
 		\item By the above, $S_3$ has 3 conjugacy classes of sizes 1, 3, and 2 respectively.
 		Then $S_3 \times S_3$ has 9 conjugacy classes with sizes $1, 3, 2, 3, 9, 6, 2, 6,$ and $4$ respectively.
@@ -153,8 +153,8 @@ Let $G$ be a group.
 			\textbf{Partition of 3} & \textbf{Representative of Cycle Type} \\
 			\hline
 			1, 1, 1 & 1 \\
-			2, 1 & (1\ 2) \\
-			3 & (1\ 2\ 3)
+			2, 1 & \cyc{1 2} \\
+			3 & \cyc{1 2 3}
 		\end{array}
 	\]
 	$n = 4$:
@@ -163,10 +163,10 @@ Let $G$ be a group.
 			\textbf{Partition of 4} & \textbf{Representative of Cycle Type} \\
 			\hline
 			1, 1, 1, 1 & 1 \\
-			2, 1, 1 & (1\ 2) \\
-			2, 2 & (1\ 2)(3\ 4) \\
-			3, 1 & (1\ 2\ 3) \\
-			4 & (1\ 2\ 3\ 4)
+			2, 1, 1 & \cyc{1 2} \\
+			2, 2 & \cyc{1 2}\cyc{3 4} \\
+			3, 1 & \cyc{1 2 3} \\
+			4 & \cyc{1 2 3 4}
 		\end{array}
 	\]
 	$n = 6$:
@@ -175,16 +175,16 @@ Let $G$ be a group.
 			\textbf{Partition of 6} & \textbf{Representative of Cycle Type} \\
 			\hline
 			1, 1, 1, 1, 1, 1 & 1 \\
-			2, 1, 1, 1, 1 & (1\ 2) \\
-			2, 2, 1, 1 & (1\ 2)(3\ 4) \\
-			2, 2, 2 & (1\ 2)(3\ 4)(5\ 6) \\
-			3, 1, 1, 1 & (1\ 2\ 3) \\
-			3, 2, 1 & (1\ 2\ 3)(4\ 5) \\
-			3, 3 & (1\ 2\ 3)(4\ 5\ 6) \\
-			4, 1, 1 & (1\ 2\ 3\ 4) \\
-			4, 2 & (1\ 2\ 3\ 4)(5\ 6) \\
-			5, 1 & (1\ 2\ 3\ 4\ 5) \\
-			6 & (1\ 2\ 3\ 4\ 5\ 6)
+			2, 1, 1, 1, 1 & \cyc{1 2} \\
+			2, 2, 1, 1 & \cyc{1 2}\cyc{3 4} \\
+			2, 2, 2 & \cyc{1 2}\cyc{3 4}\cyc{5 6} \\
+			3, 1, 1, 1 & \cyc{1 2 3} \\
+			3, 2, 1 & \cyc{1 2 3}\cyc{4 5} \\
+			3, 3 & \cyc{1 2 3}\cyc{4 5 6} \\
+			4, 1, 1 & \cyc{1 2 3 4} \\
+			4, 2 & \cyc{1 2 3 4}\cyc{5 6} \\
+			5, 1 & \cyc{1 2 3 4 5} \\
+			6 & \cyc{1 2 3 4 5 6}
 		\end{array}
 	\]
 	$n = 7$:
@@ -193,20 +193,20 @@ Let $G$ be a group.
 			\textbf{Partition of 7} & \textbf{Representative of Cycle Type} \\
 			\hline
 			1, 1, 1, 1, 1, 1, 1 & 1 \\
-			2, 1, 1, 1, 1, 1 & (1\ 2) \\
-			2, 2, 1, 1, 1 & (1\ 2)(3\ 4) \\
-			2, 2, 2, 1 & (1\ 2)(3\ 4)(5\ 6) \\
-			3, 1, 1, 1, 1 & (1\ 2\ 3) \\
-			3, 2, 1, 1 & (1\ 2\ 3)(4\ 5) \\
-			3, 2, 2 & (1\ 2\ 3)(4\ 5)(6\ 7) \\
-			3, 3, 1 & (1\ 2\ 3)(4\ 5\ 6) \\
-			4, 1, 1, 1 & (1\ 2\ 3\ 4) \\
-			4, 2, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
-			4, 3 & (1\ 2\ 3\ 4)(5\ 6\ 7) \\
-			5, 1, 1 & (1\ 2\ 3\ 4\ 5) \\
-			5, 2 & (1\ 2\ 3\ 4\ 5)(6\ 7) \\
-			6, 1 & (1\ 2\ 3\ 4\ 5\ 6) \\
-			7 & (1\ 2\ 3\ 4\ 5\ 6\ 7)
+			2, 1, 1, 1, 1, 1 & \cyc{1 2} \\
+			2, 2, 1, 1, 1 & \cyc{1 2}\cyc{3 4} \\
+			2, 2, 2, 1 & \cyc{1 2}\cyc{3 4}\cyc{5 6} \\
+			3, 1, 1, 1, 1 & \cyc{1 2 3} \\
+			3, 2, 1, 1 & \cyc{1 2 3}\cyc{4 5} \\
+			3, 2, 2 & \cyc{1 2 3}\cyc{4 5}\cyc{6 7} \\
+			3, 3, 1 & \cyc{1 2 3}\cyc{4 5 6} \\
+			4, 1, 1, 1 & \cyc{1 2 3 4} \\
+			4, 2, 1 & \cyc{1 2 3 4}\cyc{5 6} \\
+			4, 3 & \cyc{1 2 3 4}\cyc{5 6 7} \\
+			5, 1, 1 & \cyc{1 2 3 4 5} \\
+			5, 2 & \cyc{1 2 3 4 5}\cyc{6 7} \\
+			6, 1 & \cyc{1 2 3 4 5 6} \\
+			7 & \cyc{1 2 3 4 5 6 7}
 		\end{array} \qedhere
 	\]
 \end{sol}
@@ -219,33 +219,33 @@ Let $G$ be a group.
 	Suppose $\sigma \in Z(S_n)$ for some $n \geq 3$.
 	Pick some $a \in \set{1, 2, \ldots, n}$.
 	Pick some $b, c \in \set{1, 2, \ldots, n} \setminus \set{a}$ with $b \neq c$.
-	Then $\sigma(a\ b)\sigma\inv = (\sigma(a)\ \sigma(b)) = (a\ b)$, so $\set{\sigma(a), \sigma(b)} = \set{a, b}$.
-	Moreover, $\sigma(a\ c)\sigma\inv = (\sigma(a)\ \sigma(c)) = (a\ c)$, so $\set{\sigma(a), \sigma(c)} = \set{a, c}$.
+	Then $\sigma\cyc{a b}\sigma\inv = (\sigma(a)\ \sigma(b)) = \cyc{a b}$, so $\set{\sigma(a), \sigma(b)} = \set{a, b}$.
+	Moreover, $\sigma\cyc{a c}\sigma\inv = (\sigma(a)\ \sigma(c)) = \cyc{a c}$, so $\set{\sigma(a), \sigma(c)} = \set{a, c}$.
 	Then $\sigma(a) \in \set{a, b}$ and $\sigma(a) \in \set{a, c}$, so $\sigma(a) = a$.
 	Since $a$ was arbitrary, $\sigma$ fixes all elements of $\set{1, 2, \ldots, n}$.
 \end{sol}
 
 \begin{exercise}{4.3.9}
-	Show that $|C_{S_n}((1\ 2)(3\ 4))| = 8 (n-4)!$ for all $n \ge 4$.
+	Show that $|C_{S_n}(\cyc{1 2}\cyc{3 4})| = 8 (n-4)!$ for all $n \ge 4$.
 	Determine the elements in this centralizer explicitly.
 \end{exercise}
 
 \begin{sol}
-	The $(n - 4)!$ factor arises from the fact that permutations on the $n - 4$ integers not involved in the cycle $(1\ 2)(3\ 4)$ commute with it.
-	Therefore, we need only consider the permutations of $\set{1, 2, 3, 4}$ that commute with $(1\ 2)(3\ 4)$.
-	Computing $C_{S_4}((1\ 2)(3\ 4))$ directly, the permutations that fall in this set need to leave $(1\ 2)(3\ 4)$ unchanged, or swap the two transpositions.
-	The permutations that leave $(1\ 2)(3\ 4)$ unchanged are $1$, $(1\ 2)$, $(3\ 4)$, and $(1\ 2)(3\ 4)$.
-	The permutations that swap the two transpositions are $(1\ 3)(2\ 4)$, $(1\ 4)(2\ 3)$, $(1\ 3\ 2\ 4)$, and $(1\ 4\ 2\ 3)$.
+	The $(n - 4)!$ factor arises from the fact that permutations on the $n - 4$ integers not involved in the cycle $\cyc{1 2}\cyc{3 4}$ commute with it.
+	Therefore, we need only consider the permutations of $\set{1, 2, 3, 4}$ that commute with $\cyc{1 2}\cyc{3 4}$.
+	Computing $C_{S_4}(\cyc{1 2}\cyc{3 4})$ directly, the permutations that fall in this set need to leave $\cyc{1 2}\cyc{3 4}$ unchanged, or swap the two transpositions.
+	The permutations that leave $\cyc{1 2}\cyc{3 4}$ unchanged are $1$, $\cyc{1 2}$, $\cyc{3 4}$, and $\cyc{1 2}\cyc{3 4}$.
+	The permutations that swap the two transpositions are $\cyc{1 3}\cyc{2 4}$, $\cyc{1 4}\cyc{2 3}$, $\cyc{1 3 2 4}$, and $\cyc{1 4 2 3}$.
 	Therefore, 
 	\[
-		C_{S_4}((1\ 2)(3\ 4)) = \set{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)},
+		C_{S_4}(\cyc{1 2}\cyc{3 4}) = \set{1, \cyc{1 2}, \cyc{3 4}, \cyc{1 2}\cyc{3 4}, \cyc{1 3}\cyc{2 4}, \cyc{1 4}\cyc{2 3}, \cyc{1 3 2 4}, \cyc{1 4 2 3}},
 	\]
 	which has size 8.
-	Combining this with the $(n - 4)!$ factor, we have $|C_{S_n}((1\ 2)(3\ 4))| = 8(n - 4)!$ for all $n \geq 4$.
+	Combining this with the $(n - 4)!$ factor, we have $|C_{S_n}(\cyc{1 2}\cyc{3 4})| = 8(n - 4)!$ for all $n \geq 4$.
 \end{sol}
 
 \begin{exercise}{4.3.10}
-	Let $\sigma$ be the 5-cycle $(1\ 2\ 3\ 4\ 5)$ in $S_5$.
+	Let $\sigma$ be the 5-cycle $\cyc{1 2 3 4 5}$ in $S_5$.
 	In each of (a) to (c) find an explicit element $\tau \in S_5$ which accomplishes the specified conjugation:
 	\begin{subexercises}
 		\item $\tau \sigma \tau^{-1} = \sigma^2$
@@ -255,34 +255,34 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{solenum}
-	\item $\sigma^2 = (1\ 3\ 5\ 2\ 4)$.
-	Then $\tau = (2\ 3\ 5\ 4)$.
-	\item $\sigma^{-1} = (1\ 5\ 4\ 3\ 2)$.
-	Then $\tau = (1\ 5)(2\ 4)$.
-	\item $\sigma^{-2} = (1\ 4\ 2\ 5\ 3)$.
-	Then $\tau = (2\ 4\ 5\ 3)$.
+	\item $\sigma^2 = \cyc{1 3 5 2 4}$.
+	Then $\tau = \cyc{2 3 5 4}$.
+	\item $\sigma^{-1} = \cyc{1 5 4 3 2}$.
+	Then $\tau = \cyc{1 5}\cyc{2 4}$.
+	\item $\sigma^{-2} = \cyc{1 4 2 5 3}$.
+	Then $\tau = \cyc{2 4 5 3}$.
 \end{solenum}
 
 \begin{exercise}{4.3.11}
 	In each of (a) -- (d) determine whether $\sigma_1$ and $\sigma_2$ are conjugate.
 	If they are, given an explicit permutation $\tau$ such that $\tau \sigma_1 \tau^{-1} = \sigma_2$.
 	\begin{subexercises}
-		\item $\sigma_1 = (1\ 2)(3\ 4\ 5)$ and $\sigma_2 = (1\ 2\ 3)(4\ 5)$
-		\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = (3\ 7\ 5\ 10)(4\ 9)(13\ 11\ 2)$
-		\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = \sigma_1^3$
-		\item $\sigma_1 = (1\ 3)(2\ 4\ 6)$ and $\sigma_2 = (3\ 5)(2\ 4)(5\ 6)$
+		\item $\sigma_1 = \cyc{1 2}\cyc{3 4 5}$ and $\sigma_2 = \cyc{1 2 3}\cyc{4 5}$
+		\item $\sigma_1 = \cyc{1 5}\cyc{3 7 2}\cyc{10 6 8 11}$ and $\sigma_2 = \cyc{3 7 5 10}\cyc{4 9}\cyc{13 11 2}$
+		\item $\sigma_1 = \cyc{1 5}\cyc{3 7 2}\cyc{10 6 8 11}$ and $\sigma_2 = \sigma_1^3$
+		\item $\sigma_1 = \cyc{1 3}\cyc{2 4 6}$ and $\sigma_2 = \cyc{3 5}\cyc{2 4}\cyc{5 6}$
 	\end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-	\item Rewrite $\sigma_2$ as $(4\ 5)(1\ 2\ 3)$ so that both have the same cycle type.
-	Then $\tau = (1\ 4\ 2\ 5\ 3)$.
-	\item Rewrite $\sigma_2$ as $(4\ 9)(13\ 11\ 2)(3\ 7\ 5\ 10)$.
-	Then $\tau = (1\ 4)(8\ 5\ 9)(6\ 7\ 11\ 10\ 3\ 13)$.
-	\item Note that $\sigma_2 = (1\ 5)(6\ 10\ 11\ 8)$, which does not have the same cycle type as $\sigma_1$.
+	\item Rewrite $\sigma_2$ as $\cyc{4 5}\cyc{1 2 3}$ so that both have the same cycle type.
+	Then $\tau = \cyc{1 4 2 5 3}$.
+	\item Rewrite $\sigma_2$ as $\cyc{4 9}\cyc{13 11 2}\cyc{3 7 5 10}$.
+	Then $\tau = \cyc{1 4}\cyc{8 5 9}\cyc{6 7 11 10 3 13}$.
+	\item Note that $\sigma_2 = \cyc{1 5}\cyc{6 10 11 8}$, which does not have the same cycle type as $\sigma_1$.
 	Therefore, they are not conjugate.
-	\item $\sigma_2 = (2\ 4)(3\ 5\ 6)$.
-	Then $\tau = (1\ 2\ 3\ 4\ 5)$.
+	\item $\sigma_2 = \cyc{2 4}\cyc{3 5 6}$.
+	Then $\tau = \cyc{1 2 3 4 5}$.
 \end{solenum}
 
 \begin{exercise}{4.3.12}
@@ -295,10 +295,10 @@ Let $G$ be a group.
 		\begin{array}{c|c}
 			\textbf{Cycle Type} & \textbf{Representative} \\
 			\hline
-			4, 4 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8) \\
-			4, 2, 2 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8) \\
-			4, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
-			4, 1, 1, 1, 1 & (1\ 2\ 3\ 4)
+			4, 4 & \cyc{1 2 3 4}\cyc{5 6 7 8} \\
+			4, 2, 2 & \cyc{1 2 3 4}\cyc{5 6}\cyc{7 8} \\
+			4, 2, 1, 1 & \cyc{1 2 3 4}\cyc{5 6} \\
+			4, 1, 1, 1, 1 & \cyc{1 2 3 4}
 		\end{array}
 	\]
 	$S_{12}$:
@@ -306,15 +306,15 @@ Let $G$ be a group.
 		\begin{array}{c|c}
 			\textbf{Cycle Type} & \textbf{Representative} \\
 			\hline
-			4, 4, 4 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10\ 11\ 12) \\
-			4, 4, 2, 2 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10)(11\ 12) \\
-			4, 4, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10) \\
-			4, 4, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8) \\
-			4, 2, 2, 2, 2 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8)(9\ 10)(11\ 12) \\
-			4, 2, 2, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8)(9\ 10) \\
-			4, 2, 2, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8) \\
-			4, 2, 1, 1, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
-			4, 1, 1, 1, 1, 1, 1, 1, 1 & (1\ 2\ 3\ 4)
+			4, 4, 4 & \cyc{1 2 3 4}\cyc{5 6 7 8}\cyc{9 10 11 12} \\
+			4, 4, 2, 2 & \cyc{1 2 3 4}\cyc{5 6 7 8}\cyc{9 10}\cyc{11 12} \\
+			4, 4, 2, 1, 1 & \cyc{1 2 3 4}\cyc{5 6 7 8}\cyc{9 10} \\
+			4, 4, 1, 1, 1, 1 & \cyc{1 2 3 4}\cyc{5 6 7 8} \\
+			4, 2, 2, 2, 2 & \cyc{1 2 3 4}\cyc{5 6}\cyc{7 8}\cyc{9 10}\cyc{11 12} \\
+			4, 2, 2, 2, 1, 1 & \cyc{1 2 3 4}\cyc{5 6}\cyc{7 8}\cyc{9 10} \\
+			4, 2, 2, 1, 1, 1, 1 & \cyc{1 2 3 4}\cyc{5 6}\cyc{7 8} \\
+			4, 2, 1, 1, 1, 1, 1, 1 & \cyc{1 2 3 4}\cyc{5 6} \\
+			4, 1, 1, 1, 1, 1, 1, 1, 1 & \cyc{1 2 3 4}
 		\end{array} \qedhere
 	\]
 \end{sol}
@@ -338,14 +338,14 @@ Let $G$ be a group.
 \begin{exercise}{4.3.14}
 	In \exref{4.2.1} two labellings of the elements $\set{1, a, b, c}$ of the Klein 4-group $V_4$ were chosen to give two versions of the left regular representation of $V_4$ into $S_4$.
 	Let $\pi_1$ be the version of regular representation obtained in part (a) of that exercise, and let $\pi_2$ be the version obtained via the labelling in part (b).
-	Let $\tau = (2\ 4)$.
+	Let $\tau = \cyc{2 4}$.
 	Show that $\tau \circ \pi_1(g) \circ \tau\inv = \pi_2(g)$ for each $g \in V_4$ (i.e., conjugation by $\tau$ sends the image of $\pi_1$ to the image of $\pi_2$ elementwise).
 \end{exercise}
 
 \begin{sol}
 	We will compute for $a$, as the rest follow similarly.
-	We have $\pi_1(a) = (1\ 2)(3\ 4)$ and $\pi_2(a) = (1\ 4)(2\ 3)$.
-	Then $\tau \circ \pi_1(a) \circ \tau\inv = (2\ 4)(1\ 2)(3\ 4)(2\ 4) = (1\ 4)(2\ 3) = \pi_2(a)$.
+	We have $\pi_1(a) = \cyc{1 2}\cyc{3 4}$ and $\pi_2(a) = \cyc{1 4}\cyc{2 3}$.
+	Then $\tau \circ \pi_1(a) \circ \tau\inv = \cyc{2 4}\cyc{1 2}\cyc{3 4}\cyc{2 4} = \cyc{1 4}\cyc{2 3} = \pi_2(a)$.
 \end{sol}
 
 \begin{exercise}{4.3.15}
@@ -354,9 +354,9 @@ Let $G$ be a group.
 
 \begin{sol}
 	Recall by \exref{1.7.17} that left conjugation is an automorphism, so it suffices to find an element which sends the generators of the first subgroup to the generators of the second subgroup.
-	The generators of the first subgroup are $(1\ 2\ 3\ 4)(5\ 8\ 7\ 6)$ and $(1\ 5)(2\ 6)(3\ 7)(4\ 8)$, while the generators of the second subgroup are $(1\ 3\ 5\ 7)(2\ 8\ 6\ 4)$ and $(1\ 2)(3\ 4)(5\ 6)(7\ 8)$ respectively.
+	The generators of the first subgroup are $\cyc{1 2 3 4}\cyc{5 8 7 6}$ and $\cyc{1 5}\cyc{2 6}\cyc{3 7}\cyc{4 8}$, while the generators of the second subgroup are $\cyc{1 3 5 7}\cyc{2 8 6 4}$ and $\cyc{1 2}\cyc{3 4}\cyc{5 6}\cyc{7 8}$ respectively.
 	It suffices to check some element $\tau$ which sends the first generator to the second; the second generator will follow automatically.
-	One such element is $\tau = (5\ 2\ 3)(6\ 4\ 7)$.
+	One such element is $\tau = \cyc{5 2 3}\cyc{6 4 7}$.
 \end{sol}
 
 \begin{exercise}{4.3.16}
@@ -365,8 +365,8 @@ Let $G$ be a group.
 
 \begin{sol}
 	We proceed similarly to the preceding exercise.
-	The generators of the first subgroup are $(1\ 2\ 3\ 4)$ and $(2\ 4)$, while the generators of the second subgrgoup are $(1\ 3\ 2\ 4)$ and $(3\ 4)$.
-	We obtain $\tau = (2\ 3)$.
+	The generators of the first subgroup are $\cyc{1 2 3 4}$ and $\cyc{2 4}$, while the generators of the second subgrgoup are $\cyc{1 3 2 4}$ and $\cyc{3 4}$.
+	We obtain $\tau = \cyc{2 3}$.
 \end{sol}
 
 \begin{spex}{4.3.17}
@@ -599,7 +599,7 @@ Let $G$ be a group.
 		P\inv XP = \begin{pmatrix}
 			\lambda & \alpha \\
 			0 & \beta
-		\end{pmatrix} \in H.
+		\end{pmatrix} \in H
 	\]
 	for some $\alpha, \beta \in \cbb$ such that $X\mb w = \alpha \mb v + \beta \mb w$.
 	Therefore, every element of $G$ is conjugate to some element of the subgroup $H$, hence every element of $G$ is contained in some conjugate of $H$.
@@ -648,7 +648,7 @@ Let $G$ be a group.
 \begin{exercise}{4.3.28}
 	Let $p$ and $q$ be primes with $p < q$.
 	Prove that a non-Abelian group $G$ of order $pq$ has a nonnormal subgroup of index $q$ so that there exists an injective homomorphism into $S_q$.
-	Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+	Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $\cyc{1 2 cdots q}$.
 \end{exercise}
 
 \begin{sol}
@@ -672,7 +672,7 @@ Let $G$ be a group.
 	\]
 	Hence, $\pi(h) \in N_{S_q}(\gen{\pi(g)})$.
 	Since $h$ was arbitrary, we have $G \cong \pi(G) \leq N_{S_q}(\gen{\pi(g)})$.
-	Therefore, $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+	Therefore, $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $\cyc{1 2 cdots q}$.
 \end{sol}
 
 \begin{exercise}{4.3.29}
@@ -801,7 +801,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.34}
-	 Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
+	 Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles, and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
 \end{exercise}
 
 \begin{sol}
@@ -838,7 +838,7 @@ Let $G$ be a group.
 	Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication.
 	For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$.
 	Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$.
-	Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \emph{right regular representation} of $G$).
+	Thus, $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \emph{right regular representation} of $G$).
 	\begin{subexercises}
 		\item Prove that $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$. (Thus the centralizer in $S_G$ of $\pi(G)$ contains the subgroup $\lambda(G)$ which is isomorphic to $G$).
 		\item Prove that $\sigma_g = \tau_g$ if and only if $g$ is an element of order 1 or 2 in the center of $G$.
