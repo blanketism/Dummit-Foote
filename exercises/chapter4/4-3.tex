@@ -591,9 +591,9 @@ Let $G$ be a group.
 	\]
 	and consider the characteristic polynomial $\chi_X(t) = \det(X - tI) = t^2 - (a + d)t + (ad - bc)$.
 	Since $\cbb$ is closed under complex multiplication, $\chi_X(t)$ has at least one root $\lambda \in \cbb$.
-	Therefore, there exists a nonzero vector $\b v \in \cbb^2$ such that $X\b v = \lambda \b v$, so that $\b v$ is an eigenvector of $X$ corresponding to the eigenvalue $\lambda$.
-	We may extend $\b v$ to a basis $\set{\b v, \b w}$ of $\cbb^2$.
-	Let $P$ be the matrix whose columns are $\b v$ and $\b w$.
+	Therefore, there exists a nonzero vector $\mb v \in \cbb^2$ such that $X\mb v = \lambda \mb v$, so that $\mb v$ is an eigenvector of $X$ corresponding to the eigenvalue $\lambda$.
+	We may extend $\mb v$ to a basis $\set{\mb v, \mb w}$ of $\cbb^2$.
+	Let $P$ be the matrix whose columns are $\mb v$ and $\mb w$.
 	Then $P$ is invertible, and we have
 	\[
 		P\inv XP = \begin{pmatrix}
@@ -601,7 +601,7 @@ Let $G$ be a group.
 			0 & \beta
 		\end{pmatrix} \in H.
 	\]
-	for some $\alpha, \beta \in \cbb$ such that $X\b w = \alpha \b v + \beta \b w$.
+	for some $\alpha, \beta \in \cbb$ such that $X\mb w = \alpha \mb v + \beta \mb w$.
 	Therefore, every element of $G$ is conjugate to some element of the subgroup $H$, hence every element of $G$ is contained in some conjugate of $H$.
 	Thus,
 	\[
