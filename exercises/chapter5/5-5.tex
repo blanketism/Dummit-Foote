@@ -1396,13 +1396,17 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \begin{exercise}{5.5.20}
     Let $p$ be an odd prime.
 	Prove that if $P$ is a non-cyclic $p$ group, then $P$ contains a normal subgroup $U$ with $U \cong Z_p \times Z_p$.
-	Deduce that, for odd primes $p$, a $p$-group that contains a unique subgroup of order $p$ is cyclic. (For $p = 2$, it is a theorem that the generalized quaternion groups $Q_{2^n}$ are the only non-cyclic 2-groups which contain a unique subgroup of order 2.) [Proceed by induction on $|P|$.
+	Deduce that, for odd primes $p$, a $p$-group that contains a unique subgroup of order $p$ is cyclic.
+    
+    \note{For $p = 2$, it is a theorem that the generalized quaternion groups $Q_{2^n}$ are the only non-cyclic 2-groups which contain a unique subgroup of order 2.}
+    
+    \hint{Proceed by induction on $|P|$.
 	Let $Z$ be a subgroup of order $p$ in $Z(P)$, and let $\bar P = P/Z$.
 	If $\bar P$ is cyclic, then $P$ is Abelian by \exref{3.1.36}--show that the result is true for Abelian groups.
 	When $\bar P$ is not cyclic, use induction to produce a normal subgroup $\bar H$ of $\bar P$ with $\bar H \cong Z_p \times Z_p$.
 	Let $H$ be the complete preimage of $\bar H$ in $P$, so $|H| = p^3$.
 	Let $H_0 = \set{x \in H \mid x^p = 1}$, so that $H_0$ is a characteristic subgroup of $H$ of order $p^2$ or $p^3$ by \exref{5.4.9}.
-	Show that a suitable subgroup of $H_0$ gives the desired normal subgroup $U$].
+	Show that a suitable subgroup of $H_0$ gives the desired normal subgroup $U$.}
 \end{exercise}
 
 \begin{sol}
@@ -1440,44 +1444,242 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Then $U \cong Z_p \times Z_p$, and we are done.
 \end{sol}
 
-\begin{exercise}{5.5.21}
+\begin{spex}{5.5.21}
     Let $p$ be an odd prime, and let $P$ be a $p$-group.
-	Prove that if every subgroup of $P$ is normal, then $P$ is Abelian. (Note that $Q_8$ is a non-Abelian 2-group with this property, so the result is false for $p = 2$.) [Use the preceding exercises and \exref{5.4.15}.]
-\end{exercise}
+	Prove that if every subgroup of $P$ is normal, then $P$ is Abelian.
+    
+    \note{Note that $Q_8$ is a non-Abelian 2-group with this property, so the result is false for $p = 2$.}
+    
+    \hint{Use the preceding exercises and \exref{5.4.15}.}
+\end{spex}
 
-\begin{sol}
+\begin{sol}[spsol]
+    We proceed by induction on $|P|$.
+    The base case of $|P| = p$ is clear, since $P \cong Z_p$ is Abelian.
+    Suppose $|P| > p$ and every subgroup of $P$ is normal, and assume the result is true for all $p$-groups of order less than $|P|$.
+    If $P$ is cyclic, then $P$ is Abelian.
+    Otherwise, by \exref{5.5.20}, there exists a normal subgroup $U \nsub P$ with $U \cong Z_p \times Z_p$.
+    Then there are distinct subgroups $H$ and $K$ of order $p$ in $U$, normal in $P$, and have trivial intersection.
 
+    Observe that $|\aut(H)| = p - 1$.
+    Having $P$ act on $H$ by conjugation gives a homomorphism $\phi : P \to \aut(H)$.
+    Since $|P|$ is a power of $p$, and $|\aut(H)| = p - 1$ is not divisible by $p$, we have that $\phi$ is the trivial homomorphism, so $H \leq Z(P)$.
+    By symmetry, $K \leq Z(P)$.
+    Then $P/H$ is a $p$-group of order less than $|P|$ in which every subgroup is normal, hence by induction, $P/H$ is Abelian.
+    By \exref{5.4.15}, $P/H$ and $P/K$ Abelian implies that $P/(H \cap K) = P/1 \cong P$ is Abelian, and we are done.
 \end{sol}
 
 \begin{exercise}{5.5.22}
     Let $F$ be a field, let $n$ be a positive integer, and let $G$ be a group of upper triangular matrices in $\gl_n(F)$ (cf. \exref{2.1.16})
     \begin{subexercises}
-        \item Prove that $G$ is the semidirect product $U \semidir D$, where $U$ is the set of upper triangular matrices with 1's down the diagonal (cf \exref{2.1.17}), and $D$ is the set of diagonal matrices in $\gl_n(F)$.
+        \item Prove that $G$ is the semidirect product $U \semidir D$, where $U$ is the set of upper triangular matrices with 1's down the diagonal (cf. \exref{2.1.17}), and $D$ is the set of diagonal matrices in $\gl_n(F)$.
         \item Let $n = 2$.
-	    Recall that $U \cong F$, and $D \cong F\unt \times F\unt$ (cf \exref{3.1.11}).
-	    Describe the homomorphism from $D$ into $\aut(U)$ explicitly in terms of these isomorphisms (i.e., show how each element of $F\unt \times F\unt$ acts as an automorphism on $F$).
+	    Recall that $U \cong F$, and $D \cong F\unt \times F\unt$ (cf. \exref{3.1.11}).
+	    Describe the homomorphism from $D$ into $\aut(U)$ explicitly in terms of these isomorphisms, i.e., show how each element of $F\unt \times F\unt$ acts as an automorphism on $F$.
     \end{subexercises}
 \end{exercise}
 
-\begin{exercise}{5.5.23}
+\begin{solenum}
+    \item We first show that $U \nsub G$.
+    Let $A \in G$ and $B \in U$.
+    Then $A$ and $B$ are upper triangular matrices, so $ABA\inv$ is also an upper triangular matrix.
+    If $a_{ii}$ is the $i$th diagonal entry of $A$, then the $i$th diagonal entry of $ABA\inv$ is the product of the $i$th diagonal entries of $A$, $B$, and $A\inv$, which is $a_{ii} \cdot 1 \cdot a_{ii}\inv = 1$.
+    Hence, $ABA\inv \in U$, and $U \nsub G$.
+    Moreover, $U \cap D = \set{I_n}$, since the only upper triangular matrix with 1's down the diagonal that is also diagonal is the identity matrix.
+    Additionally, for any $A \in G$ with diagonal entries $a_{11}, \ldots, a_{nn}$, let $D_0 = \diag(a_{11}, \ldots, a_{nn})$.
+    Then $D_0 \in D$.
+    Put $U_0 = D_0\inv A$.
+    Then $U_0$ has diagonal entries $a_{ii}a_{ii}\inv = 1$, so $U_0 \in U$.
+    Hence, $A = D_0U_0 \in DU = UD$, and $G = UD$.
+    \item By \exref{3.1.11}, we have $U \cong F$ and $D \cong F\unt \times F\unt$ via the maps $\psi$ and $\pi_1$.
+    For any $\diag(a, b) \in D$ and $x \in F$, we have
+    \[
+        \begin{pmatrix}
+            a & 0 \\
+            0 & b
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & x \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            a & 0 \\
+            0 & b
+        \end{pmatrix}\inv
+        =
+        \begin{pmatrix}
+            1 & a b\inv x \\
+            0 & 1
+        \end{pmatrix}.
+    \]
+    Hence, the homomorphism from $D$ into $\aut(U)$ is given by
+    \[
+        \diag(a, b) \mapsto (x \mapsto ab\inv x).
+    \]
+    Note that this is the conjugation homomorphism $\phi : D \to \aut(U)$ given by $\phi(d)(u) = dud\inv$ for $d \in D$ and $u \in U$.
+\end{solenum}
+
+\begin{spex}{5.5.23}[Wreath Products]
     Let $K$ and $L$ be groups, let $n$ be a positive integer, let $\rho : K \to S_n$ be a homomorphism and let $H$ be the direct product of $n$ copies of $L$.
 	In \exref{5.1.8}, an injective homomorphism $\psi$ from $S_n$ into $\aut(H)$ was constructed by letting the elements of $S_n$ permute the $n$ factors of $H$.
 	The composition $\psi \circ \rho$ is a homomorphism from $G$ into $\aut(H)$.
-	The \emph{wreath product} of $L$ by $K$ is the semidirect product $H \semidir K$ with respect to this homomorphism and is denoted by $L \wr K$ (this wreath product depends on the choice of permutation representation $\rho$ of $K$--if none is given explicitly, $\rho$ is assumed to be the left regular representation of $K$).
+	The \textbf{wreath product} of $L$ by $K$ is the semidirect product $H \semidir K$ with respect to this homomorphism and is denoted by $L \wr K$.
+    
+    \note{This wreath product depends on the choice of permutation representation $\rho$ of $K$--if none is given explicitly, $\rho$ is assumed to be the left regular representation of $K$.}
     \begin{subexercises}
         \item Assume $K$ and $L$ are finite groups and $\rho$ is the left regular representation of $K$.
 	    Find $|L \wr K|$ in terms of $|K|$ and $|L|$.
         \item Let $p$ be a prime, let $K = L = Z_p$ and let $\rho$ be the left regular representation of $K$.
-	    Prove that $Z_p \wr Z_p$ is a non-Abelian group of order $p^{p+1}$ and is isomorphic to a Sylow $p$-subgroup of $S_{p^2}$. [The $p$ copies of $Z_p$ whose direct product makes up $H$ may be represented by $p$ disjoint $p$-cycles; these are cyclically permuted by $K$.]
+	    Prove that $Z_p \wr Z_p$ is a non-Abelian group of order $p^{p+1}$ and is isomorphic to a Sylow $p$-subgroup of $S_{p^2}$.
+        
+        \hint{The $p$ copies of $Z_p$ whose direct product makes up $H$ may be represented by $p$ disjoint $p$-cycles; these are cyclically permuted by $K$.}
     \end{subexercises}
-\end{exercise}
+\end{spex}
+
+\begin{solenum}
+    \item The left regular representation of $K$ is a homomorphism $\rho : K \to S_{|K|}$.
+    Then $H$ is the direct product of $|K|$ copies of $L$, so $|H| = |L|^{|K|}$.
+    We then have
+    \[
+        |L \wr K| = |H \semidir K| = |H||K| = |L|^{|K|}|K|.
+    \]
+    \item From the above, we know that $|Z_p \wr Z_p| = |Z_p|^{|Z_p|}|Z_p| = p^p \cdot p = p^{p + 1}$.
+    Let $H$ be the direct product of $p$ copies of $Z_p$, and put $K = \gen k \cong Z_p$.
+    Let $H = \gen{h_1} \times \gen{h_2} \times \cdots \times \gen{h_p}$, where $|h_i| = p$ for all $i$.
+    To see that $Z_p \wr Z_p$ is non-Abelian, we show that $k$ does not commute with $h_1$.
+    Let $\rho : K \to S_p$ be the left regular representation of $K$.
+    Then $\rho(k)$ is the $p$-cycle $\cyc{1 2 \cdots p}$.
+    Then $\rho(k)$ permutes the $p$ factors of $H$, so $kh_1k\inv = h_2 \neq h_1$.
+
+    Consider the integers $1, 2, \ldots, p^2$.
+    Split these integers into $p$ blocks of size $p$:
+    \[
+        S_i = \set{(i - 1)p + 1, (i - 1)p + 2, \ldots, ip} \quad \text{for}~ i = 1, 2, \ldots, p.
+    \]
+    Consider the $p$-cycle $\sigma_i$ whose entries are the elements of $S_i$ in increasing order.
+    Then $\sigma_i$ is a $p$-cycle, and the $\sigma_i$ are disjoint for $i = 1, 2, \ldots, p$.
+    Additionally, put
+    \[
+        \tau_i = \cyc{i {p + i} {2p + i} \cdots {(p - 1)p + i}} \quad \text{for}~ i = 1, 2, \ldots, p.
+    \]
+    Then define the map $\phi : Z_p \wr Z_p \to S_{p^2}$ given by
+    \[
+        \phi|_{\gen{h_i}} : h_i \mapsto \sigma_i, \quad \phi|_K : k \mapsto \tau_1 \tau_2 \cdots \tau_p.
+    \]
+    Then $\phi$ is a homomorphism, since $\phi(k)$ permutes the $p$ factors of $H$ in the same way that $k$ permutes the $p$ factors of $H$.
+    To see that this satisfies the semidirect product, we have
+    \[
+        \phi(k)\phi(h_i)\phi(k)\inv = (\tau_1 \tau_2 \cdots \tau_p)\sigma_i(\tau_1 \tau_2 \cdots \tau_p)\inv = (\tau_1 \tau_2 \cdots \tau_p)\sigma_i(\tau_p\inv \tau_{p - 1}\inv \cdots \tau_1\inv).
+    \]
+    Using associativity, we may consider the first middle terms, i.e., $(\tau_p \sigma_i \tau_p\inv)$.
+    Conjugating $\sigma_i$ by $\tau_p$ sends the $p$th entry of $\sigma_i$ to the $p$th entry of $\sigma_{i + 1}$ while fixing all other entries.
+    Conjugating by $\tau_{p - 1}$ sends the $(p - 1)$th entry of $\sigma_i$ to the $(p - 1)$th entry of $\sigma_{i + 1}$ while fixing all other entries.
+    Continuing in this way and conjugating $\sigma_i$ by all remaining $\tau_j$ gives $\sigma_{i + 1}$, where $i + 1$ is taken modulo $p$.
+
+    To see that $\phi$ is injective, note that every element of $Z_p \wr Z_p$ is of the form $hk'$ for some $h \in H$ and $k' \in K$.
+    Suppose $\phi(hk') = 1$.
+    Then $\phi(h)\phi(k') = 1$, hence $\phi(k') = \phi(h)\inv$.
+    Since $\phi(h)$ permutes elements within each block $S_i$, so does $\phi(h)\inv$.
+    It follows that $\phi(k')$ must fix every block $S_i$.
+    However, $\phi(k')$ acts as a $p$-cycle on the $p$ blocks, so $\phi(k')$ fixes all blocks if and only if $k' = 1$.
+    Then $\phi(h) = 1$.
+    Since the $\sigma_i$ are pairwise disjoint cycles of length $p$, $\phi(h) = 1$ if and only if $h = 1$.
+
+    Calculating the order of a Sylow $p$-subgroup of $S_{p^2}$, we have $|S_{p^2}| = p^2!$.
+    Using the formula in \exref{0.2.8}, the largest power of $p$ dividing $p^2!$ is
+    \[
+        \sum_{i=1}^m \floor*{\frac{p^2}{p^i}} = \floor*{\frac{p^2}{p}} + \floor*{\frac{p^2}{p^2}} + \cdots + \floor*{\frac{p^2}{p^m}}.
+    \]
+    Since $p^2/p^i < 1$ for all $i > 2$, then $\floor{p^2/p^i} = 0$ for all $i > 2$.
+    Hence, the largest power of $p$ dividing $p^2!$ is $p + 1$, and the order of a Sylow $p$-subgroup of $S_{p^2}$ is $p^{p + 1}$.
+    Since $|\phi(Z_p \wr Z_p)| = |Z_p \wr Z_p| = p^{p + 1}$, we have that $\phi(Z_p \wr Z_p)$ is a Sylow $p$-subgroup of $S_{p^2}$.
+\end{solenum}
 
 \begin{exercise}{5.5.24}
     Let $n$ be an integer $> 1$.
-	Prove the following classification: every group of order $n$ is Abelian if and only if $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}$, where $p_1, \ldots, p_r$ are distinct primes, $\alpha_i = 1$ or $2$ for all $i \in \set{1, \ldots, r}$ and $p_i$ does not divide $p_j^{\alpha_j} - 1$ for all $i$ and $j$. [See \exref{4.5.56}.]
+	Prove the following classification: every group of order $n$ is Abelian if and only if $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}$, where $p_1, \ldots, p_r$ are distinct primes, $\alpha_i = 1$ or $2$ for all $i \in \set{1, \ldots, r}$ and $p_i$ does not divide $p_j^{\alpha_j} - 1$ for all $i$ and $j$.
+    
+    \hint{See \exref{4.5.56}.}
 \end{exercise}
+
+\begin{sol}
+    \leavevmode
+    
+    \rightimp Suppose some $\alpha_i \geq 3$.
+    Then there exists a non-Abelian group of order $p_i^3$ by the classification of groups of order $p^3$.
+    Then the direct product of this group with the cyclic groups of order $p_j^{\alpha_j}$ for $j \neq i$ is a non-Abelian group of order $n$.
+    Hence, $\alpha_i \leq 2$ for all $i$.
+
+    Now suppose there exist $i$ and $j$ such that $p_i$ divides $p_j^{\alpha_j} - 1$.
+    By Proposition 4.17, the automorphism group of $Z_{p_j^{\alpha_j}}$ has order $p_j^{\alpha_j - 1}(p_j - 1)$.
+    We have two cases for $\alpha_j$:
+    \begin{itemize}
+        \item If $\alpha_j = 1$, then $p_j^{\alpha_j} - 1 = p_j - 1$, and $p_i$ divides $p_j - 1$.
+        Using Cauchy's theorem, we have that $\aut(Z_{p_j})$ has an element of order $p_i$.
+        Then we may form the non-Abelian group $Z_{p_j} \semidir Z_{p_i}$ of order $p_jp_i$.
+        \item If $\alpha_j = 2$, then $p_i \mid p_j^2 - 1$.
+        Note that $Z_{p_j} \times Z_{p_j}$ has automorphism group isomorphic to $\gl_2(\fbb_{p_j})$.
+        Then $|\aut(Z_{p_j} \times Z_{p_j})| = |\gl_2(\fbb_{p_j})| = (p_j^2 - 1)(p_j^2 - p_j) = p_j(p_j - 1)^2(p_j + 1)$, which is divisible by $p_i$.
+        Again, we may use Cauchy's theorem to find an element of order $p_i$ in $\aut(Z_{p_j} \times Z_{p_j})$, and form the non-Abelian group $(Z_{p_j} \times Z_{p_j}) \semidir Z_{p_i}$ of order $p_j^2p_i$.
+    \end{itemize}
+    In either case, we may form a direct product of the non-Abelian group with the cyclic groups of order $p_k^{\alpha_k}$ for $k \neq i, j$ to obtain a non-Abelian group of order $n$.
+
+    \leftimp We proceed by induction on $|G| = n$.
+    If $r = 1$, then $n = p$ or $p^2$.
+    Since any group of order $p$ or $p^2$ is Abelian, we are done.
+    If $r = 2$, then $n = p_1^{\alpha_1}p_2^{\alpha_2}$, where $\alpha_i = 1$ or $2$ for $i = 1, 2$.
+    If $P_i \in \syl_{p_i}(G)$, then $n_{p_i} \equiv 1 \bmod p_i$ and $n_{p_i} \mid p_j^{\alpha_j}$ for $j \neq i$.
+    Since $p_i$ does not divide $p_j^{\alpha_j} - 1$, we have that $n_{p_i} = 1$ for $i = 1, 2$.
+    Hence, $P_1$ and $P_2$ are normal in $G$, and $G = P_1 \times P_2$ is Abelian.
+
+    Suppose $n > p^2$ with $r \geq 3$, and assume the result is true for all integers less than $n$ with the same property on their prime factorization.
+    Let $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}$, where $\alpha_i = 1$ or $2$ for all $i$, and $p_i$ does not divide $p_j^{\alpha_j} - 1$ for all $i$ and $j$.
+    Let $G$ be a group of order $n$.
+    Note that every proper subgroup of $G$ has order less than $n$, and hence is Abelian by the induction hypothesis.
+    By \exref{4.5.56}, we know that $G$ is solvable, hence $G' < G$ and $G'$ is Abelian.
+
+    We now claim that $G'$ is a $p$-group for some prime $p$.
+    Suppose not, and let $q$ be a prime dividing $|G'|$.
+    Since $G'$ is Abelian, it has a unique Sylow $q$-subgroup $Q$.
+    Since $Q$ is unique, then $Q \cha G' \nsub G$.
+    Then $Q \nsub G$ so that $G/Q$ is a proper quotient of $G$.
+    Since $G/Q$ is a proper quotient of $G$, it is Abelian by the induction hypothesis.
+    Then $G' \leq Q$, which contradicts that $G'$ has multiple prime factors.
+    Hence, $G'$ is a $p$-group for some prime $p$.
+
+    Now for each prime $p_i$ dividing $|G|$, let $P_i \in \syl_{p_i}(G)$, and consider $G'P_i$.
+    Then $|G'P_i|$ divides $|G'|p_i^{\alpha_i}$, which is strictly less than $|G|$ since $r \geq 3$.
+    By the induction hypothesis, $G'P_i$ is Abelian.
+    Since $G'P_i/G'$ is a subgroup of the Abelian group $G/G'$, then $G'P_i/G' \nsub G/G'$, hence $G'P_i \nsub G$ by the Correspondence Theorem.
+    Since $G'P_i$ is Abelian, $P_i$ is its unique Sylow $p_i$-subgroup, so $P_i \cha G'P_i \nsub G$.
+    Then $P_i \nsub G$ for all $i$, and $G = P_1 \times P_2 \times \cdots \times P_r$ is Abelian.
+\end{sol}
 
 \begin{exercise}{5.5.25}
     Let $H(\fbb_p)$ be the Heisenberg group over the finite field $\fbb_p = \zbb/p\zbb$ (cf. \exref{5.4.20}).
 	Prove that $H(\fbb_2) \cong D_8$, and that $H(\fbb_p)$ has exponent $p$ and is isomorphic to the first non-Abelian group in Example 7.
 \end{exercise}
+
+\begin{sol}
+    That $H(\fbb_2) \cong D_8$ follows from \exref{2.4.12}.
+    Using the formulation in \exref{1.4.11}, we know that for any $(a, b, c) \in H(\fbb_p)$, then
+    \[
+        (a, b, c)^p = \left(pa, \frac{p(p - 1)ac}{2} + pb, pc\right) = (0, 0, 0) \in H(\fbb_p),
+    \]
+    showing that $H(\fbb_p)$ has exponent $p$ since $p$ is an odd prime. Finally, to see that $H(\fbb_p)$ is isomorphic to the given example, consider the matrices
+    \[
+        X = (1, 0, 0), \quad A = (0, 1, 0), \quad B = (0, 0, 1).
+    \]
+    Since $H(\fbb_p)$ has exponent $p$, then $X^p = A^p = B^p = 1$.
+    We also have the following relations:
+    \begin{align*}
+        X A X\inv &= (1, 0, 0)(0, 1, 0)(-1, 0, 0) = (0, 1, 1) = AB, \\
+        X B X\inv &= (1, 0, 0)(0, 0, 1)(-1, 0, 0) = (0, 0, 1) = B, \\
+        AB &= (0, 1, 0)(0, 0, 1) = (0, 1, 1) = (0, 0, 1)(0, 1, 0) = BA.
+    \end{align*}
+    Recall that $(Z_p \times Z_p) \semidir Z_p$ has presentation
+    \[
+        \gen{x, a, b \mid x^p = a^p = b^p = 1, ab = ba, xax\inv = ab, xbx\inv = b}.
+    \]
+    The map $\phi : H(\fbb_p) \to (Z_p \times Z_p) \semidir Z_p$ given by $\phi(X) = x$, $\phi(A) = a$, and $\phi(B) = b$ is clearly a surjective homomorphism, and since $|H(\fbb_p)| = p^3 = |(Z_p \times Z_p) \semidir Z_p|$, we have that $\phi$ is an isomorphism.
+\end{sol}
