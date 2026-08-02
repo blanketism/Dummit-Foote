@@ -208,13 +208,14 @@
 	Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
 \end{spex}
 
-\begin{solitem}[spsol]
-    \item [\rightimp] Suppose $(m, i) = k > 1$.
+\begin{soliff}[spsol]
+    \rightimp Suppose $(m, i) = k > 1$.
 	If $i > m$, replace $i$ with $i \bmod m$ since $\sigma^i = \sigma^{i \bmod m}$.
 	Then $i = k\ell$ for $\ell \in \zp$.
 	It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$.
 	Hence, $\sigma^i$ is not an $m$-cycle.
-    \item [\leftimp] Suppose that $(m, i) = 1$.
+    
+    \leftimp Suppose that $(m, i) = 1$.
 	Denote $x_m \equiv x \bmod m$.
 	We claim that the integers
     \[
@@ -230,7 +231,7 @@
     	\sigma^i = (1\ (1 + i)_m\ (1 + 2i)_m\ \ldots\ (1 + (m - 1)i)_m).
     \]
     Thus, $\sigma^i$ is an $m$-cycle.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{1.3.12}
     \begin{subexercises}
@@ -266,15 +267,16 @@
     Show that an element has order 2 in $S_n$ if and only if its cycle decomposition is a product of commuting 2-cycles.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = 2$.
+\begin{soliff}
+    \rightimp Let $\sigma \in S_n$ with $\abs\sigma = 2$.
 	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
 	Since $\sigma \neq \id$ and $\sigma^2 = 1$, $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$.
 	Then $m = 2$, and the cycle is a 2-cycle.
-    \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $\cyc{a_1 b_1}\cyc{a_2 b_2} \ldots \cyc{a_k b_k}$.
+
+    \leftimp Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $\cyc{a_1 b_1}\cyc{a_2 b_2} \ldots \cyc{a_k b_k}$.
 	Since each 2-cycle has order 2, and the 2-cycles commute, $\sigma^2 = \id$.
 	Because $\sigma \neq \id$, then $\abs\sigma = 2$.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{1.3.14}
     Let $p$ be a prime.
@@ -282,23 +284,22 @@
 	Show by an explicit example that this need not be the case if $p$ is not prime.
 \end{exercise}
 
-\begin{sol}
-    \leavevmode
-    \begin{itemize}
-        \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = p$.
+\begin{soliff}
+    \rightimp Let $\sigma \in S_n$ with $\abs\sigma = p$.
 	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
 	By \exref{1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$.
 	Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$.
 	Since $p$ is prime, $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
-        \item [\leftimp] Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle.
+
+    \leftimp Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle.
 	Since the cycles are disjoint, they commute.
 	Moreover, $\tau_i^t$ is a non-trivial $p$-cycle for $t < p$ by \exref{1.3.11}.
 	Then $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$ is a product of non-trivial $p$-cycles for $t < p$, so that $\sigma^t \neq 1$.
 	However, $\sigma^p = \tau_1^p\tau_2^p \ldots \tau_k^p = 1$, so that $\abs\sigma = p$.
-    \end{itemize}
+
     For a counterexample when $p$ is not prime, consider $\sigma = \cyc{1 2 3}\cyc{4 5}$ in $S_5$.
 	Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
-\end{sol}
+\end{soliff}
 
 \begin{exercise}{1.3.15}
     Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.

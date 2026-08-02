@@ -112,12 +112,13 @@ Let $F$ be a field and let $n \in \zp$.
     Show that $\gl_n(F)$ is a finite group if and only if $F$ has a finite number of elements.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] If $\gl_n(F)$ is finite, the subset $\set{\alpha I \mid \alpha\in F\unt}$ must also be finite, which implies that $F$ has a finite number of elements.
-    \item [\leftimp] Suppose $|F| = q$.
+\begin{soliff}
+    \rightimp If $\gl_n(F)$ is finite, the subset $\set{\alpha I \mid \alpha\in F\unt}$ must also be finite, which implies that $F$ has a finite number of elements.
+
+    \leftimp Suppose $|F| = q$.
 	Then an $n \times n$ matrix over $F$ has $q^{n^2}$ possible entries.
 	Since $\gl_n(F)$ is a subset of the set of all $n \times n$ matrices over $F$, it follows that $\gl_n(F)$ is finite.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{1.4.6}
     If $|F| = q$ is finite, prove that $|\gl_n(F)| < q^{n^2}$.

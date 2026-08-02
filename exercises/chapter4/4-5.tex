@@ -1129,26 +1129,24 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Deduce that two elements in the center of $P$ are conjugate in $G$ if and only if they are conjugate in $N_G(P)$. (A subset $U$ of $P$ is normal in $P$ if $N_P(U) = P$.)
 \end{exercise}
 
-\begin{sol}
-	\leavevmode
-	\begin{itemize}
-		\item[\rightimp] Suppose $U$ is conjugate to $W$ in $G$.
+\begin{soliff}
+	\rightimp Suppose $U$ is conjugate to $W$ in $G$.
 	Then there exists $g \in G$ such that $gUg\inv = W$, or $g\inv Wg = U$.
 	Taking some $p \in P$ and some $gpg\inv \in gPg\inv$, then
-		\[
-			gpg\inv W gp\inv g\inv = gpUp\inv g\inv = gUg\inv = W
-		\]
-		where $pUp\inv = U$ since $U \nsub P$.
+	\[
+		gpg\inv W gp\inv g\inv = gpUp\inv g\inv = gUg\inv = W
+	\]
+	where $pUp\inv = U$ since $U \nsub P$.
 
-		Since $gPg\inv$ is a $p$-group, and $W \nsub P$, $P \leq N_G(W)$.
+	Since $gPg\inv$ is a $p$-group, and $W \nsub P$, $P \leq N_G(W)$.
 	Hence, $P \in \syl_p(N_G(W))$.
 	By the conjugacy part of Sylow's Theorem, there exists some $n \in N_G(W)$ such that $nPn\inv = gPg\inv$.
 	Then $n\inv g \in N_G(P)$ since $n\inv gPg\inv gn\inv = P$, so that $n\inv gUg\inv n = n\inv Wn = W$.
 	Therefore, $U$ is conjugate to $W$ in $N_G(P)$.
-		\item[\leftimp] If $U$ is conjugate to $W$ in $N_G(P)$, then there exists some $n \in N_G(P)$ such that $nUn\inv = W$.
+
+	\leftimp If $U$ is conjugate to $W$ in $N_G(P)$, then there exists some $n \in N_G(P)$ such that $nUn\inv = W$.
 	Since $N_G(P) \leq G$, $U$ is conjugate to $W$ in $G$ as well because $n \in G$.
-	\end{itemize}
-\end{sol}
+\end{soliff}
 
 \begin{exercise}{4.5.51}
 	Let $P$ be a Sylow $p$-subgroup of $G$ and let $M$ be any subgroup of $G$ which contains $N_G(P)$.

@@ -208,8 +208,8 @@
 	Prove that $H \cup K$ is a subgroup if and only if either $H \subseteq K$ or $K \subseteq H$.
 \end{exercise}
 
-\begin{solitem}
-    \item[\rightimp] Suppose $H \cup K$ is a subgroup.
+\begin{soliff}
+    \rightimp Suppose $H \cup K$ is a subgroup.
 	If $H \subseteq K$, then we are done.
 	Suppose that $H \nsubseteq K$.
 	Then there exists some $h \in H$ such that $h \notin K$.
@@ -220,9 +220,10 @@
 	It must be that $hk \in H$.
 	Since $h \in H$, $h\inv \in H$ as $H \leq G$.
 	Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
-    \item[\leftimp] If $H \subseteq K$, then $H \cup K = K \leq G$.
+
+    \leftimp If $H \subseteq K$, then $H \cup K = K \leq G$.
 	Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
-\end{solitem}
+\end{soliff}
 
 \begin{spex}{2.1.9}
     Let $G = \gl_n(F)$, where $F$ is any field.

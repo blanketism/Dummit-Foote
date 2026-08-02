@@ -49,73 +49,69 @@ Let $G$ be a group.
 	A similar argument shows that $B \subseteq A$, hence $A = B$ so that $\phi$ is injective.
 	Therefore, $\phi$ is a bijection.
     \begin{enumerate}
-        \item 
-        \begin{itemize}
-            \item[\rightimp] Suppose $A \leq B$ for $A, B \in \acal$.
-	Let $\bar a \in \bar A$ for some $a \in A$.
-	Since $A \leq B$, $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
-            \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \acal$.
-	Let $a \in A$ for some $a \in A$.
-	Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$.
-	It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$.
-	Therefore, $A \leq B$.
-        \end{itemize}
+        \item \rightimp Suppose $A \leq B$ for $A, B \in \acal$.
+        Let $\bar a \in \bar A$ for some $a \in A$.
+        Since $A \leq B$, $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
+        
+        \leftimp Suppose $\bar A \leq \bar B$ for $A, B \in \acal$.
+        Let $a \in A$ for some $a \in A$.
+        Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$.
+        It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$.
+        Therefore, $A \leq B$.
         \item Define the map
         \[
         	\psi : B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A
         \]
         for $b \in B$.
-	To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$.
-	Then $b_2\inv b_1 \in A$, hence $\bar{b_2\inv b_1} \in \bar A$.
-	Then $\bar{b_1} bar A = \bar{b_2} \bar A$, hence $\psi(b_1A) = \psi(b_2A)$.
+        To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$.
+        Then $b_2\inv b_1 \in A$, hence $\bar{b_2\inv b_1} \in \bar A$.
+        Then $\bar{b_1} \bar A = \bar{b_2} \bar A$, hence $\psi(b_1A) = \psi(b_2A)$.
 
         Suppose $bA \in \ker\psi$.
-	Then $\psi(bA) = \bar A$ so that $\bar b \bar A = \bar A$.
-	Then $\bar b \in \bar A$, hence $bN \in A/N$, and $b \in A$.
-	Then $bA = A$ which is the identity in $B/A$ so that $\ker\psi = 1$, hence $\psi$ is injective.
-	To show that $\psi$ is surjective, let $\bar b \bar A \in \bar B/\bar A$ for $\bar b \in B$.
-	By definition of $\bar B$, there exists $b \in B$ such that $\bar b = bN$.
-	Then $\psi(bA) = \bar b \bar A$, hence $\psi$ is surjective.
-	Lastly, for any $b_1A, b_2A \in B/A$,
+        Then $\psi(bA) = \bar A$ so that $\bar b \bar A = \bar A$.
+        Then $\bar b \in \bar A$, hence $bN \in A/N$, and $b \in A$.
+        Then $bA = A$ which is the identity in $B/A$ so that $\ker\psi = 1$, hence $\psi$ is injective.
+        To show that $\psi$ is surjective, let $\bar b \bar A \in \bar B/\bar A$ for $\bar b \in B$.
+        By definition of $\bar B$, there exists $b \in B$ such that $\bar b = bN$.
+        Then $\psi(bA) = \bar b \bar A$, hence $\psi$ is surjective.
+        Lastly, for any $b_1A, b_2A \in B/A$,
         \[
         	\psi(b_1A \cdot b_2A) = \psi(b_1b_2A) = \bar{b_1b_2} \bar A = \bar b_1 \bar b_2 \bar A = \psi(b_1A) \cdot \psi(b_2A)
         \]
         so that $\psi$ is a homomorphism.
-	Therefore, $\psi$ is an isomorphism and $|B : A| = |B/A| = |\bar B / \bar A| = |\bar B : \bar A|$.
+        Therefore, $\psi$ is an isomorphism and $|B : A| = |B/A| = |\bar B / \bar A| = |\bar B : \bar A|$.
         \item Let $\bar x \in \bar{\gen{A, B}}$.
-	Then $x \in \gen{A, B}$ so that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$.
-	It follows that
+        Then $x \in \gen{A, B}$ so that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$.
+        It follows that
         \[
         	\bar x = \bar{x_1x_2} \ldots \bar{x_n}
         \]
         where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$, hence $\bar x \in \gen{\bar A, \bar B}$, and $\bar{\gen{A, B}} \subseteq \gen{\bar A, \bar B}$. 
         
         Conversely, let $\bar x \in \gen{\bar A, \bar B}$.
-	Then $\bar x = \bar{x_1x_2} \ldots \bar{x_n}$ where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$.
-	It follows that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$, hence $x \in \gen{A, B}$ so that $\bar x \in \bar{\gen{A, B}}$.
-	Therefore, $\bar{\gen{A, B}} = \gen{\bar A, \bar B}$.
+        Then $\bar x = \bar{x_1x_2} \ldots \bar{x_n}$ where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$.
+        It follows that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$, hence $x \in \gen{A, B}$ so that $\bar x \in \bar{\gen{A, B}}$.
+        Therefore, $\bar{\gen{A, B}} = \gen{\bar A, \bar B}$.
         \item Let $\bar x \in \bar{A \cap B}$.
-	Then $x \in A \cap B$ so that $x \in A$ and $x \in B$, hence $\bar x \in \bar A$ and $\bar x \in \bar B$, so that $\bar x \in \bar A \cap \bar B$.
-	It follows that $\bar{A \cap B} \subseteq \bar A \cap \bar B$.
-        
+        Then $x \in A \cap B$ so that $x \in A$ and $x \in B$, hence $\bar x \in \bar A$ and $\bar x \in \bar B$, so that $\bar x \in \bar A \cap \bar B$.
+        It follows that $\bar{A \cap B} \subseteq \bar A \cap \bar B$.
+            
         Conversely, let $\bar x \in \bar A \cap \bar B$.
-	Then $\bar x \in \bar A$ and $\bar x \in \bar B$, so that $x \in A$ and $x \in B$, hence $x \in A \cap B$ so that $\bar x \in \bar{A \cap B}$.
-	Therefore, $\bar{A \cap B} = \bar A \cap \bar B$.
-        \item 
-        \begin{itemize}
-            \item[\rightimp] Suppose $A \nsub G$ for some $A \in \acal$.
-	Let $\bar g \in \bar G$ and $\bar a \in \bar A$ for some $g \in G$ and $a \in A$.
-	Note that
-            \[
-            	(\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}
-            \]
-            Since $A \nsub G$, $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$.
-	It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
-            \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \acal$.
-	Let $g \in G$ and $a \in A$.
-	Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, $gag\inv N \in A/N$, hence $gag\inv \in A$.
-	It follows that $A \nsub G$. \qedhere
-        \end{itemize}
+        Then $\bar x \in \bar A$ and $\bar x \in \bar B$, so that $x \in A$ and $x \in B$, hence $x \in A \cap B$ so that $\bar x \in \bar{A \cap B}$.
+        Therefore, $\bar{A \cap B} = \bar A \cap \bar B$.
+        \item \rightimp Suppose $A \nsub G$ for some $A \in \acal$.
+	    Let $\bar g \in \bar G$ and $\bar a \in \bar A$ for some $g \in G$ and $a \in A$.
+	    Note that
+        \[
+            (\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}
+        \]
+        Since $A \nsub G$, $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$.
+	    It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
+        
+        \leftimp Suppose $\bar A \nsub \bar G$ for some $A \in \acal$.
+        Let $g \in G$ and $a \in A$.
+        Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, $gag\inv N \in A/N$, hence $gag\inv \in A$.
+        It follows that $A \nsub G$. \qedhere
     \end{enumerate}
 \end{sol}
 

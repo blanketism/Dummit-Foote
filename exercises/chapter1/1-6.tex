@@ -63,22 +63,23 @@
 
 \begin{sol}
     Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
-    \begin{itemize}
-        \item [\rightimp] Suppose that $G$ is Abelian.
-        Given $h_1, h_2 \in H$, there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
-        Then
-        \[
-            h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1,
-        \]
-        so that $H$ is Abelian.
-        \item [\leftimp] Suppose that $H$ is Abelian.
-        Given $g_1, g_2 \in G$, there exist $h_1, h_2 \in H$ such that $\phi\inv(h_1) = g_1$ and $\phi\inv(h_2) = g_2$.
-        Then
-        \[
-            g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1,
-        \]
-        so that $G$ is Abelian.
-    \end{itemize}
+
+    \rightimp Suppose that $G$ is Abelian.
+    Given $h_1, h_2 \in H$, there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
+    Then
+    \[
+        h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1,
+    \]
+    so that $H$ is Abelian.
+
+    \leftimp Suppose that $H$ is Abelian.
+    Given $g_1, g_2 \in G$, there exist $h_1, h_2 \in H$ such that $\phi\inv(h_1) = g_1$ and $\phi\inv(h_2) = g_2$.
+    Then
+    \[
+        g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1,
+    \]
+    so that $G$ is Abelian.
+    
     Let $\phi : G \to H$ be a homomorphism.
 	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
 	Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
@@ -280,13 +281,13 @@
     \]
     so that $g_1\inv \in \ker\phi$.
 	Therefore, $\ker\phi$ is a subgroup of $G$.
-    \begin{itemize}
-        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$.
+
+    \rightimp If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$.
 	Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
-        \item [\leftimp] If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$.
+
+    \leftimp If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$.
 	Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$.
-	Therefore, $\phi$ is injective. \qedhere
-    \end{itemize}
+	Therefore, $\phi$ is injective.
 \end{sol}
 
 \begin{exercise}{1.6.15}
@@ -329,20 +330,21 @@
 	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Suppose $\phi : g \mapsto g\inv$ is a homomorphism.
+\begin{soliff}
+    \rightimp Suppose $\phi : g \mapsto g\inv$ is a homomorphism.
 	Then for $g, h \in G$, we have
     \[
         gh = (h\inv g\inv)\inv = \phi(h\inv g\inv) = \phi(h\inv)\phi(g\inv) = hg,
     \]
     so $G$ is Abelian.
-    \item [\leftimp] Suppose $G$ is Abelian.
+    
+    \leftimp Suppose $G$ is Abelian.
 	Then for $g, h \in G$, we have
     \[
     	\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),
     \]
     so that $\phi$ is a homomorphism.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{1.6.18}
     Let $G$ be any group.

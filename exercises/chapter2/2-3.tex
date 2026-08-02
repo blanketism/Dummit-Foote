@@ -431,46 +431,43 @@
 \end{spex}
 
 \begin{solenum}[spsol]
-    \item 
-    \begin{itemize}
-        \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$.
+    \item \rightimp Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$.
 	Assume, by way of contradiction, that $d \neq 1$.
 	Then there are $s, t \in \zbb$ such that $n = ds$ and $a = dt$, so that $as = dts = nt$.
 	Let $Z_n = \gen x$.
 	Then
-        \[
-        	\sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1
-        \]
-        If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism.
+    \[
+        \sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1
+    \]
+    If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism.
 	Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, $s = n$ so that $d = 1$.
-        \item [\leftimp] Suppose that $(a, n) = 1$.
+    
+    \leftimp Suppose that $(a, n) = 1$.
 	By the previous exercise, then $\sigma_a$ is a surjective map.
 	Since $Z_n$ is finite, $\sigma_a$ is also bijective.
 	Moreover,
-        \[
-        	\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)
-        \]
-        for some $x, y \in Z_n$.
+    \[
+        \sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)
+    \]
+    for some $x, y \in Z_n$.
 	Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
-    \end{itemize}
     \item
-    \begin{itemize}
-        \item [\rightimp] Suppose $\sigma_a = \sigma_b$.
+    \rightimp Suppose $\sigma_a = \sigma_b$.
 	Let $Z_n = \gen x$.
 	Then
-        \[
-        	x^a = \sigma_a(x) = \sigma_b(x) = x^b
-        \]
-        so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
-        \item [\leftimp] Suppose $a \equiv b \bmod n$.
+    \[
+        x^a = \sigma_a(x) = \sigma_b(x) = x^b
+    \]
+    so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
+
+    \leftimp Suppose $a \equiv b \bmod n$.
 	Then there exists some integer $k$ such that $a - b = nk$.
 	Let $Z_n = \gen x$.
 	For any $x^m \in Z_n$, we have
-        \[
-        	\sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)
-        \]
-        so that $\sigma_a = \sigma_b$.
-    \end{itemize}
+    \[
+        \sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)
+    \]
+    so that $\sigma_a = \sigma_b$.
     \item Let $Z_n = \gen x$ and let $\phi \in \aut(Z_n)$.
 	Since $Z_n$ is cyclic, there exists some integer $a$ such that $\phi(x) = x^a$.
 	For any $x^m \in Z_n$, we have

@@ -754,15 +754,13 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{solenum}
-    \item
-    \begin{itemize}
-        \item[\rightimp] If $N \nsub G$, then $gNg\inv \subseteq N$ holds true for all $g \in G$.
-        \item[\leftimp] Suppose $gNg\inv \subseteq N$ for every $g \in G$, and let $n \in N$.
+    \item \rightimp If $N \nsub G$, then $gNg\inv \subseteq N$ holds true for all $g \in G$.
+    
+    \leftimp Suppose $gNg\inv \subseteq N$ for every $g \in G$, and let $n \in N$.
 	For some $g \in G$, we have $g\inv Ng \subseteq N$ so that $g\inv ng \in N$.
 	Then $n = g(g\inv ng)g\inv \in gNg\inv$.
 	Hence, $N \subseteq gNg\inv$, and $N = gNg\inv$.
 	Therefore, $N \nsub G$.
-    \end{itemize}
     \item Let
     \[
     	n = 
@@ -830,11 +828,9 @@ Let $G$ and $H$ be groups.
     \]
     for every $g \in G$ and $gSg\inv \subseteq N$, it follows that $gng\inv \in N$.
     Hence, $gNg\inv \subseteq N$ for every $g \in G$, so that $N \nsub G$.
-    \item
-    \begin{itemize}
-        \item[\rightimp] Immediate from the definition of a normal subgroup.
-        \item[\leftimp] Let $S = \gen x$, and use part (c).
-    \end{itemize}
+    \item \rightimp Immediate from the definition of a normal subgroup.
+
+    \leftimp Let $S = \gen x$, and use part (c).
     \item Let $S = \set{g \in G \mid |g| = n}$.
 	Let $N = \gen S$.
 	If $S$ is empty, then $N$ is again trivial, hence is normal.
@@ -849,29 +845,27 @@ Let $G$ and $H$ be groups.
 	Deduce that $N_G(N) = \set{g \in G \mid gNg\inv  \subseteq N}$.
 \end{exercise}
 
-\begin{sol}
-    \leavevmode
-    \begin{itemize}
-        \item[\rightimp] Suppose $gNg\inv \subseteq N$.
+\begin{soliff}
+    \rightimp Suppose $gNg\inv \subseteq N$.
 	Let $\phi : N \to gNg\inv$ be the conjugation map.
 	By \exref{1.7.17}, we know that this map is defined to be an isomorphism, hence $|gNg\inv| = |N|$.
 	Since $gNg\inv \subseteq N$ and both sets are finite with the same cardinality, it follows that $gNg\inv = N$.
-        \item[\leftimp] Immediate.
-    \end{itemize}
+
+    \leftimp Immediate.
 
     By the previous part, we have that $g \in N_G(N)$ if and only if $gNg\inv = N$, which holds if and only if $gNg\inv \subseteq N$.
 	Then $N_G(N) = \set{ g \in G \mid gNg\inv  \subseteq N }$.
-\end{sol}
+\end{soliff}
 
 \begin{exercise}{3.1.28}
     Let $N$ be a \emph{finite} subgroup of a group $G$ and assume $N = \langle S \rangle$ for some subset $S$ of $G$.
 	Prove that an element $g \in G$ normalizes $N$ if and only if $gSg\inv  \subseteq N$.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Immediate, since $gSg\inv \subseteq gNg\inv = N$ because $g \in N_G(N)$.
+\begin{soliff}
+    \rightimp Immediate, since $gSg\inv \subseteq gNg\inv = N$ because $g \in N_G(N)$.
 
-    \item [\leftimp] If $S$ is empty, then $N$ is trivial, hence is normal.
+    \leftimp If $S$ is empty, then $N$ is trivial, hence is normal.
 	Otherwise, suppose $S$ is nonempty, and let $n \in N$.
 	Since $N = \gen S$,
     \[
@@ -884,16 +878,17 @@ Let $G$ and $H$ be groups.
     for every $g \in G$ and $gSg\inv \subseteq N$, it follows that $gng\inv \in N$.
     Thus, $gNg\inv \subseteq N$.
 	Since $N$ is finite, we may use the previous exercise to conclude that $g \in N_G(N)$.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{3.1.29}
     Let $N$ be a \emph{finite} subgroup of $G$ and suppose $G = \langle T \rangle$ and $N = \langle S \rangle$ for some subsets $S$ and $T$ of $G$.
 	Prove that $N$ is normal in $G$ if and only if $tSt\inv  \subseteq N$ for all $t \in T$.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Immediate, since $gNg\inv = N$ for every $g \in G$, so $tSt\inv \subseteq N$.
-    \item [\leftimp] Let $S$ and $T$ be nonempty subsets of $G$, and let $g \in G$.
+\begin{soliff}
+    \rightimp Immediate, since $gNg\inv = N$ for every $g \in G$, so $tSt\inv \subseteq N$.
+
+    \leftimp Let $S$ and $T$ be nonempty subsets of $G$, and let $g \in G$.
 	By assumption, $g \in \gen T$ implies that
     \[
     	g = t_1t_2 \dots t_k, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k.
@@ -922,25 +917,26 @@ Let $G$ and $H$ be groups.
     \]
     Hence, $gsg\inv \in N$ so that $gSg\inv \subseteq N$.
 	Induction shows that this is true for every $g \in G$, and by finiteness of $N$, we use the result from the previous exercise to conclude that $N \nsub G$.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{3.1.30}
     Let $N \le G$ and let $g \in G$.
 	Prove that $gN = Ng$ if and only if $g \in N_G(N)$.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Suppose $gN = Ng$, and let $n \in N$.
+\begin{soliff}
+    \rightimp Suppose $gN = Ng$, and let $n \in N$.
     Then there exists $n' \in N$ such that $gn = n'g$.
     Then $gng\inv = n' \in N$, hence $gNg\inv \subseteq N$.
     Similarly, there exists $n'' \in N$ such that $ng = gn''$, so that $n = gn''g\inv \in gNg\inv$, hence $N \subseteq gNg\inv$.
     Then $gNg\inv = N$, so that $g \in N_G(N)$.
-    \item [\leftimp] Suppose $g \in N_G(N)$.
+
+    \leftimp Suppose $g \in N_G(N)$.
 	Let $n \in N$.
 	Since $n \in gNg\inv$, there exists $n' \in N$ such that $n = gn'g\inv$.
 	Then $ng = gn'$, hence $n \in gN$, and $Ng \subseteq gN$.
 	By symmetry, we have $gN \subseteq Ng$, hence $gN = Ng$.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{3.1.31}
     Prove that if $H \le G$ and $N$ is a normal subgroup of $H$ then $H \le N_G(N)$.
@@ -1164,16 +1160,16 @@ Let $G$ and $H$ be groups.
 	Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x\inv y\inv xy \in N$. (The element $x\inv y\inv xy$ is called the \emph{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
 \end{spex}
 
-\begin{sol}[spsol]
+\begin{soliff}[spsol]
     \rightimp Suppose $\bar{xy} = \bar{yx}$.
 	Then $xyN = yxN$.
 	Then there exists $n, n' \in N$ such that $xyn = yxn'$, or $x\inv y\inv xy = n'n\inv$ so that $x\inv y\inv xy \in N$.
 
-    \noindent \leftimp Suppose $x\inv y\inv xy\in N$.
+    \leftimp Suppose $x\inv y\inv xy\in N$.
 	Then there is $n \in N$ such that $x\inv y\inv xy = n$, or $xy = yxn$.
 	Then $a \in xyN$ if and only if $a = xyn'$ for some $n' \in N$ if and only if $a = yxnn'$ if and only if $a \in yxN$.
 	Hence, $\bar{xy} = \bar{yx}$.
-\end{sol}
+\end{soliff}
 
 \begin{spex}{3.1.41}
     Let $G$ be a group.

@@ -83,18 +83,17 @@
 	Deduce that $G$ is of exponent $n_1$.
 \end{exercise}
 
-\begin{sol}
-    \leavevmode
-    \begin{itemize}
-        \item[\rightimp] Let $g = (g_1, g_2, \ldots, g_t) \in G$ have order $m$.
+\begin{soliff}
+    \rightimp Let $g = (g_1, g_2, \ldots, g_t) \in G$ have order $m$.
 	Then $m = \lcm(|g_1|, |g_2|, \ldots, |g_t|)$, so $|g_i| \mid m$ for all $i$.
 	Since $G$ is of type $(n_1, n_2, \ldots, n_t)$, we have $|g_i| \mid n_i$ for all $i$, so $m$ divides $\lcm(n_1, n_2, \ldots, n_t) = n_1$.
-        \item[\leftimp] If $m \mid n_1$, then there exists an element of order $m$ in the cyclic subgroup of order $n_1$.
-    \end{itemize}
+
+    \leftimp If $m \mid n_1$, then there exists an element of order $m$ in the cyclic subgroup of order $n_1$.
+
     Since $G$ contains an element of order $n_1$, the exponent of $G$ is at least $n_1$.
 	On the other hand, if $g \in G$, then $|g| \mid n_1$, so the exponent of $G$ divides $n_1$.
 	Thus, the exponent of $G$ is exactly $n_1$.
-\end{sol}
+\end{soliff}
 
 \begin{exercise}{5.2.6}
     Prove that any finite group has a finite exponent.

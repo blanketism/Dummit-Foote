@@ -195,15 +195,14 @@ Let $G$ be a group.
         \item Transitive: If $\alpha \sim \beta$ and $\beta \sim \gamma$, then $\beta$ is a shift of $\alpha$ by some $k_1$, and $\gamma$ is a shift of $\beta$ by some $k_2$.
 	Then shifting $\alpha$ by $(k_1 + k_2) \bmod p$ returns $\gamma$, hence $\alpha \sim \gamma$.
     \end{itemize}
-    \begin{itemize}
-        \item[\rightimp] Let $[\alpha]$ denote the equivalence class of $\sim$ that contains $\alpha$, and let $\alpha = (x_1, x_2, \dots, x_p)$.
+    \rightimp Let $[\alpha]$ denote the equivalence class of $\sim$ that contains $\alpha$, and let $\alpha = (x_1, x_2, \dots, x_p)$.
 	If $[\alpha]$ contains a single element, then every cyclic permutation of $\alpha$ is equal to $\alpha$.
 	In particular, the cyclic permutation that shifts each coordinate by 1 must be equal to $\alpha$, hence $x_2 = x_1, x_3 = x_2, \dots, x_p = x_{p-1}, x_1 = x_p$.
 	It follows that $\alpha = (x, x, \dots, x)$ for some $x \in G$.
 	Since $\alpha \in \scal$, $x^p = 1$.
-        \item[\leftimp] Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$.
+    
+	\leftimp Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$.
 	Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
-    \end{itemize}
     \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \scal$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$.
 	Let $[\alpha]$ have $n$ elements.
 	Note that for any two coordinates $x_i$ and $x_j$, if there exists some $k \in \zbb$ such that $i + kn \equiv j \bmod p$, then $x_i = x_j$ since shifting $\alpha$ by $kn$ returns $\alpha$ as there are only $n$ distinct cyclic permutations in $[\alpha]$.

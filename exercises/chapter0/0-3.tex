@@ -142,14 +142,14 @@
 \begin{sol}[spsol]
     Recall that $\phi(n)$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$.
     Hence, it suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
-    \begin{itemize}
-        \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
-	    Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
-	    Thus, $(a, n) = 1$.
-        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
-	    We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
-	    Thus, $\bar a \in \units$. \qedhere
-    \end{itemize}
+    
+    \rightimp If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
+    Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
+    Thus, $(a, n) = 1$.
+    
+    \leftimp By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
+    We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
+    Thus, $\bar a \in \units$.
 \end{sol}
 
 \begin{exercise}{0.3.11}

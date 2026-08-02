@@ -98,12 +98,13 @@
     Prove that a group $G$ acts faithfully on a set $A$ if and only if the kernel of the action is the set consisting only of the identity.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$.
+\begin{soliff}
+    \rightimp Suppose $G$ acts faithfully on $A$ with kernel $K$.
 	Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$.
 	If $g \in K$, then $g \cdot a = a$.
 	Faithfulness of the action implies that $g = 1$, so that $K = \set{1}$.
-    \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity.
+
+    \leftimp Suppose the kernel of the action is the set consisting only of the identity.
 	Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$.
 	Then
     \[
@@ -112,7 +113,7 @@
     so that $h\inv g$ is in the kernel of the action.
 	By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$.
 	Therefore, the action is faithful.
-\end{solitem}
+\end{soliff}
 
 \begin{exercise}{1.7.7}
     Prove that in Example 2 in this section the action is faithful.

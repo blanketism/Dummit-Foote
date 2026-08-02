@@ -224,12 +224,12 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $G = \set{g_1, g_2, \ldots, g_n}$ be a finite group.
-    \begin{itemize}
-        \item [\rightimp] If $G$ is Abelian, then $g_i g_j = g_j g_i$ for all $i, j$.
+    
+    \rightimp If $G$ is Abelian, then $g_i g_j = g_j g_i$ for all $i, j$.
 	Hence, the $(i, j)$-th entry of the group table is equal to the $(j, i)$-th entry for all $i, j$, so that the group table is symmetric.
-        \item [\leftimp] If the group table is symmetric, then $g_i g_j = g_j g_i$ for all $i, j$.
-	Hence, $G$ is Abelian. \qedhere
-    \end{itemize}
+
+    \leftimp If the group table is symmetric, then $g_i g_j = g_j g_i$ for all $i, j$.
+	Hence, $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}{1.1.11}
@@ -309,13 +309,14 @@ Let $G$ be a group.
 	Prove that $x^2 = 1$ if and only if $|x|$ is either $1$ or $2$.
 \end{exercise}
 
-\begin{solitem}
-    \item[\rightimp] Suppose $x^2 = 1$.
+\begin{soliff}
+    \rightimp Suppose $x^2 = 1$.
 	Then $|x| \leq 2$.
 	Since $|x| \in \zp$, $|x|$ is either $1$ or $2$.
-    \item[\leftimp] If $|x| = 1$, then $x = 1$ and $x^2 = 1$.
-	If $|x| = 2$, then $x^2 = 1$ by definition. \qedhere
-\end{solitem}
+
+    \leftimp If $|x| = 1$, then $x = 1$ and $x^2 = 1$.
+	If $|x| = 2$, then $x^2 = 1$ by definition.
+\end{soliff}
 
 \begin{exercise}{1.1.17}
     Let $x$ be an element of $G$.
