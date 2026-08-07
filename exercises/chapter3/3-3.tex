@@ -303,9 +303,9 @@ Let $G$ be a group.
 	For any $z, w \in G$, then $\phi(zw) = (zw)^p = z^p w^p = \phi(z)\phi(w)$, hence $\phi$ is a homomorphism.
 	Suppose $y \in G$.
     Then $y$ is a $p^n$-th root of unity for some $n \in \zp$, so that $y = e^{2\pi i k/p^n}$ for some $k \in \zbb$.
-	Let $z = e^{2\pi i k/p^{n+1}}$, so that $z^p = e^{2\pi i k/p^n} = y$. Then $z \in G$, hence $\phi$ is surjective.
+	Let $z = e^{2\pi i k/p^{n+1}}$, so that $z^p = e^{2\pi i k/p^n} = y$. Then because $z \in G$, $\phi$ is surjective.
 
-    Additionally, we have $\ker\phi = \set{z \in G \mid z^p = 1} = \set{e^{2\pi i k/p} \mid k = 0, 1, \ldots, p - 1}$, which is a nontrivial subgroup of $G$.
+    Now $\ker\phi = \set{z \in G \mid z^p = 1} = \set{e^{2\pi i k/p} \mid k = 0, 1, \ldots, p - 1}$, which is a nontrivial subgroup of $G$.
     By the First Isomorphism Theorem, we have $G/\ker\phi \cong \phi(G) = G$, hence $G$ is isomorphic to a proper quotient of itself.
 \end{sol}
 

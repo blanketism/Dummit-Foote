@@ -189,7 +189,7 @@ Let $G$ be a group.
     \]
     where $P_i$ is the Sylow $p_i$-subgroup of $G$ for $1 \leq i \leq n - 1$.
 	Since $G$ is Abelian, we have that $P_n$ is normal in $G$, so $HP_n$ is a subgroup of $G$.
-	Moreover, since $H$ and $P_n$ have trivial intersection because $p_n^{\alpha_n}$ and $p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_{n-1}^{\alpha_{n-1}}$ are coprime, we have that $HP_n = H \times P_n$.
+	Moreover, since $H$ and $P_n$ have trivial intersection because $p_n^{\alpha_n}$ and $p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_{n-1}^{\alpha_{n-1}}$ are relatively prime, we have that $HP_n = H \times P_n$.
 	Since $|HP_n| = |H||P_n| = |G|$, we must have $HP_n = G$, so
     \[
     	G = P_1 \times P_2 \times \cdots \times P_n. \qedhere
@@ -246,10 +246,10 @@ Let $G$ be a group.
 	Thus, the structure of $\aut(Z_n)$ depends on the exponent of 2 in the prime factorization of $n$.
 	We can check the following cases:
     \begin{itemize}
-        \item $\alpha_1 = 0$: Then the 2-part of $n$ is trivial, so $\aut(Z_n) \cong Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if $k = 1$, or the $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise coprime.
-        \item $\alpha_1 = 1$: Then the 2-part of $n$ is $Z_2$ with $\aut(Z_2)$ trivial, so $\aut(Z_n) \cong Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if the orders $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise coprime and coprime to 2, which is equivalent to the condition in the previous case.
+        \item $\alpha_1 = 0$: Then the 2-part of $n$ is trivial, so $\aut(Z_n) \cong Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if $k = 1$, or the $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise relatively prime.
+        \item $\alpha_1 = 1$: Then the 2-part of $n$ is $Z_2$ with $\aut(Z_2)$ trivial, so $\aut(Z_n) \cong Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if the orders $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise relatively prime and relatively prime to 2, which is equivalent to the condition in the previous case.
 	Hence, the same condition as $\alpha_1 = 0$ applies here.
-        \item $\alpha_1 = 2$: Then the 2-part of $n$ is $Z_4$, so $\aut(Z_n) \cong \aut(Z_4) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if $k = 1$, similar to $\alpha_1 = 0$, or the $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise coprime and coprime to 2.
+        \item $\alpha_1 = 2$: Then the 2-part of $n$ is $Z_4$, so $\aut(Z_n) \cong \aut(Z_4) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is cyclic if and only if $k = 1$, similar to $\alpha_1 = 0$, or the $p_i^{\alpha_i - 1}(p_i - 1)$ are pairwise relatively prime and relatively prime to 2.
         \item $\alpha_1 \geq 3$: Then the 2-part of $n$ is $Z_2 \times Z_{2^{\alpha_1 - 2}}$, so $\aut(Z_n) \cong \aut(Z_{2^{\alpha_1}}) \times Z_{p_2^{\alpha_2 - 1}(p_2 - 1)} \times \cdots \times Z_{p_k^{\alpha_k - 1}(p_k - 1)}$ is not cyclic. \qedhere
     \end{itemize}
 \end{sol}

@@ -47,7 +47,7 @@
     \[
         \phi : G_I \to \prod_{i \in I} G_i, \quad \phi((g_1, g_2, \ldots, g_n)) = (g_i)_{i \in I}.
     \]
-    We have $\phi$ is a homomorphism since the group operation in $G_I$ is componentwise, and the group operation in $\prod_{i \in I} G_i$ is also componentwise.
+    Since $G_I$ and $\prod_{i \in I} G_i$ are both groups under componentwise multiplication and $\phi$ preserves multiplication componentwise, $\phi$ is a homomorphism.
     To see that $\phi$ is injective, suppose $\phi((g_1, \ldots, g_n)) = (1)_{i \in I}$, the identity in $\prod_{i \in I} G_i$.
     Then $g_i = 1$ for all $i \in I$, and since $g_j = 1$ for all $j \in J$ by definition of $G_I$, we have $(g_1, \ldots, g_n) = (1, \ldots, 1)$, the identity in $G_I$.
 
@@ -308,7 +308,7 @@
     so $\mb z$ has order 2.
     Moreover, we have
     \[
-        \mb z \mb i \mb z\inv = \mb j \mb y\inv \mb i \mb y \mb j = \mb j \mb i \mb j = \mb i\inv.
+        \mb z \mb i \mb z\inv = \mb j \mb y\inv \mb i \mb y \mb j\inv = \mb j \mb i \mb j\inv = \mb i\inv.
     \]
     Then $\mb z$ has the same properties as $\mb s$, so we may define a map $\phi : Z_4 \ast D_8 \to Z_4 \ast Q_8$ by
     \[
